@@ -1,0 +1,445 @@
+.custom-modal-content {
+  border-radius: 10px;
+  height: fit-content;
+  width: fit-content;
+  padding-top: 1%;
+  padding-bottom: 5%;
+}
+.custom-modal {
+  margin-left: -280px;
+}
+.modal-header {
+  justify-content: center;
+  align-items: center;
+}
+
+
+.titlehead h1 {
+  background-image: linear-gradient(
+    to right,
+    rgb(1, 114, 175) 0%,
+    rgb(116, 254, 189) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 20px;
+  text-align: center;
+}
+.content {
+  padding: 20px;
+  display: flex;
+}
+.allwrap {
+  padding: 20px;
+}
+
+.leftwrap {
+  width: 380px auto;
+}
+.midwrap {
+  width: 300px auto;
+  margin-left: 10px;
+}
+.rightwrap {
+  margin-top: 20px;
+  width: 300px auto;
+  margin-left: 10px;
+}
+.leftwrap input {
+  width: 465px;
+  height: 32px;
+  background-color: #e1f3fd;
+  border-radius: 12px;
+  border: 1px solid;
+  border-color: #00000040;
+  padding: 10px;
+}
+.content .leftwrap textarea {
+  margin-top: 10px;
+  width: 465px;
+  height: 120px;
+  background-color: #e1f3fd;
+  border-radius: 12px;
+  border: 1px solid;
+  border-color: #00000040;
+  padding: 10px;
+}
+.content .midwrap input[type="text"],.content .midwrap input[type="date"] {
+  width: 250px;
+  height: 32px;
+  background-color: #e1f3fd;
+  border-radius: 12px;
+  border: 1px solid;
+  border-color: #00000040;
+  padding: 10px;
+}
+
+
+.content .midwrap input[type="number"]{
+  width: 250px;
+  height: 32px;
+  background-color: #e1f3fd;
+  border-radius: 12px;
+  border: 1px solid;
+  border-color: #00000040;
+  padding: 10px;
+}
+.midwrap select {
+  margin-top: 10px;
+  width: 250px;
+  height: 32px;
+  background-color: #e1f3fd;
+  border-radius: 12px;
+  border: 1px solid;
+  border-color: #00000040;
+  padding-left: 10px;
+  color: #82828f;
+}
+.midwrap select option {
+  background-color: white;
+  text-align: center;
+}
+.file {
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.file-label {
+  display: flex;
+  cursor: pointer;
+  width: 250px;
+  height: 75px;
+  background-color: #e1f3fd;
+  border-radius: 18px;
+  border: 1px solid;
+  border-color: #00000040;
+  padding: 13px;
+  padding-top: 25px;
+}
+
+.file-label img {
+  height: 50px;
+  width: 50px;
+  margin-right: 8px;
+  margin-top: -15px;
+}
+
+.file-label span {
+  vertical-align: middle;
+  color: #737380;
+}
+
+/* Hide the actual file input */
+input[type="file"] {
+  display: none;
+}
+
+.input1 input[type="checkbox"],.input2 input[type="checkbox"]  {
+  width: 15px!important;
+  height: 15px!important;
+  border-radius: 30px!important;
+}
+
+.rightwrap div {
+  margin-left: 20px;
+  width: 300px;
+}
+.rightwrap div span {
+  margin-left: 5px;
+}
+.rightwrap h3 {
+  background-image: linear-gradient(
+    to right,
+    rgb(1, 114, 175) 0%,
+    rgb(116, 254, 189) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.questions {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  height: 310px;
+  width: 95%;
+  margin-left: 20px;
+  border-radius: 12px;
+  padding: 20px;
+  overflow-y: auto;
+}
+.questions .leftwrap .mode {
+  display: flex;
+}
+.questions .leftwrap h1 {
+  background-image: linear-gradient(
+    to right,
+    rgb(1, 114, 175) 0%,
+    rgb(116, 254, 189) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.questions .leftwrap select {
+  margin-top: -5px;
+  margin-left: 5px;
+  width: 200px;
+  height: 32px;
+  background-color: #e1f3fd;
+  border-radius: 12px;
+  border: 1px solid;
+  border-color: #00000040;
+  padding-left: 10px;
+  color: #82828f;
+}
+.questions .leftwrap select option {
+  background-color: white;
+  text-align: center;
+}
+
+.questions .leftwrap textarea {
+  margin-top: 10px;
+  width: 400px;
+  height: 80px;
+  background-color: #e1f3fd;
+  border-radius: 12px;
+  border: 1px solid;
+  border-color: #00000040;
+  padding: 10px;
+}
+.thisflex {
+  display: flex;
+}
+.thisflex .options .optionflex {
+  display: flex;
+}
+.options h1 {
+  background-image: linear-gradient(
+    to right,
+    rgb(1, 114, 175) 0%,
+    rgb(116, 254, 189) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-left: 15px;
+}
+.thisflex .options div input {
+  width: 250px;
+  height: 30px;
+  background-color: #e1f3fd;
+  border-radius: 12px;
+  border: 1px solid;
+  border-color: #00000040;
+  padding: 10px;
+  margin-top: 18px;
+  margin-left: 10px;
+}
+.thisflex .options {
+  margin-left: 10px;
+}
+
+.buttonwrap {
+  display: flex;
+}
+.buttonwrap .add {
+  height: 40px;
+  width: 100px;
+  background: linear-gradient(
+    to right,
+    rgb(1, 114, 175) 0%,
+    rgb(116, 254, 189) 100%
+  );
+  margin-top: 20px;
+  border-radius: 8px;
+  color: white;
+  margin-left: 50px;
+}
+.buttonwrap .save {
+  height: 40px;
+  width: 80px;
+  background: linear-gradient(
+    to right,
+    rgb(1, 114, 175) 0%,
+    rgb(116, 254, 189) 100%
+  );
+  margin-top: 20px;
+  border-radius: 18px;
+  color: white;
+  margin-left: 50px;
+}
+
+.buttonwrap .cancel {
+  height: 40px;
+  width: 80px;
+  background: red;
+  margin-top: 20px;
+  border-radius: 18px;
+  color: white;
+  margin-left: 20px;
+}
+.btnwrap {
+  margin-left: 60%;
+  display: flex;
+}
+.flexwrap {
+  margin-top: 10px;
+}
+
+.type2 {
+  display: flex;
+}
+.type2 .q input,
+.type2 .a input {
+  margin-top: 10px;
+}
+
+.type2 .a .awrap {
+  display: flex;
+  margin-left: 20px;
+}
+
+.type2 .a h1 {
+  margin-left: 20px;
+}
+
+.type2 .a .awrap .true {
+  height: 50px;
+  width: 150px;
+  background: #e1f3fd;
+  margin-top: 10px;
+  border-radius: 5px;
+  color: rgb(163, 160, 160);
+}
+
+.active {
+  background: linear-gradient(
+    to right,
+    rgb(1, 114, 175) 0%,
+    rgb(116, 254, 189) 100%
+  )!important;
+  color: white!important;
+}
+
+.type2 .a .awrap .false {
+  height: 50px;
+  width: 150px;
+  background: #e1f3fd;
+  margin-top: 10px;
+  border-radius: 5px;
+  color: rgb(163, 160, 160);
+  margin-left: 10px;
+}
+
+.type2 .a .awrap .true1 {
+  height: 50px;
+  width: 150px;
+  background: #e1f3fd;
+  margin-top: 10px;
+  border-radius: 5px;
+  color: rgb(163, 160, 160);
+}
+
+.type2 .a .awrap .false1 {
+  height: 50px;
+  width: 150px;
+  background: linear-gradient(
+    to right,
+    rgb(1, 114, 175) 0%,
+    rgb(116, 254, 189) 100%
+  );
+  margin-top: 10px;
+  border-radius: 5px;
+  color: white;
+  margin-left: 10px;
+}
+/* Existing CSS code remains unchanged */
+
+/* Media query for screens up to 767px width (typical mobile screens) */
+@media (max-width: 767px) {
+  .buttonwrap .add {
+    margin-left: 0  px;
+  }
+  .custom-modal-content {
+    height: fit-content;
+
+  }
+  .mode{
+    margin-top: 20px;
+  }
+  .questions .leftwrap textarea {
+    width: 300px;
+  }
+  .content .leftwrap textarea{
+    width: 360px;
+  }
+  .custom-modal {
+    margin-left: 0px;
+  }
+  .thisflex{
+    margin-top: 20px;
+  }
+  .thisflex {
+    display: block;
+  }
+  .type2{
+    display: block;
+  }
+  .thisflex .options .optionflex {
+    display: block;
+  }
+  /* Adjustments for the content layout */
+  .content {
+    flex-direction: column; /* Stack content vertically */
+  }
+  
+  .leftwrap,
+  .midwrap,
+  .rightwrap {
+    width: 100%; /* Occupy full width */
+    margin-left: 0; /* Remove left margin */
+    margin-top: 10px; /* Add some space between sections */
+  }
+
+  /* Adjust input and textarea styles for smaller screens */
+  .leftwrap input,
+  .leftwrap textarea,
+  .midwrap input[type="text"],
+  .midwrap select,
+  .questions textarea,
+  .options div input,
+  .type2 .q input,
+  .type2 .a input {
+    width: 100%; /* Occupy full width */
+    margin-top: 10px; /* Add space between inputs */
+  }
+
+  /* Hide labels for file input */
+  .file-label {
+    display: none;
+  }
+
+  /* Adjust button positions */
+  .buttonwrap {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center buttons horizontally */
+  }
+  
+  .btnwrap {
+    margin-left: -48px;
+    align-items: center; /* Center buttons horizontally */
+  }
+
+  /* Adjustments for smaller screens for .type2 */
+  .type2 .a .awrap {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center buttons horizontally */
+    margin-left: 0; /* Reset margin */
+  }
+  .questions {
+    width: 90%;
+ }
+}

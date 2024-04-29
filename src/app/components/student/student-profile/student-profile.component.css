@@ -1,0 +1,353 @@
+body {
+  padding-left: 40px;
+  background-color: transparent;
+  padding: 20px;
+}
+
+.wrapbox {
+  width: 97%;
+  height: 300px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  position: relative;
+}
+
+.wrapbox .top {
+  width: 100%;
+  height: 45%;
+  background-image: url(src/assets/studentprofile/profilewall.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+}
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 33%;
+}
+.wrapbox .bottom {
+  width: 100%;
+  height: 60%;
+  background-color: #ffffff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 12px;
+}
+
+.imageProfile {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  padding: 6px;
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 20px;
+}
+
+.imageProfile img {
+  height: 175px;
+  width: 200px;
+  border-radius: 50%;
+}
+.buttom .bio {
+  margin-left: 270px;
+}
+.buttom .bio h1 {
+  font-size: 36px;
+}
+
+.buttom .idwrap {
+  background-image: linear-gradient(
+    to right,
+    rgb(1, 114, 175) 0%,
+    rgb(116, 254, 189) 100%
+  );
+  width: 180px;
+  height: 40px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  color: #ffffff;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.buttom .idwrap img {
+  margin-left: 5px;
+  height: 30px;
+  width: 30px;
+}
+.buttom .bio .location {
+  display: flex;
+  margin-top: 5px;
+}
+.buttom .bio .location h2 {
+  color: grey;
+  margin-top: 5px;
+}
+.buttom .editwrap button {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 5px;
+  padding: 4px;
+  color: transparent;
+  background-image: linear-gradient(
+    to right,
+    rgb(1, 114, 175) 0%,
+    rgb(116, 254, 189) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-top: 10px;
+  padding-left: 10px;
+}
+
+.buttom .editwrap button:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.buttom .editwrap {
+  margin-left: 28%;
+}
+.buttom .editwrap button img {
+  height: 18px;
+  width: 18px;
+  height: 30px;
+  width: 30px;
+}
+.buttom {
+  display: flex;
+  padding-right: 10px;
+}
+.top .editpic img {
+  margin-top: 20px;
+  height: 20px;
+  width: 20px;
+  margin-left: 4px;
+}
+
+.top .editpic {
+  cursor: pointer;
+  height: 88px;
+  width: 188px;
+  border-radius: 0 0 88px 88px; /* Updated to create a semi-circle */
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 1px;
+  padding: 6px;
+  position: absolute;
+  margin-top: 141px;
+  margin-left: 26px;
+  display: flex;
+}
+
+.top .editpic h1 {
+  margin-top: -20px;
+  margin-left: 30%;
+  color: transparent;
+  background-image: linear-gradient(
+    to right,
+    rgb(1, 114, 175) 0%,
+    rgb(116, 254, 189) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 20px;
+}
+.top .editpic h1,
+.top .editpic img {
+  margin-top: 10%;
+}
+.bio .wrapflex {
+  display: flex;
+  width: 450px;
+}
+
+.infowrap .personal {
+  height: min-content;
+  width: 97%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 8px;
+  padding: 20px;
+  padding-left: 40px;
+}
+.infowrap .personal .newflex {
+  display: flex;
+}
+.infowrap {
+  height: auto;
+  width: auto;
+  display: flex;
+}
+.course {
+  padding: 40px;
+  height: 250px;
+  width: 480px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-left: 20px;
+  border-radius: 8px;
+}
+.course .ttl {
+  color: rgb(107, 105, 105);
+}
+
+@media only screen and (max-width: 799px) {
+  .wrapflex {
+    padding-top: 50px;
+  }
+  .imageProfile {
+    height: 150px;
+    width: 150px;
+    border-radius: 60%;
+    background-color: #ffffff;
+    padding: 6px;
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 20px;
+  }
+
+  .imageProfile img {
+    height: 127px;
+    width: 200px;
+    border-radius: 50%;
+  }
+  .thisrespo {
+    display: flex;
+  }
+  .buttom .bio {
+    margin-top: 70px;
+    margin-left: 10px;
+  }
+
+  .buttom .bio .idwrap img {
+    display: none;
+  }
+  .buttom .bio h1 {
+    font-size: 1.5em;
+  }
+
+  .buttom .bio h2 {
+    font-size: 1.2em;
+  }
+
+  .buttom .bio .location img {
+    height: 30px;
+    width: 30px;
+  }
+
+  .buttom .editwrap {
+    margin-left: auto;
+  }
+  .buttom .editwrap button {
+    width: 78px;
+    position: absolute;
+    margin-left: -80px;
+  }
+  .top .editpic {
+    height: 70px;
+    width: 135px;
+    border-radius: 0 0 80px 80px; /* Updated to create a semi-circle */
+    margin-top: 125px;
+    margin-left: 28px;
+  }
+  .bio .wrapflex {
+    width: 100%;
+  }
+
+  .infowrap .personal {
+    width: 97%;
+    padding-top: 20px;
+  }
+  .personal h1 {
+    font-size: 14px; /* Adjust the font size for smaller screens as needed */
+  }
+  .imageicon {
+    height: 14px;
+    width: 14px;
+  }
+  .infowrap {
+    display: block;
+    height: auto;
+  }
+  .course {
+    margin-left: 0px;
+    margin-top: 20px;
+    width: auto;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .buttom .editwrap {
+    margin-left: auto;
+  }
+  .buttom .editwrap button {
+    position: absolute;
+    margin-left: -100px;
+  }
+}
+
+.buttom .editwrap {
+  margin-left: auto;
+}
+
+.modal-overlayzz {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-contentzz {
+  background: white;
+  border-radius: 8px;
+  animation: fadeInOut 0.3s ease-in-out;
+  z-index: 9999;
+}
+
+@keyframes fadeInOut {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+@media screen and (max-width: 640px) {
+  .btn-container button {
+    font-size: 12px;
+  }
+}

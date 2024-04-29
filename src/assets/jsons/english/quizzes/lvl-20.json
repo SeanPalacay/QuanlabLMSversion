@@ -1,0 +1,96 @@
+{
+  "title": "Advanced Vocabulary and Grammar Quiz (Part 4)",
+  "description": "Test your advanced vocabulary and grammar skills with this challenging quiz. Identify the correct usage of words, sentence structures, and more to enhance your language proficiency.",
+  "items": [
+    {
+      "question": "Identify the correct usage of the word 'perfidious' in a sentence.",
+      "choices": [
+        "His perfidious actions were praised by everyone.",
+        "The perfidious river flowed gently.",
+        "She faced a perfidious challenge in her career.",
+        "Perfidiously, he kept his promise."
+      ],
+      "answer": "His perfidious actions were praised by everyone."
+    },
+    {
+      "question": "Choose the sentence with the correct use of the word 'ubiquity':",
+      "choices": [
+        "The ubiquity of the forest was breathtaking.",
+        "Ubiquity behavior is appreciated.",
+        "She ubiquitously solved the problem.",
+        "Ubiquity flowers bloomed in the garden."
+      ],
+      "answer": "The ubiquity of the forest was breathtaking."
+    },
+    {
+      "question": "Identify the correct spelling of the word meaning 'marked by a lack of interest or enthusiasm.'",
+      "choices": ["Apathetic", "Apathectic", "Apathetik", "Apatheitc"],
+      "answer": "Apathetic"
+    },
+    {
+      "question": "Select the sentence with the correct use of the word 'quixotic':",
+      "choices": [
+        "His quixotic actions were grounded in reality.",
+        "The quixotic knight faced practical challenges.",
+        "She approached the task in a quixotic manner.",
+        "Quixotically, he solved the problem."
+      ],
+      "answer": "The quixotic knight faced practical challenges."
+    },
+    {
+      "question": "Identify the correct sentence with a proper use of the conjunction 'nor':",
+      "choices": [
+        "She neither likes coffee or tea.",
+        "Neither he nor she likes spicy food.",
+        "He nor she can attend the meeting.",
+        "Neither the cat nor the dog was at home."
+      ],
+      "answer": "Neither the cat nor the dog was at home."
+    },
+    {
+      "question": "Choose the sentence with the correct use of the word 'effulgent':",
+      "choices": [
+        "Her effulgent personality brightened the room.",
+        "The effulgent stars shone in the night sky.",
+        "He effulged the dark corner with light.",
+        "Effulgently, the flower bloomed."
+      ],
+      "answer": "Her effulgent personality brightened the room."
+    },
+    {
+      "question": "Identify the sentence with the correct use of the word 'truncate':",
+      "choices": [
+        "She truncated the conversation with a smile.",
+        "The truncated tree stood tall.",
+        "Truncating the report made it longer.",
+        "He truncated the decision with care."
+      ],
+      "answer": "She truncated the conversation with a smile."
+    },
+    {
+      "question": "What is the correct plural form of 'appendix'?",
+      "choices": ["Appendixes", "Appendices", "Appendixs", "Appendixi"],
+      "answer": "Appendices"
+    },
+    {
+      "question": "Select the sentence with the correct use of the colon:",
+      "choices": [
+        "She brought fruits such as apples, oranges and bananas.",
+        "The fruits she brought are apples, oranges, bananas.",
+        "Apples, oranges and bananas she brought: delicious.",
+        "She brought apples, oranges and bananas."
+      ],
+      "answer": "She brought apples, oranges, and bananas."
+    },
+    {
+      "question": "Identify the correct use of the word 'inimical' in a sentence.",
+      "choices": [
+        "The inimical weather made the day pleasant.",
+        "He showed an inimical interest in the project.",
+        "Inimically, she agreed to help.",
+        "Inimical forces worked against their success."
+      ],
+      "answer": "Inimical forces worked against their success."
+    }
+  ]
+}

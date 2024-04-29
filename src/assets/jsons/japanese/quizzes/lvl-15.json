@@ -1,0 +1,67 @@
+{
+  "title": "Japanese Vocabulary Quiz: Everyday Objects and Places",
+  "description": "Test your knowledge of everyday Japanese vocabulary with this quiz. Explore words for various objects and places, from blue cherry blossoms to a coffee shop. Each question provides options, a hint, and the correct answer in Japanese characters and Romaji. Enjoy the challenge and expand your Japanese language skills!",
+    "items": [
+      {
+        "question": "あおざくら",
+        "answer": "aozakura",
+        "hint": "The Japanese word for blue cherry blossoms.",
+        "options": ["ninjin", "aozakura", "hondana", "kissaten"]
+      },
+      {
+        "question": "きんこう",
+        "answer": "kinkou",
+        "hint": "The Japanese word for balance or harmony.",
+        "options": ["suisenjou", "ichigo", "kinkou", "tegamiya"]
+      },
+      {
+        "question": "さつまいも",
+        "answer": "satsumaimo",
+        "hint": "The Japanese word for sweet potato.",
+        "options": ["hondana", "satsumaimo", "hashi", "aozakura"]
+      },
+      {
+        "question": "にんじん",
+        "answer": "ninjin",
+        "hint": "The Japanese word for carrot.",
+        "options": ["ninjin", "kissaten", "tegamiya", "aozakura"]
+      },
+      {
+        "question": "ほんだな",
+        "answer": "hondana",
+        "hint": "The Japanese word for bookshelf.",
+        "options": ["suisenjou", "ichigo", "hondana", "kissaten"]
+      },
+      {
+        "question": "てがみや",
+        "answer": "tegamiya",
+        "hint": "The Japanese word for post office.",
+        "options": ["hondana", "tegamiya", "hashi", "kinkou"]
+      },
+      {
+        "question": "きっさてん",
+        "answer": "kissaten",
+        "hint": "The Japanese word for coffee shop.",
+        "options": ["kissaten", "ninjin", "tegamiya", "suisenjou"]
+      },
+      {
+        "question": "いちご",
+        "answer": "ichigo",
+        "hint": "The Japanese word for strawberry.",
+        "options": ["ichigo", "suisenjou", "tegamiya", "kissaten"]
+      },
+      {
+        "question": "すいせんじょう",
+        "answer": "suisenjou",
+        "hint": "The Japanese word for water fountain.",
+        "options": ["suisenjou", "hondana", "ichigo", "tegamiya"]
+      },
+      {
+        "question": "はし",
+        "answer": "hashi",
+        "hint": "The Japanese word for chopsticks or bridge.",
+        "options": ["hashi", "ichigo", "tegamiya", "kissaten"]
+      }
+    ]
+  }
+  

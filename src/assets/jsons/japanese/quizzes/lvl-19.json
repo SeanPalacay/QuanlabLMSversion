@@ -1,0 +1,57 @@
+{
+  "title": "Japanese Kanji to English Translation Quiz",
+  "description": "Test your ability to translate Japanese Kanji into English with this quiz. Each question presents a Kanji character, and you need to select the correct English translation from the options provided. Challenge yourself and enhance your Japanese language skills by mastering the meanings of common Kanji characters!",
+    "items": [
+      {
+        "question": "木",
+        "answer": "Tree",
+        "options": ["Water", "Sun", "Fire", "Tree"]
+      },
+      {
+        "question": "日本",
+        "answer": "Japan",
+        "options": ["China", "Korea", "Japan", "Thailand"]
+      },
+      {
+        "question": "猫",
+        "answer": "Cat",
+        "options": ["Dog", "Fish", "Bird", "Cat"]
+      },
+      {
+        "question": "学生",
+        "answer": "Student",
+        "options": ["Teacher", "Doctor", "Engineer", "Student"]
+      },
+      {
+        "question": "雨",
+        "answer": "Rain",
+        "options": ["Snow", "Sunshine", "Wind", "Rain"]
+      },
+      {
+        "question": "花",
+        "answer": "Flower",
+        "options": ["Grass", "Tree", "Rose", "Flower"]
+      },
+      {
+        "question": "食べる",
+        "answer": "Eat",
+        "options": ["Drink", "Sleep", "Run", "Eat"]
+      },
+      {
+        "question": "車",
+        "answer": "Car",
+        "options": ["Bus", "Bicycle", "Train", "Car"]
+      },
+      {
+        "question": "家族",
+        "answer": "Family",
+        "options": ["Friend", "Neighbor", "Relative", "Family"]
+      },
+      {
+        "question": "夢",
+        "answer": "Dream",
+        "options": ["Reality", "Nightmare", "Vision", "Dream"]
+      }
+    ]
+  }
+  

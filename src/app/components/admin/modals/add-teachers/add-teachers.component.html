@@ -1,0 +1,38 @@
+<div class="modal-content custom-modal-content">
+    <div class="container">
+      <button class="close" type="button" class="close" aria-label="Close" (click)="closeModal()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <h1 class="poppins-b title">{{selectedUser? 'Edit Teacher':'Add Teacher'}}</h1>
+      <div class="inputwrap">
+        <div class="input">
+          <h2>Teacher ID <span class="text-red-800">*</span></h2>
+          <input placeholder="Unless necessary, use the specified ID" type="text" [(ngModel)]="teacherId">
+        </div>
+        <div class="input">
+          <h2>Last Name <span class="text-red-800">*</span></h2>
+          <input placeholder="Specify Lastname" type="text" [(ngModel)]="lastName">
+        </div>
+        <div class="input">
+          <h2>First Name <span class="text-red-800">*</span></h2>
+          <input placeholder="Specify Firstname"  type="text" [(ngModel)]="firstName">
+        </div>
+        <div class="input">
+          <h2>Email</h2>
+          <input placeholder="Leave blank (Defaults to ID)"  type="email" [(ngModel)]="email">
+        </div>
+        <div class="input">
+          <h2>Password</h2>
+          <input placeholder="Leave blank ({{!selectedUser ? 'Defaults to \'1\'': 'Retain Password'}})" type="password" [(ngModel)]="password">
+        </div>
+        <div class="input">
+          <h2>Job Title <span class="text-red-800">*</span></h2>
+          <input placeholder="Specify Title"  type="text" [(ngModel)]="title">
+        </div>
+        <div class="submitwrap">
+          <button class="submit poppins" (click)="addTeacher()">{{selectedUser? 'SAVE': 'ADD'}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

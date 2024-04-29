@@ -1,0 +1,61 @@
+{
+  "title": "At Work",
+  "description": "Improve your French speaking skills with phrases commonly used at work. Focus on clear pronunciation and professional intonation.",
+  "instructions": [
+    "Below, you'll find a list of common phrases you might use in a work environment in French.",
+    "Your task is to record yourself speaking each phrase.",
+    "Ensure your pronunciation matches the provided text as closely as possible.",
+    "Try to maintain a natural and clear speaking pace.",
+    "After recording each phrase, listen to your recording and compare it to the text.",
+    "Focus on intonation, clarity, and fluency.",
+    "Repeat the recording process as many times as needed to improve your pronunciation."
+  ],
+  "items": [
+    {
+      "question": "J'ai une réunion à 10 heures du matin.",
+      "answer": "J'ai une réunion à 10 heures du matin."
+    },
+    {
+      "question": "Où se trouve la salle de conférence ?",
+      "answer": "Où se trouve la salle de conférence ?"
+    },
+    {
+      "question": "Puis-je emprunter votre stylo ?",
+      "answer": "Puis-je emprunter votre stylo ?"
+    },
+    {
+      "question": "Je dois imprimer ce document.",
+      "answer": "Je dois imprimer ce document."
+    },
+    {
+      "question": "Programmons un déjeuner d'affaires.",
+      "answer": "Programmons un déjeuner d'affaires."
+    },
+    {
+      "question": "Le patron est-il là ?",
+      "answer": "Le patron est-il là ?"
+    },
+    {
+      "question": "Je vais vous envoyer un e-mail.",
+      "answer": "Je vais vous envoyer un e-mail."
+    },
+    {
+      "question": "Pouvons-nous discuter du projet ?",
+      "answer": "Pouvons-nous discuter du projet ?"
+    },
+    {
+      "question": "Je travaille à domicile aujourd'hui.",
+      "answer": "Je travaille à domicile aujourd'hui."
+    },
+    {
+      "question": "Appelons le client.",
+      "answer": "Appelons le client."
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and accurate. You demonstrate a strong command of work-related French.",
+    "5-7 correct pronunciations": "Good! Your pronunciation is mostly correct, with a good grasp of professional phrases in French. There are some areas to refine for improved clarity.",
+    "2-4 correct pronunciations": "Fair. You can navigate basic conversations at work in French, but there are several areas needing significant improvement.",
+    "0-1 correct pronunciations": "Needs improvement. Consider practicing more to enhance your French pronunciation skills, or seek additional resources for learning."
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "title": "At Work",
+  "description": "Improve your Japanese speaking skills with phrases typically used in a work environment. Focus on clear pronunciation and professional intonation.",
+  "instructions": [
+    "Below is a list of phrases you might use in a work setting in Japanese.",
+    "Record yourself speaking each phrase.",
+    "Aim for clear and professional pronunciation.",
+    "Maintain a conversational and steady pace.",
+    "After recording, listen to your playback and compare it to the text.",
+    "Pay attention to intonation, clarity, and fluency in Japanese.",
+    "Repeat the recording process as necessary to improve your Japanese speaking skills."
+  ],
+  "items": [
+    {
+      "question": "午前10時に会議があります。 (Gozen juuji ni kaigi ga arimasu.)",
+      "answer": "午前10時に会議があります。 (Gozen juuji ni kaigi ga arimasu.)"
+    },
+    {
+      "question": "会議室はどこですか？ (Kaigishitsu wa doko desu ka?)",
+      "answer": "会議室はどこですか？ (Kaigishitsu wa doko desu ka?)"
+    },
+    {
+      "question": "ペンを借りてもいいですか？ (Pen o karite mo ii desu ka?)",
+      "answer": "ペンを借りてもいいですか？ (Pen o karite mo ii desu ka?)"
+    },
+    {
+      "question": "この書類を印刷したいです。 (Kono shorui o insatsu shitai desu.)",
+      "answer": "この書類を印刷したいです。 (Kono shorui o insatsu shitai desu.)"
+    },
+    {
+      "question": "ランチミーティングを予定しましょう。 (Ranchi miitingu o yotei shimashou.)",
+      "answer": "ランチミーティングを予定しましょう。 (Ranchi miitingu o yotei shimashou.)"
+    },
+    {
+      "question": "上司はいますか？ (Joushi wa imasu ka?)",
+      "answer": "上司はいますか？ (Joushi wa imasu ka?)"
+    },
+    {
+      "question": "メールを送ります。 (Meeru o okurimasu.)",
+      "answer": "メールを送ります。 (Meeru o okurimasu.)"
+    },
+    {
+      "question": "プロジェクトについて話し合えますか？ (Purojekuto ni tsuite hanashiaemasu ka?)",
+      "answer": "プロジェクトについて話し合えますか？ (Purojekuto ni tsuite hanashiaemasu ka?)"
+    },
+    {
+      "question": "今日は在宅勤務です。 (Kyou wa zaitaku kinmu desu.)",
+      "answer": "今日は在宅勤務です。 (Kyou wa zaitaku kinmu desu.)"
+    },
+    {
+      "question": "クライアントに電話しましょう。 (Kuraianto ni denwa shimashou.)",
+      "answer": "クライアントに電話しましょう。 (Kuraianto ni denwa shimashou.)"
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and accurate, demonstrating strong skills in Japanese workplace language.",
+    "5-7 correct pronunciations": "Good! Your pronunciation is mostly correct, with a good grasp of work-related phrases in Japanese. There are areas to refine for improved clarity.",
+    "2-4 correct pronunciations": "Fair. You can communicate basic needs in a Japanese work environment, but need significant improvement in pronunciation.",
+    "0-1 correct pronunciations": "Needs improvement. Consider practicing more to enhance your Japanese speaking skills, or seek additional resources for learning."
+  }
+}

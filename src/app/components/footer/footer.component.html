@@ -1,0 +1,65 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyDEvJ1x6GgYRRhIsyFmw+kBjoIqyHboFU" crossorigin="anonymous">
+
+
+<footer > 
+    <div class="flex justify-center">
+        <button class="w-full gradient-color  flex items-center justify-center" (click)="toggleMenu()">
+          <i class="fa-solid fa-arrow-up text-white text-sm"></i>
+        </button>
+      </div>
+    
+      <div [@openClose]="menuState"  class="h-full w-full gradient-color p-2" *ngIf="menuState === 'in'">
+      
+        
+        <!-- content -->
+        <div class="lg:ml-5 lg:mx-4">
+           
+        <div class="main flex mx-[10px] mb-[10px]">
+            <div class="logo mt-[3%] lg:mt-[0%]">
+                <img src="assets/login/testinglang.png" class="h-[100px] w-[100px] lg:w-[150px] lg:h-[150px]">
+            </div>
+            <div class="about w-[400px] ml-[20px] hidden lg:block">
+                <p class="text-wrap poppins">Quanby IT Solutions is an innovative technology company dedicated to providing comprehensive web development and hardware services.
+                  Quanby developers works closely with clients to bring their digital visions to life. We also offer a wide range of computer hardware services to get your company or organization on its toes.</p>
+            </div>
+
+            <div class="adds ml-[140px] hidden lg:block justify-center h-[160px] w-[230px]" >
+                <img src="assets/kunyari.png">
+            </div>
+
+            <div class="contacts ml-auto">
+                <div class="ml-[10px]">
+                    <p class="text-lg font-large poppins-b">CONTACT LINKS</p>
+                    <p class="poppins">+639283105224</p><br>
+                    <a class="poppins" href="https://www.google.com/maps/place/Quanby+Solutions,+Inc./@13.1461681,123.7468023,17z/data=!3m1!4b1!4m6!3m5!1s0x33a101004488705b:0x10c8bf574eafb11f!8m2!3d13.1461681!4d123.7493772!16s%2Fg%2F11y24vy_5f?entry=ttu">Landco Business Park, F. Imperial St,<br> Legazpi Port District,<br> Legazpi City, Albay</a><br><br>
+                    <p class="poppins">chrisma@quanbyit.com</p>
+                </div>
+            </div>
+        </div>
+    
+     <!-- footer linya -->
+     <div class="linya"> </div>
+     <div class=" flex container max-w-full mt-2">
+        <div class="justify-start">
+            <p class="text-white text-sm font-normal ml-0"> Copyright 2023 | All Rights Reserved</p>
+        </div>
+        <div class="flex w-4/5 justify-end">
+          <div class="mr-5">
+            <a href="https://www.facebook.com/quanbysolutionsinc">
+              <i class="fab fa-facebook text-white text-xl"></i>
+            </a>
+          </div>
+          <div>  
+            <a href="http://quanbyit.com">
+                <i class="fas fa-globe text-white text-xl"></i>
+            </a>
+        </div>
+        
+        </div>        
+      </div>
+   
+</div>      
+ 
+</div> 
+ 
+</footer>

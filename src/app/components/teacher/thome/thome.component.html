@@ -1,0 +1,261 @@
+<div class="mx-10">
+  <div class="flex gap-x-8 w-full h-10">
+    <!-- Input -->
+    <div class="lg:ml-4 w-1/4 h-2/3 hidden lg:block">
+      <p class="mt-6 text-center poppins-b greyniclei text-md">CALENDAR</p>
+    </div>
+
+    <style>
+      @media screen and (max-width: 640px) {
+        .custom-smaller-text {
+          font-size: 10px; /* Adjust the font size as needed */
+        }
+      }
+      @media screen and (max-width: 900px) {
+        .custom-smaller-text {
+          font-size: 10px; /* Adjust the font size as needed */
+        }
+      }
+      @media screen and (max-width: 380px) {
+        .geh {
+          width: 20rem;
+        }
+      }
+    </style>
+
+    <div
+      routerLink="/teacher/task-management"
+      class="cursor-pointer group lg:ml-36 ml-4 w-11/12 lg:w-1/4 h-full shadow-boxz rounded flex items-center justify-center hover:bg-gradient-to-r hover:from-[var(--secondary-color)] hover:to-[var(--primary-color)]"
+    >
+      <p
+        class="poppins-b text-transparent bg-clip-text gradient-color custom-smaller-text group-hover:text-white"
+      >
+        MANAGE TASK
+      </p>
+    </div>
+
+    <div
+      routerLink="/teacher/quiz-management"
+      class="cursor-pointer group ml-4 w-11/12 lg:w-1/4 lg:mr-20 h-full shadow-boxz rounded flex items-center justify-center hover:bg-gradient-to-r hover:from-[var(--secondary-color)] hover:to-[var(--primary-color)]"
+    >
+      <p
+        class="poppins-b text-transparent bg-clip-text gradient-color custom-smaller-text group-hover:text-white"
+      >
+        MANAGE QUIZ
+      </p>
+    </div>
+  </div>
+
+  <div class="mt-4 flex gap-x-8 lg:w-full md:w-full w-full h-80 geh">
+    <!-- Input -->
+    <div class="w-2/5 h-2/3 shadow-boxz floating rounded hidden lg:block">
+      <div class="calendar-header rounded-t">
+        <span class="month-picker text-white" id="month-picker"> May </span>
+        <div class="year-picker text-white" id="year-picker">
+          <!-- <span class="year-change text-white" id="pre-year"> -->
+          <!-- <pre (click)="preYearOnClick()"><</pre> -->
+          <!-- </span> -->
+          <span class="" id="year">2020 </span>
+          <!-- <span class="year-change" id="next-year"> -->
+          <!-- <pre (click)="nextYearOnClick()">></pre> -->
+          <!-- </span> -->
+        </div>
+      </div>
+
+      <div class="calendar-body">
+        <div class="calendar-week-days text-xs">
+          <div>Sun</div>
+          <div>Mon</div>
+          <div>Tue</div>
+          <div>Wed</div>
+          <div>Thu</div>
+          <div>Fri</div>
+          <div>Sat</div>
+        </div>
+        <div class="calendar-days text-xs -mt-10"></div>
+      </div>
+    </div>
+
+    <div class="w-full h-full shadow-boxz rounded overflow-y-hidden relative">
+      <!-- Arrow Icon -->
+      <div class="flex w-full h-10 items-start justify-between">
+        <div class="ml-1 w-1/2 h-full">
+          <p
+            class="lg:-mr-28 ml-2 animate-wave mt-2 text-right poppins-b text-transparent bg-clip-text gradient-color absolute lg:relative text-xl lg:text-xl"
+          >
+            COURSE OVERVIEW
+          </p>
+        </div>
+        <div
+          class="flex items-center justify-center h-6 w-6 rounded-full gradient-color-updown mt-2 mr-2"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-3 w-3 text-white"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M14 5l7 7m0 0l-7 7m7-7H3"
+            ></path>
+          </svg>
+        </div>
+      </div>
+
+      <div class="-mt-2 rounded-xl flex flex-row">
+        <div class="pb-3 rounded-xl flex flex-row overflow-x-auto islide1">
+          <div *ngFor="let course of courses" class="rounded-xl w-2/5 mt-4 ml-4 h-60 shadow-boxz bg-sky-100 flex flex-col courseover">
+            <!-- Image -->
+            <div class="rounded-xl mt-2 shadow-boxz h-48 mx-2 gradient-color">
+              <div class="w-full h-3/6">
+                <img src="{{ course.background }}" class="rounded-t-xl w-full h-36 object-cover" alt="image" />
+              </div>
+              <div class="w-full h-1/2 flex items-center justify-center">
+                <p class="text-white justify-start ml-4 mt-12 text-xs poppins-b relative" [title]="course.course">
+                  {{ course.course }}
+                </p>
+              </div>
+            </div>
+            <!-- Content -->
+            <div class="mx-4 my-3 flex flex-col flex-grow">
+              <!-- Title -->
+              <div class="overvview">
+                <div class="textover">
+                  <div>
+                    <p class="enrol">
+                      <a class="text-sm mr-1 text-transparent bg-clip-text gradient-color-updown">{{ course.studentcount }}</a>Enrolled Students
+                    </p>
+                  </div>
+                </div>
+                <!-- <div>
+                  <p class="comple">
+                    <a class="text-sm mr-1 text-transparent bg-clip-text gradient-color-updown">23%</a>Completion Rate
+                  </p>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="lg:mt-4 mt-32 lg:ml-10 flex lg:gap-x-8 lg:w-11/12 lg:h-52 lg:justify-between lg:mb-14 lg:flex-row flex-col w-full lg:px-0 px-10 relative lg:gap-y-0 gap-y-6"
+>
+  <div class="lg:w-5/12 w-full shadow-boxz rounded flex-col misij">
+    <div class="flex justify-between items-center">
+      <button
+        (click)="openInbox()"
+        class="mt-3.5 ml-3.5 text-left poppins-b text-transparent bg-clip-text gradient-color w-full text-md"
+      >
+        COMMUNICATION PAGE
+      </button>
+      <button
+        class="flex items-center justify-center h-4 w-4 rounded-full gradient-color-updown mt-3.5 mr-3.5"
+        (click)="openInbox()"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-2 w-2"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="white"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M14 5l7 7m0 0l-7 7m7-7H3"
+          ></path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="h-full p-2 mt-2 rounded w-full">
+      <style>
+        .gg:hover {
+          filter: drop-shadow(0 0 2em #24f0ffaa);
+        }
+      </style>
+
+      <!-- Your content goes here -->
+      <div
+        class="mt-2 flex justify-center items-center w-full flex-col gap-y-1"
+      >
+        <!-- Your scrollable content goes here -->
+        <button
+          class="gg floating lg:h-1/4 w-full rounded-md gradient-color"
+          (click)="openMessage()"
+        >
+          <div class="text-center">
+            <p class="poppins-b px-4 py-4 font-semibold text-xl text-white">
+              CHAT
+            </p>
+          </div>
+        </button>
+
+        <button
+          class="gg floating h-1/4 w-full rounded-md gradient-color"
+          (click)="openMessage()"
+        >
+          <div class="text-center">
+            <p class="poppins-b px-4 py-4 font-semibold text-xl text-white">
+              ALERT
+            </p>
+          </div>
+        </button>
+
+        <button
+          class="gg floating h-1/4 w-full rounded-md gradient-color"
+          (click)="openMessage()"
+        >
+          <div class="text-center">
+            <p class="poppins-b px-4 py-4 font-semibold text-xl text-white">
+              BROADCAST
+            </p>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mic -->
+  <!-- You can add your mic element here -->
+
+  <!-- Audio with Equalizer -->
+  <div class="w-[105%] -mr-3 h-full mb-20 shadow-boxz rounded overflow-y-hidden relative gradient-color">
+    <div class="flex w-full h-10 items-start justify-between">
+      <!-- Input -->
+      <div class="ml-1 w-full h-full">
+        <p class="ml-2 mt-1 text-left poppins-b text-white text-md">CURRENT CLASSES</p>
+      </div>
+      <!-- Arrow Icon -->
+      <div class="flex items-center justify-center h-4 w-4 rounded-full bg-white mt-2 mr-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-2 w-2" fill="none" viewBox="0 0 24 24" stroke="#64EABB">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+        </svg>
+      </div>
+    </div>
+    <!-- New Body -->
+    <div class="h-full" style="background-color: white">
+      <div class="-mt-2 rounded-xl flex flex-row">
+        <div class="pb-2 rounded-xl flex flex-row overflow-x-auto islide">
+          <div *ngFor="let class of classes" class="px-4 rounded w-2/5 mt-3 ml-4 h-36 shadow-md bg-sky-100 flex flex-col justify-center items-center curclas relative">
+            <a class="poppins-b font-bold gradient-color text-transparent bg-clip-text text-xl w-full text-center relative" [title]="class.class">
+              <span class="truncate">{{ class.class }}</span>
+            </a>
+            <a class="poppins-b font-bold text-gray-600 bg-clip-text w-full text-center relative overflow-hidden" style="font-size: 8px" [title]="class.schedule">
+              <span class="truncate">{{ class.schedule }}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

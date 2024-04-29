@@ -1,0 +1,58 @@
+{
+  "title": "English Language Familiarization Quiz - Medium Difficulty",
+  "description": "Enhance your English skills with this quiz focusing on sentence construction, vocabulary, and common expressions.",
+  "instructions": [
+    "Read each question carefully.",
+    "Write your answer in English, focusing on correct usage and grammar.",
+    "After completing all questions, submit your answers for evaluation."
+  ],
+  "items": [
+    {
+      "question": "Rewrite the following using a conditional sentence: 'He didn't study, so he failed the test.'",
+      "suggestedAnswer": "If he had studied, he would not have failed the test."
+    },
+    {
+      "question": "What does the idiom 'to burn the midnight oil' mean?",
+      "suggestedAnswer": "To work late into the night or very early morning."
+    },
+    {
+      "question": "Fill in the blank with the correct verb form: 'She would have been successful if she ___ (pursue) her goals more aggressively.'",
+      "suggestedAnswer": "had pursued"
+    },
+    {
+      "question": "Explain the meaning of the phrasal verb 'to back down'.",
+      "suggestedAnswer": "To withdraw or yield in a confrontation or competition."
+    },
+    {
+      "question": "Choose the correct word: 'His ___ (persuasive/perspicuous) argument convinced everyone in the meeting.'",
+      "suggestedAnswer": "persuasive"
+    },
+    {
+      "question": "Rewrite in reported speech: 'They said, \"We are moving to a new city next month.\"'",
+      "suggestedAnswer": "They said that they were moving to a new city the following month."
+    },
+    {
+      "question": "What is a synonym for 'onerous'?",
+      "suggestedAnswer": "Burdensome or heavy"
+    },
+    {
+      "question": "Complete the sentence with an appropriate modal verb: 'You ___ (can/might/must) be more careful when handling chemicals.'",
+      "suggestedAnswer": "must"
+    },
+    {
+      "question": "Define the word 'aberration'.",
+      "suggestedAnswer": "A departure from what is normal, usual, or expected, typically an unwelcome one."
+    },
+    {
+      "question": "Convert the following to the future perfect tense: 'She finishes the project.'",
+      "suggestedAnswer": "She will have finished the project."
+    }
+  ],
+  "scoring": {
+    "10 correct answers": "Excellent! You've shown great proficiency in Filipino to English translation.",
+    "7-9 correct answers": "Very good! You've mastered most of the words with a few left to learn.",
+    "4-6 correct answers": "Good effort! You're learning well, keep practicing to improve further.",
+    "1-3 correct answers": "Nice try! Some words are tricky, but with more practice, you'll get there.",
+    "0 correct answers": "This level is tough, but don't get discouraged. Review and try again!"
+  }
+}

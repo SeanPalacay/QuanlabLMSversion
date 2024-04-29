@@ -1,0 +1,21 @@
+<!-- app.component.html -->
+
+<ng-container >
+    <select [(ngModel)]="selectedModule" >
+        <option [value]="null">Select Module</option>
+        <option *ngFor="let module of practices" [value]="module.id" >{{module.name}}</option>
+    </select><br>
+
+    <label for="lessonFile">Drill Title</label><br>
+    <input type="text" name="drillTitle"[(ngModel)]="drillName"><br>
+
+    <div class="flex"> <button (click)="lessonInput.click()" class="px-2 rounded-md text-white bg-blue-700 ml-2">Upload</button> <label>Upload Drill (PDF): {{getFilename(drillFile)}} </label></div><br>
+    <input #lessonInput (change)="onLessonSelected($event)" type="file"  accept=".pdf"  hidden><br>
+    <div class="flex"> <button (click)="quizInput.click()" class="px-2 rounded-md text-white bg-blue-700 ml-2">Upload</button> <label >Add Audio (MP3):: {{getFilename(audioFile)}} </label></div><br>
+    <input #quizInput (change)="onQuizSelected($event)" type="file"accept=".mp3" hidden><br>
+  
+    <input (click)="onSubmit()" class="border border-2-[black] bg-[skyblue] rounded-md p-2" type="submit" value="Submit">
+</ng-container>
+  
+  <ng-template #module>
+    

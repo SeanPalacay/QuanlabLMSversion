@@ -1,0 +1,56 @@
+{
+  "title": "French Language Essentials - Hard Mode",
+  "description": "Challenge your French skills by identifying the error in each sentence.",
+  "items": [
+    {
+      "question": "Nous mangeons du poissons tous les vendredis.",
+      "choices": ["mangeons", "du", "poissons", "vendredis"],
+      "answer": "poissons"
+    },
+    {
+      "question": "Elle a achetée une nouvelle robe hier.",
+      "choices": ["a", "achetée", "nouvelle", "hier"],
+      "answer": "achetée"
+    },
+    {
+      "question": "Ils vont au cinéma chaque semaines.",
+      "choices": ["vont", "au", "chaque", "semaines"],
+      "answer": "semaines"
+    },
+    {
+      "question": "Tu as bien fait de me rappeller ce soir.",
+      "choices": ["as", "fait", "rappeller", "soir"],
+      "answer": "rappeller"
+    },
+    {
+      "question": "La plupart des étudiants a réussi l'examen.",
+      "choices": ["plupart", "des", "a", "réussi"],
+      "answer": "a"
+    },
+    {
+      "question": "Il y a beaucoup de bruits dans cette ville.",
+      "choices": ["y", "beaucoup", "bruits", "cette"],
+      "answer": "bruits"
+    },
+    {
+      "question": "Nous devrions prendre de parapluies en cas de pluie.",
+      "choices": ["devrions", "prendre", "de", "cas"],
+      "answer": "de"
+    },
+    {
+      "question": "Mon frère aîné est plus âgé que moi de cinq ans.",
+      "choices": ["frère", "aîné", "plus", "de"],
+      "answer": "de"
+    },
+    {
+      "question": "Chaque matin, je me lève à 7 heures du matin.",
+      "choices": ["Chaque", "me", "à", "du"],
+      "answer": "du"
+    },
+    {
+      "question": "Elle parle courrament trois langues étrangères.",
+      "choices": ["parle", "courrament", "trois", "étrangères"],
+      "answer": "courrament"
+    }
+  ]
+}

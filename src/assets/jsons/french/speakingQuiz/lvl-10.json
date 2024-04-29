@@ -1,0 +1,61 @@
+{
+  "title": "Expressing Opinions",
+  "description": "Improve your French speaking skills with phrases commonly used for expressing opinions. Focus on clear pronunciation and assertive intonation.",
+  "instructions": [
+    "Below, you'll find a list of common phrases used to express opinions in French.",
+    "Your task is to record yourself speaking each phrase.",
+    "Ensure your pronunciation matches the provided text as closely as possible.",
+    "Try to maintain a natural and assertive speaking pace.",
+    "After recording each phrase, listen to your recording and compare it to the text.",
+    "Focus on intonation, clarity, and fluency.",
+    "Repeat the recording process as many times as needed to improve your pronunciation."
+  ],
+  "items": [
+    {
+      "question": "Je pense que c'est une bonne idée.",
+      "answer": "Je pense que c'est une bonne idée."
+    },
+    {
+      "question": "Je ne suis pas d'accord avec vous.",
+      "answer": "Je ne suis pas d'accord avec vous."
+    },
+    {
+      "question": "À mon avis, c'est trop cher.",
+      "answer": "À mon avis, c'est trop cher."
+    },
+    {
+      "question": "Je préfère le thé au café.",
+      "answer": "Je préfère le thé au café."
+    },
+    {
+      "question": "C'est un point intéressant.",
+      "answer": "C'est un point intéressant."
+    },
+    {
+      "question": "Je ne suis pas sûr à ce sujet.",
+      "answer": "Je ne suis pas sûr à ce sujet."
+    },
+    {
+      "question": "J'adore cette chanson.",
+      "answer": "J'adore cette chanson."
+    },
+    {
+      "question": "Je n'aime pas ce temps.",
+      "answer": "Je n'aime pas ce temps."
+    },
+    {
+      "question": "Ce film était incroyable.",
+      "answer": "Ce film était incroyable."
+    },
+    {
+      "question": "Je pense que nous devrions voyager plus.",
+      "answer": "Je pense que nous devrions voyager plus."
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and confident, perfect for expressing opinions in French.",
+    "5-7 correct pronunciations": "Good! Your pronunciation is mostly correct, with a good grasp of opinion phrases in French. There are some areas to refine for improved clarity.",
+    "2-4 correct pronunciations": "Fair. You can express basic opinions in French, but there are several areas needing significant improvement.",
+    "0-1 correct pronunciations": "Needs improvement. Consider practicing more to enhance your French pronunciation skills, or seek additional resources for learning."
+  }
+}

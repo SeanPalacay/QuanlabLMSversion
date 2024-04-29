@@ -1,0 +1,61 @@
+{
+  "title": "Cultural Awareness",
+  "description": "Enhance your English speaking skills with phrases related to cultural awareness and diversity. Focus on clear, respectful pronunciation and inclusive intonation.",
+  "instructions": [
+    "Below is a list of phrases that are commonly used in discussions about cultural awareness.",
+    "Record yourself speaking each phrase.",
+    "Aim for clear, respectful, and inclusive pronunciation.",
+    "Maintain a steady and empathetic pace.",
+    "After recording, listen to your playback and compare it to the text.",
+    "Pay attention to intonation, clarity, and fluency in a cultural context.",
+    "Repeat the recording process as necessary to improve your language skills in cultural discussions."
+  ],
+  "items": [
+    {
+      "question": "Understanding cultural diversity is crucial.",
+      "answer": "Understanding cultural diversity is crucial."
+    },
+    {
+      "question": "Let's appreciate the richness of different cultures.",
+      "answer": "Let's appreciate the richness of different cultures."
+    },
+    {
+      "question": "How can we promote cross-cultural understanding?",
+      "answer": "How can we promote cross-cultural understanding?"
+    },
+    {
+      "question": "I value the cultural exchange of ideas.",
+      "answer": "I value the cultural exchange of ideas."
+    },
+    {
+      "question": "Let's explore traditions from around the world.",
+      "answer": "Let's explore traditions from around the world."
+    },
+    {
+      "question": "Cultural sensitivity is essential in our global society.",
+      "answer": "Cultural sensitivity is essential in our global society."
+    },
+    {
+      "question": "What cultural nuances should we consider?",
+      "answer": "What cultural nuances should we consider?"
+    },
+    {
+      "question": "I'm interested in multicultural experiences.",
+      "answer": "I'm interested in multicultural experiences."
+    },
+    {
+      "question": "Let's embrace diversity in our interactions.",
+      "answer": "Let's embrace diversity in our interactions."
+    },
+    {
+      "question": "How can we create an inclusive environment?",
+      "answer": "How can we create an inclusive environment?"
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and sensitive, well-suited for discussions on cultural awareness.",
+    "5-7 correct pronunciations": "Good! Most of your phrases are pronounced correctly, but some require further refinement for cultural discussions.",
+    "2-4 correct pronunciations": "Fair. You understand basic concepts of cultural awareness, but your pronunciation needs more work for clear communication.",
+    "0-1 correct pronunciations": "Needs improvement. Focus more on practicing these phrases to enhance your English speaking skills in cultural contexts."
+  }
+}

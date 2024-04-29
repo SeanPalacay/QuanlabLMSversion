@@ -1,0 +1,59 @@
+{
+  "title": "English Language Familiarization Quiz - Medium Difficulty",
+  "description": "Enhance your English skills with this quiz focusing on sentence construction, vocabulary, and common expressions.",
+  "instructions": [
+    "Read each question carefully.",
+    "Write your answer in English, focusing on correct usage and grammar.",
+    "After completing all questions, submit your answers for evaluation."
+    ],
+    "items": [
+      {
+        "question": "Use the correct passive form: 'Someone cleans this room every day.'",
+        "suggestedAnswer": "This room is cleaned every day."
+      },
+      {
+        "question": "Explain the meaning of the idiom 'to bite off more than one can chew'.",
+        "suggestedAnswer": "To take on a task that is too big or beyond one's ability."
+      },
+      {
+        "question": "Choose the correct past perfect tense form: 'We ___ (leave) the house when she called.'",
+        "suggestedAnswer": "had left"
+      },
+      {
+        "question": "What does the phrasal verb 'to back out' mean?",
+        "suggestedAnswer": "To withdraw from a commitment or promise."
+      },
+      {
+        "question": "Select the correct word: 'His ___ (perspective/prospective) on the issue was quite unique.'",
+        "suggestedAnswer": "perspective"
+      },
+      {
+        "question": "Convert to reported speech: 'Tom said, \"I am feeling ill today.\"'",
+        "suggestedAnswer": "Tom said that he was feeling ill that day."
+      },
+      {
+        "question": "What is the synonym of 'meticulous'?",
+        "suggestedAnswer": "Thorough or detailed"
+      },
+      {
+        "question": "Fill in the blank: 'Despite the heavy rain, they continued ___ their journey.'",
+        "suggestedAnswer": "with"
+      },
+      {
+        "question": "What does the word 'taciturn' mean?",
+        "suggestedAnswer": "Reserved or uncommunicative in speech; saying little."
+      },
+      {
+        "question": "Rewrite in future continuous tense: 'She will attend the meeting.'",
+        "suggestedAnswer": "She will be attending the meeting."
+      }
+    ],
+    "scoring": {
+      "10 correct answers": "Excellent! You've shown great proficiency in Filipino to English translation.",
+      "7-9 correct answers": "Very good! You've mastered most of the words with a few left to learn.",
+      "4-6 correct answers": "Good effort! You're learning well, keep practicing to improve further.",
+      "1-3 correct answers": "Nice try! Some words are tricky, but with more practice, you'll get there.",
+      "0 correct answers": "This level is tough, but don't get discouraged. Review and try again!"
+    }
+  }
+  

@@ -1,0 +1,56 @@
+{
+  "title": "French Language Essentials - Medium Mode",
+  "description": "Test your knowledge with these finish-the-sentence French phrases.",
+  "items": [
+    {
+      "question": "Lors d'un dîner formel, il est de coutume de porter un...",
+      "choices": ["jean", "short", "costume", "maillot de bain"],
+      "answer": "costume"
+    },
+    {
+      "question": "En été, beaucoup de Français partent en vacances à la...",
+      "choices": ["montagne", "mer", "campagne", "ville"],
+      "answer": "mer"
+    },
+    {
+      "question": "Si tu veux apprendre le français rapidement, il est utile de regarder des films en...",
+      "choices": ["silence", "anglais", "français", "espagnol"],
+      "answer": "français"
+    },
+    {
+      "question": "Pour cuisiner une quiche, l'ingrédient principal est l'...",
+      "choices": ["eau", "œuf", "huile", "sucre"],
+      "answer": "œuf"
+    },
+    {
+      "question": "Un célèbre musée à Paris, qui était auparavant une gare, est le musée d'...",
+      "choices": ["Orsay", "Louvre", "Orangerie", "Pompidou"],
+      "answer": "Orsay"
+    },
+    {
+      "question": "Le fromage est souvent mangé en France comme un...",
+      "choices": ["plat principal", "dessert", "apéritif", "entrée"],
+      "answer": "dessert"
+    },
+    {
+      "question": "Dans la cuisine française, le beurre est préféré à l'huile pour la préparation de la...",
+      "choices": ["salade", "pâtisserie", "pizza", "soupe"],
+      "answer": "pâtisserie"
+    },
+    {
+      "question": "Le système éducatif en France inclut l'école maternelle dès l'âge de...",
+      "choices": ["trois ans", "cinq ans", "sept ans", "dix ans"],
+      "answer": "trois ans"
+    },
+    {
+      "question": "La France est connue pour son vin, particulièrement celui de la région de...",
+      "choices": ["Bretagne", "Normandie", "Bourgogne", "Alsace"],
+      "answer": "Bourgogne"
+    },
+    {
+      "question": "Un moyen de transport très utilisé dans Paris est le...",
+      "choices": ["vélo", "bateau", "métro", "hélicoptère"],
+      "answer": "métro"
+    }
+  ]
+}

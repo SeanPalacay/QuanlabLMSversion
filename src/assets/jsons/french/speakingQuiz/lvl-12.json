@@ -1,0 +1,61 @@
+{
+  "title": "Business Communication",
+  "description": "Enhance your French speaking skills with phrases suitable for business communication. Focus on precise pronunciation and professional intonation.",
+  "instructions": [
+    "Below, you'll find a list of phrases commonly used in business communication in French.",
+    "Your task is to record yourself speaking each phrase.",
+    "Ensure your pronunciation matches the provided text as closely as possible.",
+    "Try to maintain a formal and professional speaking pace.",
+    "After recording each phrase, listen to your recording and compare it to the text.",
+    "Focus on intonation, clarity, and the concise expression of business concepts.",
+    "Repeat the recording process as many times as needed to improve your pronunciation."
+  ],
+  "items": [
+    {
+      "question": "Nous devons optimiser notre flux de travail.",
+      "answer": "Nous devons optimiser notre flux de travail."
+    },
+    {
+      "question": "Quel est l'état du projet ?",
+      "answer": "Quel est l'état du projet ?"
+    },
+    {
+      "question": "Stratégisons pour le trimestre à venir.",
+      "answer": "Stratégisons pour le trimestre à venir."
+    },
+    {
+      "question": "Je propose une approche collaborative.",
+      "answer": "Je propose une approche collaborative."
+    },
+    {
+      "question": "Pouvez-vous fournir un rapport complet ?",
+      "answer": "Pouvez-vous fournir un rapport complet ?"
+    },
+    {
+      "question": "Abordons les indicateurs de performance clés.",
+      "answer": "Abordons les indicateurs de performance clés."
+    },
+    {
+      "question": "Il est crucial d'améliorer l'engagement des clients.",
+      "answer": "Il est crucial d'améliorer l'engagement des clients."
+    },
+    {
+      "question": "Nous devrions effectuer une analyse de marché.",
+      "answer": "Nous devrions effectuer une analyse de marché."
+    },
+    {
+      "question": "Mettre en œuvre une stratégie axée sur les résultats.",
+      "answer": "Mettre en œuvre une stratégie axée sur les résultats."
+    },
+    {
+      "question": "Je recommande un plan de communication proactif.",
+      "answer": "Je recommande un plan de communication proactif."
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and professional, ideal for business communication in French.",
+    "5-7 correct pronunciations": "Good! Your pronunciation is mostly correct, with a strong grasp of business phrases in French. Some areas may need refinement for full professional effectiveness.",
+    "2-4 correct pronunciations": "Fair. You're able to communicate basic business concepts in French, but further practice is needed for effective professional communication.",
+    "0-1 correct pronunciations": "Needs improvement. Focus on practicing these business communication phrases to enhance your French speaking skills in professional settings."
+  }
+}

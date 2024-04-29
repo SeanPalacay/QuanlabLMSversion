@@ -1,0 +1,48 @@
+<div *ngIf="!denied||isTeacher" class='mx-auto lg:max-w-[826px] h-[505px]  relative flex justify-center items-center font-roboto'>
+    <div class='absolute md:w-[96.2%] w-full h-4 md:h-6 bg-gradient-to-r from-primary to-secondary z-20 rounded-tr-xl rounded-tl-xl top-0 shadow-md shadow-black/25'></div>
+    <div class='absolute bottom-0 z-10 md:w-6 w-3 h-[96.2%] top-3 bg-gradient-to-b from-primary to-secondary lg:left-4 md:left-4 left-0'></div>
+      <button class='lg:text-25px font-semibold text-primary leading-7 w-[43.9%] rounded-[30px]  text-sm lg:h-16 h-12 sm:text-lg shadow-md shadow-black/25 '>Select Module</button>
+    <div class='absolute top-3 bg-gradient-to-b from-primary to-secondary bottom-0 right-0 md:right-4 md:w-6 w-3 h-[96.2%] z-10'></div>
+    <div class='absolute bottom-0 z-20 w-full h-4 shadow-md lg:h-6 lg:inset-x-0 bg-gradient-to-r from-primary to-secondary rounded-br-xl rounded-bl-xl shadow-black/25'></div>
+
+    <button (click)="openModal()" class='absolute inset-x-auto bottom-20 shadow-md shadow-[#00000040] rounded-full lg:size-[85px] size-14 flex justify-center items-center '>
+      <img class='lg:size-[30px] size-5' src="assets/ask.png" alt="">
+    </button>
+</div>
+
+<ng-template #notGranted>
+  <div class="h-3/4 mt-4 gap-4 flex justify-center items-center">
+    You are not assigned to any speech lab.
+  </div>
+</ng-template>
+
+<!-- <div class="px-4 py-3 bg-gray-50 sm:flex sm:flex-row-reverse sm:px-6">
+    <button type="button" class="inline-flex justify-center w-full px-3 py-2 text-sm font-semibold text-white bg-red-600 rounded-md shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto">Deactivate</button>
+    <button type="button" class="inline-flex justify-center w-full px-3 py-2 mt-3 text-sm font-semibold text-gray-900 bg-white rounded-md shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto">Cancel</button>
+  </div> -->
+
+
+  <!-- <div class="fixed inset-0 z-30">
+    <div class="flex items-end justify-center min-h-full p-4 text-center sm:items-center sm:p-0">
+      <div class="relative  overflow-hidden text-left transition-all  transform bg-white lg:w-[1024px] shadow-xl sm:my-8 sm:w-full ">
+        <div class="px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+          <div class="sm:flex sm:items-start">
+            <div class="flex items-center justify-center flex-shrink-0 w-12 h-12 mx-auto sm:mx-0 sm:h-10 sm:w-10">
+              <img src="assets/close.png" alt="">
+            </div>
+            <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+              <h3 class="text-base font-semibold leading-6 text-gray-900" id="modal-title">Deactivate account</h3>
+              <div class="mt-2">
+                <p class="text-sm text-gray-500">Are you sure you want to deactivate your account? All of your data will be permanently removed. This action cannot be undone.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div> -->
+
+
+
+

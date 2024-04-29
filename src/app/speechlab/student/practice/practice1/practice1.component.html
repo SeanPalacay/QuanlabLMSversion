@@ -1,0 +1,72 @@
+<div class="container mx-auto relative w-full max-w-4/5 h-4/5 flex flex-col justify-center items-center overflow-y-auto px-4 pt-10 py-6 mt-2 overflow-x-hidden">
+  <ng-container *ngFor="let src of getParticipants() | keyvalue; let i = index" >
+    <audio [srcObject]="src.value.stream" [autoplay]="true" playsinline="true" [muted]="src.value.muted"></audio>
+</ng-container> 
+  <!-- Back button -->
+    <button *ngIf="isTeacher" (click)="redirectToOtherPage()" class="text-lg text-slate-600/80 absolute top-0 left-2 flex justify-center items-center p-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M328 112L184 256l144 144"/>
+      </svg>
+      Back
+    </button>
+  
+    <!-- Lesson content -->
+    <div class="hidden h-full w-full justify-center  lg:flex">
+      <div class="relative overflow-x-hidden h-full border rounded-3xl bg-no-repeat bg-center bg-contain bg-white">
+        <div class="h-full w-full">
+          <pdf-viewer
+        class="overflow-hidden block w-[500px] h-full"
+        [zoom]="1"
+        [src]="pdfBase" [render-text]="true" [page]="currentPage"  [show-all]="false" [original-size]="true"  [fit-to-page]="true" (after-load-complete)="afterLoadComplete($event)"></pdf-viewer>  
+        </div>
+      </div>
+      <div  *ngIf="currentPage+1 < totalPages" class="relative  overflow-x-hidden h-full border rounded-3xl bg-no-repeat bg-center bg-contain bg-white">
+        <div class="h-full w-full">
+          <pdf-viewer
+        class="overflow-hidden block w-[500px] h-full"
+      [zoom]="1"
+        [src]="pdfBase" [render-text]="true" [page]="currentPage+1"  [show-all]="false" [original-size]="true"  [fit-to-page]="true" (after-load-complete)="afterLoadComplete($event)"></pdf-viewer>  
+        </div>
+      </div>
+    </div>
+  
+    <div class=" flex lg:hidden h-full w-full justify-center">
+      <div class="relative overflow-x-hidden h-full border rounded-3xl bg-no-repeat bg-center bg-contain bg-white">
+        <div class="h-full w-full">
+          <pdf-viewer
+        class="overflow-hidden block w-[500px] h-full"
+        [zoom]="1"
+        [src]="pdfBase" [render-text]="true" [page]="currentPage"  [show-all]="false" [original-size]="true"  [fit-to-page]="true" (after-load-complete)="afterLoadComplete($event)"></pdf-viewer>  
+        </div>
+      </div>
+    </div>
+    <!-- <div class="overflow-x-hidden h-full border rounded-3xl lg:p-5 md:p-2 sm:p-2 smallest:p-2 bg-no-repeat bg-center bg-contain"> -->
+      <!-- <div *ngIf="lessonData">
+        <ng-container *ngIf="lessonData.lessons[currentLessonIndex]">
+          <h2 class="text-2xl font-bold mb-4">{{ lessonData.lessons[currentLessonIndex].lines[0] }}</h2>
+          <img *ngIf="lessonData.lessons[currentLessonIndex].image" src="{{ lessonData.lessons[currentLessonIndex].image }}" alt="Lesson Image" class="mb-4 card-image">
+          <ul>
+            <li *ngFor="let line of lessonData.lessons[currentLessonIndex].lines.slice(1)" class="mb-2">
+              {{ line }}
+            </li>
+          </ul>
+        </ng-container>
+        <div *ngIf="!lessonData.lessons[currentLessonIndex]" class="text-center text-gray-600 mt-4">No lesson data available</div>
+      </div>
+      <div *ngIf="!lessonData" class="text-center text-gray-600 mt-4">No lesson data available</div> -->
+    <!-- </div> -->
+  
+    <!-- Next button -->
+    <!-- <button (click)="loadNextLesson()" class="mt-4 px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+      Next
+    </button> -->
+
+    <div class="p-2 bg-gray-200 rounded-md shadow-md w-[35%] h-[60px] mt-[10px]">
+        <audio controls class="w-full h-[40px]">
+            <source src="{{audio}}" type="audio/mp3">
+            Your browser does not support the audio tag.
+        </audio>
+    </div>
+    
+  </div>
+  

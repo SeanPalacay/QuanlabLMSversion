@@ -1,0 +1,61 @@
+{
+  "title": "Scientific Conversations",
+  "description": "Enhance your Japanese speaking skills with phrases used for scientific conversations. Focus on clear, analytical pronunciation and a methodical tone.",
+  "instructions": [
+    "Below is a list of phrases you might use in scientific conversations in Japanese.",
+    "Record yourself speaking each phrase.",
+    "Aim for clear, precise, and analytical pronunciation.",
+    "Maintain a steady and methodical pace.",
+    "After recording, listen to your playback and compare it to the text.",
+    "Pay attention to intonation, clarity, and fluency in Japanese.",
+    "Repeat the recording process as necessary to improve your Japanese speaking skills for scientific contexts."
+  ],
+  "items": [
+    {
+      "question": "あなたの実験の仮説は何ですか？ (Anata no jikken no kasetsu wa nan desu ka?)",
+      "answer": "あなたの実験の仮説は何ですか？ (Anata no jikken no kasetsu wa nan desu ka?)"
+    },
+    {
+      "question": "科学的な方法論について話し合いましょう。 (Kagakuteki na houron ni tsuite hanashiaimashou.)",
+      "answer": "科学的な方法論について話し合いましょう。 (Kagakuteki na houron ni tsuite hanashiaimashou.)"
+    },
+    {
+      "question": "この分野の研究に興味があります。 (Kono bunya no kenkyuu ni kyoumi ga arimasu.)",
+      "answer": "この分野の研究に興味があります。 (Kono bunya no kenkyuu ni kyoumi ga arimasu.)"
+    },
+    {
+      "question": "経験的な証拠を説明してもらえますか？ (Keikenteki na shouko o setsumei shite moraemasu ka?)",
+      "answer": "経験的な証拠を説明してもらえますか？ (Keikenteki na shouko o setsumei shite moraemasu ka?)"
+    },
+    {
+      "question": "議論には科学的な厳密さが求められます。 (Giron ni wa kagakuteki na genmitsusa ga motomeraremasu.)",
+      "answer": "議論には科学的な厳密さが求められます。 (Giron ni wa kagakuteki na genmitsusa ga motomeraremasu.)"
+    },
+    {
+      "question": "あなたの研究の倫理的な考慮事項は何ですか？ (Anata no kenkyuu no rinteki na kouryo jikou wa nan desu ka?)",
+      "answer": "あなたの研究の倫理的な考慮事項は何ですか？ (Anata no kenkyuu no rinteki na kouryo jikou wa nan desu ka?)"
+    },
+    {
+      "question": "科学的な進歩について探求しましょう。 (Kagakuteki na shinpo ni tsuite tankyuu shimashou.)",
+      "answer": "科学的な進歩について探求しましょう。 (Kagakuteki na shinpo ni tsuite tankyuu shimashou.)"
+    },
+    {
+      "question": "エビデンスに基づく科学的な議論を重視します。 (Ebidensu ni motozuku kagakuteki na giron o juushi shimasu.)",
+      "answer": "エビデンスに基づく科学的な議論を重視します。 (Ebidensu ni motozuku kagakuteki na giron o juushi shimasu.)"
+    },
+    {
+      "question": "科学的な原則を実世界のシナリオにどう適用しますか？ (Kagakuteki na gensoku o jissekai no shinario ni dou tekiyou shimasu ka?)",
+      "answer": "科学的な原則を実世界のシナリオにどう適用しますか？ (Kagakuteki na gensoku o jissekai no shinario ni dou tekiyou shimasu ka?)"
+    },
+    {
+      "question": "この科学的な発見の意味を分析しましょう。 (Kono kagakuteki na hakken no imi o bunseki shimashou.)",
+      "answer": "この科学的な発見の意味を分析しましょう。 (Kono kagakuteki na hakken no imi o bunseki shimashou.)"
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and well-suited for scientific discussions in Japanese.",
+    "5-7 correct pronunciations": "Good! Most of your scientific phrases are pronounced correctly, with some areas needing refinement for technical clarity.",
+    "2-4 correct pronunciations": "Fair. You understand basic scientific concepts, but need more practice for effective communication in scientific settings.",
+    "0-1 correct pronunciations": "Needs improvement. Focus on practicing these scientific phrases to enhance your Japanese speaking skills in technical discussions."
+  }
+}

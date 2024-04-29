@@ -1,0 +1,56 @@
+{
+  "title": "French Language Essentials - Medium Mode",
+  "description": "Test your knowledge with these finish-the-sentence French phrases.",
+  "items": [
+    {
+      "question": "Je ne sais pas nager, donc je ne peux pas aller à la...",
+      "choices": ["bibliothèque", "piscine", "école", "banque"],
+      "answer": "piscine"
+    },
+    {
+      "question": "Il fait très froid, tu devrais porter un...",
+      "choices": ["chapeau", "maillot de bain", "manteau", "short"],
+      "answer": "manteau"
+    },
+    {
+      "question": "Pour le petit déjeuner, j'aime manger des croissants avec du...",
+      "choices": ["fromage", "café", "jus d'orange", "chocolat"],
+      "answer": "café"
+    },
+    {
+      "question": "Nous allons au cinéma ce soir, nous allons regarder un...",
+      "choices": ["livre", "film", "jeu", "concert"],
+      "answer": "film"
+    },
+    {
+      "question": "Quand je vais à Paris, j'aime beaucoup visiter la Tour...",
+      "choices": ["Eiffel", "de Pise", "de Londres", "Liberty"],
+      "answer": "Eiffel"
+    },
+    {
+      "question": "Elle a perdu son passeport, elle doit aller à l'...",
+      "choices": ["hôpital", "école", "ambassade", "supermarché"],
+      "answer": "ambassade"
+    },
+    {
+      "question": "Je voudrais un billet aller-retour pour Lyon, s'il vous...",
+      "choices": ["plait", "achète", "vend", "trouve"],
+      "answer": "plait"
+    },
+    {
+      "question": "Il est tard, je suis fatigué, je vais me...",
+      "choices": ["lever", "asseoir", "coucher", "habiller"],
+      "answer": "coucher"
+    },
+    {
+      "question": "Cette tarte est trop sucrée, elle a trop de...",
+      "choices": ["sel", "poivre", "sucre", "vinaigre"],
+      "answer": "sucre"
+    },
+    {
+      "question": "Pour aller à Nice, nous prenons l'... à la gare.",
+      "choices": ["avion", "voiture", "vélo", "train"],
+      "answer": "train"
+    }
+  ]
+}

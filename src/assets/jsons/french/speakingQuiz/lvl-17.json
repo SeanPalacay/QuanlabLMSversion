@@ -1,0 +1,61 @@
+{
+  "title": "Scientific Conversations",
+  "description": "Enhance your French speaking skills with phrases suitable for scientific conversations. Focus on precise pronunciation and analytical intonation.",
+  "instructions": [
+    "Below, you'll find a list of phrases that are key to engaging in scientific discussions in French.",
+    "Your task is to record yourself speaking each phrase.",
+    "Ensure your pronunciation matches the provided text as closely as possible.",
+    "Try to maintain a logical and inquisitive speaking pace.",
+    "After recording each phrase, listen to your recording and compare it to the text.",
+    "Focus on intonation, clarity, and the articulate expression of scientific concepts.",
+    "Repeat the recording process as many times as needed to improve your pronunciation."
+  ],
+  "items": [
+    {
+      "question": "Quelle est l'hypothèse de votre expérience ?",
+      "answer": "Quelle est l'hypothèse de votre expérience ?"
+    },
+    {
+      "question": "Discutons de la méthodologie scientifique.",
+      "answer": "Discutons de la méthodologie scientifique."
+    },
+    {
+      "question": "Je suis intrigué par la recherche dans ce domaine.",
+      "answer": "Je suis intrigué par la recherche dans ce domaine."
+    },
+    {
+      "question": "Pouvez-vous expliquer les preuves empiriques ?",
+      "answer": "Pouvez-vous expliquer les preuves empiriques ?"
+    },
+    {
+      "question": "La rigueur scientifique est cruciale dans nos discussions.",
+      "answer": "La rigueur scientifique est cruciale dans nos discussions."
+    },
+    {
+      "question": "Quelles sont les considérations éthiques de votre étude ?",
+      "answer": "Quelles sont les considérations éthiques de votre étude ?"
+    },
+    {
+      "question": "Explorons les avancées scientifiques.",
+      "answer": "Explorons les avancées scientifiques."
+    },
+    {
+      "question": "J'apprécie les discussions fondées sur des preuves scientifiques.",
+      "answer": "J'apprécie les discussions fondées sur des preuves scientifiques."
+    },
+    {
+      "question": "Comment pouvons-nous appliquer les principes scientifiques dans des scénarios réels ?",
+      "answer": "Comment pouvons-nous appliquer les principes scientifiques dans des scénarios réels ?"
+    },
+    {
+      "question": "Analysons les implications de cette découverte scientifique.",
+      "answer": "Analysons les implications de cette découverte scientifique."
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and methodical, ideal for engaging in scientific conversations in French.",
+    "5-7 correct pronunciations": "Good! Your pronunciation is mostly correct, with a strong grasp of scientific phrases in French. Some areas may need refinement for full technical articulation.",
+    "2-4 correct pronunciations": "Fair. You're able to communicate basic scientific concepts in French, but further practice is needed for effective scientific discussions.",
+    "0-1 correct pronunciations": "Needs improvement. Focus on practicing these scientific conversation phrases to enhance your French speaking skills in scientific contexts."
+  }
+}

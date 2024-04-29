@@ -1,0 +1,71 @@
+{
+  "title": "French Language Essentials - Easy Mode",
+  "description": "Choose the English equivalent of the given French language.",
+  "items": [
+    {
+      "question": "Au revoir",
+      "choices": ["See you later", "Goodbye", "Please", "Hello"],
+      "answer": "Goodbye"
+    },
+    {
+      "question": "S'il vous plaît",
+      "choices": ["Thank you", "Yes", "Please", "Excuse me"],
+      "answer": "Please"
+    },
+    {
+      "question": "De rien",
+      "choices": ["You're welcome", "No", "Yes", "Goodbye"],
+      "answer": "You're welcome"
+    },
+    {
+      "question": "Je m'appelle",
+      "choices": ["I'm lost", "My name is", "I'm sorry", "I'm happy"],
+      "answer": "My name is"
+    },
+    {
+      "question": "Je suis perdu",
+      "choices": ["I'm happy", "I'm lost", "I'm sorry", "I understand"],
+      "answer": "I'm lost"
+    },
+    {
+      "question": "Heureux/Heureuse",
+      "choices": ["I'm lost", "I'm sad", "I'm happy", "I'm sorry"],
+      "answer": "I'm happy"
+    },
+    {
+      "question": "Je ne comprends pas",
+      "choices": [
+        "I don't know",
+        "I don't understand",
+        "I don't want",
+        "I don't remember"
+      ],
+      "answer": "I don't understand"
+    },
+    {
+      "question": "Pouvez-vous m'aider ?",
+      "choices": [
+        "Can you help me?",
+        "Do you know me?",
+        "Can you show me?",
+        "Do you understand me?"
+      ],
+      "answer": "Can you help me?"
+    },
+    {
+      "question": "Je suis désolé(e)",
+      "choices": ["I'm lost", "I'm happy", "I'm sorry", "I'm tired"],
+      "answer": "I'm sorry"
+    },
+    {
+      "question": "Où sont les toilettes ?",
+      "choices": [
+        "Where is the exit?",
+        "Where is the restaurant?",
+        "Where is the hotel?",
+        "Where are the toilets?"
+      ],
+      "answer": "Where are the toilets?"
+    }
+  ]
+}

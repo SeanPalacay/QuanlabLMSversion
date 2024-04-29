@@ -1,0 +1,61 @@
+{
+  "title": "Negotiation Skills",
+  "description": "Enhance your English speaking skills with key phrases used in negotiation settings. Concentrate on clear, persuasive pronunciation and diplomatic intonation.",
+  "instructions": [
+    "Below is a list of phrases that are commonly used in negotiations.",
+    "Record yourself speaking each phrase.",
+    "Strive for clear, assertive, and persuasive pronunciation.",
+    "Maintain a steady and confident pace.",
+    "After recording, listen to your playback and compare it to the text.",
+    "Pay attention to intonation, clarity, and fluency in a negotiation context.",
+    "Repeat the recording process as necessary to improve your negotiation language skills."
+  ],
+  "items": [
+    {
+      "question": "Let's find a mutually beneficial solution.",
+      "answer": "Let's find a mutually beneficial solution."
+    },
+    {
+      "question": "What are your non-negotiable terms?",
+      "answer": "What are your non-negotiable terms?"
+    },
+    {
+      "question": "I propose a win-win scenario.",
+      "answer": "I propose a win-win scenario."
+    },
+    {
+      "question": "Can we revisit the terms of the agreement?",
+      "answer": "Can we revisit the terms of the agreement?"
+    },
+    {
+      "question": "It's essential to establish common ground.",
+      "answer": "It's essential to establish common ground."
+    },
+    {
+      "question": "Let's work towards a fair compromise.",
+      "answer": "Let's work towards a fair compromise."
+    },
+    {
+      "question": "Negotiating requires effective communication.",
+      "answer": "Negotiating requires effective communication."
+    },
+    {
+      "question": "What concessions are you willing to make?",
+      "answer": "What concessions are you willing to make?"
+    },
+    {
+      "question": "Let's focus on reaching a consensus.",
+      "answer": "Let's focus on reaching a consensus."
+    },
+    {
+      "question": "I'm open to exploring different options.",
+      "answer": "I'm open to exploring different options."
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear, assertive, and well-suited for negotiation contexts.",
+    "5-7 correct pronunciations": "Good! You are mostly effective in your pronunciation, but some phrases could be improved for negotiation settings.",
+    "2-4 correct pronunciations": "Fair. Your negotiation language is basic and needs more work for clearer and more persuasive communication.",
+    "0-1 correct pronunciations": "Needs improvement. Focus on practicing these negotiation phrases to enhance your English speaking skills in such contexts."
+  }
+}

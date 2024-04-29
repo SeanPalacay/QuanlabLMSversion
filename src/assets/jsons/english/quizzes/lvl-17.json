@@ -1,0 +1,91 @@
+{
+  "title": "Advanced Vocabulary and Grammar Quiz",
+  "description": "Challenge yourself with this advanced vocabulary and grammar quiz. Test your knowledge of word usage, adverb placement, plural forms, misplaced modifiers, and more to enhance your language skills.",
+  "items": [
+    {
+      "question": "Identify the correct usage of the word 'cacophony' in a sentence.",
+      "choices": [
+        "The symphony produced a beautiful cacophony.",
+        "The birdsong created a soothing cacophony.",
+        "His speech was marred by a cacophony of applause.",
+        "The cacophony of the city was peaceful at night."
+      ],
+      "answer": "The symphony produced a beautiful cacophony."
+    },
+    {
+      "question": "Choose the sentence with the correct placement of the adverb 'ardently':",
+      "choices": [
+        "She ardently believed in the cause.",
+        "She believed ardently in the cause.",
+        "Believed in the cause ardently she did.",
+        "Ardently she believed in the cause."
+      ],
+      "answer": "She ardently believed in the cause."
+    },
+    {
+      "question": "Identify the correct plural form of 'datum'.",
+      "choices": ["Data", "Datas", "Datums", "Dati"],
+      "answer": "Data"
+    },
+    {
+      "question": "Which of the following sentences contains a misplaced modifier?",
+      "choices": [
+        "The cat slept soundly on the windowsill.",
+        "Eager to impress, the essay was carefully written.",
+        "I almost broke my phone typing a message.",
+        "After eating, the dishes were washed."
+      ],
+      "answer": "Eager to impress, the essay was carefully written."
+    },
+    {
+      "question": "Choose the correct synonym for 'ephemeral'.",
+      "choices": ["Enduring", "Transient", "Eternal", "Perpetual"],
+      "answer": "Transient"
+    },
+    {
+      "question": "What is the correct form of the verb 'lie' in the past participle?",
+      "choices": ["Lied", "Lain", "Lay", "Layen"],
+      "answer": "Lain"
+    },
+    {
+      "question": "Identify the sentence with the correct use of the word 'serendipity':",
+      "choices": [
+        "The serendipity of the discovery amazed the scientists.",
+        "She faced a serendipity challenge in her career.",
+        "Serendipity events rarely occur in nature.",
+        "His serendipity attitude was appreciated by the team."
+      ],
+      "answer": "The serendipity of the discovery amazed the scientists."
+    },
+    {
+      "question": "Select the sentence with the correct use of the colon:",
+      "choices": [
+        "The ingredients for the cake are: flour, sugar, and eggs.",
+        "The cake ingredients are flour, sugar, and eggs.",
+        "Flour, sugar and eggs: are the cake ingredients.",
+        "Flour, sugar, eggs are the cake ingredients."
+      ],
+      "answer": "The ingredients for the cake are: flour, sugar, and eggs."
+    },
+    {
+      "question": "Which of the following sentences uses the correct form of the verb 'dissemble'?",
+      "choices": [
+        "She tried to dissemble her excitement, but it was evident.",
+        "His dissembling behavior was appreciated by everyone.",
+        "The politician dissembled his speech to avoid controversy.",
+        "Dissemblingly, she managed to hide her emotions."
+      ],
+      "answer": "She tried to dissemble her excitement, but it was evident."
+    },
+    {
+      "question": "Identify the correct use of the word 'plethora' in a sentence.",
+      "choices": [
+        "The plethora of books in the library was overwhelming.",
+        "She faced a plethora of difficulties in her journey.",
+        "Plethora rains created a flood in the region.",
+        "He showcased a plethora of talents during the performance."
+      ],
+      "answer": "The plethora of books in the library was overwhelming."
+    }
+  ]
+}

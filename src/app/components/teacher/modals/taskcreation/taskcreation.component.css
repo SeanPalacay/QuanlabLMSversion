@@ -1,0 +1,114 @@
+.custom-modal-content {
+    border-radius: 10px; /* Adjust the value to your desired border radius */
+    height: auto; /* Set the desired height */
+    /* You might need to adjust other styles based on your requirements */
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.inputwrap{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.inputwrap .titlehead h1{
+    background-image: linear-gradient(to right, rgb(1, 114, 175) 0%, rgb(116, 254, 189) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 20px;
+    text-align: center;
+}
+
+.inputwrap .titleinput input {
+    width: 330px;
+    height: 50px;
+    background-color: #e1f3fd;
+    border-radius: 18px;
+    border: 1px solid;
+    border-color: #00000040;
+    padding: 20px;
+}
+.container{
+    margin-top: 20px;
+}
+.text{
+    margin-top: 10px;
+}
+.text textarea {
+    width: 330px;
+    height: 180px;
+    background-color: #e1f3fd;
+    border-radius: 18px;
+    border: 1px solid;
+    border-color: #00000040;
+    padding: 20px;
+}
+
+.text select{
+    width: 330px;
+    height: 50px;
+    background-color: #e1f3fd;
+    border-radius: 18px;
+    border: 1px solid;
+    border-color: #00000040;
+    padding-left: 10px;
+    color: #82828f;
+}
+.text select option{
+    background-color: white;
+    text-align: center;
+}
+.deadline{
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.deadline input{
+    width: 260px;
+    height: 50px;
+    padding-left: 10px;
+    background-color: #e1f3fd;
+    border-radius: 18px;
+    border: 1px solid;
+    border-color: #00000040;
+}
+.deadline button, .deadline label{
+    width: 60px;
+    height: 50px;
+    background-color: #e1f3fd;
+    border-radius: 18px;
+    border: 1px solid;
+    border-color: #00000040;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-left: 10px;
+}
+.btnwrap .save{
+    height: 40px;
+    width: 80px;
+    background: linear-gradient(to right, rgb(1, 114, 175) 0%, rgb(116, 254, 189) 100%);
+    margin-top: 20px;
+    border-radius: 18px;
+    color: white;
+    margin-left: 50px;
+}
+
+.btnwrap{
+    margin-left: -50px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.btnwrap .cancel{
+    height: 40px;
+    width: 80px;
+    background: red;
+    margin-top: 20px;
+    border-radius: 18px;
+    color: white;
+    margin-left: 20px;
+}

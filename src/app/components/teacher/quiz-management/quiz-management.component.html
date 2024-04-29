@@ -1,0 +1,304 @@
+<!-- Import any necessary Angular modules at the top of your file -->
+<body class="flex flex-col bg-gray-100 p-6">
+  <div class="flex justify-between items-center mx-4">
+    <div class="w-auto flex">
+      <button
+        class="flex items-center poppins-b shadow-sm text-lg rounded-lg px-3 py-1.5 bg-transparent bg-gradient-to-r from-green-300 via-purple-600 to-blue-500 text-transparent bg-clip-text hover:scale-105 hover:ease-out duration-300"
+        (click)="navigateBack()"
+      >
+        Back
+      </button>
+    </div>
+    <!-- Quiz Operations Buttons -->
+    <div>
+      <button
+        (click)="navigateAnal()"
+        class="font-bold poppins-b shadow-sm px-3 py-1.5 rounded-md text-lg bg-transparent bg-gradient-to-r from-green-300 via-purple-600 to-blue-500 text-transparent bg-clip-text hover:scale-105 hover:ease-out duration-300"
+      >
+        ANALYTICS
+      </button>
+      <button
+        (click)="createQuiz()"
+        class="ml-2 font-bold poppins-b shadow-sm px-3 py-1.5 rounded-md text-lg bg-transparent bg-gradient-to-r from-green-300 via-purple-600 to-blue-500 text-transparent bg-clip-text hover:scale-105 hover:ease-out duration-300"
+      >
+        <i class="fas fa-plus mr-2"></i> CREATE QUIZ
+      </button>
+    </div>
+  </div>
+  
+
+  <!-- Main Container -->
+  <div class="w-full flex flex-col justify-start items-center gap-3 mt-4">
+    <!-- Left Column - Quiz Management -->
+    <div class="w-full bg-white shadow-md rounded-md p-4">
+      <div class="flex flex-col mb-5">
+        <div class="flex justify-center rounded-lg backgroundQuiz mb-4">
+          <h2 class="text-2xl font-bold text-center text-white py-2.5">
+            QUIZ MANAGEMENT
+          </h2>
+        </div>
+        <div class="mb-2.5">
+          <div class="relative inline-block text-left">
+            <button
+              type="button"
+              (click)="toggleDropdown()"
+              class="inline-flex justify-center w-full md:w-auto rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base md:text-sm lg:text-base font-medium bg-gradient-to-r from-green-300 via-purple-600 to-blue-500 text-transparent bg-clip-text hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            >
+              {{
+                currentCourse == null ? "Select Course" : currentCourse.title
+              }}
+            </button>
+            <div
+              *ngIf="isDropdownOpen"
+              class="origin-top-right absolute right-0 mt-2 w-full md:max-w-xs lg:max-w-md overflow-hidden rounded-md shadow-lg bg-white ring-1 shadowboxz ring-black ring-opacity-5"
+            >
+              <div
+                class="py-1"
+                role="menu"
+                aria-orientation="vertical"
+                aria-labelledby="options-menu"
+              >
+                <button
+                  *ngFor="let course of courses"
+                  (click)="changeCourse(course)"
+                  class="block px-4 py-2 text-sm bg-gradient-to-r from-green-300 via-purple-600 to-blue-500 text-transparent bg-clip-text hover:bg-gray-100 hover:text-gray-900"
+                  role="menuitem"
+                >
+                  {{ course.title }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quiz List Table -->
+        <div class="w-full overflow-x-auto">
+          <table
+            class="poppins w-full border border-gray-300 text-sm md:text-base lg:text-lg"
+          >
+            <thead
+              class="poppins-b bg-gradient-to-r from-green-300 via-purple-600 to-blue-500 text-transparent bg-clip-text"
+            >
+              <tr>
+                <th class="border border-gray-300 px-4 py-2">Quiz Title</th>
+                <th class="border border-gray-300 px-4 py-2">Created On</th>
+                <th class="border border-gray-300 px-4 py-2">Items</th>
+                <th class="border border-gray-300 px-4 py-2">Deadline</th>
+                <th class="border border-gray-300 px-4 py-2">Time Limit</th>
+              </tr>
+            </thead>
+            <tbody class="text-gray-400">
+              <!-- Quiz List Rows Go Here -->
+              <ng-container *ngFor="let quiz of quizzes">
+                <tr
+                  [ngClass]="{
+                    'bg-slate-200': quiz.id == selectedQuiz?.id
+                  }"
+                  (click)="getAverageScore(quiz)"
+                  class="active:bg-slate-200 hover:bg-slate-100 cursor-pointer"
+                  *ngIf="
+                    currentCourse == null
+                      ? true
+                      : currentCourse.id == quiz.courseid
+                  "
+                >
+                  <td class="border border-gray-300 px-4 py-2">
+                    {{ quiz.title }}
+                  </td>
+                  <td class="border border-gray-300 px-4 py-2">
+                    {{ parseDate(quiz.time) }}
+                  </td>
+                  <td class="border border-gray-300 px-4 py-2">
+                    {{ quiz.items }}
+                  </td>
+                  <td class="border border-gray-300 px-4 py-2">
+                    {{ parseDate(quiz.deadline) }}
+                  </td>
+                  <td class="border border-gray-300 px-4 py-2">
+                    {{ quiz.timelimit }}
+                    {{ quiz.timelimit == 1 ? "min" : "mins" }}.
+                  </td>
+                </tr>
+              </ng-container>
+              <!-- Repeat for each quiz -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Right Column - Quiz Analytics and Feedback -->
+      <div class="w-full h-auto rounded-md">
+        <!-- Quiz Analytics Section -->
+        <div class="flex justify-center rounded-lg backgroundQuiz">
+          <h2 class="text-2xl font-bold text-center text-white py-2.5">
+            QUIZ ANALYTICS
+          </h2>
+        </div>
+        <!-- Feedback Section -->
+        <p
+          class="poppins-b bg-gradient-to-r from-green-300 via-purple-600 to-blue-500 text-transparent bg-clip-text text-2xl py-2.5 mb-2 mt-3.5"
+        >
+          Average Score:
+          <span>{{
+            gettingAvg
+              ? "Calculating..."
+              : (mockAverageScore * 100).toString() + "%"
+          }}</span>
+        </p>
+        <div class="relative inline-block text-left mb-4">
+          <!-- <button
+            type="button"
+            (click)="toggleQuizDropdown()"
+            class="inline-flex justify-between items-center w-full rounded-md px-2.5 py-2 text-sm font-medium bg-gradient-to-r from-green-300 via-purple-600 to-blue-500 text-transparent bg-clip-text border border-gray-300 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2"
+          >
+            <span>{{ selectedQuiz || "Select Quiz" }}</span>
+            <span class="ml-2">
+              <i class="fas fa-chevron-down"></i>
+            </span>
+          </button> -->
+          <input
+            readonly
+            type="text"
+            [(ngModel)]="
+              selectedQuiz == null ? 'Select a Quiz' : selectedQuiz.title
+            "
+            (input)="filterQuizzes()"
+            placeholder="Enter Quiz Name"
+            class="poppins w-full rounded-md px-2.5 py-2 text-sm bg-gradient-to-r from-green-300 via-purple-600 to-blue-500 text-transparent bg-clip-text border border-gray-300"
+          />
+          <!-- <div
+            *ngIf="isQuizDropdownOpen"
+            class="origin-top-right absolute right-0 mt-2 w-full max-h-40 overflow-y-auto rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
+          >
+            <div
+              class="py-1"
+              role="menu"
+              aria-orientation="vertical"
+              aria-labelledby="options-menu"
+            >
+              <button
+                *ngFor="let quiz of quizOptions; let last = last"
+                (click)="selectQuiz(quiz)"
+                class="block px-4 py-2 text-sm border border-b-black text-gray-700 hover:bg-gray-100 hover:text-gray-900 w-full"
+                role="menuitem"
+              >
+                <span>{{ quiz }}</span>
+                <hr *ngIf="!last" class="my-1 border-gray-300" />
+              </button>
+            </div>
+          </div> -->
+        </div>
+
+        <!-- Select Student Button with Scrollable Dropdown -->
+        <div class="relative inline-block text-left mb-4 ml-2">
+          <!-- <button
+            type="button"
+            (click)="toggleStudentDropdown()"
+            class="inline-flex justify-between items-center w-full rounded-md px-2.5 py-2 text-sm font-medium bg-gradient-to-r from-green-300 via-purple-600 to-blue-500 text-transparent bg-clip-text border border-gray-300 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2"
+          >
+            <span>{{ selectedStudent || "Select Student" }}</span>
+            <span class="ml-2">
+              <i class="fas fa-chevron-down"></i>
+            </span>
+          </button>
+          <div
+            *ngIf="isStudentDropdownOpen"
+            class="origin-top-right absolute right-0 mt-2 w-full max-h-40 overflow-y-auto rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
+          >
+            <div
+              class="py-1"
+              role="menu"
+              aria-orientation="vertical"
+              aria-labelledby="options-menu"
+            >
+              <button
+                *ngFor="let student of studentOptions; let last = last"
+                (click)="selectStudent(student)"
+                class="block px-4 py-2 text-sm border text-gray-700 hover:bg-gray-100 hover:text-gray-900 w-full"
+                role="menuitem"
+              >
+                <span>{{ student }}</span>
+                <hr *ngIf="!last" class="my-1 border-gray-300" />
+              </button>
+            </div>
+          </div> -->
+          <input
+            [readOnly]="selectedStudent != null"
+            type="text"
+            [(ngModel)]="search"
+            (input)="searchPeople($event)"
+            placeholder="Search Student Name"
+            class="poppins w-full rounded-md px-2.5 py-2 text-sm bg-gradient-to-r from-green-300 via-purple-600 to-blue-500 text-transparent bg-clip-text border border-gray-300"
+          />
+        </div>
+        <span
+          (click)="resetStudent()"
+          *ngIf="selectedStudent != null"
+          class="px-2 rounded bg-red-600 ml-2 cursor-pointer"
+          ><i class="bx bx-x text-white"></i
+        ></span>
+        <ng-container *ngIf="!searching; else searchs">
+          <div *ngIf="people.length" class="flex-grow">
+            <p class="leading-9 mb-3">
+              <span
+                (click)="selectStudent(person)"
+                class="select-none cursor-pointer px-2 py-1 hover:!bg-blue-200 bg-blue-100 rounded-md ml-2"
+                *ngFor="let person of people; let i = index"
+              >
+                {{ person.firstname + " " + person.lastname }}
+                <span class="bg-blue-400 px-2 rounded text-white"
+                  >{{ person.takenpoints }}/{{ person.totalpoints }}</span
+                >
+              </span>
+            </p>
+          </div>
+
+          <ng-container
+            *ngIf="
+              !people.length &&
+              search.trim() != '' &&
+              selectedStudent == null &&
+              selectedQuiz != null
+            "
+          >
+            <div class="mb-2 ml-2">
+              No related search for students who took the quiz
+            </div>
+          </ng-container>
+
+          <ng-container
+            *ngIf="
+              !people.length &&
+              search.trim() != '' &&
+              selectedStudent == null &&
+              selectedQuiz == null
+            "
+          >
+            <div class="mb-2 ml-2">Please select a quiz in the table</div>
+          </ng-container>
+        </ng-container>
+        <ng-template #searchs>
+          <div class="flex-grow">
+            <p class="leading-9 mb-3 ml-3">Searching....</p>
+          </div>
+        </ng-template>
+        <div class="h-full">
+          <textarea
+            [(ngModel)]="feedback"
+            class="poppins text-sm w-full px-2.5 py-2 border border-gray-300 rounded-md mb-3.5"
+            placeholder="Write feedback..."
+          ></textarea>
+        </div>
+        <!-- Send Button -->
+        <div class="flex justify-center items-center">
+          <button
+            (click)="sendFeedback()"
+            class="poppins-b bg-transparent bg-gradient-to-r from-green-300 via-purple-600 to-blue-500 text-transparent bg-clip-text shadow-md px-4 py-2 rounded-md hover:scale-105 hover:ease-out duration-300 hover:bg-blue-600"
+          >
+            Send
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

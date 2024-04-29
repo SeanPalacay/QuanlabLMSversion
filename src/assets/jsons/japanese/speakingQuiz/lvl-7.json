@@ -1,0 +1,61 @@
+{
+  "title": "At Home",
+  "description": "Improve your Japanese speaking skills with phrases typically used at home. Focus on clear pronunciation and appropriate intonation.",
+  "instructions": [
+    "Below is a list of phrases you might use at home in Japanese.",
+    "Record yourself speaking each phrase.",
+    "Aim for clear and natural pronunciation.",
+    "Maintain a conversational and steady pace.",
+    "After recording, listen to your playback and compare it to the text.",
+    "Pay attention to intonation, clarity, and fluency in Japanese.",
+    "Repeat the recording process as necessary to improve your Japanese speaking skills."
+  ],
+  "items": [
+    {
+      "question": "猫にエサをやりましたか？ (Neko ni esa o yarimashita ka?)",
+      "answer": "猫にエサをやりましたか？ (Neko ni esa o yarimashita ka?)"
+    },
+    {
+      "question": "洗濯をしています。 (Sentaku o shite imasu.)",
+      "answer": "洗濯をしています。 (Sentaku o shite imasu.)"
+    },
+    {
+      "question": "部屋を掃除してください。 (Heya o souji shite kudasai.)",
+      "answer": "部屋を掃除してください。 (Heya o souji shite kudasai.)"
+    },
+    {
+      "question": "7時に夕食です。 (Shichiji ni yuushoku desu.)",
+      "answer": "7時に夕食です。 (Shichiji ni yuushoku desu.)"
+    },
+    {
+      "question": "テレビを消してください。 (Terebi o keshite kudasai.)",
+      "answer": "テレビを消してください。 (Terebi o keshite kudasai.)"
+    },
+    {
+      "question": "シャワーを浴びています。 (Shawaa o abite imasu.)",
+      "answer": "シャワーを浴びています。 (Shawaa o abite imasu.)"
+    },
+    {
+      "question": "キッチンのシンクが漏れています。 (Kitchin no shinku ga morete imasu.)",
+      "answer": "キッチンのシンクが漏れています。 (Kitchin no shinku ga morete imasu.)"
+    },
+    {
+      "question": "ドアに鍵をかけましたか？ (Doa ni kagi o kakemashita ka?)",
+      "answer": "ドアに鍵をかけましたか？ (Doa ni kagi o kakemashita ka?)"
+    },
+    {
+      "question": "もう寝る時間です。 (Mou neru jikan desu.)",
+      "answer": "もう寝る時間です。 (Mou neru jikan desu.)"
+    },
+    {
+      "question": "食卓をセットしてくれますか？ (Shokutaku o setto shite kuremasu ka?)",
+      "answer": "食卓をセットしてくれますか？ (Shokutaku o setto shite kuremasu ka?)"
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and accurate, demonstrating strong skills in Japanese home language.",
+    "5-7 correct pronunciations": "Good! Your pronunciation is mostly correct, with a good grasp of home-related phrases in Japanese. There are areas to refine for improved clarity.",
+    "2-4 correct pronunciations": "Fair. You can communicate basic needs in a Japanese home environment, but need significant improvement in pronunciation.",
+    "0-1 correct pronunciations": "Needs improvement. Consider practicing more to enhance your Japanese speaking skills, or seek additional resources for learning."
+  }
+}

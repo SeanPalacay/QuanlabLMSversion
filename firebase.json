@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "quanlab",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

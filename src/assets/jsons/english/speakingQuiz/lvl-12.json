@@ -1,0 +1,61 @@
+{
+  "title": "Business Communication",
+  "description": "Develop your English speaking skills with key phrases used in business communication. Focus on clear, professional pronunciation and corporate intonation.",
+  "instructions": [
+    "Below is a list of phrases typical in business settings.",
+    "Record yourself speaking each phrase.",
+    "Aim for a clear, professional, and assertive pronunciation.",
+    "Maintain a steady and confident pace.",
+    "After recording, listen to your playback and compare it to the text.",
+    "Pay attention to intonation, clarity, and fluency in a business context.",
+    "Repeat the recording process as needed to improve your business language skills."
+  ],
+  "items": [
+    {
+      "question": "We need to optimize our workflow.",
+      "answer": "We need to optimize our workflow."
+    },
+    {
+      "question": "What's the status of the project?",
+      "answer": "What's the status of the project?"
+    },
+    {
+      "question": "Let's strategize for the upcoming quarter.",
+      "answer": "Let's strategize for the upcoming quarter."
+    },
+    {
+      "question": "I propose a collaborative approach.",
+      "answer": "I propose a collaborative approach."
+    },
+    {
+      "question": "Can you provide a comprehensive report?",
+      "answer": "Can you provide a comprehensive report?"
+    },
+    {
+      "question": "Let's address the key performance indicators.",
+      "answer": "Let's address the key performance indicators."
+    },
+    {
+      "question": "It's crucial to enhance customer engagement.",
+      "answer": "It's crucial to enhance customer engagement."
+    },
+    {
+      "question": "We should conduct a market analysis.",
+      "answer": "We should conduct a market analysis."
+    },
+    {
+      "question": "Let's implement a results-driven strategy.",
+      "answer": "Let's implement a results-driven strategy."
+    },
+    {
+      "question": "I recommend a proactive communication plan.",
+      "answer": "I recommend a proactive communication plan."
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and professional, aligning well with business communication standards.",
+    "5-7 correct pronunciations": "Good! Most of your business phrases are pronounced correctly, but some require further refinement for a professional setting.",
+    "2-4 correct pronunciations": "Fair. You have basic skills in business communication, but more practice is needed to polish your pronunciation.",
+    "0-1 correct pronunciations": "Needs improvement. Focus on enhancing your pronunciation skills for more effective business communication."
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "title": "Environmental Discussions",
+  "description": "Enhance your Japanese speaking skills with phrases used for environmental discussions. Focus on clear, concerned pronunciation and an eco-conscious tone.",
+  "instructions": [
+    "Below is a list of phrases you might use in environmental discussions in Japanese.",
+    "Record yourself speaking each phrase.",
+    "Aim for clear, articulate, and environmentally conscious pronunciation.",
+    "Maintain a steady and engaged pace.",
+    "After recording, listen to your playback and compare it to the text.",
+    "Pay attention to intonation, clarity, and fluency in Japanese.",
+    "Repeat the recording process as necessary to improve your Japanese speaking skills for environmental contexts."
+  ],
+  "items": [
+    {
+      "question": "環境持続可能性は緊急の課題です。 (Kankyo jizokukanousei wa kinkyuu no kadai desu.)",
+      "answer": "環境持続可能性は緊急の課題です。 (Kankyo jizokukanousei wa kinkyuu no kadai desu.)"
+    },
+    {
+      "question": "エコフレンドリーなイニシアティブについて話しましょう。 (Ekofurendorii na inishiatiibu ni tsuite hanashimashou.)",
+      "answer": "エコフレンドリーなイニシアティブについて話しましょう。 (Ekofurendorii na inishiatiibu ni tsuite hanashimashou.)"
+    },
+    {
+      "question": "自然保護活動に情熱を持っています。 (Shizen hogo katsudou ni jounetsu o motte imasu.)",
+      "answer": "自然保護活動に情熱を持っています。 (Shizen hogo katsudou ni jounetsu o motte imasu.)"
+    },
+    {
+      "question": "環境を守るために私たちにできることは何ですか？ (Kankyo o mamoru tame ni watashitachi ni dekiru koto wa nan desu ka?)",
+      "answer": "環境を守るために私たちにできることは何ですか？ (Kankyo o mamoru tame ni watashitachi ni dekiru koto wa nan desu ka?)"
+    },
+    {
+      "question": "将来の世代のために環境意識が重要です。 (Shourai no sedai no tame ni kankyo ishiki ga juuyou desu.)",
+      "answer": "将来の世代のために環境意識が重要です。 (Shourai no sedai no tame ni kankyo ishiki ga juuyou desu.)"
+    },
+    {
+      "question": "日常生活で持続可能な実践を探求しましょう。 (Nichijou seikatsu de jizokukanou na jissen o tankyuu shimashou.)",
+      "answer": "日常生活で持続可能な実践を探求しましょう。 (Nichijou seikatsu de jizokukanou na jissen o tankyuu shimashou.)"
+    },
+    {
+      "question": "環境倫理についての議論を重視します。 (Kankyo rinri ni tsuite no giron o juushi shimasu.)",
+      "answer": "環境倫理についての議論を重視します。 (Kankyo rinri ni tsuite no giron o juushi shimasu.)"
+    },
+    {
+      "question": "気候変動にどう共同で対処しましょうか？ (Kikou hendou ni dou kyoudou de taisho shimashou ka?)",
+      "answer": "気候変動にどう共同で対処しましょうか？ (Kikou hendou ni dou kyoudou de taisho shimashou ka?)"
+    },
+    {
+      "question": "エコ意識のある意思決定を促進しましょう。 (Ekoishiki no aru ishikettei o sokushin shimashou.)",
+      "answer": "エコ意識のある意思決定を促進しましょう。 (Ekoishiki no aru ishikettei o sokushin shimashou.)"
+    },
+    {
+      "question": "環境保全における個人の役割は何ですか？ (Kankyo hozen ni okeru kojin no yakuwari wa nan desu ka?)",
+      "answer": "環境保全における個人の役割は何ですか？ (Kankyo hozen ni okeru kojin no yakuwari wa nan desu ka?)"
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and environmentally aware, perfect for engaging in discussions on sustainability.",
+    "5-7 correct pronunciations": "Good! Most of your environmental phrases are pronounced correctly, with some areas needing refinement for full impact.",
+    "2-4 correct pronunciations": "Fair. You have a basic understanding of environmental topics, but need more practice for effective communication.",
+    "0-1 correct pronunciations": "Needs improvement. Focus on practicing these environmental phrases to enhance your Japanese speaking skills in eco-conscious discussions."
+  }
+}

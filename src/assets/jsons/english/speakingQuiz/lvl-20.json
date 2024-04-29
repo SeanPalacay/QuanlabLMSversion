@@ -1,0 +1,61 @@
+{
+  "title": "Digital Citizenship",
+  "description": "Improve your English speaking skills with phrases related to digital citizenship. Focus on clear, responsible pronunciation and a conscientious tone.",
+  "instructions": [
+    "Below is a list of phrases commonly used in the context of digital citizenship.",
+    "Record yourself speaking each phrase.",
+    "Aim for clear, informed, and ethical pronunciation.",
+    "Maintain a steady and responsible pace.",
+    "After recording, listen to your playback and compare it to the text.",
+    "Pay attention to intonation, clarity, and fluency in a digital context.",
+    "Repeat the recording process as necessary to improve your language skills in digital citizenship."
+  ],
+  "items": [
+    {
+      "question": "Understanding digital responsibility is vital.",
+      "answer": "Understanding digital responsibility is vital."
+    },
+    {
+      "question": "Let's discuss online privacy concerns.",
+      "answer": "Let's discuss online privacy concerns."
+    },
+    {
+      "question": "Digital literacy is essential in the modern age.",
+      "answer": "Digital literacy is essential in the modern age."
+    },
+    {
+      "question": "What are the ethical considerations in online communication?",
+      "answer": "What are the ethical considerations in online communication?"
+    },
+    {
+      "question": "How can we promote a positive digital culture?",
+      "answer": "How can we promote a positive digital culture?"
+    },
+    {
+      "question": "Let's explore the impact of social media on society.",
+      "answer": "Let's explore the impact of social media on society."
+    },
+    {
+      "question": "Digital citizenship requires critical thinking.",
+      "answer": "Digital citizenship requires critical thinking."
+    },
+    {
+      "question": "I value responsible online behavior.",
+      "answer": "I value responsible online behavior."
+    },
+    {
+      "question": "Let's address cyberbullying and online harassment.",
+      "answer": "Let's address cyberbullying and online harassment."
+    },
+    {
+      "question": "What measures can we take for a safer digital environment?",
+      "answer": "What measures can we take for a safer digital environment?"
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and demonstrates an understanding of digital citizenship concepts.",
+    "5-7 correct pronunciations": "Good! Most of your digital citizenship phrases are pronounced correctly, but some might need further refinement.",
+    "2-4 correct pronunciations": "Fair. You understand basic digital citizenship language, but need more practice for effective communication.",
+    "0-1 correct pronunciations": "Needs improvement. Focus on practicing these phrases to enhance your English speaking skills in digital contexts."
+  }
+}

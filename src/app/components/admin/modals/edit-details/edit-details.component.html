@@ -1,0 +1,38 @@
+<div class="modal-content custom-modal-content">
+    <div class="container p-10">
+      <button class="close absolute top-0 right-0 m-4" type="button" (click)="closeModal()">
+        <span class="text-3xl text-gray-700">&times;</span>
+      </button>
+      <h1 class="title text-gray-700 text-2xl mb-6">Edit User Details</h1>
+  
+      <div class="mb-4">
+        <label for="studentNo" class="block text-sm font-semibold">Student No.</label>
+        <input id="studentNo" type="text" class="input w-full bg-gray-100 text-gray-400 px-4 py-2 rounded" [(ngModel)]="selectedUser.visibleid" disabled>
+      </div>
+  
+      <div class="mb-4">
+        <label for="lastName" class="block text-sm font-semibold">Last Name</label>
+        <input id="lastName" type="text" class="input w-full bg-gray-100 px-4 py-2 rounded" [(ngModel)]="selectedUser.lastname">
+      </div>
+  
+      <div class="mb-4">
+        <label for="firstName" class="block text-sm font-semibold">First Name</label>
+        <input id="firstName" type="text" class="input w-full bg-gray-100 px-4 py-2 rounded" [(ngModel)]="selectedUser.firstname">
+      </div>
+  
+      <div class="mb-4">
+        <label for="middleInitial" class="block text-sm font-semibold">M.I.</label>
+        <input id="middleInitial" type="text" class="input w-full bg-gray-100 px-4 py-2 rounded" [(ngModel)]="selectedUser.middleInitial">
+      </div>
+  
+      <div class="mb-4">
+        <label for="email" class="block text-sm font-semibold">Email</label>
+        <input id="email" type="email" class="input w-full bg-gray-100 px-4 py-2 rounded" [(ngModel)]="selectedUser.email">
+      </div>
+  
+      <div class="text-center submitwrap">
+        <button class="submit bg-gradient-to-r from-blue-500 to-green-300 text-white px-4 py-2 rounded hover:from-blue-600" (click)="saveChanges()">Save Changes</button>
+      </div>
+    </div>
+  </div>
+  

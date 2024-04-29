@@ -1,0 +1,71 @@
+{
+  "title": "French Language Essentials - Medium Mode",
+  "description": "Test your knowledge with these finish-the-sentence French phrases.",
+  "items": [
+    {
+      "question": "Avant de partir en voyage, il est important de vérifier la validité de son...",
+      "choices": ["passeport", "téléphone", "ordinateur", "sac"],
+      "answer": "passeport"
+    },
+    {
+      "question": "Dans la culture française, le pain est souvent considéré comme un élément...",
+      "choices": ["inutile", "indispensable", "occasionnel", "étranger"],
+      "answer": "indispensable"
+    },
+    {
+      "question": "La ville de Lyon est réputée pour sa cuisine, notamment ses...",
+      "choices": ["quiches", "brioches", "bouchons", "crêpes"],
+      "answer": "bouchons"
+    },
+    {
+      "question": "Le TGV est un type de train à grande vitesse qui signifie...",
+      "choices": [
+        "Train Grande Vitesse",
+        "Très Grande Vitesse",
+        "Train de Grande Variété",
+        "Travail de Grande Valeur"
+      ],
+      "answer": "Train Grande Vitesse"
+    },
+    {
+      "question": "La fête nationale française, le 14 juillet, commémore la prise de la...",
+      "choices": ["Bastille", "Tour Eiffel", "Versailles", "Louvre"],
+      "answer": "Bastille"
+    },
+    {
+      "question": "Un dessert français classique servi lors de fêtes est la...",
+      "choices": [
+        "crème brûlée",
+        "galette des rois",
+        "tarte tatin",
+        "mousse au chocolat"
+      ],
+      "answer": "galette des rois"
+    },
+    {
+      "question": "L'expression «Ça ne fait rien» signifie...",
+      "choices": [
+        "C'est important",
+        "Je suis d'accord",
+        "Ce n'est pas grave",
+        "Je refuse"
+      ],
+      "answer": "Ce n'est pas grave"
+    },
+    {
+      "question": "Un jeune enfant en France va à l'école...",
+      "choices": ["maternelle", "élémentaire", "secondaire", "supérieure"],
+      "answer": "maternelle"
+    },
+    {
+      "question": "Le camembert est un type de...",
+      "choices": ["vin", "fromage", "pain", "gâteau"],
+      "answer": "fromage"
+    },
+    {
+      "question": "La Côte d'Azur est située au bord de la...",
+      "choices": ["Manche", "Méditerranée", "Atlantique", "Seine"],
+      "answer": "Méditerranée"
+    }
+  ]
+}

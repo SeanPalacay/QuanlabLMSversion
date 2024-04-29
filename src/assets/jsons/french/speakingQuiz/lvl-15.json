@@ -1,0 +1,61 @@
+{
+  "title": "Cultural Awareness",
+  "description": "Enhance your French speaking skills with phrases suitable for discussions on cultural awareness. Focus on respectful pronunciation and inclusive intonation.",
+  "instructions": [
+    "Below, you'll find a list of phrases that are key to engaging in conversations about cultural awareness in French.",
+    "Your task is to record yourself speaking each phrase.",
+    "Ensure your pronunciation matches the provided text as closely as possible.",
+    "Try to maintain a respectful and inclusive speaking pace.",
+    "After recording each phrase, listen to your recording and compare it to the text.",
+    "Focus on intonation, clarity, and the respectful expression of cultural concepts.",
+    "Repeat the recording process as many times as needed to improve your pronunciation."
+  ],
+  "items": [
+    {
+      "question": "Comprendre la diversité culturelle est crucial.",
+      "answer": "Comprendre la diversité culturelle est crucial."
+    },
+    {
+      "question": "Apprécions la richesse des différentes cultures.",
+      "answer": "Apprécions la richesse des différentes cultures."
+    },
+    {
+      "question": "Comment pouvons-nous promouvoir la compréhension interculturelle ?",
+      "answer": "Comment pouvons-nous promouvoir la compréhension interculturelle ?"
+    },
+    {
+      "question": "Je valorise l'échange culturel d'idées.",
+      "answer": "Je valorise l'échange culturel d'idées."
+    },
+    {
+      "question": "Explorons les traditions du monde entier.",
+      "answer": "Explorons les traditions du monde entier."
+    },
+    {
+      "question": "La sensibilité culturelle est essentielle dans notre société mondiale.",
+      "answer": "La sensibilité culturelle est essentielle dans notre société mondiale."
+    },
+    {
+      "question": "Quelles nuances culturelles devrions-nous considérer ?",
+      "answer": "Quelles nuances culturelles devrions-nous considérer ?"
+    },
+    {
+      "question": "Je m'intéresse aux expériences multiculturelles.",
+      "answer": "Je m'intéresse aux expériences multiculturelles."
+    },
+    {
+      "question": "Intégrons la diversité dans nos interactions.",
+      "answer": "Intégrons la diversité dans nos interactions."
+    },
+    {
+      "question": "Comment pouvons-nous créer un environnement inclusif ?",
+      "answer": "Comment pouvons-nous créer un environnement inclusif ?"
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and respectful, perfect for discussions on cultural awareness in French.",
+    "5-7 correct pronunciations": "Good! Your pronunciation is mostly correct, with a strong grasp of cultural awareness phrases in French. Some areas may need refinement for full inclusiveness.",
+    "2-4 correct pronunciations": "Fair. You're able to communicate basic cultural concepts in French, but further practice is needed for effective cultural discussions.",
+    "0-1 correct pronunciations": "Needs improvement. Focus on practicing these cultural awareness phrases to enhance your French speaking skills in diverse settings."
+  }
+}

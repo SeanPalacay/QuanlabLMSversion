@@ -1,0 +1,120 @@
+<div class="content gradint animate-wave flex flex-col lg:flex-row h-screen">
+  <!-- bg1 -->
+  <div
+    class="hidden custom:hidden lg:block lg:w-3/5 my-div bg-cover box-border p-8 lg:p-20 flex-1"
+  >
+    <div class="text">
+      <div
+        class="overlock-i title text-white font-Overlock-i text-2xl lg:text-5xl mt-6 lg:mt-20 ml-4 lg:ml-10 mx-auto"
+      >
+        <h2>Empower Fluency:</h2>
+        <h2>Unleash Digital Language</h2>
+        <h2>Learning</h2>
+      </div>
+      <div
+        class="overlock-r title text-white font-Overlock-i text-4xl lg:text-3xl mt-6 lg:mt-20 ml-4 lg:ml-10 mx-auto"
+      >
+        <h4 class="titleB">Quanby Language Lab Classroom</h4>
+      </div>
+      <div class="title1"></div>
+      <div
+        class="desc text-white ml-4 lg:ml-10 mt-20 pt-3 lg:pt-5 lg:w-70 font-Overlock-r mx-auto"
+      >
+        <p class="text-lg lg:text-sm">
+          A cutting-edge digital language teaching solution that offers teachers
+          and <br />
+          students new possibilities for digital teaching and learning
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="lg:bg-slate-100 lg:mt-0 flex items-center justify-center flex-1 p-4 lg:p-8 z-2"
+  >
+    <div
+      class="w-full lg:w-2/5 mt-4 lg:mt-0 flex items-center justify-center flex-1 lg:p-8 z-2"
+    >
+      <div
+        class="floating bg-white rounded-3xl p-2 lg:p-4 shadow-boxz w-au lg:w-3/4 h-auto"
+      >
+        <div class="relative qlab flex justify-center items-center">
+          <img
+            src="assets/dashboard.png"
+            alt="QuanLab"
+            class="left-6 absolute w-full sm:w-1/2 md:w-2/4 lg:w-3/4 xl:w-3/4 max-w-xs p-2"
+          />
+          <img
+            src="assets/dashboard.png"
+            alt="QuanLab"
+            class="right-6 absolute w-full sm:w-1/2 md:w-2/4 lg:w-3/4 xl:w-3/4 max-w-xs p-2"
+          />
+          <img
+            src="assets/login/Reg_CNSC_Logo.png"
+            alt="QuanLab"
+            class="z-10 w-3/4 sm:w-1/2 md:w-1/3 lg:w-2/5 xl:w-2/5 max-w-xs p-2"
+          />
+        </div>
+
+        <div class="qlab-desc pt-2 lg:pt-4">
+          <p class="overlock-r tex text-md lg:text-xl">
+            Enroll Today, Speak Tomorrow: Join Our <br />
+            Digital Language Classroom
+          </p>
+          <div class="input-div mt-2 lg:mt-4 poppins-r">
+            <input
+
+              name="email"
+              type="email"
+              [(ngModel)]="username"
+              class="poppins-r border rounded p-2 w-full mb-2"
+              id=""
+              placeholder="Email"
+            />
+            <div class="relative">
+              <input
+                [type]="showPassword ? 'text' : 'password'"
+                [(ngModel)]="password"
+                name="password"
+                class="poppins-r border rounded p-2 w-full relative"
+                placeholder="Password"
+                id=""
+              />
+              <i
+                (click)="toggleShowPassword()"
+                class="text-gray-500 absolute right-2.5 top-3 cursor-pointer password-icon fas"
+                [ngClass]="{ 'fa-eye': showPassword, 'fa-eye-slash': !showPassword }"
+                aria-hidden="true"
+              ></i>
+            </div>
+          </div>
+          <div class="checkbox-div flex items-center mt-2 lg:mt-4">
+            <input type="checkbox" [(ngModel)]="rememberMe"/>
+            <p class="rmb ml-2 text-xs lg:text-xs">Remember me</p>
+          </div>
+          <div class="submit-btn mt-4 lg:mt-6 shadow-lg">
+            <!-- <a href="student/dashboard"> -->
+            <button
+              (click)="login()"
+              class="border rounded-xl p-2 lg:p-3 w-full gradient-color text-white poppins-b"
+            >
+              LOGIN
+            </button>
+            <!-- </a> -->
+          </div>
+          <div
+            class="register mt-2 lg:mt-6 poppins text-xs lg:text-xs text-center"
+          >
+            No Account?
+            <a class="text-black underline cursor-pointer" (click)="openModal()"
+              >Register here</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <button (click)="goOffline()" class="z-50 text-xs from-blue-500 bg-gradient-to-r px-4 lg:mr-5 lg:mb-3 lg:text-xl hover:!bg-blue-600 to-teal-400 absolute bottom-0 right-0 py-1 rounded text-white  hover:font-medium poppins-sb">
+    <span>Having trouble connecting to the internet? <i class='bx bx-right-arrow-alt'></i></span>
+  </button> -->
+  </div>
+</div>

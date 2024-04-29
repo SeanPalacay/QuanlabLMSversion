@@ -1,0 +1,126 @@
+<div class="modal-content custom-modal-content">
+        
+    <div class="title flex justify-between items-center">
+        <h4 class="modal-title poppins">Request Form</h4>
+        <button type="button" class="close bg-white focus:outline-none focus:ring-2 focus:ring-gray-600 rounded-md inline-flex items-center justify-center h-8 w-8" aria-label="Close" (click)="closeModal()">
+            <!-- SVG for Close Icon -->
+            <svg class="w-4 h-4 text-gray" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+    </div>
+
+    <div class="container">
+        <div class="top">
+            <input
+            type="text"
+            [(ngModel)]="firstname"
+            name="fname"
+            id="fname"
+            placeholder="First Name"
+            [ngClass]="{'shake': inputErrors.firstname, 'error-border': inputErrors.firstname}"
+            #firstnameInput
+            required
+          />
+          <input
+            class="ml-7"
+            [(ngModel)]="lastname"
+            type="text"
+            name="lname"
+            id="lname"
+            placeholder="Last Name"
+            [ngClass]="{'shake': inputErrors.lastname, 'error-border': inputErrors.lastname}"
+            required
+          />
+        </div>
+        <div class="mid">
+          <input
+            type="text"
+            [(ngModel)]="address"
+            name="address"
+            id="address"
+            placeholder="Address"
+            [ngClass]="{'shake': inputErrors.address, 'error-border': inputErrors.address}"
+            required
+          />
+          <input
+            type="email"
+            [(ngModel)]="email"
+            name="emailr"
+            id="emailr"
+            placeholder="Email"
+            [ngClass]="{'shake': inputErrors.email, 'error-border': inputErrors.email}"
+            required
+            class="placeholder-left-margin"
+          />
+        </div>
+        <div class="bottom ml-2">
+          <input
+            type="text"
+            [(ngModel)]="nationality"
+            name="nationality"
+            id="nationality"
+            placeholder="Nationality"
+            [ngClass]="{'shake': inputErrors.nationality, 'error-border': inputErrors.nationality}"
+            required
+          />
+          <input
+            type="text"
+            [(ngModel)]="birthdate"
+            name="birthday"
+            id="birthday"
+            placeholder="Date of Birth"
+            onfocus="this.type='date'"
+            onblur="this.type='text'"
+            [ngClass]="{'shake': inputErrors.birthdate, 'error-border': inputErrors.birthdate}"
+            required
+            style="padding-left: 10px;"
+          />
+          <select
+            type="text"
+            [(ngModel)]="gender"
+            name="gender"
+            id="gender"
+            placeholder="Gender"
+            [ngClass]="{'shake': inputErrors.gender, 'error-border': inputErrors.gender}"
+            required
+          >
+          <option class="text-center" value="Male" selected>Male</option>
+          <option class="text-center" value="Female">Female</option>
+          <option class="text-center" value="Other">Other</option>
+        </select>
+        </div>
+    
+        <!-- Add password and confirm password fields -->
+        <div class="passwords ml-3">
+          <input
+            [(ngModel)]="password"
+            type="password"
+            name="passwordr"
+            id="passwordr"
+            placeholder="Password"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+            [ngClass]="{'shake': inputErrors.password, 'error-border': inputErrors.password}"
+            required
+          />
+          <input
+            [(ngModel)]="confirmpassword"
+            type="password"
+            name="confirm_password"
+            id="confirm_password"
+            placeholder="Confirm Password"
+            [ngClass]="{'shake': inputErrors.confirmpassword, 'error-border': inputErrors.confirmpassword}"
+            required
+          />
+          <span id="message"></span> <!-- Display a message if passwords do not match -->
+        </div>
+
+        <!-- <div class="terms">
+            <input type="checkbox" name="terms" id="terms" required>
+            <label for="terms" class="poppins">By checking the box, you agree to the Terms and Conditions of Q-LAB</label>
+        </div> -->
+
+        <div class="submit">
+            <button (click)="request()" type="submit">Request</button>
+        </div>
+    </div>
+</div>

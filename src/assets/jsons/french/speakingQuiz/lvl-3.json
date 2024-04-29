@@ -1,0 +1,61 @@
+{
+  "title": "At the Supermarket",
+  "description": "Improve your French speaking skills with phrases commonly used at the supermarket. Focus on clear pronunciation and specific intonation.",
+  "instructions": [
+    "Below, you'll find a list of common phrases you might use at the supermarket in French.",
+    "Your task is to record yourself speaking each phrase.",
+    "Ensure your pronunciation matches the provided text as closely as possible.",
+    "Try to maintain a natural and clear speaking pace.",
+    "After recording each phrase, listen to your recording and compare it to the text.",
+    "Focus on intonation, clarity, and fluency.",
+    "Repeat the recording process as many times as needed to improve your pronunciation."
+  ],
+  "items": [
+    {
+      "question": "Où est le pain ?",
+      "answer": "Où est le pain ?"
+    },
+    {
+      "question": "Combien coûtent les pommes ?",
+      "answer": "Combien coûtent les pommes ?"
+    },
+    {
+      "question": "Est-ce bio ?",
+      "answer": "Est-ce bio ?"
+    },
+    {
+      "question": "Vendez-vous du lait ?",
+      "answer": "Vendez-vous du lait ?"
+    },
+    {
+      "question": "J'ai besoin d'œufs.",
+      "answer": "J'ai besoin d'œufs."
+    },
+    {
+      "question": "Où est la caisse ?",
+      "answer": "Où est la caisse ?"
+    },
+    {
+      "question": "Puis-je avoir un sac ?",
+      "answer": "Puis-je avoir un sac ?"
+    },
+    {
+      "question": "Avez-vous du riz ?",
+      "answer": "Avez-vous du riz ?"
+    },
+    {
+      "question": "Ces produits sont-ils frais ?",
+      "answer": "Ces produits sont-ils frais ?"
+    },
+    {
+      "question": "Où se trouve la nourriture surgelée ?",
+      "answer": "Où se trouve la nourriture surgelée ?"
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and accurate. You demonstrate a strong command of supermarket-related French.",
+    "5-7 correct pronunciations": "Good! Your pronunciation is mostly correct, with a good grasp of supermarket phrases in French. There are some areas to refine for improved clarity.",
+    "2-4 correct pronunciations": "Fair. You can navigate basic supermarket conversations in French, but there are several areas needing significant improvement.",
+    "0-1 correct pronunciations": "Needs improvement. Consider practicing more to enhance your French pronunciation skills, or seek additional resources for learning."
+  }
+}

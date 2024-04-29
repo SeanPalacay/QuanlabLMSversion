@@ -1,0 +1,96 @@
+{
+  "title": "Advanced Vocabulary and Grammar Quiz (Part 3)",
+  "description": "Test your advanced vocabulary and grammar skills with this challenging quiz. Identify the correct usage of words, sentence structures, and more to enhance your language proficiency.",
+  "items": [
+    {
+      "question": "Identify the correct use of the word 'ephemeral' in a sentence.",
+      "choices": [
+        "The ephemeral river flowed through the valley.",
+        "His ephemeral actions left a lasting impact.",
+        "The book described the ephemeral beauty of nature.",
+        "Ephemeral clouds gathered in the sky."
+      ],
+      "answer": "The ephemeral river flowed through the valley."
+    },
+    {
+      "question": "Choose the sentence with the correct use of the word 'iconoclast':",
+      "choices": [
+        "She followed the traditions, not an iconoclast.",
+        "The iconoclast artist challenged traditional norms.",
+        "Iconoclasts admire conventional ideas.",
+        "He embraced iconoclasm in his work."
+      ],
+      "answer": "The iconoclast artist challenged traditional norms."
+    },
+    {
+      "question": "Identify the correct spelling of the word meaning 'to clear of guilt or blame.'",
+      "choices": ["Exonerate", "Exhonorate", "Exonorate", "Exoneratte"],
+      "answer": "Exonerate"
+    },
+    {
+      "question": "Select the sentence with the correct use of the word 'pernicious':",
+      "choices": [
+        "The pernicious storm caused widespread damage.",
+        "Perfume can have a pernicious effect on some people.",
+        "He perniciously solved the problem.",
+        "The perniciously atmosphere was soothing."
+      ],
+      "answer": "The pernicious storm caused widespread damage."
+    },
+    {
+      "question": "Identify the correct sentence with a proper conditional construction:",
+      "choices": [
+        "If he would have known, he will come early.",
+        "If she knows, she would have helped.",
+        "If I have time, I will visit.",
+        "If they will ask, I would have answered."
+      ],
+      "answer": "If I have time, I will visit."
+    },
+    {
+      "question": "Choose the sentence with the correct use of the word 'recalcitrant':",
+      "choices": [
+        "The recalcitrant student always followed the rules.",
+        "Her recalcitrant attitude made her popular.",
+        "He solved the problem with a recalcitrant approach.",
+        "The recalcitrant horse obeyed commands easily."
+      ],
+      "answer": "He solved the problem with a recalcitrant approach."
+    },
+    {
+      "question": "Identify the sentence with the correct use of the colon:",
+      "choices": [
+        "She brought: apples, oranges, and bananas.",
+        "The fruits she brought are: apples oranges bananas.",
+        "Apples, oranges and bananas: she brought them all.",
+        "She brought apples, oranges, and bananas."
+      ],
+      "answer": "She brought apples, oranges, and bananas."
+    },
+    {
+      "question": "What is the correct form of the verb 'lie' in the past tense?",
+      "choices": ["Lied", "Lay", "Layen", "Layd"],
+      "answer": "Lied"
+    },
+    {
+      "question": "Select the sentence with the correct use of the word 'ubiquitous':",
+      "choices": [
+        "The ubiquitous bird species was spotted in the forest.",
+        "Ubiquitous flowers bloomed in the garden.",
+        "The ubiquitous of the situation was clear.",
+        "He ubiquitously participated in various activities."
+      ],
+      "answer": "The ubiquitous bird species was spotted in the forest."
+    },
+    {
+      "question": "Identify the correct use of the word 'vicissitude' in a sentence.",
+      "choices": [
+        "The vicissitude of life is inevitable.",
+        "He vicissitude his decision after hearing the arguments.",
+        "Vicissitude weather made the day pleasant.",
+        "She vicissituded through the pages of the book."
+      ],
+      "answer": "The vicissitude of life is inevitable."
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+<div class="modal-content custom-modal-content">
+    <div class="container">
+      <button class="close" type="button" aria-label="Close" (click)="closeModal()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <h1 class="poppins-b title">Add Student</h1>
+      <div class="inputwrap">
+        <div class="input">
+          <h2>Student No. <span class="text-red-800">*</span></h2>
+          <input placeholder="Unless necessary, use the specified ID" type="text" [(ngModel)]="studentNo">
+        </div>
+        <div class="input">
+          <h2>Last Name <span class="text-red-800">*</span></h2>
+          <input placeholder="Specify Lastname" type="text" [(ngModel)]="lastName">
+        </div>
+        <div class="input">
+          <h2>First Name <span class="text-red-800">*</span></h2>
+          <input placeholder="Specify Firstname"  type="text" [(ngModel)]="firstName">
+        </div>
+        <div class="input">
+          <h2>Email</h2>
+          <input  placeholder="Leave blank (Defaults to ID)" type="email" [(ngModel)]="email">
+        </div>
+        <div class="input">
+          <h2>Password</h2>
+          <input  placeholder="Leave blank (Retain Password)" type="password" [(ngModel)]="password">
+        </div>
+        <div class="submitwrap">
+          <button class="submit poppins" (click)="addStudent()">ADD</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

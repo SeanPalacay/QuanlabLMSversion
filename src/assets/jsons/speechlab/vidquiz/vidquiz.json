@@ -1,0 +1,36 @@
+
+{
+    "choicesSets": [
+      {
+        "id": 1,
+        "question": "What is the main difference between stress-based languages like English and syllable-based languages like French?",
+        "choices": [
+          { "value": "Emphasis is placed on specific syllables in stress-based languages.", "text": "Emphasis is placed on specific syllables in stress-based languages.", "isCorrect": true },
+          { "value": "Syllables are not present in stress-based languages.", "text": "Syllables are not present in stress-based languages.", "isCorrect": false },
+          { "value": "Syllables are the main focus in stress-based languages.", "text": "Syllables are the main focus in stress-based languages.", "isCorrect": false },
+          { "value": "Emphasis is placed on each syllable equally in stress-based languages.", "text": "Emphasis is placed on each syllable equally in stress-based languages.", "isCorrect": false }
+        ]
+      },
+      {
+        "id": 2,
+        "question": "What are some common problems associated with incorrect word stress?",
+        "choices": [
+          { "value": "Too much stress, stress in the wrong place, and stress on each syllable.", "text": "Too much stress, stress in the wrong place, and stress on each syllable.", "isCorrect": true },
+          { "value": "Emphasis on all syllables, stress in random places, and weak vowel sounds.", "text": "Emphasis on all syllables, stress in random places, and weak vowel sounds.", "isCorrect": false },
+          { "value": "Lack of stress, no emphasis on syllables, and weak pronunciation.", "text": "Lack of stress, no emphasis on syllables, and weak pronunciation.", "isCorrect": false },
+          { "value": "No stress at all, lack of variation in pitch, and incorrect intonation.", "text": "No stress at all, lack of variation in pitch, and incorrect intonation.", "isCorrect": false }
+        ]
+      },
+      {
+        "id": 3,
+        "question": "Why is proper word stress considered crucial for effective communication?",
+        "choices": [
+          { "value": "It makes the language sound more melodious.", "text": "It makes the language sound more melodious.", "isCorrect": true },
+          { "value": "It ensures everyone speaks at the same volume.", "text": "It ensures everyone speaks at the same volume.", "isCorrect": false },
+          { "value": "It aids in understanding words more clearly", "text": "It aids in understanding words more clearly", "isCorrect": false },
+          { "value": "It helps in memorizing words more easily.", "text": "It helps in memorizing words more easily.", "isCorrect": false }
+        ]
+      }
+    ]
+  }
+  

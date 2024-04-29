@@ -1,0 +1,106 @@
+{
+"title": "English Proficiency Quiz",
+"description": "Test your knowledge of the English language with this quiz covering a variety of topics, from geography to literature and science. Answer questions related to capitals, famous authors, oceans, and more to assess your English proficiency.",
+ "items": [
+  {
+   "question": "What is the capital of Australia?",
+   "choices": [
+    "Sydney",
+    "Melbourne",
+    "Brisbane",
+    "Canberra"
+   ],
+   "answer": "Canberra"
+  },
+  {
+   "question": "Who wrote the play 'Romeo and Juliet'?",
+   "choices": [
+    "William Shakespeare",
+    "Christopher Marlowe",
+    "Ben Jonson",
+    "John Webster"
+   ],
+   "answer": "William Shakespeare"
+  },
+  {
+   "question": "What is the largest ocean in the world?",
+   "choices": [
+    "Pacific Ocean",
+    "Atlantic Ocean",
+    "Indian Ocean",
+    "Southern Ocean"
+   ],
+   "answer": "Pacific Ocean"
+  },
+  {
+   "question": "Which country is known as the 'Land of the Rising Sun'?",
+   "choices": [
+    "Japan",
+    "China",
+    "Korea",
+    "Thailand"
+   ],
+   "answer": "Japan"
+  },
+  {
+   "question": "What is the chemical formula for water?",
+   "choices": [
+    "H2O",
+    "CO2",
+    "NaCl",
+    "CH4"
+   ],
+   "answer": "H2O"
+  },
+  {
+   "question": "Which U.S. state is known as the 'Lone Star State'?",
+   "choices": [
+    "Texas",
+    "California",
+    "Florida",
+    "New York"
+   ],
+   "answer": "Texas"
+  },
+  {
+   "question": "What is the name of the largest planet in our solar system?",
+   "choices": [
+    "Jupiter",
+    "Saturn",
+    "Uranus",
+    "Neptune"
+   ],
+   "answer": "Jupiter"
+  },
+  {
+   "question": "Which artist painted the famous work 'The Starry Night'?",
+   "choices": [
+    "Vincent van Gogh",
+    "Claude Monet",
+    "Pablo Picasso",
+    "Henri Matisse"
+   ],
+   "answer": "Vincent van Gogh"
+  },
+  {
+   "question": "What is the name of the tallest mountain in the world?",
+   "choices": [
+    "Mount Everest",
+    "K2",
+    "Kanchenjunga",
+    "Lhotse"
+   ],
+   "answer": "Mount Everest"
+  },
+  {
+   "question": "Which city is known as the 'City of Lights'?",
+   "choices": [
+    "Paris",
+    "London",
+    "New York City",
+    "Tokyo"
+   ],
+   "answer": "Paris"
+  }
+ ]
+}

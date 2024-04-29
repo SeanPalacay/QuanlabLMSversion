@@ -1,0 +1,61 @@
+{
+  "title": "Negotiation Skills",
+  "description": "Enhance your Japanese speaking skills with phrases used for negotiation. Focus on clear, persuasive pronunciation and strategic intonation.",
+  "instructions": [
+    "Below is a list of phrases commonly used in negotiations in Japanese.",
+    "Record yourself speaking each phrase.",
+    "Aim for clear, persuasive, and confident pronunciation.",
+    "Maintain a steady and strategic pace.",
+    "After recording, listen to your playback and compare it to the text.",
+    "Pay attention to intonation, clarity, and fluency in Japanese.",
+    "Repeat the recording process as necessary to improve your Japanese speaking skills in negotiation contexts."
+  ],
+  "items": [
+    {
+      "question": "双方に利益のある解決策を見つけましょう。 (Souhou ni rieki no aru kaiketsusaku o mitsukemashou.)",
+      "answer": "双方に利益のある解決策を見つけましょう。 (Souhou ni rieki no aru kaiketsusaku o mitsukemashou.)"
+    },
+    {
+      "question": "あなたの譲れない条件は何ですか？ (Anata no yuzurenai jouken wa nan desu ka?)",
+      "answer": "あなたの譲れない条件は何ですか？ (Anata no yuzurenai jouken wa nan desu ka?)"
+    },
+    {
+      "question": "双赢のシナリオを提案します。 (Souei no shinario o teian shimasu.)",
+      "answer": "双赢のシナリオを提案します。 (Souei no shinario o teian shimasu.)"
+    },
+    {
+      "question": "合意の条件を再考しましょう。 (Goui no jouken o saikou shimashou.)",
+      "answer": "合意の条件を再考しましょう。 (Goui no jouken o saikou shimashou.)"
+    },
+    {
+      "question": "共通の土台を築くことが必要です。 (Kyoutsuu no dodai o kizuku koto ga hitsuyou desu.)",
+      "answer": "共通の土台を築くことが必要です。 (Kyoutsuu no dodai o kizuku koto ga hitsuyou desu.)"
+    },
+    {
+      "question": "公平な妥協に向けて努力しましょう。 (Kouhei na dakyou ni mukete doryoku shimashou.)",
+      "answer": "公平な妥協に向けて努力しましょう。 (Kouhei na dakyou ni mukete doryoku shimashou.)"
+    },
+    {
+      "question": "交渉には効果的なコミュニケーションが求められます。 (Koushou ni wa koukateki na komyunikeeshon ga motomeraremasu.)",
+      "answer": "交渉には効果的なコミュニケーションが求められます。 (Koushou ni wa koukateki na komyunikeeshon ga motomeraremasu.)"
+    },
+    {
+      "question": "どのような譲歩ができますか？ (Dono you na jouho ga dekimasu ka?)",
+      "answer": "どのような譲歩ができますか？ (Dono you na jouho ga dekimasu ka?)"
+    },
+    {
+      "question": "合意に達するための焦点を当てましょう。 (Goui ni tassuru tame no shouden o atemashou.)",
+      "answer": "合意に達するための焦点を当てましょう。 (Goui ni tassuru tame no shouden o atemashou.)"
+    },
+    {
+      "question": "異なる選択肢を探る余地があります。 (Kotonaru sentakushi o saguru yochi ga arimasu.)",
+      "answer": "異なる選択肢を探る余地があります。 (Kotonaru sentakushi o saguru yochi ga arimasu.)"
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and persuasive, well-suited for negotiation in Japanese.",
+    "5-7 correct pronunciations": "Good! Most of your negotiation phrases are pronounced correctly, but some might need further refinement.",
+    "2-4 correct pronunciations": "Fair. You understand the basics of negotiation language, but need more practice for effective communication.",
+    "0-1 correct pronunciations": "Needs improvement. Focus on practicing these negotiation phrases to enhance your Japanese speaking skills."
+  }
+}

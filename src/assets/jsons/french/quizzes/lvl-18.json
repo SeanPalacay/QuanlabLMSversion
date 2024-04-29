@@ -1,0 +1,56 @@
+{
+  "title": "French Language Essentials - Hard Mode",
+  "description": "Challenge your French skills by identifying the error in each sentence.",
+  "items": [
+    {
+      "question": "Chaque matin, je me réveille à six heures et demie pour me préparer avant d'aller au travail.",
+      "choices": ["réveille", "à", "pour", "d'aller"],
+      "answer": "à"
+    },
+    {
+      "question": "Nous avons choisi de prendre un chemin différent afin d'éviter les embouteillages sur l'autoroute principale.",
+      "choices": ["choisi", "de", "afin", "les"],
+      "answer": "afin"
+    },
+    {
+      "question": "La nouvelle exposition au musée présente des oeuvres d'art modernes qui défient les conventions traditionnelles.",
+      "choices": ["présente", "des", "qui", "les"],
+      "answer": "les"
+    },
+    {
+      "question": "Lorsque j'étais petit, je rêvais de devenir astronaute et d'explorer l'espace.",
+      "choices": ["Lorsque", "de", "d'explorer", "l'espace"],
+      "answer": "de"
+    },
+    {
+      "question": "La critique du film a été largement positive, soulignant la performance exceptionnelle de l'actrice principale.",
+      "choices": ["a été", "largement", "soulignant", "exceptionnelle"],
+      "answer": "largement"
+    },
+    {
+      "question": "Avant de quitter la maison, assurez-vous d'avoir éteint tous les appareils électriques pour éviter tout risque d'incendie.",
+      "choices": ["Avant", "d'avoir", "tous", "tout"],
+      "answer": "tout"
+    },
+    {
+      "question": "Le gouvernement envisage d'introduire une nouvelle loi pour lutter contre le réchauffement climatique.",
+      "choices": ["envisage", "d'introduire", "pour", "contre"],
+      "answer": "pour"
+    },
+    {
+      "question": "Ce roman historique nous transporte dans la France du XVIIIe siècle, une époque de grands changements sociaux.",
+      "choices": ["nous", "dans", "une", "grands"],
+      "answer": "une"
+    },
+    {
+      "question": "Malgré ses efforts pour rester en bonne santé, il a été difficile pour elle de trouver du temps pour faire de l'exercice régulièrement.",
+      "choices": ["pour", "a été", "pour", "du"],
+      "answer": "du"
+    },
+    {
+      "question": "La conférence sur l'innovation technologique a attiré des experts de divers domaines, cherchant à partager leurs connaissances et expériences.",
+      "choices": ["sur", "a attiré", "de", "à"],
+      "answer": "à"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "title": "French Error Detection - Hard Mode",
+  "description": "Test your proficiency in French by identifying errors in common sentences. This quiz is designed for advanced learners.",
+  "instructions": [
+    "Read each sentence carefully.",
+    "Identify the word that is incorrect in the context of the sentence.",
+    "Write down the incorrect word as your answer.",
+    "Check your answers at the end of the quiz to see explanations and correct forms."
+  ],
+  "items": [
+    {
+      "question": "Il a acheté un nouveau paire de chaussures pour la compétition.",
+      "suggestedAnswer": "paire"
+    },
+    {
+      "question": "Les résultats de leurs recherche ont été publiés dans un journal scientifique.",
+      "suggestedAnswer": "recherche"
+    },
+    {
+      "question": "Je préfère le thé au café parce qu'il est moins stimulant et plus doux pour mon estomac.",
+      "suggestedAnswer": "stimulant"
+    },
+    {
+      "question": "L'équipe a perdu son match non pas à cause de manque de talent, mais à cause de manque de préparation.",
+      "suggestedAnswer": "préparation"
+    },
+    {
+      "question": "Cet artiste est connu pour ses peintures qui dépeint la vie quotidienne avec une précision extraordinaire.",
+      "suggestedAnswer": "dépeint"
+    },
+    {
+      "question": "Nous devrions prendre en compte tout les aspects du plan avant de prendre une décision.",
+      "suggestedAnswer": "tout"
+    },
+    {
+      "question": "Le gouvernement a annoncé des nouvelles mesures pour lutter contre le changement climatique.",
+      "suggestedAnswer": "des"
+    },
+    {
+      "question": "Elle a réussi à résoudre le problème en utilisant une méthode peu orthodoxe, qui a surpris tout le monde.",
+      "suggestedAnswer": "en"
+    },
+    {
+      "question": "Malgré sa richesse et sa célébrité, il mène une vie assez simple et non matérialiste.",
+      "suggestedAnswer": "non"
+    },
+    {
+      "question": "La construction de la nouvelle bibliothèque a été retardé en raison de problèmes financiers inattendus.",
+      "suggestedAnswer": "retardé"
+    }
+  ],
+  "scoring": {
+    "10 correct answers": "Exceptionnel! Your understanding of French grammar and vocabulary is impressive.",
+    "7-9 correct answers": "Très bien! You have a strong grasp on French, with minor areas for improvement.",
+    "4-6 correct answers": "Bien! You're on the right track, but paying closer attention to details will help.",
+    "1-3 correct answers": "Un bon début! Keep studying the nuances of French grammar and vocabulary.",
+    "0 correct answers": "C'est un début. Focus on learning basic rules and common expressions."
+  }
+}

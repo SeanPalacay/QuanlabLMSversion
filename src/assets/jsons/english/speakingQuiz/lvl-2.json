@@ -1,0 +1,61 @@
+{
+  "title": "Common Questions",
+  "description": "Enhance your English speaking skills by practicing these common questions. Focus on accurate pronunciation and natural intonation.",
+  "instructions": [
+    "Below is a list of frequently asked English questions.",
+    "Your task is to record yourself saying each question.",
+    "Aim to pronounce each question as clearly and naturally as possible.",
+    "Maintain a steady and conversational pace.",
+    "After recording, listen to your playback and compare it to the text.",
+    "Pay attention to the intonation, clarity, and fluency of each question.",
+    "Repeat the recording as needed to improve your pronunciation and confidence."
+  ],
+  "items": [
+    {
+      "question": "What's your name?",
+      "answer": "What's your name?"
+    },
+    {
+      "question": "Where are you from?",
+      "answer": "Where are you from?"
+    },
+    {
+      "question": "How old are you?",
+      "answer": "How old are you?"
+    },
+    {
+      "question": "Do you have any pets?",
+      "answer": "Do you have any pets?"
+    },
+    {
+      "question": "What's your favorite color?",
+      "answer": "What's your favorite color?"
+    },
+    {
+      "question": "What time is it?",
+      "answer": "What time is it?"
+    },
+    {
+      "question": "Are you hungry?",
+      "answer": "Are you hungry?"
+    },
+    {
+      "question": "Do you like music?",
+      "answer": "Do you like music?"
+    },
+    {
+      "question": "Can you help me?",
+      "answer": "Can you help me?"
+    },
+    {
+      "question": "Where is the bathroom?",
+      "answer": "Where is the bathroom?"
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and accurate, showing a strong command of common English questions.",
+    "5-7 correct pronunciations": "Good! Your pronunciation is mostly correct. There are minor areas to refine for improved clarity.",
+    "2-4 correct pronunciations": "Fair. You can pronounce English questions but need significant improvement in certain areas.",
+    "0-1 correct pronunciations": "Needs improvement. Consider more practice or additional resources to enhance your English pronunciation skills."
+  }
+}

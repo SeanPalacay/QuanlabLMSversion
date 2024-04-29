@@ -1,0 +1,135 @@
+.main-container {
+  width: 100%;
+  padding: 1rem 2.5rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+button {
+  color: #34b0b5;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 4px 4px 2px 0 rgba(0, 0, 0, 0.25);
+  padding: 10px;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 120px;
+}
+
+.main-container button img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.main-container button span {
+  margin-right: 5px;
+}
+.course {
+  display: flex;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+}
+.image-container {
+  flex: 1;
+  margin: 1rem;
+}
+.image-container img {
+  border-radius: 12px;
+}
+.details {
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  gap: 6px;
+  height: 100%;
+  padding: 1rem 1rem;
+}
+.details p {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(
+    to right,
+    rgb(1, 114, 175) 0%,
+    rgb(116, 254, 189) 100%
+  );
+}
+.details span {
+  color: #7f7f7f;
+}
+.label-container {
+  display: flex;
+  gap: 1rem;
+}
+.description-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  text-align: justify;
+}
+@media screen and (min-width: 769px) and (max-width: 1279px) {
+  .main-container {
+    width: 80%;
+    margin-left: 3.5rem;
+  }
+  .course {
+    flex-direction: column;
+  }
+  .image-container {
+    margin-bottom: 0;
+  }
+  .image-container img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .main-container {
+    width: 80%;
+    margin-left: 3.5rem;
+  }
+  .course {
+    flex-direction: column;
+  }
+  .image-container {
+    margin-bottom: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .image-container img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-container button {
+    width: 90px;
+    padding: 5px;
+  }
+  .course {
+    flex-direction: column;
+  }
+  .image-container {
+    margin-bottom: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .image-container img {
+    width: 100%;
+    height: 100%;
+  }
+  .details {
+    font-size: 13px;
+  }
+}

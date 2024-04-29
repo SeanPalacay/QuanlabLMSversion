@@ -1,0 +1,67 @@
+{
+  "title": "Hiragana Quiz - Set 2",
+  "description": "Test your knowledge of hiragana characters with this quiz. Identify the correct hiragana character for each given pronunciation.",
+    "items": [
+      {
+        "question": "さ",
+        "answer": "sa",
+        "hint": "Starts with a short diagonal line, followed by a longer one.",
+        "options": ["su", "shi", "se", "sa"]
+      },
+      {
+        "question": "し",
+        "answer": "shi",
+        "hint": "Resembles the letter 'shi' with a curve at the top.",
+        "options": ["so", "se", "shi", "ta"]
+      },
+      {
+        "question": "す",
+        "answer": "su",
+        "hint": "Looks like the letter 'su' with a curve at the top.",
+        "options": ["tsu", "so", "su", "te"]
+      },
+      {
+        "question": "せ",
+        "answer": "se",
+        "hint": "Combination of two strokes: a horizontal line and a curve.",
+        "options": ["chi", "se", "so", "to"]
+      },
+      {
+        "question": "そ",
+        "answer": "so",
+        "hint": "Combination of three strokes: a vertical line, a curve, and a short line.",
+        "options": ["to", "so", "shi", "sa"]
+      },
+      {
+        "question": "た",
+        "answer": "ta",
+        "hint": "Looks like the letter 'ta' with a small hook at the top.",
+        "options": ["to", "ta", "chi", "tsu"]
+      },
+      {
+        "question": "ち",
+        "answer": "chi",
+        "hint": "Combination of two strokes: a short horizontal line and a longer diagonal line.",
+        "options": ["chi", "se", "shi", "to"]
+      },
+      {
+        "question": "つ",
+        "answer": "tsu",
+        "hint": "Resembles the letter 'tsu' with a curve at the top.",
+        "options": ["te", "tsu", "to", "chi"]
+      },
+      {
+        "question": "て",
+        "answer": "te",
+        "hint": "Combination of two strokes: a horizontal line and a short curve.",
+        "options": ["te", "to", "su", "chi"]
+      },
+      {
+        "question": "と",
+        "answer": "to",
+        "hint": "Looks like a circle with a small line coming out from the right.",
+        "options": ["to", "so", "chi", "te"]
+      }
+    ]
+  }
+  

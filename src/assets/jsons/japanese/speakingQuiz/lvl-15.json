@@ -1,0 +1,61 @@
+{
+  "title": "Cultural Awareness",
+  "description": "Enhance your Japanese speaking skills with phrases focused on cultural awareness. Emphasize clear pronunciation and respectful intonation.",
+  "instructions": [
+    "Below is a list of phrases that promote cultural awareness and appreciation in Japanese.",
+    "Record yourself speaking each phrase.",
+    "Aim for clear, respectful, and thoughtful pronunciation.",
+    "Maintain a conversational and considerate pace.",
+    "After recording, listen to your playback and compare it to the text.",
+    "Pay attention to intonation, clarity, and fluency in Japanese.",
+    "Repeat the recording process as necessary to improve your Japanese speaking skills in the context of cultural awareness."
+  ],
+  "items": [
+    {
+      "question": "文化的多様性を理解することが重要です。 (Bunkateki tayousei o rikai suru koto ga juuyou desu.)",
+      "answer": "文化的多様性を理解することが重要です。 (Bunkateki tayousei o rikai suru koto ga juuyou desu.)"
+    },
+    {
+      "question": "異なる文化の豊かさを評価しましょう。 (Kotonaru bunka no yutakasa o hyouka shimashou.)",
+      "answer": "異なる文化の豊かさを評価しましょう。 (Kotonaru bunka no yutakasa o hyouka shimashou.)"
+    },
+    {
+      "question": "異文化間の理解を促進する方法は何ですか？ (Ibunkakan no rikai o sokushin suru houhou wa nan desu ka?)",
+      "answer": "異文化間の理解を促進する方法は何ですか？ (Ibunkakan no rikai o sokushin suru houhou wa nan desu ka?)"
+    },
+    {
+      "question": "アイデアの文化交流を重視します。 (Aidea no bunka kouryuu o juushi shimasu.)",
+      "answer": "アイデアの文化交流を重視します。 (Aidea no bunka kouryuu o juushi shimasu.)"
+    },
+    {
+      "question": "世界中の伝統について探求しましょう。 (Sekaijuu no dentou ni tsuite tankyuu shimashou.)",
+      "answer": "世界中の伝統について探求しましょう。 (Sekaijuu no dentou ni tsuite tankyuu shimashou.)"
+    },
+    {
+      "question": "グローバル社会における文化的感受性は不可欠です。 (Guroobarushakai ni okeru bunkateki kanjusei wa fukaketsu desu.)",
+      "answer": "グローバル社会における文化的感受性は不可欠です。 (Guroobarushakai ni okeru bunkateki kanjusei wa fukaketsu desu.)"
+    },
+    {
+      "question": "考慮すべき文化的ニュアンスは何ですか？ (Kouryo subeki bunkateki nyuansu wa nan desu ka?)",
+      "answer": "考慮すべき文化的ニュアンスは何ですか？ (Kouryo subeki bunkateki nyuansu wa nan desu ka?)"
+    },
+    {
+      "question": "多文化体験に興味があります。 (Tabunka taiken ni kyoumi ga arimasu.)",
+      "answer": "多文化体験に興味があります。 (Tabunka taiken ni kyoumi ga arimasu.)"
+    },
+    {
+      "question": "私たちの交流に多様性を取り入れましょう。 (Watashitachi no kouryuu ni tayousei o toriiremashou.)",
+      "answer": "私たちの交流に多様性を取り入れましょう。 (Watashitachi no kouryuu ni tayousei o toriiremashou.)"
+    },
+    {
+      "question": "包括的な環境を作るにはどうすればいいですか？ (Houkatsuteki na kankyou o tsukuru ni wa dou sureba ii desu ka?)",
+      "answer": "包括的な環境を作るにはどうすればいいですか？ (Houkatsuteki na kankyou o tsukuru ni wa dou sureba ii desu ka?)"
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and respectful, well-suited for discussions on cultural awareness in Japanese.",
+    "5-7 correct pronunciations": "Good! Most of your cultural awareness phrases are pronounced correctly, with some areas needing refinement for clarity.",
+    "2-4 correct pronunciations": "Fair. You understand basic concepts of cultural awareness, but need more practice for effective communication.",
+    "0-1 correct pronunciations": "Needs improvement. Focus on practicing these phrases to enhance your Japanese speaking skills in cultural contexts."
+  }
+}

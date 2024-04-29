@@ -1,0 +1,61 @@
+{
+  "title": "At Work",
+  "description": "Develop your English speaking skills with phrases frequently used in a work environment. Focus on clear pronunciation and professional intonation.",
+  "instructions": [
+    "Below is a list of common phrases used in a workplace.",
+    "Record yourself speaking each phrase.",
+    "Strive for clear and precise pronunciation.",
+    "Maintain a steady, professional pace in your speech.",
+    "After recording, listen to your playback and compare it to the text.",
+    "Pay attention to your intonation, clarity, and fluency.",
+    "Repeat the recording process as necessary to improve your pronunciation."
+  ],
+  "items": [
+    {
+      "question": "I have a meeting at 10 AM.",
+      "answer": "I have a meeting at 10 AM."
+    },
+    {
+      "question": "Where's the conference room?",
+      "answer": "Where's the conference room?"
+    },
+    {
+      "question": "Can I borrow your pen?",
+      "answer": "Can I borrow your pen?"
+    },
+    {
+      "question": "I need to print this document.",
+      "answer": "I need to print this document."
+    },
+    {
+      "question": "Let's schedule a lunch meeting.",
+      "answer": "Let's schedule a lunch meeting."
+    },
+    {
+      "question": "Is the boss in?",
+      "answer": "Is the boss in?"
+    },
+    {
+      "question": "I'll send you an email.",
+      "answer": "I'll send you an email."
+    },
+    {
+      "question": "Can we discuss the project?",
+      "answer": "Can we discuss the project?"
+    },
+    {
+      "question": "I'm working from home today.",
+      "answer": "I'm working from home today."
+    },
+    {
+      "question": "Let's call the client.",
+      "answer": "Let's call the client."
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and accurate, demonstrating strong communication skills in a professional setting.",
+    "5-7 correct pronunciations": "Good! You're mostly accurate in your pronunciation, with a few areas needing refinement for professional clarity.",
+    "2-4 correct pronunciations": "Fair. You have a basic understanding of workplace phrases but need to improve your pronunciation for better professional communication.",
+    "0-1 correct pronunciations": "Needs improvement. More practice is needed to enhance your pronunciation skills in a work environment."
+  }
+}

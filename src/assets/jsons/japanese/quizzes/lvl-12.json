@@ -1,0 +1,67 @@
+{
+  "title": "Hiragana Quiz - Set 4",
+  "description": "Test your knowledge of hiragana characters with this quiz. Identify the correct hiragana character for each given pronunciation.",
+    "items": [
+      {
+        "question": "ま",
+        "answer": "ma",
+        "hint": "Combination of two strokes: a curve and a short horizontal line.",
+        "options": ["mu", "mi", "mo", "ma"]
+      },
+      {
+        "question": "み",
+        "answer": "mi",
+        "hint": "Resembles the letter 'mi' with a curve at the top.",
+        "options": ["yo", "ya", "mi", "ra"]
+      },
+      {
+        "question": "む",
+        "answer": "mu",
+        "hint": "Looks like the letter 'mu' with a curve at the top.",
+        "options": ["ra", "mo", "mu", "ri"]
+      },
+      {
+        "question": "め",
+        "answer": "me",
+        "hint": "Combination of three strokes: a curve, a short horizontal line, and a longer diagonal line.",
+        "options": ["yo", "ri", "me", "mu"]
+      },
+      {
+        "question": "も",
+        "answer": "mo",
+        "hint": "Combination of three strokes: a curve, a short horizontal line, and a longer diagonal line.",
+        "options": ["mo", "mi", "ma", "ra"]
+      },
+      {
+        "question": "や",
+        "answer": "ya",
+        "hint": "Resembles the letter 'ya' with a short horizontal line and a curve.",
+        "options": ["ri", "ya", "yo", "mu"]
+      },
+      {
+        "question": "ゆ",
+        "answer": "yu",
+        "hint": "Resembles the letter 'yu' with a curve at the top.",
+        "options": ["yu", "ya", "yo", "ra"]
+      },
+      {
+        "question": "よ",
+        "answer": "yo",
+        "hint": "Combination of three strokes: a curve, a short horizontal line, and a longer diagonal line.",
+        "options": ["yo", "ma", "ri", "mo"]
+      },
+      {
+        "question": "ら",
+        "answer": "ra",
+        "hint": "Combination of two strokes: a short diagonal line and a longer diagonal line.",
+        "options": ["ri", "ra", "ru", "yo"]
+      },
+      {
+        "question": "り",
+        "answer": "ri",
+        "hint": "Resembles the letter 'ri' with a curve at the top.",
+        "options": ["mo", "ri", "ra", "ya"]
+      }
+    ]
+  }
+  

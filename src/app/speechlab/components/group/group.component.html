@@ -1,0 +1,52 @@
+<div class='relative flex justify-center gap-x-12' *ngFor="let row of [row1, row2, row3]; let i = index">
+    <div class='pb-5' *ngFor="let item of row">
+     <p class="font-bold text-center {{getAssignedName(item) != 'None'? 'text-green-500': 'text-red-500'}}">{{item.label}}</p>
+     <div > 
+    
+
+      <!-- default -->
+      <p class=" text-center text-6xl font-thin text-black mt-4" *ngIf="layout">
+        <i class="fa-solid fa-tv"></i>
+      </p>
+      <!-- end default-->
+
+      <!-- start solo -->
+
+      <p class=" text-center text-6xl font-thin text-gray-500 mt-4" *ngIf="editedLayout" [ngClass]="{'text-teal-300' : choosenSolo == item}">
+        <i class="fa-solid fa-tv"></i>
+      </p>
+
+      <!-- end solo-->
+
+      <!-- start groupings -->
+
+      <p class=" text-center text-6xl font-thin mt-4" *ngIf="editedLayoutGroupings" [ngClass]="{'text-blue-500': groupColor=== 'blue' && groupingItems.includes(item)}">
+        <i class="fa-solid fa-tv"></i>
+      </p>
+
+      <!-- end groupings -->
+      <!-- pag ma pili na for 1v1 -->
+      <p class="text-6xl text-center font-thin text-gray-100 mt-4" *ngIf="solo">
+         <button class="hover:text-teal-300" [ngClass]="{'text-teal-300' : choosenSolo == item}" (click)="soloGropings(item)">
+          <i class="fa-solid fa-tv"></i>
+         </button>
+         
+      </p>
+
+      <!-- end kang  ma pili na for 1v1 -->
+
+       <!-- pag ma pili na for groupings -->
+       <p class="text-6xl text-center font-thin text-gray-100 mt-4" *ngIf="groupings">
+        <button [ngClass]="{'text-blue-500': groupColor=== 'blue' && groupingItems.includes(item), 'text-red-500': groupColor=== 'red' && groupingItems.includes(item)}" (click)="dakolGroupings(item)">
+          <i class="fa-solid fa-tv"></i>
+        </button>
+     </p>
+     <!-- end kang  ma pili na for groupings-->
+     </div>
+   
+
+      <br>
+      <span class=" font-bold {{getAssignedName(item) != 'None'? 'text-green-500': 'text-red-500'}}"><p class="text-center"> {{getAssignedName(item)}}</p></span>
+    </div>
+    <div class='absolute bottom-6 h-1 inset-x-14 bg-gradient-to-r from-primary to-secondary rounded-sm'></div>
+  </div>

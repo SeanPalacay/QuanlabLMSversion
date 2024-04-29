@@ -1,0 +1,67 @@
+{
+  "title": "Hiragana Vocabulary Quiz II",
+  "description": "Embark on a quiz to test your knowledge of Japanese words. Match the Japanese term with its romanji equivalent.",
+    "items": [
+      {
+        "question": "りんご",
+        "answer": "ringo",
+        "hint": "The Japanese word for apple.",
+        "options": ["kippu", "mizu", "ringo", "haha"]
+      },
+      {
+        "question": "ひと",
+        "answer": "hito",
+        "hint": "The Japanese word for person.",
+        "options": ["haha", "ringo", "hito", "ame"]
+      },
+      {
+        "question": "くるま",
+        "answer": "kuruma",
+        "hint": "The Japanese word for car.",
+        "options": ["kuruma", "yama", "tegami", "kippu"]
+      },
+      {
+        "question": "みず",
+        "answer": "mizu",
+        "hint": "The Japanese word for water.",
+        "options": ["ame", "hito", "mizu", "yama"]
+      },
+      {
+        "question": "きっぷ",
+        "answer": "kippu",
+        "hint": "The Japanese word for ticket.",
+        "options": ["haha", "kippu", "hito", "ringo"]
+      },
+      {
+        "question": "ほん",
+        "answer": "hon",
+        "hint": "The Japanese word for book.",
+        "options": ["yama", "ringo", "tegami", "hon"]
+      },
+      {
+        "question": "てがみ",
+        "answer": "tegami",
+        "hint": "The Japanese word for letter or mail.",
+        "options": ["haha", "tegami", "mizu", "kuruma"]
+      },
+      {
+        "question": "あめ",
+        "answer": "ame",
+        "hint": "The Japanese word for rain.",
+        "options": ["ame", "kippu", "tegami", "kuruma"]
+      },
+      {
+        "question": "はは",
+        "answer": "haha",
+        "hint": "The Japanese word for mother.",
+        "options": ["haha", "ringo", "yama", "kippu"]
+      },
+      {
+        "question": "やま",
+        "answer": "yama",
+        "hint": "The Japanese word for mountain.",
+        "options": ["kippu", "tegami", "yama", "ame"]
+      }
+    ]
+  }
+  

@@ -1,0 +1,30 @@
+<div class="modal-content custom-modal-content">
+    <div class="inputwrap">
+      <div class="titlehead poppins-b"><h1>FEEDBACK FORM</h1></div>
+
+      <div class="container">
+     <div class="titleinput">
+      <input class="student poppins" type="text" placeholder="Student :" value="Student : Cleomark">
+      <input class="task poppins" type="text" name="" id="" placeholder="Task :" value="Task : A">
+     </div>
+     <div class="text">
+      <textarea name="" id="" cols="30" rows="10" placeholder="Feedback :"></textarea>
+  </div>
+     
+  <div class="file">
+    <label for="file-upload" class="file-label">
+      <img src="assets/teacher/Link.png" alt="Attach audio feedback">
+      <span class="poppins">{{ selectedFileName || 'Attach audio feedback' }}</span>
+    </label>
+    <input id="file-upload" type="file" (change)="onFileSelected($event)">
+  </div>
+  
+  
+
+  </div>
+      <div class="btnwrap">
+          <button class="save poppins">SUBMIT</button>
+      </div>
+    </div>  
+  
+</div>

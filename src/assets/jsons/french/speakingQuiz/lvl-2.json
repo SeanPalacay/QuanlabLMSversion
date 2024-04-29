@@ -1,0 +1,61 @@
+{
+  "title": "Simple Personal Questions",
+  "description": "Improve your French speaking skills with simple personal questions. Focus on clear pronunciation and polite intonation.",
+  "instructions": [
+    "Below, you'll find a list of common personal questions in French.",
+    "Your task is to record yourself speaking each phrase.",
+    "Ensure your pronunciation matches the provided text as closely as possible.",
+    "Try to maintain a natural and clear speaking pace.",
+    "After recording each phrase, listen to your recording and compare it to the text.",
+    "Focus on intonation, clarity, and fluency.",
+    "Repeat the recording process as many times as needed to improve your pronunciation."
+  ],
+  "items": [
+    {
+      "question": "Comment vous appelez-vous ?",
+      "answer": "Comment vous appelez-vous ?"
+    },
+    {
+      "question": "D'où venez-vous ?",
+      "answer": "D'où venez-vous ?"
+    },
+    {
+      "question": "Quel âge avez-vous ?",
+      "answer": "Quel âge avez-vous ?"
+    },
+    {
+      "question": "Avez-vous des animaux de compagnie ?",
+      "answer": "Avez-vous des animaux de compagnie ?"
+    },
+    {
+      "question": "Quelle est votre couleur préférée ?",
+      "answer": "Quelle est votre couleur préférée ?"
+    },
+    {
+      "question": "Quelle heure est-il ?",
+      "answer": "Quelle heure est-il ?"
+    },
+    {
+      "question": "Avez-vous faim ?",
+      "answer": "Avez-vous faim ?"
+    },
+    {
+      "question": "Aimez-vous la musique ?",
+      "answer": "Aimez-vous la musique ?"
+    },
+    {
+      "question": "Pouvez-vous m'aider ?",
+      "answer": "Pouvez-vous m'aider ?"
+    },
+    {
+      "question": "Où sont les toilettes ?",
+      "answer": "Où sont les toilettes ?"
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and accurate. You demonstrate a strong command of basic personal questions in French.",
+    "5-7 correct pronunciations": "Good! Your pronunciation is mostly correct, with a good grasp of basic French questions. There are some areas to refine for improved clarity.",
+    "2-4 correct pronunciations": "Fair. You can ask basic personal questions in French, but there are several areas needing significant improvement.",
+    "0-1 correct pronunciations": "Needs improvement. Consider practicing more to enhance your French pronunciation skills, or seek additional resources for learning."
+  }
+}

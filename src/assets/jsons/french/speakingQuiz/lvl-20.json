@@ -1,0 +1,61 @@
+{
+  "title": "Digital Citizenship",
+  "description": "Enhance your French speaking skills with phrases suitable for discussions on digital citizenship. Focus on clear pronunciation and responsible intonation.",
+  "instructions": [
+    "Below, you'll find a list of phrases that are key to engaging in conversations about digital citizenship in French.",
+    "Your task is to record yourself speaking each phrase.",
+    "Ensure your pronunciation matches the provided text as closely as possible.",
+    "Try to maintain an informative and thoughtful speaking pace.",
+    "After recording each phrase, listen to your recording and compare it to the text.",
+    "Focus on intonation, clarity, and the articulate expression of digital ethics and safety.",
+    "Repeat the recording process as many times as needed to improve your pronunciation."
+  ],
+  "items": [
+    {
+      "question": "Comprendre la responsabilité numérique est vital.",
+      "answer": "Comprendre la responsabilité numérique est vital."
+    },
+    {
+      "question": "Discutons des préoccupations concernant la confidentialité en ligne.",
+      "answer": "Discutons des préoccupations concernant la confidentialité en ligne."
+    },
+    {
+      "question": "La littératie numérique est essentielle à l'ère moderne.",
+      "answer": "La littératie numérique est essentielle à l'ère moderne."
+    },
+    {
+      "question": "Quelles sont les considérations éthiques de la communication en ligne ?",
+      "answer": "Quelles sont les considérations éthiques de la communication en ligne ?"
+    },
+    {
+      "question": "Comment pouvons-nous promouvoir une culture numérique positive ?",
+      "answer": "Comment pouvons-nous promouvoir une culture numérique positive ?"
+    },
+    {
+      "question": "Quel est l'impact des médias sociaux sur la société ?",
+      "answer": "Quel est l'impact des médias sociaux sur la société ?"
+    },
+    {
+      "question": "La citoyenneté numérique nécessite une pensée critique.",
+      "answer": "La citoyenneté numérique nécessite une pensée critique."
+    },
+    {
+      "question": "J'apprécie un comportement en ligne responsable.",
+      "answer": "J'apprécie un comportement en ligne responsable."
+    },
+    {
+      "question": "Comment faire face au cyberharcèlement et au harcèlement en ligne ?",
+      "answer": "Comment faire face au cyberharcèlement et au harcèlement en ligne ?"
+    },
+    {
+      "question": "Quelles mesures pouvons-nous prendre pour un environnement numérique plus sûr ?",
+      "answer": "Quelles mesures pouvons-nous prendre pour un environnement numérique plus sûr ?"
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and conscientious, ideal for discussions on digital citizenship in French.",
+    "5-7 correct pronunciations": "Good! Your pronunciation is mostly correct, with a strong grasp of digital ethics phrases in French. Some areas may need refinement for full engagement.",
+    "2-4 correct pronunciations": "Fair. You're able to communicate basic digital citizenship concepts in French, but further practice is needed for effective discussions.",
+    "0-1 correct pronunciations": "Needs improvement. Focus on practicing these digital citizenship phrases to enhance your French speaking skills in digital contexts."
+  }
+}

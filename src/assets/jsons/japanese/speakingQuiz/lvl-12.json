@@ -1,0 +1,61 @@
+{
+  "title": "Business Communication",
+  "description": "Enhance your Japanese speaking skills with phrases used for business communication. Focus on clear, professional pronunciation and confident intonation.",
+  "instructions": [
+    "Below is a list of phrases commonly used in business communication in Japanese.",
+    "Record yourself speaking each phrase.",
+    "Aim for clear, articulate, and professional pronunciation.",
+    "Maintain a steady and confident pace.",
+    "After recording, listen to your playback and compare it to the text.",
+    "Pay attention to intonation, clarity, and fluency in Japanese.",
+    "Repeat the recording process as necessary to improve your Japanese speaking skills in business contexts."
+  ],
+  "items": [
+    {
+      "question": "ワークフローを最適化しましょう。 (Waakufuroo o saiteki-ka shimashou.)",
+      "answer": "ワークフローを最適化しましょう。 (Waakufuroo o saiteki-ka shimashou.)"
+    },
+    {
+      "question": "プロジェクトの進捗はどうですか？ (Purojekuto no shinchoku wa dou desu ka?)",
+      "answer": "プロジェクトの進捗はどうですか？ (Purojekuto no shinchoku wa dou desu ka?)"
+    },
+    {
+      "question": "来期の戦略を立てましょう。 (Raiki no senryaku o tatemashou.)",
+      "answer": "来期の戦略を立てましょう。 (Raiki no senryaku o tatemashou.)"
+    },
+    {
+      "question": "協力的なアプローチを提案します。 (Kyouryokuteki na apuroochi o teian shimasu.)",
+      "answer": "協力的なアプローチを提案します。 (Kyouryokuteki na apuroochi o teian shimasu.)"
+    },
+    {
+      "question": "包括的なレポートを提供できますか？ (Houkatsuteki na repo-to o teikyou dekimasu ka?)",
+      "answer": "包括的なレポートを提供できますか？ (Houkatsuteki na repo-to o teikyou dekimasu ka?)"
+    },
+    {
+      "question": "主要なパフォーマンス指標について話し合いましょう。 (Shuyou na pafomaansu shihyou ni tsuite hanashiaimashou.)",
+      "answer": "主要なパフォーマンス指標について話し合いましょう。 (Shuyou na pafomaansu shihyou ni tsuite hanashiaimashou.)"
+    },
+    {
+      "question": "顧客エンゲージメントを強化することが重要です。 (Kokyaku engeeji mento o kyouka suru koto ga juuyou desu.)",
+      "answer": "顧客エンゲージメントを強化することが重要です。 (Kokyaku engeeji mento o kyouka suru koto ga juuyou desu.)"
+    },
+    {
+      "question": "市場分析を行うべきです。 (Shijou bunseki o okonau beki desu.)",
+      "answer": "市場分析を行うべきです。 (Shijou bunseki o okonau beki desu.)"
+    },
+    {
+      "question": "成果主義の戦略を実施しましょう。 (Seika shugi no senryaku o jisshi shimashou.)",
+      "answer": "成果主義の戦略を実施しましょう。 (Seika shugi no senryaku o jisshi shimashou.)"
+    },
+    {
+      "question": "積極的なコミュニケーションプランを推奨します。 (Sekkyokuteki na komyunikeeshon puran o suishou shimasu.)",
+      "answer": "積極的なコミュニケーションプランを推奨します。 (Sekkyokuteki na komyunikeeshon puran o suishou shimasu.)"
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and professional, aligning well with business communication standards in Japanese.",
+    "5-7 correct pronunciations": "Good! Most of your business phrases are pronounced correctly, but some require further refinement for a professional setting.",
+    "2-4 correct pronunciations": "Fair. You have basic skills in business communication, but more practice is needed to polish your pronunciation in Japanese.",
+    "0-1 correct pronunciations": "Needs improvement. Focus on practicing these business communication phrases to enhance your Japanese speaking skills."
+  }
+}

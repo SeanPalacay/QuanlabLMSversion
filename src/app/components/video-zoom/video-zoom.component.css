@@ -1,0 +1,60 @@
+/* Add this to your styles.css file */
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .video-call {
+    display: flex;
+    width: 800px; /* Adjust the width as needed */
+  }
+  
+  .video-holders {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  
+  .video-holder {
+    border: 2px solid #fff; /* White border for visibility */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Optional shadow effect */
+  }
+  
+  .sidebar {
+    width: 300px;
+    background-color: #f0f0f0;
+    padding: 16px;
+  }
+  
+  .participant-list {
+    border-bottom: 1px solid #555; /* Border between participant items */
+    padding-bottom: 8px;
+  }
+  
+  .participant-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .participant-item img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+  
+  .live-chat {
+    margin-top: 16px;
+  }
+  
+  /* Add more styles for the live chat as needed */
+  

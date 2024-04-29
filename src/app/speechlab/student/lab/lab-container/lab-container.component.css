@@ -1,0 +1,93 @@
+.buttonwrap .lessonbtn{
+    margin-top: 14px;
+}
+.openchatbtn{
+    display: none;
+}
+
+.chatMessage{
+    z-index:49!important;
+}
+@media only screen and (max-width: 768px) {
+    .containerflex{
+        display: block;
+    }
+    .openchatbtn{
+        display: block;
+        height: 40px;
+        width: 120px;
+        background: linear-gradient(to right, #0172AF, #74FEBD);
+        color: white;
+        border-radius: 8px;
+        box-shadow: 0px 0px 15px #00000040;
+    }
+    .livechat{
+        display: none;
+    }
+    .videosy{
+        width: 40%;
+    }
+    .wrapcontainer{
+        margin-top: 70%;
+        height: 100%;
+    }
+
+    .margin-up{
+        margin-top: 70%;
+    }
+
+    .margin-down{
+        margin-bottom: 40%;
+    }
+    .buttonwrap{
+        margin-top:60%;
+        display: flex;
+        margin-left: -32%;
+       
+    }
+
+    .parightkamo{
+        right: 40%;
+    }
+
+    .buttonwrap button{
+        width: 100px;
+    }
+    .buttonwrap .lessonbtn{
+        margin-top: 0px;
+        margin-left: 10px;
+    }
+    .taowrap{
+        height: 100px;
+        width: 100px;
+    }
+
+    .marginPhone {
+        margin-left: 12px!important;
+        margin-right: 12px!important;
+        
+    }
+    
+
+
+
+  } 
+
+
+
+
+  @media (min-aspect-ratio: 1/1) {
+    .videoR {
+      object-fit: cover;
+    }
+  }
+  
+  /* Apply object-scale-down when the screen is portrait */
+  @media (max-aspect-ratio: 1/1) {
+    .videoR {
+      object-fit: scale-down;
+    }
+  }
+
+
+  

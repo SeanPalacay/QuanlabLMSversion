@@ -1,0 +1,61 @@
+{
+  "title": "At the Restaurant",
+  "description": "Improve your Japanese speaking skills with phrases typically used at a restaurant. Focus on clear pronunciation and appropriate intonation.",
+  "instructions": [
+    "Below is a list of phrases you might use at a restaurant in Japanese.",
+    "Record yourself speaking each phrase.",
+    "Aim for clear and natural pronunciation.",
+    "Maintain a conversational and steady pace.",
+    "After recording, listen to your playback and compare it to the text.",
+    "Pay attention to intonation, clarity, and fluency in Japanese.",
+    "Repeat the recording process as necessary to improve your Japanese speaking skills."
+  ],
+  "items": [
+    {
+      "question": "二人用のテーブルをお願いします。 (Futariyou no teeburu o onegaishimasu.)",
+      "answer": "二人用のテーブルをお願いします。 (Futariyou no teeburu o onegaishimasu.)"
+    },
+    {
+      "question": "メニューを見せてください。 (Menyuu o misete kudasai.)",
+      "answer": "メニューを見せてください。 (Menyuu o misete kudasai.)"
+    },
+    {
+      "question": "ピーナッツアレルギーがあります。 (Piinattsu arerugii ga arimasu.)",
+      "answer": "ピーナッツアレルギーがあります。 (Piinattsu arerugii ga arimasu.)"
+    },
+    {
+      "question": "お水を一杯ください。 (Omizu o ippai kudasai.)",
+      "answer": "お水を一杯ください。 (Omizu o ippai kudasai.)"
+    },
+    {
+      "question": "チキンをいただきます。 (Chikin o itadakimasu.)",
+      "answer": "チキンをいただきます。 (Chikin o itadakimasu.)"
+    },
+    {
+      "question": "お会計をお願いします。 (Okaikei o onegaishimasu.)",
+      "answer": "お会計をお願いします。 (Okaikei o onegaishimasu.)"
+    },
+    {
+      "question": "サービス料は含まれていますか？ (Saabisu-ryou wa fukumarete imasu ka?)",
+      "answer": "サービス料は含まれていますか？ (Saabisu-ryou wa fukumarete imasu ka?)"
+    },
+    {
+      "question": "私はベジタリアンです。 (Watashi wa bejitarian desu.)",
+      "answer": "私はベジタリアンです。 (Watashi wa bejitarian desu.)"
+    },
+    {
+      "question": "デザートはありますか？ (Dezaato wa arimasu ka?)",
+      "answer": "デザートはありますか？ (Dezaato wa arimasu ka?)"
+    },
+    {
+      "question": "これは辛すぎます。 (Kore wa karasugimasu.)",
+      "answer": "これは辛すぎます。 (Kore wa karasugimasu.)"
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and accurate, demonstrating strong skills in Japanese restaurant language.",
+    "5-7 correct pronunciations": "Good! Your pronunciation is mostly correct, with a good grasp of restaurant phrases in Japanese. There are areas to refine for improved clarity.",
+    "2-4 correct pronunciations": "Fair. You can communicate basic needs in a Japanese restaurant, but need significant improvement in pronunciation.",
+    "0-1 correct pronunciations": "Needs improvement. Consider practicing more to enhance your Japanese speaking skills, or seek additional resources for learning."
+  }
+}

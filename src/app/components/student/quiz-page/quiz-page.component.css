@@ -1,0 +1,24 @@
+.gradient-color1 {
+  background-image: linear-gradient(
+    to right,
+    var(--tw-gradient-color),
+    var(--tw-gradient-color)
+  );
+  /* --tw-gradient-stops:  #0172AF, #74FEBD; */
+  /* --tw-gradient-from: #0172AF var(--tw-gradient-from-position); */
+  /* --tw-gradient-to: rgb(6 182 212 / 0) var(--tw-gradient-to-position); */
+  /* --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); */
+  /* --tw-gradient-to: #74FEBD var(--tw-gradient-to-position); */
+  background-size: 300% 100%;
+  overflow: hidden; /* Hide overflow content (if any) */
+  transition: transform 0.5s ease; /* Set the duration and timing function for both background and transform */
+}
+.score {
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(
+    to right,
+    rgb(1, 114, 175) 0%,
+    rgb(116, 254, 189) 100%
+  );
+}

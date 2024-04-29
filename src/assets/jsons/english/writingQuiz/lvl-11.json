@@ -1,0 +1,58 @@
+{
+  "title": "English Language Familiarization Quiz - Medium Difficulty",
+  "description": "Enhance your English skills with this quiz focusing on sentence construction, vocabulary, and common expressions.",
+  "instructions": [
+    "Read each question carefully.",
+    "Write your answer in English, focusing on correct usage and grammar.",
+    "After completing all questions, submit your answers for evaluation."
+  ],
+  "items": [
+    {
+      "question": "Convert the following sentence to the passive voice: 'The committee will announce the results tomorrow.'",
+      "suggestedAnswer": "The results will be announced by the committee tomorrow."
+    },
+    {
+      "question": "Explain the meaning of the idiom 'to play devil's advocate'.",
+      "suggestedAnswer": "To argue against an idea or opinion to explore the thought further, not necessarily because one disagrees."
+    },
+    {
+      "question": "Fill in the blank: 'Despite the heavy rain, they ___ (proceed) with the outdoor event.'",
+      "suggestedAnswer": "proceeded"
+    },
+    {
+      "question": "What does the phrasal verb 'to look up to someone' mean?",
+      "suggestedAnswer": "To admire or respect someone."
+    },
+    {
+      "question": "Choose the correct word: 'The artist's latest work is ___ (ambiguous/amphibious) and open to various interpretations.'",
+      "suggestedAnswer": "ambiguous"
+    },
+    {
+      "question": "Rewrite the following in reported speech: 'He said, \"I don't believe in ghosts.\"'",
+      "suggestedAnswer": "He said that he didn't believe in ghosts."
+    },
+    {
+      "question": "What is the antonym of 'lucid'?",
+      "suggestedAnswer": "Obscure or unclear"
+    },
+    {
+      "question": "Complete the sentence with a suitable modal verb: 'You ___ (might/could/should) see a doctor if the pain persists.'",
+      "suggestedAnswer": "should"
+    },
+    {
+      "question": "What does the word 'pedantic' mean?",
+      "suggestedAnswer": "Excessively concerned with minor details or rules; overly scholarly."
+    },
+    {
+      "question": "Convert the sentence to the future continuous tense: 'They travel to Paris.'",
+      "suggestedAnswer": "They will be traveling to Paris."
+    }
+  ],
+  "scoring": {
+    "10 correct answers": "Excellent! You've shown great proficiency in Filipino to English translation.",
+    "7-9 correct answers": "Very good! You've mastered most of the words with a few left to learn.",
+    "4-6 correct answers": "Good effort! You're learning well, keep practicing to improve further.",
+    "1-3 correct answers": "Nice try! Some words are tricky, but with more practice, you'll get there.",
+    "0 correct answers": "This level is tough, but don't get discouraged. Review and try again!"
+  }
+}

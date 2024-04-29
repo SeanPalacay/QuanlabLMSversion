@@ -1,0 +1,105 @@
+<div class="modal-content custom-modal-content" [ngClass]="myCustomClass">
+    <div class="modal-header">
+        <div class="titlehead poppins-b flex">
+            <h1>EDIT COURSE</h1>
+        </div>
+    </div>
+  
+    <div class="container">
+        <div class="topwrap">
+            <div class="topwrap1">
+                <input type="text" [(ngModel)]="courseTitle" placeholder="Course Title :" class="input-field">
+                <textarea [(ngModel)]="courseDesc" name="" id="" cols="30" rows="10" placeholder="Description :" class="textarea-field"></textarea>
+            </div>
+            <div class="topwrap2">
+                <div class="text">
+                    <select [(ngModel)]="language" (change)="selectLanguage(language)" name="language" id="language" class="poppins select-field">
+                        <option class="placeholder poppins-b" value="" disabled selected hidden>Select Language:</option>
+                        <option [value]='language.value.language' *ngFor="let language of languages|keyvalue" >
+                          {{language.value.language}}
+                       </option>
+                    </select>
+                </div>
+                <div class="mode poppins">
+                    <div>
+                        <h1 class="poppins-b">Select Mode :</h1>
+                    </div>
+                    <input [checked]="mode.listen =='on'" (change)="listen($event)" type="radio"><span> Listen</span>
+                    <input [checked]="mode.read =='on'" (change)="read($event)"   type="radio"><span> Read</span>
+                    <input [checked]="mode.speak =='on'"  (change)="speak($event)" type="radio"><span> Speak</span>
+                    <input [checked]="mode.write =='on'" (change)="write($event)"  type="radio"><span> Write</span>
+                </div>
+            </div>
+        </div>
+  
+        <div class="scrollables">
+           <ng-container  *ngIf="lessons.length ;else loading">
+            <div class="midtop" *ngFor="let lesson of lessons; let i = index"  >
+                <div class="midtopwrap flex">
+                    <div class="lessonwrapping">
+                    <h1 class="poppins-b">LESSON {{ i + 1 }}</h1>.
+                </div>
+                    <div  (click)="delete(lesson)" class="trashicon">
+                        
+                    <img class="w-7 h-7" src="assets/teacher/trash-bin.png" alt="">
+                </div>
+                    
+                </div>
+  
+                <div class="midtopcontents  text-center ">
+                    <div class="topinput  text-center ">
+                      <div class="resp  text-center ">
+                        <input type="text" [(ngModel)]="lesson.lessonName" placeholder="Lesson Name :" class="input-field">
+                        <!-- <div class="file text-center ">
+                            <label for="image-upload-{{i}}" class="flex justify-center file-label text-center ">
+                                <span class="poppins text-center " [ngClass]="{'text-cyan-500':lesson.coverImage, 'text-gray-400':!lesson.coverImage}">{{ (lesson.coverImage)? 'Uploaded!': 'Import Image' }}</span>
+                            </label>
+                            <input id="image-upload-{{i}}" type="file" (change)="importImage($event, lesson)">
+                        </div> -->
+                      </div>
+                        <div class="text">
+                            <select [(ngModel)]="lesson.complexity"  name="language" id="language" class="poppins select-field">
+                                <option class="placeholder poppins-b" value="" disabled selected hidden><span>Complexity :</span> Beginner</option>
+                                <option *ngFor="let complex of complexityOptions;let j = index" value="{{j}}">{{complex}}</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+  
+                <div class="buttom" style="margin-left: 10px;">
+                  <div class="filedesc">
+                      <label for="lesson-description" class="file-labeldesc">
+                          <input id="lesson-description" class="border-none outline-none full-width-input newtext" type="text" [(ngModel)]="lesson.description" placeholder="Description">
+                      </label>
+                  </div>
+                  <div class="buttomwrap">
+                      <div class="file">
+                          <label for="file-upload-{{i}}" class="file-label">
+                              <span class="poppins full-width-span">{{(lesson.fileupload)? getFilename(lesson.fileupload):'Attach File' }}</span>  
+                              <img src="assets/teacher/icondown.png" alt="Attach audio feedback">
+                          </label>
+                          <input id="file-upload-{{i}}" type="file" (change)="onFileSelected($event, lesson)">
+                      </div>
+                  </div>
+              </div>
+              
+            </div>
+  
+           </ng-container>
+            <!-- Add other lesson sections here -->
+           <ng-template #loading>
+            Loading Lessons....
+           </ng-template>
+        </div>
+        <div class="addlesson">
+            <button class="lesson poppins" (click)="thisLesson()">ADD LESSON</button>
+        </div>
+        <div class="buttonwrap">
+            <div class="btnwrap">
+                <button class="save poppins" (click)="submit()">SAVE</button>
+                <button class="cancel poppins" (click)="closeModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+  </div>
+  

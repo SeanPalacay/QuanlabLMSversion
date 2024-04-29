@@ -1,0 +1,77 @@
+{
+  "title": "Everyday Japanese Situational Phrases Quiz",
+  "description": "Master practical Japanese expressions for various daily situations with this quiz.",
+    "items": [
+      {
+        "id": 41,
+        "question": "How do you say 'Excuse me' when passing through a crowded place?",
+        "answer": "Sumimasen",
+        "options": ["Hai", "Iie", "Sumimasen", "Arigatou"],
+        "hint": "Apology or seeking attention in a crowded place"
+      },
+      {
+        "id": 42,
+        "question": "What is the Japanese word for 'Good afternoon'?",
+        "answer": "Konnichiwa",
+        "options": ["Ohayou gozaimasu", "Konbanwa", "Konnichiwa", "Arigatou"],
+        "hint": "Afternoon greeting"
+      },
+      {
+        "id": 43,
+        "question": "How do you say 'I'm fine' when someone asks how you are?",
+        "answer": "Genki desu",
+        "options": ["Iie", "Genki desu", "Konnichiwa", "Arigatou"],
+        "hint": "Responding positively to a well-being inquiry"
+      },
+      {
+        "id": 44,
+        "question": "What is the Japanese word for 'Small'?",
+        "answer": "Chisai",
+        "options": ["Ookii", "Chisai", "Konnichiwa", "Arigatou"],
+        "hint": "Describing something as small"
+      },
+      {
+        "id": 45,
+        "question": "How do you ask 'What is your age?' in Japanese?",
+        "answer": "Nan-sai desu ka",
+        "options": ["Kore wa nan desu ka", "Nan-sai desu ka", "Ima nan-ji desu ka", "Arigatou"],
+        "hint": "Inquiring about someone's age"
+      },
+      {
+        "id": 46,
+        "question": "What is the Japanese word for 'Tired'?",
+        "answer": "Tsukareta",
+        "options": ["Wakarimasen", "Iie", "Tsukareta", "Wakarimasu"],
+        "hint": "Expressing fatigue or exhaustion"
+      },
+      {
+        "id": 47,
+        "question": "How do you say 'Please wait a moment' in Japanese?",
+        "answer": "Chotto matte kudasai",
+        "options": ["Arigatou", "Sumimasen", "Chotto matte kudasai", "Sayonara"],
+        "hint": "Requesting someone to wait for a short time"
+      },
+      {
+        "id": 48,
+        "question": "What is the Japanese word for 'Rainy'?",
+        "answer": "Ame",
+        "options": ["Konnichiwa", "Ame", "Sayonara", "Arigatou"],
+        "hint": "Describing weather with rain"
+      },
+      {
+        "id": 49,
+        "question": "How do you say 'I don't like it' in Japanese?",
+        "answer": "Suki ja arimasen",
+        "options": ["Suki desu", "Iie", "Suki ja arimasen", "Arigatou"],
+        "hint": "Expressing dislike or preference"
+      },
+      {
+        "id": 50,
+        "question": "What is the Japanese word for 'Beautiful' (scenery)?",
+        "answer": "Kirei",
+        "options": ["Kirei", "Iie", "Konnichiwa", "Arigatou"],
+        "hint": "Describing beautiful scenery"
+      }
+    ]
+  }
+  

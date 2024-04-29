@@ -1,0 +1,71 @@
+
+      
+
+      <div class="instruction poppins mx-8 mt-4 text-gray-600 text-2xl font-semibold">
+        Our Most
+        <a
+          class="poppins-b font-semibold gradient-color text-transparent bg-clip-text text-2xl"
+        >
+        Popular Courses</a
+        >
+      </div>
+      <div class="description my-2 mx-12 text-gray-700 text-xl font-normal">
+        Let’s join our best classes with our famous instructor and institutes
+      </div>
+      
+      <div class="lg:mx-8 mx-6 my-4 flex justify-between items-center">
+
+        <div class="relative inline-block text-left dropdown">
+          <button class="text-sm shadow-boxz px-2 w-auto py-2 font-semibold rounded-xl" (click)="toggleDropdown(selectedDifficulty!)">
+            Difficulty: <span class="text-sm text-gray-500">{{ selectedDifficulty == null ? 'All':selectedDifficulty }}</span>
+          </button>
+          <div *ngIf="showDropdown" class="origin-top-right absolute right-0 mt-2 w-36 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="sort-options">
+            <div class="py-1" role="none">
+              <a class="block cursor-pointer px-4 py-2 text-sm"
+                 role="menuitem"
+                 [ngClass]="{'selected': selectedDifficulty === null}"
+                 (click)="selectDifficulty(null)">All</a>
+              <a class="block cursor-pointer px-4 py-2 text-sm"
+                 role="menuitem"
+                 [ngClass]="{'selected': selectedDifficulty === 'Beginner'}"
+                 (click)="selectDifficulty('Beginner')">Beginner</a>
+              <a class="block cursor-pointer px-4 py-2 text-sm"
+                 role="menuitem"
+                 [ngClass]="{'selected': selectedDifficulty === 'Intermediate'}"
+                 (click)="selectDifficulty('Intermediate')">Intermediate</a>
+              <a class="block cursor-pointer px-4 py-2 text-sm"
+                 role="menuitem"
+                 [ngClass]="{'selected': selectedDifficulty === 'Advanced'}"
+                 (click)="selectDifficulty('Advanced')">Advanced</a>
+            </div>
+          </div>
+        </div>
+        
+        
+      
+      </div>
+      <div class=" mx-1 rounded-xl">
+        <div class="lg:mx-8 mx-6 grid grid-cols-1 gap-y-10 lg:gap-4 lg:grid-cols-3  h-1/5  pt-4 pb-10 grid-rows-none" *ngIf="courses != null">
+          <!-- <div > -->
+           <ng-container *ngFor="let course of courses">
+            <app-card 
+            *ngIf="checkComplexity(course.complexity) || selectedDifficulty==null" 
+            (click)="checkIfEnrolled(course)"
+            [enrolled]="course.enrolled" 
+            [difficulty]="course.complexity"  
+            [picture]="course.cover" 
+            [number]="course.lessoncount + 'x Lessons'"
+            [lecture]="course.course" 
+            [profilepic]="getUrl(course.profile)" 
+            [name]="course.firstname + ' ' + course.lastname" 
+            [job]="course.job">
+          </app-card>
+
+          
+</ng-container>
+
+          <!-- </div> -->
+        </div>
+      </div>
+
+    

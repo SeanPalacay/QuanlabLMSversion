@@ -1,0 +1,35 @@
+{
+    "items": [
+      {"hiragana": "きんようび", "romaji": "kinyoubi", "english": "Friday"},
+      {"hiragana": "びょうき", "romaji": "byouki", "english": "Sick/Illness"},
+      {"hiragana": "げんき", "romaji": "genki", "english": "Healthy"},
+      {"hiragana": "ちょっとまって", "romaji": "chotto matte", "english": "Wait a moment"},
+      {"hiragana": "いらっしゃいませ", "romaji": "irasshaimase", "english": "Welcome (used in shops)"},
+      {"hiragana": "わすれる", "romaji": "wasureru", "english": "To forget"},
+      {"hiragana": "しんぱい", "romaji": "shinpai", "english": "Worry/Concern"},
+      {"hiragana": "よくわからない", "romaji": "yoku wakaranai", "english": "I don't understand it well"},
+      {"hiragana": "すごくむずかしい", "romaji": "sugoku muzukashii", "english": "Very difficult"},
+      {"hiragana": "あとで", "romaji": "ato de", "english": "Later/Afterwards"},
+      {"hiragana": "しつれいします", "romaji": "shitsurei shimasu", "english": "Excuse me (used when entering or leaving)"},
+      {"hiragana": "どちら", "romaji": "dochira", "english": "Where (polite)"},
+      {"hiragana": "こちら", "romaji": "kochira", "english": "This way (polite)"},
+      {"hiragana": "くれる", "romaji": "kureru", "english": "To give (from someone to me)"},
+      {"hiragana": "もちろん", "romaji": "mochiron", "english": "Of course"},
+      {"hiragana": "なんでしょうか", "romaji": "nandeshouka", "english": "What is it?"},
+      {"hiragana": "あまり", "romaji": "amari", "english": "Not much/Not very"},
+      {"hiragana": "たいてい", "romaji": "taitei", "english": "Usually/Mostly"},
+      {"hiragana": "いま", "romaji": "ima", "english": "Now"},
+      {"hiragana": "しんせつ", "romaji": "shinsetsu", "english": "Kind/Polite"},
+      {"hiragana": "こわい", "romaji": "kowai", "english": "Scary"},
+      {"hiragana": "ひま", "romaji": "hima", "english": "Free time"},
+      {"hiragana": "たすけて", "romaji": "tasukete", "english": "Help me"},
+      {"hiragana": "やめる", "romaji": "yameru", "english": "To stop/Quit"},
+      {"hiragana": "とてもたのしい", "romaji": "totemo tanoshii", "english": "Very enjoyable"},
+      {"hiragana": "なかなか", "romaji": "nakanaka", "english": "Pretty/Quite"},
+      {"hiragana": "やさしい", "romaji": "yasashii", "english": "Easy/Kind"},
+      {"hiragana": "たいへん", "romaji": "taihen", "english": "Difficult/Tough"},
+      {"hiragana": "やる気", "romaji": "yaruki", "english": "Motivation"},
+      {"hiragana": "もちろんです", "romaji": "mochiron desu", "english": "Certainly"}
+    ]
+  }
+  

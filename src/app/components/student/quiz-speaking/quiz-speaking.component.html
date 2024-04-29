@@ -1,0 +1,146 @@
+<div class="bg-gray-100 h-full w-full flex flex-col items-center">
+  <div class="w-11/12 p-6 bg-white rounded-md shadow-md">
+    <!-- Introductory Text -->
+    <div class="mx-auto p-8 bg-white shadow-md rounded-md mb-6">
+      <div class="flex items-center">
+        <div class="w-full">
+          <h1 class="text-3xl font-bold mb-4">{{ title }}</h1>
+          <p class="text-lg">{{ description }}</p>
+        </div>
+        <!-- Image on the right -->
+        <img
+          src="assets/quiz1.jpg"
+          alt="Quiz Image"
+          class="w-2/12 ml-4 rounded-md"
+        />
+      </div>
+    </div>
+
+    <!-- Question -->
+    <div *ngIf="currentQuestionIndex < questions.length">
+      <div class="text-center my-2">
+        <span class="text-sm font-semibold text-gray-700">
+          Question {{ currentQuestionIndex + 1 }} of {{ questions.length }}
+        </span>
+      </div>
+      <h2 class="text-xl text-center font-semibold mb-4">
+        <i class="bx bxs-microphone-alt"></i>
+        {{ questions[currentQuestionIndex].question }}
+        <i class="bx bxs-microphone-alt"></i>
+      </h2>
+
+      <!-- Record Button, toggles recording on and off -->
+      <div *ngIf="!nextLevel" class="text-center mb-4">
+        <button
+          [ngClass]="{
+            '!bg-gray-500': analysing,
+            'hover!bg-gray-600': analysing,
+            '!bg-blue-500': analysing,
+            'hover!bg-blue-700': analysing
+          }"
+          class="inline-flex items-center justify-center p-2 bg-blue-500 text-white rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50"
+          (click)="toggleRecording()"
+        >
+          <!-- Custom Microphone Icon for Start Recording -->
+          <svg
+            *ngIf="!isRecording && !analysing"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M20 12V13C20 17.4183 16.4183 21 12 21C7.58172 21 4 17.4183 4 13V12M12 17C9.79086 17 8 15.2091 8 13V7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7V13C16 15.2091 14.2091 17 12 17Z"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <!-- Custom Stop Recording Icon -->
+          <svg
+            *ngIf="isRecording && !analysing"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            stroke="#ff0000"
+            width="24"
+            height="24"
+          >
+            <path
+              d="M20 12V13C20 17.4183 16.4183 21 12 21C7.58172 21 4 17.4183 4 13V12M12 17C9.79086 17 8 15.2091 8 13V7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7V13C16 15.2091 14.2091 17 12 17Z"
+              stroke="#ff0000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+          {{
+            analysing
+              ? "Analyzing"
+              : isRecording
+              ? "Stop Recording"
+              : "Start Recording"
+          }}
+        </button>
+      </div>
+
+      <!-- Container for displaying the mock answer -->
+      <div *ngIf="mockAnswer" class="mt-4 text-center">
+        <p class="text-lg font-medium text-gray-800">{{ mockAnswer }}</p>
+      </div>
+      <div *ngIf="analysing" class="mt-4 text-center">
+        <p class="text-lg font-medium text-gray-800">
+          Analying your voice! Wait for the results.
+        </p>
+      </div>
+
+      <div *ngIf="nextLevel" class="mt-2 flex justify-center">
+        <div
+          class="py-2 px-4 bg-green-500 text-white rounded-lg text-lg poppins-sb"
+        >
+          Congratulations! You Passed!
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="mt-4 flex justify-center">
+        <button
+          *ngIf="nextLevel"
+          class="py-2 px-4 bg-green-500 text-white rounded-md"
+          (click)="nextQuestion()"
+        >
+          Next
+        </button>
+      </div>
+    </div>
+
+    <!-- Result Popup -->
+    <div *ngIf="showResult" class="mt-8">
+      <!-- <p class="text-lg font-semibold">
+        Quiz Result: {{ correctAnswersCount }}/{{ questions.length }}
+      </p> -->
+
+      <ng-container *ngIf="review">
+        <div *ngFor="let question of questions; let i = index">
+          <p class="mt-4 font-medium">
+            Phrase <span>{{ i + 1 }}</span
+            >:
+            <span class="text-green-500">{{ question.suggestedAnswer }}</span>
+          </p>
+        </div>
+      </ng-container>
+
+      <!-- Centered "Try Again" button -->
+      <div class="text-center">
+        <button
+          class="py-2 px-4 bg-blue-600 text-white rounded-md my-4 hover:bg-orange-600 hover:text-white focus:bg-orange-600 focus:text-white"
+          (click)="resetQuiz()"
+        >
+          Done
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+{
+    "items": [
+      {"hiragana": "こんにちは", "romaji": "konnichiwa", "english": "Hello"},
+      {"hiragana": "ありがとう", "romaji": "arigatou", "english": "Thank you"},
+      {"hiragana": "おはよう", "romaji": "ohayou", "english": "Good morning"},
+      {"hiragana": "こんばんは", "romaji": "konbanwa", "english": "Good evening"},
+      {"hiragana": "さようなら", "romaji": "sayounara", "english": "Goodbye"},
+      {"hiragana": "はい", "romaji": "hai", "english": "Yes"},
+      {"hiragana": "いいえ", "romaji": "iie", "english": "No"},
+      {"hiragana": "お願いします", "romaji": "onegaishimasu", "english": "Please"},
+      {"hiragana": "すみません", "romaji": "sumimasen", "english": "Excuse me / I'm sorry"},
+      {"hiragana": "どうもありがとう", "romaji": "doumo arigatou", "english": "Thank you very much"},
+      {"hiragana": "お元気ですか", "romaji": "ogenki desu ka", "english": "How are you?"},
+      {"hiragana": "わかりました", "romaji": "wakarimashita", "english": "I understand"},
+      {"hiragana": "お疲れ様です", "romaji": "otsukaresama desu", "english": "Thank you for your hard work"},
+      {"hiragana": "すごい", "romaji": "sugoi", "english": "Amazing"},
+      {"hiragana": "だめです", "romaji": "dame desu", "english": "It's not allowed / No good"},
+      {"hiragana": "楽しい", "romaji": "tanoshii", "english": "Fun"},
+      {"hiragana": "きれい", "romaji": "kirei", "english": "Beautiful"},
+      {"hiragana": "大丈夫", "romaji": "daijoubu", "english": "It's okay / All right"},
+      {"hiragana": "おいしい", "romaji": "oishii", "english": "Delicious"},
+      {"hiragana": "わかりません", "romaji": "wakarimasen", "english": "I don't understand"},
+      {"hiragana": "ごめんなさい", "romaji": "gomen nasai", "english": "I'm sorry"},
+      {"hiragana": "どうぞ", "romaji": "douzo", "english": "Here you go / Please"},
+      {"hiragana": "気をつけて", "romaji": "ki o tsukete", "english": "Take care"},
+      {"hiragana": "おめでとう", "romaji": "omedetou", "english": "Congratulations"},
+      {"hiragana": "はじめまして", "romaji": "hajimemashite", "english": "Nice to meet you"},
+      {"hiragana": "いただきます", "romaji": "itadakimasu", "english": "I will receive (said before meals)"},
+      {"hiragana": "ごちそうさまでした", "romaji": "gochisousama deshita", "english": "Thank you for the meal"},
+      {"hiragana": "おつかれさまでした", "romaji": "otsukaresama deshita", "english": "Thank you for your hard work"},
+      {"hiragana": "ええと", "romaji": "eeto", "english": "Well..."},
+      {"hiragana": "なんで", "romaji": "nande", "english": "Why"}
+    ]
+  }
+  

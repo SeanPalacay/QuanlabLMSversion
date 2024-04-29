@@ -1,0 +1,59 @@
+{
+  "title": "Fill in the Blanks - Medium Mode",
+  "description": "This intermediate-level quiz challenges you to fill in the blanks with the correct French translations of the given Tagalog words or phrases.",
+  "instructions": [
+    "Each sentence contains a blank space where a Tagalog word is provided in parentheses.",
+    "Translate the Tagalog word into French and fill in the blank.",
+    "Ensure the French word correctly completes the sentence in terms of both meaning and grammatical structure.",
+    "Review your answers before submission."
+  ],
+  "items": [
+    {
+      "question": "Ils ont planté un _____ dans leur jardin pour fournir de l'ombre. (punongkahoy)",
+      "suggestedAnswer": "arbre"
+    },
+    {
+      "question": "Le chef a préparé un délicieux _____ de fruits de mer pour le dîner. (sinigang)",
+      "suggestedAnswer": "sinigang"
+    },
+    {
+      "question": "Mon _____ sportif préféré est le badminton. (laro)",
+      "suggestedAnswer": "jeu"
+    },
+    {
+      "question": "Elle utilise un _____ pour transporter ses livres à l'université. (bag)",
+      "suggestedAnswer": "sac"
+    },
+    {
+      "question": "La _____ est très importante pour maintenir une bonne santé. (ehersisyo)",
+      "suggestedAnswer": "exercice"
+    },
+    {
+      "question": "Nous avons acheté des _____ frais au marché pour le dîner. (gulay)",
+      "suggestedAnswer": "légumes"
+    },
+    {
+      "question": "Le _____ a chanté tôt le matin et nous a réveillés. (tandang)",
+      "suggestedAnswer": "coq"
+    },
+    {
+      "question": "Après la pluie, l'air sentait la _____. (lupa)",
+      "suggestedAnswer": "terre"
+    },
+    {
+      "question": "Pour son anniversaire, il a reçu une nouvelle _____ à jouer avec ses amis. (bola)",
+      "suggestedAnswer": "balle"
+    },
+    {
+      "question": "La recette demandait d'ajouter une pincée de _____ pour améliorer le goût. (asin)",
+      "suggestedAnswer": "sel"
+    }
+  ],
+  "scoring": {
+    "10 correct answers": "Excellent! Your translation skills are quite impressive.",
+    "7-9 correct answers": "Great job! You're almost there, with just a little more practice needed.",
+    "4-6 correct answers": "Good effort! You've shown a solid understanding, but room for improvement remains.",
+    "1-3 correct answers": "A good start! Keep studying and practicing to enhance your skills.",
+    "0 correct answers": "It's a challenging start, but don't give up! Learning a new language takes time and practice."
+  }
+}

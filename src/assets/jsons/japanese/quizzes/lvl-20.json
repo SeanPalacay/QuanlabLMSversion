@@ -1,0 +1,57 @@
+{
+  "title": "Japanese Kanji and Hiragana Reading Quiz",
+  "description": "Challenge your knowledge of Japanese Kanji and Hiragana readings with this quiz. Each question presents a Kanji character, and you need to choose the correct Hiragana reading from the options. Test your proficiency in reading Japanese characters and enhance your language skills!",
+    "items": [
+      {
+        "question": "木",
+        "answer": "き",
+        "options": ["みず", "たいよう", "ひ", "き"]
+      },
+      {
+        "question": "日本",
+        "answer": "にほん",
+        "options": ["ちゅうごく", "かんこく", "にほん", "タイ"]
+      },
+      {
+        "question": "猫",
+        "answer": "ねこ",
+        "options": ["いぬ", "さかな", "とり", "ねこ"]
+      },
+      {
+        "question": "学生",
+        "answer": "がくせい",
+        "options": ["せんせい", "いしゃ", "エンジニア", "がくせい"]
+      },
+      {
+        "question": "雨",
+        "answer": "あめ",
+        "options": ["ゆき", "さんしょう", "かぜ", "あめ"]
+      },
+      {
+        "question": "花",
+        "answer": "はな",
+        "options": ["くさ", "き", "ばら", "はな"]
+      },
+      {
+        "question": "食べる",
+        "answer": "たべる",
+        "options": ["のむ", "ねる", "はしる", "たべる"]
+      },
+      {
+        "question": "車",
+        "answer": "くるま",
+        "options": ["バス", "じてんしゃ", "でんしゃ", "くるま"]
+      },
+      {
+        "question": "家族",
+        "answer": "かぞく",
+        "options": ["ともだち", "となり", "しんせき", "かぞく"]
+      },
+      {
+        "question": "夢",
+        "answer": "ゆめ",
+        "options": ["ひとみ", "あくむ", "ゆめ", "じっけん"]
+      }
+    ]
+  }
+  

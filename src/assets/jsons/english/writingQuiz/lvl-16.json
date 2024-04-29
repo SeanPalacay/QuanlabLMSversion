@@ -1,0 +1,58 @@
+{
+  "title": "Advanced English Proficiency Quiz - Hard Mode",
+  "description": "This quiz challenges your understanding of advanced English grammar, vocabulary, and idiomatic expressions.",
+  "instructions": [
+    "Read each question or prompt carefully.",
+    "Provide the most appropriate and advanced response or correction.",
+    "Submit your answers after completing all the questions."
+  ],
+  "items": [
+    {
+      "question": "Explain 'to play devil's advocate'.",
+      "suggestedAnswer": "To argue a contrary view for debate purposes."
+    },
+    {
+      "question": "Complete the sentence: 'His arguments were so ___ that nobody disagreed.'",
+      "suggestedAnswer": "convincing"
+    },
+    {
+      "question": "Correct the error: 'The jury was divided in their opinions.'",
+      "suggestedAnswer": "in its opinions"
+    },
+    {
+      "question": "Define 'esoteric'.",
+      "suggestedAnswer": "Understood by a select few."
+    },
+    {
+      "question": "Rewrite in direct speech: 'She said she had been waiting an hour.'",
+      "suggestedAnswer": "'I've been waiting an hour,' she said."
+    },
+    {
+      "question": "Correct the sentence: 'Each participant have to bring their equipment.'",
+      "suggestedAnswer": "Each participant has to bring his/her equipment."
+    },
+    {
+      "question": "Antonym of 'ephemeral'.",
+      "suggestedAnswer": "Permanent"
+    },
+    {
+      "question": "Complete the sentence: 'Despite the weather, the event went ahead ___.'",
+      "suggestedAnswer": "as planned"
+    },
+    {
+      "question": "Meaning of 'a red herring'.",
+      "suggestedAnswer": "A misleading distraction."
+    },
+    {
+      "question": "Identify the error: 'One of the keys to success are perseverance.'",
+      "suggestedAnswer": "are"
+    }
+  ],
+  "scoring": {
+    "10 correct answers": "Excellent! You've shown great proficiency in Filipino to English translation.",
+    "7-9 correct answers": "Very good! You've mastered most of the words with a few left to learn.",
+    "4-6 correct answers": "Good effort! You're learning well, keep practicing to improve further.",
+    "1-3 correct answers": "Nice try! Some words are tricky, but with more practice, you'll get there.",
+    "0 correct answers": "This level is tough, but don't get discouraged. Review and try again!"
+  }
+}

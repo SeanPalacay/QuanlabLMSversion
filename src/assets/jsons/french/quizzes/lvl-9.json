@@ -1,0 +1,56 @@
+{
+  "title": "French Language Essentials - Medium Mode",
+  "description": "Test your knowledge with these finish-the-sentence French phrases.",
+  "items": [
+    {
+      "question": "Mon frère aime beaucoup jouer au..., surtout le weekend.",
+      "choices": ["travail", "football", "sommeil", "repas"],
+      "answer": "football"
+    },
+    {
+      "question": "Quand il pleut, n'oublie pas de prendre un...",
+      "choices": ["parapluie", "sandwich", "soleil", "chapeau"],
+      "answer": "parapluie"
+    },
+    {
+      "question": "Je suis végétarien, donc je ne mange pas de...",
+      "choices": ["pommes", "carottes", "viande", "pain"],
+      "answer": "viande"
+    },
+    {
+      "question": "En France, beaucoup de gens boivent du... au petit déjeuner.",
+      "choices": ["vin", "thé", "eau", "lait"],
+      "answer": "thé"
+    },
+    {
+      "question": "Nous devons nous dépêcher pour ne pas manquer le...",
+      "choices": ["dîner", "bus", "film", "match"],
+      "answer": "bus"
+    },
+    {
+      "question": "Elle porte toujours des lunettes de... quand il fait beau.",
+      "choices": ["vue", "soleil", "pluie", "nuit"],
+      "answer": "soleil"
+    },
+    {
+      "question": "Pour son anniversaire, il a reçu une belle montre...",
+      "choices": ["argent", "argentée", "or", "dorée"],
+      "answer": "argentée"
+    },
+    {
+      "question": "Dans mon jardin, j'ai planté des... pour avoir de l'ombre.",
+      "choices": ["fleurs", "arbres", "légumes", "pierres"],
+      "answer": "arbres"
+    },
+    {
+      "question": "Le matin, avant d'aller au travail, je lis le...",
+      "choices": ["livre", "menu", "journal", "ciel"],
+      "answer": "journal"
+    },
+    {
+      "question": "Pour faire une salade de fruits, il me faut acheter des...",
+      "choices": ["pâtes", "fruits", "fromages", "chocolats"],
+      "answer": "fruits"
+    }
+  ]
+}

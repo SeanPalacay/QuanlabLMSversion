@@ -1,0 +1,58 @@
+{
+  "title": "Advanced English Proficiency Quiz - Hard Mode",
+  "description": "This quiz challenges your understanding of advanced English grammar, vocabulary, and idiomatic expressions.",
+  "instructions": [
+    "Read each question or prompt carefully.",
+    "Provide the most appropriate and advanced response or correction.",
+    "Submit your answers after completing all the questions."
+  ],
+  "items": [
+    {
+      "question": "Complete the sentence with the correct form of the verb: 'If I ___ (to know) about the traffic, I would have left earlier.'",
+      "suggestedAnswer": "had known"
+    },
+    {
+      "question": "Identify and correct the error in the sentence: 'One of the students have lost their textbook.'",
+      "suggestedAnswer": "Correction: 'One of the students has lost his or her textbook.'"
+    },
+    {
+      "question": "What does the idiom 'to bite off more than you can chew' mean?",
+      "suggestedAnswer": "To take on a task that is too big or beyond one's ability."
+    },
+    {
+      "question": "Rewrite the sentence in the passive voice: 'The committee will announce the results tomorrow.'",
+      "suggestedAnswer": "The results will be announced by the committee tomorrow."
+    },
+    {
+      "question": "Provide a synonym for 'ubiquitous'.",
+      "suggestedAnswer": "Omnipresent or widespread"
+    },
+    {
+      "question": "Correct the sentence: 'Neither the teachers nor the principal are in the office today.'",
+      "suggestedAnswer": "Correction: 'Neither the teachers nor the principal is in the office today.'"
+    },
+    {
+      "question": "Explain the difference in usage between 'affect' and 'effect'.",
+      "suggestedAnswer": "'Affect' is usually a verb meaning 'to influence,' while 'effect' is a noun meaning 'a result or outcome.'"
+    },
+    {
+      "question": "Complete the sentence: 'Despite his many achievements, he remains ___.' (use an appropriate adjective)",
+      "suggestedAnswer": "humble"
+    },
+    {
+      "question": "Identify the error: 'She is one of those who loves or love to travel.'",
+      "suggestedAnswer": "Correction: 'She is one of those who love to travel.'"
+    },
+    {
+      "question": "What does the phrase 'turning a blind eye' mean?",
+      "suggestedAnswer": "To ignore something and pretend not to see it."
+    }
+  ],
+  "scoring": {
+    "10 correct answers": "Excellent! You've shown great proficiency in Filipino to English translation.",
+    "7-9 correct answers": "Very good! You've mastered most of the words with a few left to learn.",
+    "4-6 correct answers": "Good effort! You're learning well, keep practicing to improve further.",
+    "1-3 correct answers": "Nice try! Some words are tricky, but with more practice, you'll get there.",
+    "0 correct answers": "This level is tough, but don't get discouraged. Review and try again!"
+  }
+}

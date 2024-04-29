@@ -1,0 +1,62 @@
+{
+    "title": "Advanced Conversations",
+    "description": "Practice English phrases for advanced conversational contexts. Emphasize clear pronunciation, confident intonation, and understanding of complex expressions.",
+    "instructions": [
+      "Below is a list of advanced phrases for deeper and more thoughtful conversations.",
+      "Record yourself speaking each phrase.",
+      "Focus on clear, precise, and confident pronunciation.",
+      "Maintain a conversational yet thoughtful pace.",
+      "After recording, listen to your playback and compare it to the text.",
+      "Consider the intonation, clarity, and complexity of each phrase.",
+      "Repeat the recording process as necessary to master your pronunciation."
+    ],
+    "items": [
+      {
+        "question": "Let's delve into the details.",
+        "answer": "Let's delve into the details."
+      },
+      {
+        "question": "What's your perspective on this matter?",
+        "answer": "What's your perspective on this matter?"
+      },
+      {
+        "question": "I'm intrigued by the cultural nuances.",
+        "answer": "I'm intrigued by the cultural nuances."
+      },
+      {
+        "question": "Could you elaborate on that concept?",
+        "answer": "Could you elaborate on that concept?"
+      },
+      {
+        "question": "Let's explore alternative solutions.",
+        "answer": "Let's explore alternative solutions."
+      },
+      {
+        "question": "I appreciate your nuanced approach.",
+        "answer": "I appreciate your nuanced approach."
+      },
+      {
+        "question": "What's the underlying theme here?",
+        "answer": "What's the underlying theme here?"
+      },
+      {
+        "question": "I find the historical context fascinating.",
+        "answer": "I find the historical context fascinating."
+      },
+      {
+        "question": "Let's engage in a thought-provoking discussion.",
+        "answer": "Let's engage in a thought-provoking discussion."
+      },
+      {
+        "question": "Your insights are thoughtfully articulated.",
+        "answer": "Your insights are thoughtfully articulated."
+      }
+    ],
+    "scoring": {
+      "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and sophisticated, suitable for advanced conversations.",
+      "5-7 correct pronunciations": "Good! Your pronunciation is largely effective, with a few areas to improve for advanced discussions.",
+      "2-4 correct pronunciations": "Fair. You're able to engage in complex conversations, but your pronunciation needs further refinement.",
+      "0-1 correct pronunciations": "Needs improvement. Focus on practicing these advanced phrases to enhance your skills in nuanced English conversations."
+    }
+  }
+  

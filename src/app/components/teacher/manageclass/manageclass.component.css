@@ -1,0 +1,371 @@
+    body {
+  padding: 30px;
+}
+
+.newclass button {
+  background-color: #ffffff;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center;
+  background-image: linear-gradient(
+    to right,
+    rgb(1, 114, 175) 0%,
+    rgb(116, 254, 189) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 20px;
+}
+.container_top {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 20px;
+}
+.container_top .img img {
+  margin-top: -4%;
+  margin-right: 22px;
+  height: auto;
+  width: 175px;
+}
+.reg button {
+  width: 300px;
+  height: 70px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 0px 15px #00000040;
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center;
+  background-image: linear-gradient(
+    to right,
+    rgb(1, 114, 175) 0%,
+    rgb(116, 254, 189) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 20px;
+  margin-left: 40px;
+}
+.reg button img {
+  height: 25px;
+  margin-right: 5px;
+}
+.newclass button img {
+  height: 25px;
+  margin-right: 5px;
+}
+
+.container {
+  margin-top: 2%;
+  display: flex;
+}
+.container .list {
+  background-color: #e1f3fd;
+  border-radius: 12px;
+}
+
+.list {
+  padding: 45px;
+}
+
+.approve {
+  width: 378px;
+  height: 230px;
+  background-color: #e1f3fd;
+  border-radius: 12px;
+  box-shadow: 0px 0px 15px #00000040;
+  margin-left: 50px;
+  padding: 20px;
+}
+.regwrap .approve .regcontent .table table {
+  border-radius: 8px;
+  width: 300px;
+  overflow: hidden; /* To contain the border-radius */
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.regwrap .approve .regcontent .table table td button {
+  height: 25px;
+  width: 100%;
+  margin: 0;
+  padding: 0px;
+}
+
+.regwrap .approve .regcontent .table table tbody {
+  max-height: 190px; /* Change this value as needed */
+  overflow-y: auto;
+  display: block;
+}
+
+.regwrap .approve .regcontent .table table td {
+  margin: 0;
+  padding-left: 10px;
+}
+
+.regwrap .approve .regcontent .table table .student {
+  width: 55%;
+  text-align: left;
+}
+.regwrap .approve .regcontent .table table .btn1 {
+  width: 26%;
+  background: linear-gradient(
+    to right,
+    rgb(1, 114, 175) 0%,
+    rgb(116, 254, 189) 100%
+  );
+  color: #e1f3fd;
+}
+.regwrap .approve .regcontent .table table .btn2 {
+  background: red;
+  color: #e1f3fd;
+}
+
+.regcontent .table h1 {
+  text-align: left;
+}
+
+/* PENDING */
+.pendingcontent .table .title > h1 {
+  background: linear-gradient(
+    to right,
+    rgb(1, 114, 175) 0%,
+    rgb(116, 254, 189) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 18px;
+}
+
+.pendingcontent .table .title {
+  display: flex;
+  background-color: transparent;
+}
+.pendingcontent .table .title .titlecont {
+  font-size: 10px;
+  margin-top: 3px;
+  margin-left: 20px;
+  display: flex;
+}
+
+.pendingwrap {
+  margin-top: 20px;
+}
+.pending {
+  width: 378px;
+  height: 190px;
+  background-color: #e1f3fd;
+  border-radius: 12px;
+  box-shadow: 0px 0px 15px #00000040;
+  margin-left: 50px;
+  padding: 20px;
+}
+.pendingwrap .pending .pendingcontent .table table {
+  border-radius: 8px;
+  width: 300px;
+  overflow: hidden; /* To contain the border-radius */
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.pendingwrap .pending .pendingcontent .table table td button {
+  height: 25px;
+  width: 100%;
+  margin: 0;
+  padding: 0px;
+}
+
+.pendingwrap .pending .pendingcontent .table table tbody {
+  max-height: 90px; /* Change this value as needed */
+  overflow-y: auto;
+  display: block;
+}
+
+.pendingwrap .pending .pendingcontent .table table td {
+  margin: 0;
+  padding-left: 10px;
+}
+
+.pendingwrap .pending .pendingcontent .table table .student {
+  width: 55%;
+  text-align: left;
+}
+.pendingwrap .pending .pendingcontent .table table .btn1 {
+  width: 26%;
+  background: linear-gradient(
+    to right,
+    rgb(1, 114, 175) 0%,
+    rgb(116, 254, 189) 100%
+  );
+  color: #e1f3fd;
+}
+
+.regwrap .pending .pendingcontent .table table .btn2 {
+  background: red;
+  color: #e1f3fd;
+}
+
+.pendingcontent .table h1 {
+  text-align: left;
+}
+input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  margin-left: 10px;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 30px; /* Adjusted width */
+  height: 15px; /* Adjusted height */
+  background: grey;
+  display: block;
+  border-radius: 7.5px; /* Adjusted border radius */
+  position: relative;
+}
+
+label:after {
+  content: "";
+  position: absolute;
+  top: 3px; /* Adjusted top position */
+  left: 3px; /* Adjusted left position */
+  width: 11px; /* Adjusted width */
+  height: 11px; /* Adjusted height */
+  background: #fff;
+  border-radius: 5px; /* Adjusted border radius */
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: rgba(116, 254, 190, 0.622);
+}
+
+input:checked + label:after {
+  left: calc(100% - 1px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 14px; /* Adjusted width */
+}
+
+.analytics {
+  font-size: 15px;
+  margin-top: 20px;
+  margin-left: 200px;
+  width: 65%;
+}
+.analytics button {
+  height: 30px;
+  width: 70%;
+  background: linear-gradient(
+    to right,
+    rgb(1, 114, 175) 0%,
+    rgb(116, 254, 189) 100%
+  );
+  display: flex;
+  border-radius: 12px;
+  box-shadow: 0px 0px 15px #00000040;
+  text-align: center;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+.analytics button img {
+  height: 25px;
+  width: 25px;
+  margin-left: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th,
+td {
+  border-right: 1px solid rgb(217, 217, 217);
+  border-bottom: 1px solid rgb(217, 217, 217);
+  padding: 10px;
+  text-align: center;
+}
+
+.table-container {
+  background-color: white;
+  height: 380px;
+  overflow: auto;
+}
+
+table thead {
+  background: linear-gradient(to right, #0172af, #74febd);
+  position: sticky;
+  top: 0;
+  height: 50px;
+  z-index: 1;
+}
+
+table thead th {
+  color: white;
+  padding: 10px;
+  text-align: left;
+}
+
+table tbody {
+  overflow-y: auto;
+}
+
+table tbody tr {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+table tbody td {
+  padding: 10px; /* Adjust padding as needed */
+  text-align: left;
+}
+
+/* For smaller screens, adjust layout */
+@media screen and (max-width: 768px) {
+  .container {
+    display: block;
+  }
+  .container .list {
+    width: auto;
+  }
+  .approve {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  .pending {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  .container_top {
+    margin-top: -2%;
+  }
+  .container_top .img img {
+    display: none;
+  }
+  .reg button {
+    width: 200px;
+    height: 82px;
+    margin-left: 10px;
+  }
+  .newclass button {
+    width: 200px;
+    height: 82px;
+    font-size: 20px;
+    margin-left: 10px;
+  }
+}
+
+/* For even smaller screens, further adjustments */
+@media screen and (max-width: 480px) {
+  /* Your specific mobile styles here */
+}

@@ -1,0 +1,61 @@
+{
+  "title": "Socializing and Leisure",
+  "description": "Improve your French speaking skills with phrases commonly used for socializing and leisure activities. Focus on clear pronunciation and engaging intonation.",
+  "instructions": [
+    "Below, you'll find a list of common phrases related to socializing and leisure activities in French.",
+    "Your task is to record yourself speaking each phrase.",
+    "Ensure your pronunciation matches the provided text as closely as possible.",
+    "Try to maintain a natural and engaging speaking pace.",
+    "After recording each phrase, listen to your recording and compare it to the text.",
+    "Focus on intonation, clarity, and fluency.",
+    "Repeat the recording process as many times as needed to improve your pronunciation."
+  ],
+  "items": [
+    {
+      "question": "Voulez-vous aller au cinéma ?",
+      "answer": "Voulez-vous aller au cinéma ?"
+    },
+    {
+      "question": "Faisons un pique-nique dans le parc.",
+      "answer": "Faisons un pique-nique dans le parc."
+    },
+    {
+      "question": "J'aime jouer au tennis.",
+      "answer": "J'aime jouer au tennis."
+    },
+    {
+      "question": "Voulez-vous danser ?",
+      "answer": "Voulez-vous danser ?"
+    },
+    {
+      "question": "Rencontrons-nous pour un café.",
+      "answer": "Rencontrons-nous pour un café."
+    },
+    {
+      "question": "Je vais à la salle de sport.",
+      "answer": "Je vais à la salle de sport."
+    },
+    {
+      "question": "Jouez-vous d'un instrument ?",
+      "answer": "Jouez-vous d'un instrument ?"
+    },
+    {
+      "question": "Je lis un excellent livre.",
+      "answer": "Je lis un excellent livre."
+    },
+    {
+      "question": "Voulez-vous jouer à des jeux vidéo ?",
+      "answer": "Voulez-vous jouer à des jeux vidéo ?"
+    },
+    {
+      "question": "Allons faire du shopping ce week-end.",
+      "answer": "Allons faire du shopping ce week-end."
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and engaging, perfect for social and leisure conversations in French.",
+    "5-7 correct pronunciations": "Good! Your pronunciation is mostly correct, with a good grasp of leisure activity phrases in French. There are some areas to refine for improved clarity.",
+    "2-4 correct pronunciations": "Fair. You can navigate basic social and leisure conversations in French, but there are several areas needing significant improvement.",
+    "0-1 correct pronunciations": "Needs improvement. Consider practicing more to enhance your French pronunciation skills, or seek additional resources for learning."
+  }
+}

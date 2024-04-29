@@ -1,0 +1,74 @@
+ <body>
+    <div class="topbutton">      
+        <div ngbDropdown class="d-inline-block" placement="buttom-end">
+            <button type="button" id="dropdownBasic1" ngbDropdownToggle class="btntop poppins">
+                <div>Category <span>Attendace</span></div><img src="assets/teacher/icondown.png">
+            </button> 
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="toggle">
+                <button ngbDropdownItem>Attendance</button>
+                <button class="btnwrap" ngbDropdownItem>Grades of Student</button>
+                <button ngbDropdownItem>Assesment</button>
+            </div>
+        </div>
+    </div>
+<div class="select">
+    <div class="container">
+        
+        <div class="list">
+
+            <div class="table table-bordered">
+                <h1 class="poppins-b">Select Class:</h1>
+                <table class="poppins">
+                    <thead>
+                    <tr>
+                        <th>Class name</th>
+                    </tr>
+                    </thead>
+                    <tbody *ngFor="let class of classes" class="poppins-b">
+                        <tr (click)="loadStudents(class.id)">
+                            <td>{{class.class}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="apply">
+                    <button class="poppins-b">Apply Filter</button>
+                </div>
+            </div>
+        </div>
+        <div class="list list2">
+
+            <div class="table">
+                <h1 class="poppins-b">Select Student:</h1>
+                <table class="poppins">
+                    <thead>
+                    <tr>
+                        <th>Student name</th>
+                    </tr>
+                    </thead>
+                    <tbody *ngFor="let student of students" class="poppins-b">
+                        <tr>
+                            <td>{{student.firstname + " " + student.lastname}}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                <div class="apply">
+                    <button class="poppins-b">Apply Filter</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container2">
+        <div class="graphwrap">
+            <h1>Graphh igdi</h1>
+        </div>
+        <div class="btnwrap poppins">
+            <button>EXPORT TO EXCEL</button>
+            <button>DOWNLOAD CSV</button>
+            <button>DOWNLOAD PDF</button>
+        </div>
+    </div>
+</div>
+</body>

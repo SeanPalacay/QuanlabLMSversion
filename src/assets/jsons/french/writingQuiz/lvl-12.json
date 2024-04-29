@@ -1,0 +1,59 @@
+{
+  "title": "Fill in the Blanks - Medium Mode",
+  "description": "This intermediate-level quiz challenges you to fill in the blanks with the correct French translations of the given Tagalog words or phrases.",
+  "instructions": [
+    "Each sentence contains a blank space where a Tagalog word is provided in parentheses.",
+    "Translate the Tagalog word into French and fill in the blank.",
+    "Ensure the French word correctly completes the sentence in terms of both meaning and grammatical structure.",
+    "Review your answers before submission."
+  ],
+  "items": [
+    {
+      "question": "Après avoir fini ses devoirs, il est allé jouer au _____ avec ses amis. (basketbol)",
+      "suggestedAnswer": "basket-ball"
+    },
+    {
+      "question": "Chaque dimanche, ils vont à l'église pour entendre la _____. (misa)",
+      "suggestedAnswer": "messe"
+    },
+    {
+      "question": "Pour le petit déjeuner, je préfère toujours un bol de _____ chaud. (gatas)",
+      "suggestedAnswer": "lait"
+    },
+    {
+      "question": "Le _____ est très utile pour ceux qui étudient l'histoire ancienne. (mapa)",
+      "suggestedAnswer": "carte"
+    },
+    {
+      "question": "Il a offert à sa mère un collier avec un pendentif en forme de _____. (puso)",
+      "suggestedAnswer": "coeur"
+    },
+    {
+      "question": "Nous avons utilisé un _____ pour couper le bois pour le feu de camp. (palakol)",
+      "suggestedAnswer": "hache"
+    },
+    {
+      "question": "Le _____ est considéré comme un plat national aux Philippines. (sinigang)",
+      "suggestedAnswer": "sinigang"
+    },
+    {
+      "question": "Elle a décoré sa chambre avec des photos de ses _____ préférés. (artista)",
+      "suggestedAnswer": "artistes"
+    },
+    {
+      "question": "Lors de notre promenade en forêt, nous avons aperçu un _____ sauvage. (baboy damo)",
+      "suggestedAnswer": "sanglier"
+    },
+    {
+      "question": "Leur famille aime manger du _____ avec du riz pour le dîner. (manok)",
+      "suggestedAnswer": "poulet"
+    }
+  ],
+  "scoring": {
+    "10 correct answers": "Excellent! Your translation skills are quite impressive.",
+    "7-9 correct answers": "Great job! You're almost there, with just a little more practice needed.",
+    "4-6 correct answers": "Good effort! You've shown a solid understanding, but room for improvement remains.",
+    "1-3 correct answers": "A good start! Keep studying and practicing to enhance your skills.",
+    "0 correct answers": "It's a challenging start, but don't give up! Learning a new language takes time and practice."
+  }
+}

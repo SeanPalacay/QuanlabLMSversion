@@ -1,0 +1,61 @@
+{
+  "title": "Academic Discussions",
+  "description": "Enhance your Japanese speaking skills with phrases used for academic discussions. Focus on clear, intellectual pronunciation and analytical intonation.",
+  "instructions": [
+    "Below is a list of phrases that are commonly used in academic discussions in Japanese.",
+    "Record yourself speaking each phrase.",
+    "Aim for clear, articulate, and thoughtful pronunciation.",
+    "Maintain a steady and analytical pace.",
+    "After recording, listen to your playback and compare it to the text.",
+    "Pay attention to intonation, clarity, and fluency in Japanese.",
+    "Repeat the recording process as necessary to improve your Japanese speaking skills for academic contexts."
+  ],
+  "items": [
+    {
+      "question": "学術研究へのあなたのアプローチは何ですか？ (Gakujutsu kenkyuu e no anata no apuroochi wa nan desu ka?)",
+      "answer": "学術研究へのあなたのアプローチは何ですか？ (Gakujutsu kenkyuu e no anata no apuroochi wa nan desu ka?)"
+    },
+    {
+      "question": "理論的枠組みについて掘り下げましょう。 (Rironteki wakugumi ni tsuite horisagemashou.)",
+      "answer": "理論的枠組みについて掘り下げましょう。 (Rironteki wakugumi ni tsuite horisagemashou.)"
+    },
+    {
+      "question": "あなたの学術的視点に興味があります。 (Anata no gakujutsuteki shiten ni kyoumi ga arimasu.)",
+      "answer": "あなたの学術的視点に興味があります。 (Anata no gakujutsuteki shiten ni kyoumi ga arimasu.)"
+    },
+    {
+      "question": "使用された方法論について詳しく教えてください。 (Shiyou sareta houron ni tsuite kuwashiku oshiete kudasai.)",
+      "answer": "使用された方法論について詳しく教えてください。 (Shiyou sareta houron ni tsuite kuwashiku oshiete kudasai.)"
+    },
+    {
+      "question": "あなたの研究の主要な発見は何ですか？ (Anata no kenkyuu no shuyou na hakken wa nan desu ka?)",
+      "answer": "あなたの研究の主要な発見は何ですか？ (Anata no kenkyuu no shuyou na hakken wa nan desu ka?)"
+    },
+    {
+      "question": "その研究論文を批判的に分析しましょう。 (Sono kenkyuu ronbun o hihanteki ni bunseki shimashou.)",
+      "answer": "その研究論文を批判的に分析しましょう。 (Sono kenkyuu ronbun o hihanteki ni bunseki shimashou.)"
+    },
+    {
+      "question": "学際的なアプローチを高く評価します。 (Gakusai-teki na apuroochi o takaku hyouka shimasu.)",
+      "answer": "学際的なアプローチを高く評価します。 (Gakusai-teki na apuroochi o takaku hyouka shimasu.)"
+    },
+    {
+      "question": "学術的な議論は学習に不可欠です。 (Gakujutsuteki na giron wa gakushuu ni fukaketsu desu.)",
+      "answer": "学術的な議論は学習に不可欠です。 (Gakujutsuteki na giron wa gakushuu ni fukaketsu desu.)"
+    },
+    {
+      "question": "学術的な知識を実践にどう統合しますか？ (Gakujutsuteki na chishiki o jissen ni dou tougou shimasu ka?)",
+      "answer": "学術的な知識を実践にどう統合しますか？ (Gakujutsuteki na chishiki o jissen ni dou tougou shimasu ka?)"
+    },
+    {
+      "question": "この研究の意味するところを探求しましょう。 (Kono kenkyuu no imi suru tokoro o tankyuu shimashou.)",
+      "answer": "この研究の意味するところを探求しましょう。 (Kono kenkyuu no imi suru tokoro o tankyuu shimashou.)"
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and suited for in-depth academic discussions in Japanese.",
+    "5-7 correct pronunciations": "Good! Most of your academic phrases are pronounced correctly, with some areas needing refinement for academic clarity.",
+    "2-4 correct pronunciations": "Fair. You understand basic academic concepts, but need more practice for effective communication in scholarly settings.",
+    "0-1 correct pronunciations": "Needs improvement. Focus on practicing these academic phrases to enhance your Japanese speaking skills in scholarly discussions."
+  }
+}

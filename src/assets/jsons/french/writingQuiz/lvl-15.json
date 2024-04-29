@@ -1,0 +1,59 @@
+{
+  "title": "French Error Detection - Hard Mode",
+  "description": "Test your proficiency in French by identifying errors in common sentences. This quiz is designed for advanced learners.",
+  "instructions": [
+    "Read each sentence carefully.",
+    "Identify the word that is incorrect in the context of the sentence.",
+    "Write down the incorrect word as your answer.",
+    "Check your answers at the end of the quiz to see explanations and correct forms."
+  ],
+  "items": [
+    {
+      "question": "Je mange un pomme pour le petit déjeuner.",
+      "suggestedAnswer": "pomme"
+    },
+    {
+      "question": "Elle va à l'école avec son frères.",
+      "suggestedAnswer": "frères"
+    },
+    {
+      "question": "Nous avons acheté des nouveaux livres pour la classe.",
+      "suggestedAnswer": "des"
+    },
+    {
+      "question": "Il fait du vélo sans aucun casque sur la tête.",
+      "suggestedAnswer": "casque"
+    },
+    {
+      "question": "Tu as vu le chien qui courait dans le jardin?",
+      "suggestedAnswer": "courait"
+    },
+    {
+      "question": "Mon livre préféré est sur la table, à côté de la lampe.",
+      "suggestedAnswer": "préféré"
+    },
+    {
+      "question": "Ils ont perdu leurs clés dans le parc hier soir.",
+      "suggestedAnswer": "leurs"
+    },
+    {
+      "question": "Elle a une belle robe bleue pour aller à la fête.",
+      "suggestedAnswer": "bleue"
+    },
+    {
+      "question": "Les enfants joue dans le parc tous les samedis.",
+      "suggestedAnswer": "joue"
+    },
+    {
+      "question": "Ce gâteau est pour toi, mais ne mange pas tout d'un coup!",
+      "suggestedAnswer": "mange"
+    }
+  ],
+  "scoring": {
+    "10 correct answers": "Exceptionnel! Your understanding of French grammar and vocabulary is impressive.",
+    "7-9 correct answers": "Très bien! You have a strong grasp on French, with minor areas for improvement.",
+    "4-6 correct answers": "Bien! You're on the right track, but paying closer attention to details will help.",
+    "1-3 correct answers": "Un bon début! Keep studying the nuances of French grammar and vocabulary.",
+    "0 correct answers": "C'est un début. Focus on learning basic rules and common expressions."
+  }
+}

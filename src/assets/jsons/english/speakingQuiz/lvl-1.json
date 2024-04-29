@@ -1,0 +1,61 @@
+{
+  "title": "Basic Greetings",
+  "description": "Practice your English pronunciation skills with this audio recording task. Challenge yourself to accurately pronounce each phrase!",
+  "instructions": [
+    "Below, you'll find a list of common English greetings.",
+    "Your task is to record yourself speaking each phrase.",
+    "Ensure your pronunciation matches the provided text as closely as possible.",
+    "Try to maintain a natural and clear speaking pace.",
+    "After recording each phrase, listen to your recording and compare it to the text.",
+    "Focus on intonation, clarity, and fluency.",
+    "Repeat the recording process as many times as needed to improve your pronunciation."
+  ],
+  "items": [
+    {
+      "question": "Hello, how are you?",
+      "answer":  "Hello, how are you?"
+    },
+    {
+      "question": "Good morning.",
+      "answer": "Good morning."
+    },
+    {
+      "question":   "Good night.",
+      "answer":   "Good night."
+    },
+    {
+      "question": "See you later.",
+      "answer": "See you later."
+    },
+    {
+      "question":     "Have a good day.",
+      "answer":     "Have a good day."
+    },
+    {
+      "question":  "How's it going?",
+      "answer":  "How's it going?"
+    },
+    {
+      "question": "Nice to meet you.",
+      "answer": "Nice to meet you."
+    },
+    {
+      "question": "What's up?",
+      "answer": "What's up?"
+    },
+    {
+      "question": "Take care.",
+      "answer": "Take care."
+    },
+    {
+      "question":"Bye-bye.",
+      "answer": "Bye-bye."
+    }
+  ],
+  "scoring": {
+    "8-10 correct answers": "Excellent! You have a strong command of basic English.",
+    "5-7 correct answers": "Good! You have a good understanding of basic English, but there are a few areas where you could improve.",
+    "2-4 correct answers": "Fair. You have a basic understanding of English, but there are many areas where you need to improve.",
+    "0-1 correct answers": "Needs improvement. You should consider taking an English language course or using resources to improve your English skills."
+  }
+}

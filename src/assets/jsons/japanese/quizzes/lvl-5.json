@@ -1,0 +1,77 @@
+{
+  "title": "Essential Japanese Expressions Quiz II",
+  "description": "Expand your proficiency in Japanese with a diverse set of essential phrases and expressions.",
+    "items": [
+      {
+        "id": 31,
+        "question": "How do you say 'I don't know' in Japanese?",
+        "answer": "Shirimasen",
+        "options": ["Hai", "Iie", "Shirimasen", "Arigatou"],
+        "hint": "Expressing lack of knowledge"
+      },
+      {
+        "id": 32,
+        "question": "What is the Japanese word for 'Hot' (temperature)?",
+        "answer": "Atsui",
+        "options": ["Atsui", "Iie", "Konnichiwa", "Arigatou"],
+        "hint": "Describing warm or hot weather"
+      },
+      {
+        "id": 33,
+        "question": "How do you ask 'What is your name?' in a formal way?",
+        "answer": "O-namae wa nan desu ka",
+        "options": ["Anata wa dare desu ka", "Kore wa nan desu ka", "O-namae wa nan desu ka", "Arigatou"],
+        "hint": "Formally inquiring about someone's name"
+      },
+      {
+        "id": 34,
+        "question": "What is the Japanese word for 'Big'?",
+        "answer": "Ookii",
+        "options": ["Ookii", "Chisai", "Konnichiwa", "Arigatou"],
+        "hint": "Describing something as large or big"
+      },
+      {
+        "id": 35,
+        "question": "How do you say 'I'm thirsty' in Japanese?",
+        "answer": "Nodo ga kawakimashita",
+        "options": ["Nodo ga kawakimashita", "Iie", "Konnichiwa", "Arigatou"],
+        "hint": "Expressing thirst"
+      },
+      {
+        "id": 36,
+        "question": "What is the Japanese word for 'Happy'?",
+        "answer": "Ureshii",
+        "options": ["Wakarimasen", "Iie", "Ureshii", "Wakarimasu"],
+        "hint": "Expressing joy or happiness"
+      },
+      {
+        "id": 37,
+        "question": "How do you ask 'What is this?' in Japanese?",
+        "answer": "Kore wa nan desu ka",
+        "options": ["Anata wa nani desu ka", "Kore wa nan desu ka", "Ima nan-ji desu ka", "Arigatou"],
+        "hint": "Inquiring about an object"
+      },
+      {
+        "id": 38,
+        "question": "What is the Japanese word for 'Fast'?",
+        "answer": "Hayai",
+        "options": ["Konnichiwa", "Hayai", "Sayonara", "Arigatou"],
+        "hint": "Describing quick or fast movement"
+      },
+      {
+        "id": 39,
+        "question": "How do you say 'Good afternoon' in Japanese?",
+        "answer": "Konnichiwa",
+        "options": ["Ohayou gozaimasu", "Konbanwa", "Konnichiwa", "Arigatou"],
+        "hint": "Afternoon greeting"
+      },
+      {
+        "id": 40,
+        "question": "What is the Japanese word for 'Slow'?",
+        "answer": "Osoi",
+        "options": ["Osoi", "Iie", "Konnichiwa", "Arigatou"],
+        "hint": "Describing slow or leisurely movement"
+      }
+    ]
+  }
+  

@@ -1,0 +1,76 @@
+{
+  "title": "French Language Essentials - Easy Mode",
+  "description": "Choose the English equivalent of the given French language.",
+  "items": [
+    {
+      "question": "À la vôtre !",
+      "choices": ["Good luck!", "Cheers!", "Enjoy your meal!", "Goodbye!"],
+      "answer": "Cheers!"
+    },
+    {
+      "question": "C'est la vie",
+      "choices": ["It's life", "It's beautiful", "It's possible", "It's mine"],
+      "answer": "It's life"
+    },
+    {
+      "question": "L'heure du goûter",
+      "choices": ["Lunch time", "Breakfast time", "Snack time", "Dinner time"],
+      "answer": "Snack time"
+    },
+    {
+      "question": "Faire la bise",
+      "choices": [
+        "To shake hands",
+        "To hug",
+        "To kiss on the cheek",
+        "To wave"
+      ],
+      "answer": "To kiss on the cheek"
+    },
+    {
+      "question": "Le quatorze juillet",
+      "choices": ["New Year's Day", "Christmas", "Bastille Day", "Easter"],
+      "answer": "Bastille Day"
+    },
+    {
+      "question": "Rentrée scolaire",
+      "choices": [
+        "Summer break",
+        "School holiday",
+        "Back to school",
+        "Graduation day"
+      ],
+      "answer": "Back to school"
+    },
+    {
+      "question": "La grève",
+      "choices": ["The meeting", "The strike", "The party", "The conference"],
+      "answer": "The strike"
+    },
+    {
+      "question": "Apéro",
+      "choices": ["Dessert", "Appetizer", "Lunch", "Dinner"],
+      "answer": "Appetizer"
+    },
+    {
+      "question": "Tutoyer ou vouvoyer ?",
+      "choices": [
+        "To work or to rest?",
+        "To laugh or to cry?",
+        "To use 'tu' or 'vous'?",
+        "To stay or to leave?"
+      ],
+      "answer": "To use 'tu' or 'vous'?"
+    },
+    {
+      "question": "Le savoir-vivre à la française",
+      "choices": [
+        "The French lifestyle",
+        "The French cuisine",
+        "The French etiquette",
+        "The French language"
+      ],
+      "answer": "The French etiquette"
+    }
+  ]
+}

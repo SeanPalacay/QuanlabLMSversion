@@ -1,0 +1,77 @@
+{
+  "title": "Japanese Phrases Mastery Challenge",
+  "description": "Take on the challenge of mastering Japanese phrases with this quiz. Featuring nuanced greetings, expressions of gratitude, and complex questions, each item offers options, a hint, and the correct answer in Japanese characters and Romaji. Test your proficiency and elevate your Japanese language skills to an advanced level!",
+    "items": [
+      {
+        "id": 1,
+        "question": "How do you greet someone during the day?",
+        "answer": "こんにちは",
+        "options": ["さようなら", "ありがとう", "すみません", "こんにちは"],
+        "hint": "Common greeting"
+      },
+      {
+        "id": 2,
+        "question": "What expression is used to show gratitude or say 'thank you'?",
+        "answer": "ありがとう",
+        "options": ["はい", "いいえ", "こんにちは", "ありがとう"],
+        "hint": "Expressing gratitude"
+      },
+      {
+        "id": 3,
+        "question": "What is the Japanese word for 'yes'?",
+        "answer": "はい",
+        "options": ["はい", "いいえ", "こんにちは", "ありがとう"],
+        "hint": "Affirmative response"
+      },
+      {
+        "id": 4,
+        "question": "How do you say 'no' in Japanese?",
+        "answer": "いいえ",
+        "options": ["はい", "いいえ", "こんにちは", "ありがとう"],
+        "hint": "Negative response"
+      },
+      {
+        "id": 5,
+        "question": "Which phrase is used as a morning greeting?",
+        "answer": "おはようございます",
+        "options": ["こんばんは", "こんにちは", "おはようございます", "ありがとう"],
+        "hint": "Morning greeting"
+      },
+      {
+        "id": 6,
+        "question": "What phrase is used to greet someone in the evening?",
+        "answer": "こんばんは",
+        "options": ["おはようございます", "こんにちは", "こんばんは", "ありがとう"],
+        "hint": "Evening greeting"
+      },
+      {
+        "id": 7,
+        "question": "How do you apologize or get someone's attention in Japanese?",
+        "answer": "すみません",
+        "options": ["はい", "いいえ", "すみません", "ありがとう"],
+        "hint": "Apology or seeking attention"
+      },
+      {
+        "id": 8,
+        "question": "What is the common way to ask 'How are you?' in Japanese?",
+        "answer": "お元気ですか",
+        "options": ["さようなら", "お元気ですか", "すみません", "ありがとう"],
+        "hint": "Asking about well-being"
+      },
+      {
+        "id": 9,
+        "question": "How do you express appreciation for someone's hard work in Japanese?",
+        "answer": "お疲れ様です",
+        "options": ["はい", "お疲れ様です", "すみません", "こんにちは"],
+        "hint": "Common expression in the workplace"
+      },
+      {
+        "id": 10,
+        "question": "What question would you ask when you want to know what something is?",
+        "answer": "これは何ですか",
+        "options": ["はい", "いいえ", "これは何ですか", "こんにちは"],
+        "hint": "Asking about an object"
+      }
+    ]
+  }
+  

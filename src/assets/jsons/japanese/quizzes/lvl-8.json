@@ -1,0 +1,77 @@
+{
+  "title": "Expressions for Various Life Situations Quiz",
+  "description": "Dive into a diverse range of Japanese phrases applicable to different life situations with this quiz.",
+    "items": [
+      {
+        "id": 61,
+        "question": "How do you say 'I have a cold' in Japanese?",
+        "answer": "Kaze wo hiita",
+        "options": ["Hai", "Iie", "Kaze wo hiita", "Arigatou"],
+        "hint": "Indicating that you caught a cold"
+      },
+      {
+        "id": 62,
+        "question": "What is the Japanese word for 'I'm lost' in a city?",
+        "answer": "Machinami ni mayoimashita",
+        "options": ["Ohayou gozaimasu", "Machinami ni mayoimashita", "Konnichiwa", "Arigatou"],
+        "hint": "Expressing being lost in a city or town"
+      },
+      {
+        "id": 63,
+        "question": "How do you say 'Congratulations' in Japanese?",
+        "answer": "Omedetou gozaimasu",
+        "options": ["Iie", "Omedetou gozaimasu", "Konnichiwa", "Arigatou"],
+        "hint": "Offering congratulations for an achievement"
+      },
+      {
+        "id": 64,
+        "question": "What is the Japanese word for 'Cute'?",
+        "answer": "Kawaii",
+        "options": ["Ookii", "Chisai", "Kawaii", "Arigatou"],
+        "hint": "Describing something as cute or adorable"
+      },
+      {
+        "id": 65,
+        "question": "How do you ask 'What is your favorite food?' in Japanese?",
+        "answer": "Anata no suki na tabemono wa nanidesu ka",
+        "options": ["Kore wa nan desu ka", "Anata no suki na tabemono wa nanidesu ka", "Ima nan-ji desu ka", "Arigatou"],
+        "hint": "Inquiring about someone's favorite food"
+      },
+      {
+        "id": 66,
+        "question": "What is the Japanese word for 'I'm bored'?",
+        "answer": "Tsumaranai",
+        "options": ["Wakarimasen", "Iie", "Tsumaranai", "Wakarimasu"],
+        "hint": "Expressing boredom or lack of interest"
+      },
+      {
+        "id": 67,
+        "question": "How do you say 'What's your phone number?' in Japanese?",
+        "answer": "Denwa bangou wa nan ban desu ka",
+        "options": ["Sumimasen", "Arigatou", "Denwa bangou wa nan ban desu ka", "Sayonara"],
+        "hint": "Inquiring about someone's phone number"
+      },
+      {
+        "id": 68,
+        "question": "What is the Japanese word for 'Sunny' (weather)?",
+        "answer": "Hare",
+        "options": ["Konnichiwa", "Hare", "Sayonara", "Arigatou"],
+        "hint": "Describing sunny weather"
+      },
+      {
+        "id": 69,
+        "question": "How do you say 'I can't speak Japanese well'?",
+        "answer": "Nihongo ga jouzu ja arimasen",
+        "options": ["Suki desu", "Iie", "Nihongo ga jouzu ja arimasen", "Arigatou"],
+        "hint": "Indicating a lack of proficiency in Japanese"
+      },
+      {
+        "id": 70,
+        "question": "What is the Japanese word for 'Quiet'?",
+        "answer": "Shizuka",
+        "options": ["Shizuka", "Iie", "Konnichiwa", "Arigatou"],
+        "hint": "Describing a quiet or peaceful atmosphere"
+      }
+    ]
+  }
+  

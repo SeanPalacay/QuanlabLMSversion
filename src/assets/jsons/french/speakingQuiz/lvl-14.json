@@ -1,0 +1,61 @@
+{
+  "title": "Technological Conversations",
+  "description": "Enhance your French speaking skills with phrases suitable for technological conversations. Focus on precise pronunciation and insightful intonation.",
+  "instructions": [
+    "Below, you'll find a list of phrases that are key to engaging in conversations about technology in French.",
+    "Your task is to record yourself speaking each phrase.",
+    "Ensure your pronunciation matches the provided text as closely as possible.",
+    "Try to maintain an inquisitive and informed speaking pace.",
+    "After recording each phrase, listen to your recording and compare it to the text.",
+    "Focus on intonation, clarity, and the articulate expression of technological concepts.",
+    "Repeat the recording process as many times as needed to improve your pronunciation."
+  ],
+  "items": [
+    {
+      "question": "Quelles sont les dernières tendances technologiques ?",
+      "answer": "Quelles sont les dernières tendances technologiques ?"
+    },
+    {
+      "question": "Discutons de l'impact de l'intelligence artificielle.",
+      "answer": "Discutons de l'impact de l'intelligence artificielle."
+    },
+    {
+      "question": "Comment pouvons-nous tirer parti des technologies émergentes ?",
+      "answer": "Comment pouvons-nous tirer parti des technologies émergentes ?"
+    },
+    {
+      "question": "Je m'intéresse à la technologie blockchain.",
+      "answer": "Je m'intéresse à la technologie blockchain."
+    },
+    {
+      "question": "Explorons le potentiel de la réalité virtuelle.",
+      "answer": "Explorons le potentiel de la réalité virtuelle."
+    },
+    {
+      "question": "Quelle est votre perspective sur la cybersécurité ?",
+      "answer": "Quelle est votre perspective sur la cybersécurité ?"
+    },
+    {
+      "question": "Comment pouvons-nous intégrer l'analyse de données ?",
+      "answer": "Comment pouvons-nous intégrer l'analyse de données ?"
+    },
+    {
+      "question": "Approfondissons le monde de l'apprentissage automatique.",
+      "answer": "Approfondissons le monde de l'apprentissage automatique."
+    },
+    {
+      "question": "Quelles innovations prévoyez-vous pour l'avenir ?",
+      "answer": "Quelles innovations prévoyez-vous pour l'avenir ?"
+    },
+    {
+      "question": "Je suis fasciné par l'évolution de la technologie.",
+      "answer": "Je suis fasciné par l'évolution de la technologie."
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and forward-thinking, perfect for engaging in technological conversations in French.",
+    "5-7 correct pronunciations": "Good! Your pronunciation is mostly correct, with a strong grasp of tech-related phrases in French. Some areas may need refinement for full technical articulation.",
+    "2-4 correct pronunciations": "Fair. You're able to communicate basic technology concepts in French, but further practice is needed for effective tech discussions.",
+    "0-1 correct pronunciations": "Needs improvement. Focus on practicing these technological conversation phrases to enhance your French speaking skills in tech contexts."
+  }
+}

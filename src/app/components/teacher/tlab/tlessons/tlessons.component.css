@@ -1,0 +1,17 @@
+
+@media only screen and (max-width: 600px) {
+  .book{
+    visibility: hidden;
+  }
+  .pname{
+     display: none;
+  }
+}
+
+.background{
+  background: linear-gradient(
+    to right,
+    rgb(1, 114, 175) 0%,
+    rgb(116, 254, 189) 100%
+  );
+}

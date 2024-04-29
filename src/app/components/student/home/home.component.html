@@ -1,0 +1,284 @@
+
+<button (click)="openModal()" class="fixed bottom-10 z-50 right-10 w-14 h-14 gradient-color text-white rounded-full animate-bounce  cursor-pointer">
+  <i class="fas fa-comment"></i> 
+</button>
+
+<!-- Modal -->
+<div *ngIf="showModal" [@fadeInOut] class="modal-overlayzz">
+  <div class="modal-contentzz flex flex-col h-3/4 w-4/5 lg:w-1/4">
+
+<header class="px-4 py-3 lg:py-4 text-gray-700 flex justify-between items-center">
+
+<h1 class="text-xl text-center font-semibold flex-1">MESSAGES</h1>
+<button (click)="closeModal()" class="text-blue-500 focus:outline-none">
+  <i class="fas fa-close text-transparent gradient-color bg-clip-text "></i> 
+</button>
+</header>
+
+
+<div class="linya"> </div>
+
+<main class="flex-1 overflow-y-scroll p-4">
+
+  <div class="flex flex-col ">
+    
+    <label for="person_search">Search {{interests.length? 'Interest':'People'}}: </label>
+    <div *ngIf="interests.length" class="flex-grow">
+      <p class="leading-9">
+        <span (click)="deleteInterst(i)" class="select-none cursor-pointer px-2 py-1 hover:!bg-blue-200 bg-blue-100 rounded-md ml-2" *ngFor="let interest of interests; let i = index">
+          {{interest}}
+        </span>
+      </p>
+    </div>
+    <input [disabled]="listen" [(ngModel)]="search" (keyup)="searchPeople($event)" id="person_search" type="text" placeholder="Type someone..." class="mb-2 px-3 py-2 rounded-md outline-none border-solid border-b-2 focus-within:!border-blue-700 transition-all border-blue-400">
+
+    <!-- ken ini su mga pandok kang teacher -->
+    <ng-container *ngIf="!searching; else searchingPeople " >
+      <ng-container *ngIf="people.length && !interests.length; else showConvos" >
+        <button *ngFor="let person of people" (click)="openChatModal(person)" class="flex mb-4 items-center bg-blue-500 hover:!bg-blue-600 rounded-2xl p-2 " >
+          <img src="{{getUrl(person.profile)}}" alt="Profile Picture" class="w-10 h-10 mt-1 ml-2 rounded-full mr-4">
+          <div class="flex-grow">
+              <div class="flex justify-between mx-1 overflow-x-auto "> 
+                  <div>
+                      <p class=" text-md font-medium text-white ">{{person.firstname + ' '+ person.lastname}}</p>
+                  </div>
+                 
+              </div>
+           
+              <div class=" px-1 text-md font-light text-white text-left  w-full ">{{person.lastseen == 'Just now' ? 'Online' : 'Last seen ' + person.lastseen}}</div>
+          </div>
+        </button>
+      </ng-container>
+      <ng-template #showConvos>
+        <ng-container *ngIf="interests.length; else justConvos">
+          <ng-container *ngIf="!listen; else listening">
+            <button (click)="searchByInterest()" class="flex mb-4 justify-center text-white font-bold items-center bg-blue-500 hover:!bg-blue-600 rounded-2xl p-2" >
+              Start Conversation
+            </button>
+          </ng-container>
+          <ng-template #listening>
+            <div class="mt- rounded-md h-32 w-full flex flex-col justify-center items-center">
+              <span>Searching for people with same interest ... </span>
+            </div>
+            <button (click)="cancelListen()" class="flex mb-4 justify-center text-white font-bold items-center bg-blue-500 hover:!bg-blue-600 rounded-2xl p-2" >
+             Cancel
+            </button>
+          </ng-template>
+        </ng-container>
+        <ng-template #justConvos>
+          <ng-container *ngIf="getConvos().length; else empty" >
+            <button *ngFor="let person of getConvos()" (click)="openChatModal(person)" [ngClass]="{'opacity-85':person.lastmessageref.status == 'seen', 
+              '!bg-slate-600':person.lastmessageref.status == 'seen' || person.lastmessageref.senderid == user.id,
+              'hover:!bg-slate-700':person.lastmessageref.status == 'seen' || person.lastmessageref.senderid == user.id,
+              'hover:!bg-blue-600 ':person.lastmessageref.status != 'seen' && person.lastmessageref.senderid != user.id
+              
+              }" class="flex mb-2 min-h-16 items-center bg-blue-500 rounded-2xl p-2" >
+              <img src="{{getUrl(person.profile)}}" alt="Profile Picture" class="w-10 h-10 mt-1 ml-2 rounded-full mr-4">
+              <div class="flex-grow">
+                  <div class="flex justify-between mx-1 overflow-x-auto  "> 
+                      <div>
+                          <p [ngClass]="{'font-bold':person.lastmessageref.status != 'seen'}" class=" text-md font-medium text-white ">{{person.firstname + ' '+ person.lastname}}</p>
+                      </div>
+                     
+                  </div>
+               
+                  <div class=" px-1 text-md font-light text-white text-left  w-full ">{{person.lastmessage}}</div>
+              </div>
+            </button>
+          </ng-container>
+          <ng-template #empty>
+            <div class="mt-2 border-dashed border-2 border-slate-300 rounded-md h-32 w-full flex flex-col justify-center items-center">
+              <span>No Inbox</span>
+              <span>Start a conversation!</span>
+            </div>
+          </ng-template>
+        </ng-template>
+      </ng-template>
+      
+    </ng-container>
+    <ng-template #searchingPeople >
+      <div class="mt- rounded-md h-32 w-full flex flex-col justify-center items-center">
+        <span>Searching for people ... </span>
+      </div>
+    </ng-template>
+    <!-- end ini ken kang "ken ini su mga pandok kang teacher" -->
+  
+
+  
+  </div>
+</main>
+
+
+
+<!-- Footer -->
+
+</div>
+
+  </div>
+
+
+  
+  <div *ngIf="checkOpenModal()" [@fadeInOut] class="modal-overlayzz">
+    
+
+    <div class="modal-contentzz flex flex-col h-3/4 w-4/5 lg:w-1/4">
+ 
+      <header class="px-4 py-3 lg:py-4 text-gray-700 flex justify-between items-center">
+        <button (click)="closeChatModal()" class="text-blue-500 focus:outline-none">
+          <i class=" fas fa-arrow-left text-transparent gradient-color bg-clip-text"></i>
+        </button>
+        
+        <h1 class="text-xl text-center font-semibold flex-1">{{chat.firstname +' '+ chat.lastname}}</h1>
+        <button (click)="closeModals()" class="text-blue-500 focus:outline-none">
+          <i class="fas fa-close text-transparent gradient-color bg-clip-text "></i> 
+        </button>
+      </header>
+      
+      
+        <div class="linya"> </div>
+      
+      
+        <main class="flex-1 overflow-y-scroll p-4" #scrollMessages >
+        
+          <div class="flex flex-col  ">
+            <div *ngIf="chat?.anonymous" class="flex justify-center text-gray-700 py-2">
+              {{'Both of you like'}}<b *ngFor="let interest of chat.interests">&nbsp;&nbsp;{{interest}}</b>
+            </div>
+            <ng-container *ngFor="let message of getMessages()" >
+              <!-- user ini ken-->
+                <div *ngIf="user.id == message.senderid; else notMe" class="bg-blue-500 mb-2 rounded-xl text-right p-2 max-w-64 self-end">
+                  <h1 class="text-white">{{message.message}}</h1>
+                </div>
+                <!-- ken sa teacher ini-->
+               <ng-template #notMe>
+                <div class="bg-gray-500 p-2 pr-4 mb-2 rounded-xl text-left max-w-64 self-start">
+                  <h1 class="text-white">{{message.message}}</h1>
+                </div>
+               </ng-template>
+            </ng-container>
+
+         
+          </div>
+        </main>
+      
+    
+        <footer>
+          <div class="bg-transparent ">
+            <div class="flex items-center mx-1 my-3">
+              <div class="relative flex items-center w-full shadow-boxz rounded-xl mx-3">
+                <input (keyup.enter)="chat.anonymous? sendMessageAnonymous() : sendMessage()"  #messageInput type="text" [(ngModel)]="message" placeholder="Type your message..." class="shadow-boxz flex-1 py-2 px-3 rounded-lg border border-teal-400 focus:outline-none focus:ring-black focus:border-gray-600 text-black font-normal">
+                <button (click)="chat.anonymous? sendMessageAnonymous() : sendMessage()" class="absolute right-2 top-1/2 transform -translate-y-1/2 cursor-pointer pr-3">
+                  <i class="fa-solid fa-paper-plane text-transparent gradient-color bg-clip-text text-xl"></i>
+                </button>
+              </div>
+              
+          
+              
+                
+            </div>
+          </div>
+        </footer>
+      </div>  
+
+
+    </div>
+
+
+
+
+<p
+  class="poppins text-xl lg:text-2xl lg:font-normal text-gray-500 mt-4 mb-4 mx-4"
+>
+  Courses Progress
+</p>
+<div
+  class="shadow-boxz gradient-color animate-wave text-white h-2/6 lg:mb-14 mb-4 mx-4 rounded-xl flex"
+>
+  <div
+    class="custom-scrollbar flex-1 ml-10 mt-7 mb-7 overflow-y-auto scrollbar-thin scrollbar-thumb-teal-200 scrollbar-track-teal-100 scrollbar-thumb-rounded-full scrollbar-track-rounded-full"
+  >
+    <div *ngFor="let course of courses | keyvalue" class="text-sm mb-2">
+      <p>{{ course.value.course }}</p>
+      <div class="h-2 rounded-full mt-1 flex">
+        <div
+          class="border border-solid border-teal-200 bg-white h-full rounded-full shadow-md"
+          [ngStyle]="{ width: course.value.progress + '%' }"
+        ></div>
+        <div class="ml-2 flex items-center text-sm">
+          {{ course.value.progress }}%
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex-1 cut-diagonal">
+    <img src="assets/dsbor.png" alt="dp" class="h-full w-full object-cover" />
+  </div>
+</div>
+
+<div class="mx-4 mb-20">
+  <div class="flex contianerflex gap-x-4">
+    <!-- start of div -->
+    <div class="flex-1">
+      <!-- enrolled -->
+      <div>
+        <p
+          class="poppins text-xl lg:text-2xl lg:font-normal text-gray-500 mb-4"
+        >
+          Courses Enrolled
+        </p>
+        <div
+          (click)="openCourse(course.value.id)"
+          class="cursor-pointer bg-transparent rounded-xl shadow-boxz mr-10 mt-3 w-full flex items-center boxes"
+          *ngFor="let course of courses | keyvalue"
+        >
+          <div class="w-20 lg:h-20 h-16 bg-purple-600 rounded mx-4 my-4"></div>
+          <div class="my-2 w-full h-32 pt-1 pr-1">
+            <h2 class="lg:text-lg font-bold pb-2 h-14 flex items-center">
+              {{ course.value.course }}
+            </h2>
+
+            <p class="text-sm mb-1 text-gray-500">
+              {{ course.value.firstname + " " + course.value.lastname }}
+            </p>
+            <p class="text-sm">
+              {{ course.value.class + " " + course.value.schedule }}
+            </p>
+          </div>
+        </div>
+        <!-- end -->
+      </div>
+      <!-- end of start -->
+    </div>
+    <!-- end of div -->
+
+    <div class="flex-1" *ngIf="getNotifications().length">
+      <div>
+        <p
+          class="poppins text-xl lg:text-2xl lg:font-normal text-gray-500 mb-4 mt-10 lg:mt-0"
+        >
+          Announcements
+        </p>
+
+        <ng-container *ngFor="let notification of getNotifications()">
+          <div *ngIf="isBroadcastAlert(notification.title)"
+          class="relative bg-transparent rounded-xl shadow-boxz mr-10 mt-3 flex items-center boxes"
+        >
+          <div class="w-20 lg:h-20 min-h-16 bg-slate-600 rounded mx-4 my-4"></div>
+
+          <div class="my-2 min-h-32 w-full pt-1 pr-1">
+            <div [innerHTML]="notification.message" class="lg:text-lg font-bold pb-2 min-h-14 flex-col justify-center"></div>
+            
+          </div>
+
+          <div *ngIf="isUrgent(notification.title)" class="absolute top-0 right-0 py-2 px-4 bg-blue-600 text-white  mt-2 ml-2 rounded-md font-medium tracking-wider poppins">URGENT!</div>
+        </div>
+        </ng-container>
+
+       
+        <!-- end -->
+      </div>
+      <!-- end of start -->
+    </div>
+  </div>
+</div>

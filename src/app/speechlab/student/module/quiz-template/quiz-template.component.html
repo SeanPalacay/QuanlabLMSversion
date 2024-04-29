@@ -1,0 +1,101 @@
+<div class="min-h-screen flex flex-col items-center justify-center mt-[-20px]">
+  <div class="bg-gray-50 p-8 pt-11 rounded-lg shadow-md w-[90%] mt-[-60px] relative">
+    <button (click)="goBack()" class="flex items-center text-transparent bg-gradient-to-r from-[#1084b0] to-[#5be0b9] bg-clip-text font-bold absolute top-2 left-4">
+      <i class="fa-solid fa-arrow-left mr-2"></i> BACK
+    </button>
+
+
+  <div id="confettis" *ngIf="showResults && correctAnswers === questions.length">
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+  </div>
+  <ng-container *ngIf="questions.length > 0 && questions[0].quiztype == 'multiple'">
+    <div class="container bg-white p-10 rounded-lg shadow-md w-[90%]">
+      <div *ngIf="!showResults && questions.length">
+        <h2 class="text-xl font-bold mb-4">{{ questions[currentQuestionIndex].questionText }}</h2>
+        <ul>
+          <li *ngFor="let option of questions[currentQuestionIndex].options" class="mb-2">
+            <input
+              type="radio"
+              [value]="option"
+              [checked]="option === questions[currentQuestionIndex].selectedOption"
+              (change)="selectOption(option)"
+              class="mr-2"
+            />
+            {{ option }}
+          </li>
+        </ul>
+  
+        <div class="flex justify-between mt-4">
+          <button *ngIf="currentQuestionIndex > 0" (click)="previousQuestion()" class="bg-blue-500 text-white px-4 py-2 rounded">
+            Previous
+          </button>
+          <button *ngIf="currentQuestionIndex < questions.length - 1" (click)="nextQuestion()" class="bg-blue-500 text-white px-4 py-2 rounded">
+            Next
+          </button>
+          <button *ngIf="currentQuestionIndex === questions.length - 1" (click)="submitQuiz()" class="bg-green-500 text-white px-4 py-2 rounded">
+            Submit
+          </button>
+        </div>
+      </div>
+  
+      <div *ngIf="showResults" class="mt-8 max-w-md mx-auto bg-white p-6 rounded-md shadow-md">
+        <h2 class="text-2xl font-bold mb-4">Quiz Results</h2>
+        <div *ngFor="let question of questions; let i = index" class="mb-2">
+          <p>
+            Question {{ i + 1 }}:
+            <span class="{{ question.selectedOption === question.correctOption ? 'text-green-500' : 'text-red-500' }}">
+              {{ question.selectedOption === question.correctOption ? 'Correct' : 'Wrong' }}
+            </span>
+          </p>
+        </div>
+        <p class="text-lg">Total Score: <span class="font-bold">{{ correctAnswers }}</span> / {{ questions.length }}</p>
+        <button type="button" class="mt-6 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-105" (click)="navigateToOtherPage()">Back</button>
+      </div>
+    </div>
+  </ng-container>
+
+  <!-- Quiz Template drag -->
+
+  <ng-container *ngIf=" questions.length > 0 &&questions[0].quiztype == 'drag'">
+    <div class="container bg-white p-10 rounded-lg shadow-md w-[90%]">
+      <h1 class="header">Complete the Text</h1>
+      
+      <div class="story">
+        <p>
+          <span *ngFor="let word of questions">
+            <span *ngIf="word.quiztype == 'drag'"> {{ word.sentence }}
+              <span
+                (drop)="onDrop($event, word.answer!)"
+                (dragover)="allowDrop($event, word)"
+                (dragstart)="onDragStart($event, word.answer!)"
+                draggable="true"
+                id="{{ word.answer }}"
+                class="drop-target w-[80px]"
+              >
+                <span *ngIf="word.blank !== null && !word.blank.trim()">{{ word.blank }}</span>
+              </span>
+            </span>
+          </span>
+        </p>
+      </div>
+    
+      <div class="verbs-container">
+        <div *ngFor="let verb of newverb" (dragstart)="onDragStart($event, verb)" draggable="true" class="verb-item">
+          <p>{{ verb }}</p>
+        </div>
+      </div>
+      
+      <div class="score">
+        Score: {{ score }}
+      </div>
+    </div>
+  </ng-container>
+</div>

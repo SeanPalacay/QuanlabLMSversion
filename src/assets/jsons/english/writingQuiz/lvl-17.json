@@ -1,0 +1,58 @@
+{
+  "title": "Advanced English Proficiency Quiz - Hard Mode",
+  "description": "This quiz challenges your understanding of advanced English grammar, vocabulary, and idiomatic expressions.",
+  "instructions": [
+    "Read each question or prompt carefully.",
+    "Provide the most appropriate and advanced response or correction.",
+    "Submit your answers after completing all the questions."
+  ],
+  "items": [
+    {
+      "question": "Define the idiom 'burn the midnight oil'.",
+      "suggestedAnswer": "Work late into the night"
+    },
+    {
+      "question": "Complete the sentence: 'Her remarks added ___ to the debate.'",
+      "suggestedAnswer": "insight"
+    },
+    {
+      "question": "Correct the error: 'Neither of the answers were correct.'",
+      "suggestedAnswer": "was correct"
+    },
+    {
+      "question": "What does 'obfuscate' mean?",
+      "suggestedAnswer": "To make something unclear"
+    },
+    {
+      "question": "Rewrite in passive voice: 'They will hold the meeting tomorrow.'",
+      "suggestedAnswer": "The meeting will be held tomorrow."
+    },
+    {
+      "question": "Correct this sentence: 'Every students are required to attend.'",
+      "suggestedAnswer": "Every student is required to attend."
+    },
+    {
+      "question": "Provide a synonym for 'sagacious'.",
+      "suggestedAnswer": "Wise"
+    },
+    {
+      "question": "Finish the sentence: 'Despite his fears, he spoke with ___.'",
+      "suggestedAnswer": "confidence"
+    },
+    {
+      "question": "What is the meaning of 'jump on the bandwagon'?",
+      "suggestedAnswer": "Join a popular trend or activity"
+    },
+    {
+      "question": "Identify the error: 'Each of the books have interesting covers.'",
+      "suggestedAnswer": "have"
+    }
+  ],
+  "scoring": {
+    "10 correct answers": "Excellent! You've shown great proficiency in Filipino to English translation.",
+    "7-9 correct answers": "Very good! You've mastered most of the words with a few left to learn.",
+    "4-6 correct answers": "Good effort! You're learning well, keep practicing to improve further.",
+    "1-3 correct answers": "Nice try! Some words are tricky, but with more practice, you'll get there.",
+    "0 correct answers": "This level is tough, but don't get discouraged. Review and try again!"
+  }
+}

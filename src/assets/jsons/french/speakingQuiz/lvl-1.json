@@ -1,0 +1,61 @@
+{
+  "title": "Basic Greetings and Farewells",
+  "description": "Improve your French speaking skills with basic greetings and farewells. Focus on clear pronunciation and appropriate intonation.",
+  "instructions": [
+    "Below, you'll find a list of common French greetings and farewells.",
+    "Your task is to record yourself speaking each phrase.",
+    "Ensure your pronunciation matches the provided text as closely as possible.",
+    "Try to maintain a natural and clear speaking pace.",
+    "After recording each phrase, listen to your recording and compare it to the text.",
+    "Focus on intonation, clarity, and fluency.",
+    "Repeat the recording process as many times as needed to improve your pronunciation."
+  ],
+  "items": [
+    {
+      "question": "Bonjour, comment ça va ?",
+      "answer": "Bonjour, comment ça va ?"
+    },
+    {
+      "question": "Bonjour.",
+      "answer": "Bonjour."
+    },
+    {
+      "question": "Bonne nuit.",
+      "answer": "Bonne nuit."
+    },
+    {
+      "question": "À plus tard.",
+      "answer": "À plus tard."
+    },
+    {
+      "question": "Bonne journée.",
+      "answer": "Bonne journée."
+    },
+    {
+      "question": "Comment ça se passe ?",
+      "answer": "Comment ça se passe ?"
+    },
+    {
+      "question": "Enchanté de vous rencontrer.",
+      "answer": "Enchanté de vous rencontrer."
+    },
+    {
+      "question": "Quoi de neuf ?",
+      "answer": "Quoi de neuf ?"
+    },
+    {
+      "question": "Prenez soin de vous.",
+      "answer": "Prenez soin de vous."
+    },
+    {
+      "question": "Au revoir.",
+      "answer": "Au revoir."
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and accurate. You demonstrate a strong command of basic French.",
+    "5-7 correct pronunciations": "Good! Your pronunciation is mostly correct, with a good grasp of basic French. There are some areas to refine for improved clarity.",
+    "2-4 correct pronunciations": "Fair. You have a basic ability to pronounce French phrases, but there are several areas needing significant improvement.",
+    "0-1 correct pronunciations": "Needs improvement. Consider practicing more to enhance your French pronunciation skills, or seek additional resources for learning."
+  }
+}

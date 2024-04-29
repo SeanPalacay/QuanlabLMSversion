@@ -1,0 +1,58 @@
+{
+  "title": "Advanced English Proficiency Quiz - Hard Mode",
+  "description": "This quiz challenges your understanding of advanced English grammar, vocabulary, and idiomatic expressions.",
+  "instructions": [
+    "Read each question or prompt carefully.",
+    "Provide the most appropriate and advanced response or correction.",
+    "Submit your answers after completing all the questions."
+  ],
+  "items": [
+    {
+      "question": "What is the meaning of 'to hit the nail on the head'?",
+      "suggestedAnswer": "To describe exactly what is causing a situation or problem."
+    },
+    {
+      "question": "Complete the sentence: 'Her remarks on the issue were quite ___.'",
+      "suggestedAnswer": "pertinent"
+    },
+    {
+      "question": "Fix the sentence: 'Neither of the solutions were effective.'",
+      "suggestedAnswer": "Neither of the solutions was effective."
+    },
+    {
+      "question": "Define 'circumlocution'.",
+      "suggestedAnswer": "The use of many words where fewer would do, especially in a deliberate attempt to be vague or evasive."
+    },
+    {
+      "question": "Rewrite in active voice: 'A novel was written by her in a month.'",
+      "suggestedAnswer": "She wrote a novel in a month."
+    },
+    {
+      "question": "Correct this sentence: 'Whom is going to the store?'",
+      "suggestedAnswer": "Who is going to the store?"
+    },
+    {
+      "question": "Provide a synonym for 'insidious'.",
+      "suggestedAnswer": "Stealthy"
+    },
+    {
+      "question": "Finish the sentence: 'Despite the criticism, he responded with remarkable ___.'",
+      "suggestedAnswer": "composure"
+    },
+    {
+      "question": "Explain 'to add insult to injury'.",
+      "suggestedAnswer": "To make a bad situation even worse."
+    },
+    {
+      "question": "Identify the error: 'Me and my friends are planning a trip.'",
+      "suggestedAnswer": "Me and my friends"
+    }
+  ],
+  "scoring": {
+    "10 correct answers": "Excellent! You've shown great proficiency in Filipino to English translation.",
+    "7-9 correct answers": "Very good! You've mastered most of the words with a few left to learn.",
+    "4-6 correct answers": "Good effort! You're learning well, keep practicing to improve further.",
+    "1-3 correct answers": "Nice try! Some words are tricky, but with more practice, you'll get there.",
+    "0 correct answers": "This level is tough, but don't get discouraged. Review and try again!"
+  }
+}

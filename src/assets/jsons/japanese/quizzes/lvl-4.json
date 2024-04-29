@@ -1,0 +1,76 @@
+{
+  "title": "Japanese Daily Life Phrases Quiz",
+  "description": "Enhance your Japanese language skills with essential phrases for daily life situations.",
+  "items": [
+    {
+      "id": 21,
+      "question": "How do you ask 'Where is the bathroom?' in Japanese?",
+      "answer": "Toire wa doko desu ka",
+      "options": ["Namae wa nan desu ka", "Anata wa doko desu ka", "Toire wa doko desu ka", "Arigatou"],
+      "hint": "Inquiring about the location of the bathroom"
+    },
+    {
+      "id": 22,
+      "question": "What is the Japanese word for 'Good night'?",
+      "answer": "Oyasumi nasai",
+      "options": ["Konnichiwa", "Oyasumi nasai", "Sayonara", "Arigatou"],
+      "hint": "Wishing someone a good night"
+    },
+    {
+      "id": 23,
+      "question": "How do you say 'I'm hungry' in Japanese?",
+      "answer": "Onaka ga suita",
+      "options": ["Onaka ga suita", "Iie", "Konnichiwa", "Arigatou"],
+      "hint": "Expressing hunger"
+    },
+    {
+      "id": 24,
+      "question": "What is the Japanese word for 'Beautiful'?",
+      "answer": "Kirei",
+      "options": ["Kirei", "Iie", "Konnichiwa", "Arigatou"],
+      "hint": "Describing something as beautiful"
+    },
+    {
+      "id": 25,
+      "question": "How do you ask 'What time is it?' in Japanese?",
+      "answer": "Ima nan-ji desu ka",
+      "options": ["Anata wa nan desu ka", "Kore wa nan desu ka", "Ima nan-ji desu ka", "Arigatou"],
+      "hint": "Inquiring about the current time"
+    },
+    {
+      "id": 26,
+      "question": "What is the Japanese word for 'Friend'?",
+      "answer": "Tomodachi",
+      "options": ["Wakarimasen", "Iie", "Tomodachi", "Wakarimasu"],
+      "hint": "Referring to a friend"
+    },
+    {
+      "id": 27,
+      "question": "How do you say 'I'm sorry for your loss' in Japanese?",
+      "answer": "Goshujin no okage de",
+      "options": ["Sumimasen", "Arigatou", "Goshujin no okage de", "Sayonara"],
+      "hint": "Offering condolences"
+    },
+    {
+      "id": 28,
+      "question": "What is the Japanese word for 'Cold' (weather)?",
+      "answer": "Samui",
+      "options": ["Konnichiwa", "Samui", "Sayonara", "Arigatou"],
+      "hint": "Describing chilly weather"
+    },
+    {
+      "id": 29,
+      "question": "How do you say 'I'm lost' in Japanese?",
+      "answer": "Michi ni mayoimashita",
+      "options": ["Hai", "Iie", "Michi ni mayoimashita", "Arigatou"],
+      "hint": "Expressing being lost or confused about directions"
+    },
+    {
+      "id": 30,
+      "question": "What is the Japanese word for 'Delicious'?",
+      "answer": "Oishii",
+      "options": ["Oishii", "Iie", "Konnichiwa", "Arigatou"],
+      "hint": "Expressing enjoyment of tasty food"
+    }
+  ]
+}

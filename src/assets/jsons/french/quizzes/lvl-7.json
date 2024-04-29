@@ -1,0 +1,106 @@
+{
+  "title": "French Language Essentials - Easy Mode",
+  "description": "Choose the English equivalent of the given French language.",
+  "items": [
+    {
+      "question": "Un billet pour Paris, s'il vous plaît",
+      "choices": [
+        "A ticket to Paris, please",
+        "A map of Paris, please",
+        "A guide to Paris, please",
+        "Directions to Paris, please"
+      ],
+      "answer": "A ticket to Paris, please"
+    },
+    {
+      "question": "Où est la gare ?",
+      "choices": [
+        "Where is the station?",
+        "Where is the airport?",
+        "Where is the hotel?",
+        "Where is the museum?"
+      ],
+      "answer": "Where is the station?"
+    },
+    {
+      "question": "Je voudrais louer une voiture",
+      "choices": [
+        "I would like to rent a car",
+        "I would like to buy a car",
+        "I need a car repair",
+        "I want to sell a car"
+      ],
+      "answer": "I would like to rent a car"
+    },
+    {
+      "question": "Avez-vous des chambres libres ?",
+      "choices": [
+        "Do you have any vacancies?",
+        "Do you have a free meal?",
+        "Do you have free Wi-Fi?",
+        "Do you have a free guide?"
+      ],
+      "answer": "Do you have any vacancies?"
+    },
+    {
+      "question": "Je suis allergique aux arachides",
+      "choices": [
+        "I am allergic to peanuts",
+        "I am allergic to dairy",
+        "I like peanuts",
+        "I don't like peanuts"
+      ],
+      "answer": "I am allergic to peanuts"
+    },
+    {
+      "question": "Pouvez-vous recommander un itinéraire ?",
+      "choices": [
+        "Can you recommend a restaurant?",
+        "Can you recommend a route?",
+        "Can you recommend a hotel?",
+        "Can you recommend a book?"
+      ],
+      "answer": "Can you recommend a route?"
+    },
+    {
+      "question": "Combien ça coûte ?",
+      "choices": [
+        "How much does it cost?",
+        "How much is this?",
+        "Can I get a discount?",
+        "Is this free?"
+      ],
+      "answer": "How much does it cost?"
+    },
+    {
+      "question": "Je voudrais commander maintenant",
+      "choices": [
+        "I would like to order now",
+        "I would like to pay now",
+        "I would like to leave now",
+        "I would like to wait now"
+      ],
+      "answer": "I would like to order now"
+    },
+    {
+      "question": "C'est combien pour l'entrée ?",
+      "choices": [
+        "How much is the entrance fee?",
+        "How much is the main course?",
+        "How much for a guided tour?",
+        "How much for a reservation?"
+      ],
+      "answer": "How much is the entrance fee?"
+    },
+    {
+      "question": "Pouvez-vous m'appeler un taxi ?",
+      "choices": [
+        "Can you call me a taxi?",
+        "Can you book me a hotel?",
+        "Can you find me a guide?",
+        "Can you lend me a phone?"
+      ],
+      "answer": "Can you call me a taxi?"
+    }
+  ]
+}

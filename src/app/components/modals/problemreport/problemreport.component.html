@@ -1,0 +1,54 @@
+<div class="modal-content custom-modal-content">
+  <div class="container">
+    <button
+      class="close"
+      type="button"
+      class="close"
+      aria-label="Close"
+      (click)="closeModal()"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <h1 class="poppins-b title">Report a Bug</h1>
+    <div class="inputwrap">
+      <div class="dropwrap">
+        <h1 class="poppins">I have a problem with</h1>
+        <div class="topbutton">
+          <div class="text">
+            <select name="language" id="language" class="poppins" 
+            [(ngModel)]="option"
+            (change)="selectOption($event)">
+              <option
+                class="placeholder poppins-b"
+                value=""
+                disabled
+                selected
+                hidden
+              >
+                SELECT OPTION
+              </option>
+              <option value="Security">Security</option>
+              <option value="Feature">Feature</option>
+              <option value="Technical">Technical</option>
+              <option value="Account">Account</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="titleinput">
+        <h1 class="poppins">Title</h1>
+        <input [(ngModel)]="title" type="text" placeholder="Enter a title" />
+      </div>
+      <div class="descinput">
+        <h1 class="poppins">Description</h1>
+        <textarea [(ngModel)]="description" name="" id="" cols="40" rows="5"></textarea>
+      </div>
+
+      <div class="submitwrap">
+        <button class="submit poppins" (click)="submit()">SUBMIT</button>
+      </div>
+    </div>
+  </div>
+</div>

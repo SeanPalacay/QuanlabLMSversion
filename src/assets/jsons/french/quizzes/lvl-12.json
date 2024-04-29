@@ -1,0 +1,61 @@
+{
+  "title": "French Language Essentials - Medium Mode",
+  "description": "Test your knowledge with these finish-the-sentence French phrases.",
+  "items": [
+    {
+      "question": "Le Mont-Saint-Michel est célèbre pour être une île...",
+      "choices": ["volcanique", "flottante", "enchantée", "marée"],
+      "answer": "marée"
+    },
+    {
+      "question": "La tarte Tatin est une recette de dessert renversée aux...",
+      "choices": ["pommes", "poires", "pêches", "abricots"],
+      "answer": "pommes"
+    },
+    {
+      "question": "Le festival de Cannes est un événement international consacré au...",
+      "choices": ["théâtre", "cinéma", "livre", "art contemporain"],
+      "answer": "cinéma"
+    },
+    {
+      "question": "La Loire est le plus long fleuve de...",
+      "choices": ["France", "Belgique", "Suisse", "Canada"],
+      "answer": "France"
+    },
+    {
+      "question": "Le coq est l'un des symboles...",
+      "choices": ["royaux", "nationaux", "religieux", "sportifs"],
+      "answer": "nationaux"
+    },
+    {
+      "question": "Les macarons sont de petits gâteaux...",
+      "choices": ["croquants", "mous", "colorés", "amers"],
+      "answer": "colorés"
+    },
+    {
+      "question": "Le fromage Roquefort est fabriqué à partir de lait de...",
+      "choices": ["vache", "chèvre", "brebis", "bufflonne"],
+      "answer": "brebis"
+    },
+    {
+      "question": "Le Tour de France est une compétition de...",
+      "choices": ["football", "tennis", "cyclisme", "natation"],
+      "answer": "cyclisme"
+    },
+    {
+      "question": "Victor Hugo est un célèbre écrivain français du XIXe siècle, auteur de «Les...",
+      "choices": [
+        "Misérables",
+        "Fleurs du mal",
+        "Trois Mousquetaires",
+        "Liaisons dangereuses"
+      ],
+      "answer": "Misérables"
+    },
+    {
+      "question": "La baguette est un type de pain...",
+      "choices": ["rond", "plat", "long", "tressé"],
+      "answer": "long"
+    }
+  ]
+}

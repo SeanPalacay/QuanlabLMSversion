@@ -1,0 +1,117 @@
+{
+  "title": "Easy English Quiz 7",
+  "description": "Test your basic English skills with this 10-question quiz. Good luck!",
+  "instructions": [
+    "Read each question carefully and select the best answer from the choices provided.",
+    "There is only one correct answer for each question.",
+    "Once you have answered all the questions, click the \"Submit\" button to see your score."
+  ],
+  "items": [
+    {
+      "question": "Which of these words means 'large'?",
+      "choices": [
+        "small",
+        "big",
+        "tiny",
+        "gigantic"
+      ],
+      "answer": "big"
+    },
+    {
+      "question": "What is the opposite of 'good'?",
+      "choices": [
+        "bad",
+        "great",
+        "excellent",
+        "wonderful"
+      ],
+      "answer": "bad"
+    },
+    {
+      "question": "What is the past tense of 'sing'?",
+      "choices": [
+        "sang",
+        "singed",
+        "song",
+        "sungen"
+      ],
+      "answer": "sang"
+    },
+    {
+      "question": "Which of these sentences is grammatically correct?",
+      "choices": [
+        "He goed to school.",
+        "He go to school.",
+        "He goes to school.",
+        "He is go to school."
+      ],
+      "answer": "He goes to school."
+    },
+    {
+      "question": "What is the present tense of 'to run'?",
+      "choices": [
+        "run",
+        "ran",
+        "running",
+        "runned"
+      ],
+      "answer": "run"
+    },
+    {
+      "question": "Which of these words means 'sad'?",
+      "choices": [
+        "happy",
+        "excited",
+        "angry",
+        "depressed"
+      ],
+      "answer": "depressed"
+    },
+    {
+      "question": "What is the opposite of 'slow'?",
+      "choices": [
+        "fast",
+        "quick",
+        "rapid",
+        "swift"
+      ],
+      "answer": "fast"
+    },
+    {
+      "question": "Which of these words means 'old'?",
+      "choices": [
+        "new",
+        "ancient",
+        "modern",
+        "recent"
+      ],
+      "answer": "ancient"
+    },
+    {
+      "question": "What is the past tense of 'eat'?",
+      "choices": [
+        "eated",
+        "eaten",
+        "ate",
+        "eat"
+      ],
+      "answer": "ate"
+    },
+    {
+      "question": "Which of these sentences is grammatically correct?",
+      "choices": [
+        "She goed to the store.",
+        "She go to the store.",
+        "She goes to the store.",
+        "She is go to the store."
+      ],
+      "answer": "She goes to the store."
+    }
+  ],
+  "scoring": {
+    "8-10 correct answers": "Excellent! You have a strong command of basic English.",
+    "5-7 correct answers": "Good! You have a good understanding of basic English, but there are a few areas where you could improve.",
+    "2-4 correct answers": "Fair. You have a basic understanding of English, but there are many areas where you need to improve.",
+    "0-1 correct answers": "Needs improvement. You should consider taking an English language course or using resources to improve your English skills."
+  }
+}

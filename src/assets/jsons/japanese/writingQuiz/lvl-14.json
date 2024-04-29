@@ -1,0 +1,59 @@
+{
+  "title": "Japanese Sentence Completion Quiz - Medium Mode",
+  "description": "Test your Japanese vocabulary and grammar knowledge by completing sentences. This quiz is designed for intermediate learners.",
+  "instructions": [
+    "Read each sentence carefully.",
+    "Fill in the blank with the correct Japanese word in Romaji.",
+    "The case (uppercase or lowercase) of your answer does not matter, as long as the spelling is correct.",
+    "After completing all questions, submit your answers for scoring."
+  ],
+  "items": [
+    {
+      "question": "Kono hon wa watashi no _____ desu. (This book is mine.)",
+      "suggestedAnswer": "mono"
+    },
+    {
+      "question": "Asa gohan wa _____ tabemasu. (I eat breakfast at 7 o'clock.)",
+      "suggestedAnswer": "shichiji ni"
+    },
+    {
+      "question": "Watashi wa kinou _____ e ikimashita. (I went to the beach yesterday.)",
+      "suggestedAnswer": "umibe"
+    },
+    {
+      "question": "Kanojo wa _____ o hajimemashita. (She started learning piano.)",
+      "suggestedAnswer": "piano"
+    },
+    {
+      "question": "Kare wa _____ ni tsutomete imasu. (He works at a bank.)",
+      "suggestedAnswer": "ginkou"
+    },
+    {
+      "question": "Watashi wa _____ de eiga o mimasu. (I watch movies on TV.)",
+      "suggestedAnswer": "terebi"
+    },
+    {
+      "question": "Watashitachi no ie wa _____ chikaku ni arimasu. (Our house is near the station.)",
+      "suggestedAnswer": "eki"
+    },
+    {
+      "question": "Kare wa maiasa _____ wo shimasu. (He jogs every morning.)",
+      "suggestedAnswer": "jogingu"
+    },
+    {
+      "question": "Kanojo wa _____ ga totemo jouzu desu. (She is very good at singing.)",
+      "suggestedAnswer": "utau"
+    },
+    {
+      "question": "Watashi wa _____ de nihongo o benkyou shimasu. (I study Japanese on the internet.)",
+      "suggestedAnswer": "intanetto"
+    }
+  ],
+  "scoring": {
+    "10 correct answers": "Outstanding! Your grasp of Japanese vocabulary and sentence structure is excellent.",
+    "7-9 correct answers": "Very good! You have a strong understanding with minor areas for improvement.",
+    "4-6 correct answers": "Good job! You're on the right track, but there's room to grow.",
+    "1-3 correct answers": "Fair effort. Keep practicing to enhance your Japanese skills.",
+    "0 correct answers": "A tough challenge, but don't give up! Study and practice will help you improve."
+  }
+}

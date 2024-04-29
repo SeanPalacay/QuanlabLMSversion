@@ -1,0 +1,58 @@
+.custom-modal-content {
+    border-radius: 10px;
+    height: 500px auto;
+    align-items: center;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 30px;
+
+
+}
+
+.container .close span{
+    font-size: 3em;
+    color: rgb(71, 71, 71);
+}
+.container .close{
+ margin-left: 100%;
+}
+.container .title{
+    color: rgb(71, 71, 71);
+    font-size: 20px;
+    margin-top: -10%;
+    
+}
+
+.submitwrap{
+    margin-top: 30px;
+    padding-bottom: 20px;
+}
+.submitwrap .submit {
+    background: linear-gradient(to right, rgb(1, 114, 175) 0%, rgb(116, 254, 189) 100%);
+    color: white;
+    height: 40px;
+    width: 120px;
+    border-radius: 3px;
+}
+
+.inputwrap .input h2{
+text-align: left;
+
+}
+.inputwrap .input input, .inputwrap .input select{
+    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid black;
+
+    }
+.inputwrap .input{
+    margin-top: 10px;
+    
+}
+
+input{
+    padding-left: 10px;
+}
+
+

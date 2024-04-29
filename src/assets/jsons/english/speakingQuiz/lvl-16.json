@@ -1,0 +1,61 @@
+{
+  "title": "Academic Discussions",
+  "description": "Practice English phrases for engaging in academic discussions. Emphasize clear, intellectual pronunciation and analytical intonation.",
+  "instructions": [
+    "Below is a list of phrases commonly used in academic contexts.",
+    "Record yourself speaking each phrase.",
+    "Strive for clear, articulate, and thoughtful pronunciation.",
+    "Maintain a steady and analytical pace.",
+    "After recording, listen to your playback and compare it to the text.",
+    "Pay attention to intonation, clarity, and fluency in an academic context.",
+    "Repeat the recording process as necessary to improve your academic language skills."
+  ],
+  "items": [
+    {
+      "question": "What's your approach to academic research?",
+      "answer": "What's your approach to academic research?"
+    },
+    {
+      "question": "Let's delve into the theoretical framework.",
+      "answer": "Let's delve into the theoretical framework."
+    },
+    {
+      "question": "I'm curious about your academic perspective.",
+      "answer": "I'm curious about your academic perspective."
+    },
+    {
+      "question": "Can you elaborate on the methodology used?",
+      "answer": "Can you elaborate on the methodology used?"
+    },
+    {
+      "question": "What are the key findings of your study?",
+      "answer": "What are the key findings of your study?"
+    },
+    {
+      "question": "Let's critically analyze the research paper.",
+      "answer": "Let's critically analyze the research paper."
+    },
+    {
+      "question": "I appreciate the interdisciplinary approach.",
+      "answer": "I appreciate the interdisciplinary approach."
+    },
+    {
+      "question": "Academic discourse is essential for learning.",
+      "answer": "Academic discourse is essential for learning."
+    },
+    {
+      "question": "How can we integrate academic knowledge into practice?",
+      "answer": "How can we integrate academic knowledge into practice?"
+    },
+    {
+      "question": "Let's explore the implications of this study.",
+      "answer": "Let's explore the implications of this study."
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and well-suited for in-depth academic discussions.",
+    "5-7 correct pronunciations": "Good! Most of your academic phrases are pronounced correctly, but some might need further refinement for clarity.",
+    "2-4 correct pronunciations": "Fair. You have a basic grasp of academic language, but your pronunciation needs further improvement for effective communication.",
+    "0-1 correct pronunciations": "Needs improvement. Focus on practicing these academic phrases to enhance your English speaking skills in scholarly contexts."
+  }
+}

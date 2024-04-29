@@ -1,0 +1,59 @@
+{
+  "title": "Japanese Sentence Completion Quiz - Medium Mode",
+  "description": "Test your Japanese vocabulary and grammar knowledge by completing sentences. This quiz is designed for intermediate learners.",
+  "instructions": [
+    "Read each sentence carefully.",
+    "Fill in the blank with the correct Japanese word in Romaji.",
+    "The case (uppercase or lowercase) of your answer does not matter, as long as the spelling is correct.",
+    "After completing all questions, submit your answers for scoring."
+  ],
+  "items": [
+    {
+      "question": "Watashi wa _____ ni ikitai. (I want to go to Japan.)",
+      "suggestedAnswer": "nihon"
+    },
+    {
+      "question": "Kare wa totemo _____ hito desu. (He is a very quiet person.)",
+      "suggestedAnswer": "shizuka"
+    },
+    {
+      "question": "Kono hon wa _____ desu. (This book is interesting.)",
+      "suggestedAnswer": "omoshiroi"
+    },
+    {
+      "question": "Kanojo wa mainichi _____ wo nomimasu. (She drinks tea every day.)",
+      "suggestedAnswer": "ocha"
+    },
+    {
+      "question": "Ashita wa _____ wo tabemasu. (Tomorrow, I will eat fish.)",
+      "suggestedAnswer": "sakana"
+    },
+    {
+      "question": "Kesa, watashi wa _____ de eki made ikimashita. (This morning, I went to the station by bicycle.)",
+      "suggestedAnswer": "jitensha"
+    },
+    {
+      "question": "Kare wa _____ wo yoku mimasu. (He often watches TV.)",
+      "suggestedAnswer": "terebi"
+    },
+    {
+      "question": "Watashitachi wa _____ ga suki desu. (We like music.)",
+      "suggestedAnswer": "ongaku"
+    },
+    {
+      "question": "Kanojo no ie wa eki kara _____ desu. (Her house is close to the station.)",
+      "suggestedAnswer": "chikai"
+    },
+    {
+      "question": "Kesa, kare wa _____ de asa gohan wo tabemashita. (This morning, he ate breakfast at a restaurant.)",
+      "suggestedAnswer": "resutoran"
+    }
+  ],
+  "scoring": {
+    "10 correct answers": "Outstanding! Your grasp of Japanese vocabulary and sentence structure is excellent.",
+    "7-9 correct answers": "Very good! You have a strong understanding with minor areas for improvement.",
+    "4-6 correct answers": "Good job! You're on the right track, but there's room to grow.",
+    "1-3 correct answers": "Fair effort. Keep practicing to enhance your Japanese skills.",
+    "0 correct answers": "A tough challenge, but don't give up! Study and practice will help you improve."
+  }
+}

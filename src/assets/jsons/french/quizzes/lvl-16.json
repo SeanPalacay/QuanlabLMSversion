@@ -1,0 +1,56 @@
+{
+  "title": "French Language Essentials - Hard Mode",
+  "description": "Challenge your French skills by identifying the error in each sentence.",
+  "items": [
+    {
+      "question": "Le professeur nous a donnés trop de devoirs ce weekend.",
+      "choices": ["professeur", "donnés", "de", "weekend"],
+      "answer": "donnés"
+    },
+    {
+      "question": "Ma soeur cadette aime beaucoup les romans historiques.",
+      "choices": ["soeur", "cadette", "beaucoup", "historiques"],
+      "answer": "cadette"
+    },
+    {
+      "question": "Il faut que je fasse mes bagages avant de partir en vacances.",
+      "choices": ["faut", "fasse", "mes", "avant"],
+      "answer": "mes"
+    },
+    {
+      "question": "Les enfants jouent à cache-cache dans le jardin derrière la maison.",
+      "choices": ["jouent", "à", "dans", "derrière"],
+      "answer": "à"
+    },
+    {
+      "question": "Je n'ai pas encore décidé qu'est-ce que je vais faire demain.",
+      "choices": ["pas", "décidé", "qu'est-ce que", "demain"],
+      "answer": "qu'est-ce que"
+    },
+    {
+      "question": "Ce musée est l'un des plus visités au monde grâce à ses oeuvres d'arts.",
+      "choices": ["est", "plus", "à", "d'arts"],
+      "answer": "d'arts"
+    },
+    {
+      "question": "Après avoir fini le dîner, nous avons regardé un film sur le canapé.",
+      "choices": ["Après", "fini", "regardé", "sur"],
+      "answer": "sur"
+    },
+    {
+      "question": "Elle a réussit à convaincre ses parents de la laisser partir avec ses amis.",
+      "choices": ["a", "réussit", "convaincre", "laisser"],
+      "answer": "réussit"
+    },
+    {
+      "question": "Les chercheurs ont découvert un nouveau traitement contre cette maladie.",
+      "choices": ["chercheurs", "ont", "contre", "cette"],
+      "answer": "contre"
+    },
+    {
+      "question": "Il pleuvait fort quand nous sommes sortis de l'école hier après-midi.",
+      "choices": ["pleuvait", "fort", "sortis", "après-midi"],
+      "answer": "fort"
+    }
+  ]
+}

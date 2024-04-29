@@ -1,0 +1,71 @@
+{
+  "title": "French Language Essentials - Medium Mode",
+  "description": "Test your knowledge with these finish-the-sentence French phrases.",
+  "items": [
+    {
+      "question": "Le camembert est un fromage français qui vient de la région de...",
+      "choices": ["Bretagne", "Normandie", "Alsace", "Provence"],
+      "answer": "Normandie"
+    },
+    {
+      "question": "Le TGV (Train à Grande Vitesse) détient le record mondial de vitesse sur rails à plus de...",
+      "choices": ["320 km/h", "574 km/h", "200 km/h", "450 km/h"],
+      "answer": "574 km/h"
+    },
+    {
+      "question": "\"Les Demoiselles d'Avignon\" est une œuvre célèbre de...",
+      "choices": [
+        "Pablo Picasso",
+        "Vincent van Gogh",
+        "Claude Monet",
+        "Leonardo da Vinci"
+      ],
+      "answer": "Pablo Picasso"
+    },
+    {
+      "question": "Le Festival d'Avignon est consacré au...",
+      "choices": ["cinéma", "théâtre", "opéra", "ballet"],
+      "answer": "théâtre"
+    },
+    {
+      "question": "Le Beaujolais nouveau est un vin qui doit être consommé...",
+      "choices": [
+        "après plusieurs années",
+        "immédiatement",
+        "avant l'été",
+        "en hiver"
+      ],
+      "answer": "immédiatement"
+    },
+    {
+      "question": "La Côte d'Azur est située le long de la mer...",
+      "choices": ["Noire", "Baltique", "Méditerranée", "Adriatique"],
+      "answer": "Méditerranée"
+    },
+    {
+      "question": "La France a remporté la Coupe du Monde de football en...",
+      "choices": [
+        "1998 et 2018",
+        "2002 et 2006",
+        "1982 et 1994",
+        "1990 et 2014"
+      ],
+      "answer": "1998 et 2018"
+    },
+    {
+      "question": "La baguette française est traditionnellement faite de farine, d'eau, de levure et de...",
+      "choices": ["sel", "sucre", "beurre", "œufs"],
+      "answer": "sel"
+    },
+    {
+      "question": "La ville de Lyon est réputée pour être la capitale de la...",
+      "choices": ["mode", "gastronomie", "littérature", "musique"],
+      "answer": "gastronomie"
+    },
+    {
+      "question": "Le drapeau français est composé de trois couleurs : bleu, blanc, et...",
+      "choices": ["vert", "rouge", "jaune", "noir"],
+      "answer": "rouge"
+    }
+  ]
+}

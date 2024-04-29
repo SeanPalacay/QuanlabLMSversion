@@ -1,0 +1,61 @@
+{
+  "title": "At Home",
+  "description": "Practice English phrases you might use in daily home life. Focus on clear pronunciation and conversational intonation.",
+  "instructions": [
+    "Below is a list of phrases commonly used at home.",
+    "Record yourself speaking each phrase.",
+    "Aim for clear and natural pronunciation.",
+    "Keep your speech conversational and at a steady pace.",
+    "After recording, listen to your playback and compare it to the written text.",
+    "Pay attention to the intonation, clarity, and fluency.",
+    "Repeat the recording process as needed to improve your pronunciation."
+  ],
+  "items": [
+    {
+      "question": "Did you feed the cat?",
+      "answer": "Did you feed the cat?"
+    },
+    {
+      "question": "I'm doing the laundry.",
+      "answer": "I'm doing the laundry."
+    },
+    {
+      "question": "Can you clean your room?",
+      "answer": "Can you clean your room?"
+    },
+    {
+      "question": "We're having dinner at 7 PM.",
+      "answer": "We're having dinner at 7 PM."
+    },
+    {
+      "question": "Turn off the TV, please.",
+      "answer": "Turn off the TV, please."
+    },
+    {
+      "question": "I'm taking a shower.",
+      "answer": "I'm taking a shower."
+    },
+    {
+      "question": "The kitchen sink is leaking.",
+      "answer": "The kitchen sink is leaking."
+    },
+    {
+      "question": "Did you lock the door?",
+      "answer": "Did you lock the door?"
+    },
+    {
+      "question": "It's time for bed.",
+      "answer": "It's time for bed."
+    },
+    {
+      "question": "Can you set the table?",
+      "answer": "Can you set the table?"
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and accurate, reflecting good communication skills in a home setting.",
+    "5-7 correct pronunciations": "Good! Your pronunciation is mostly correct with a few areas to improve for better clarity at home.",
+    "2-4 correct pronunciations": "Fair. You understand basic home-related phrases, but there's room for significant improvement in pronunciation.",
+    "0-1 correct pronunciations": "Needs improvement. Focus on practicing these phrases more to enhance your English speaking skills at home."
+  }
+}

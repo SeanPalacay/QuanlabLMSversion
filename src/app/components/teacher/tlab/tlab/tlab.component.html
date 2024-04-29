@@ -1,0 +1,44 @@
+<div class="mx-10">
+    <div class="newclass text-transparent bg-clip-text gradient-color animate-wave">
+        <button class="poppins-b"><img src="assets/teacher/manageclass/Plus.png" alt="add">NEW CLASS</button>
+    </div>
+   
+
+
+</div>
+
+<div class="mx-10 my-4 flex justify-between items-center">
+    <div ngbDropdown class="ghover ml-8 w-40 mt-2 h-8 shadow-boxz rounded flex items-center justify-center boxkolor">
+        <div ngbDropdownToggle class="btntop poppins"  class="poppins-r text-transparent bg-clip-text gradient-color text-sm group-hover:text-white" style="font-size: 15px;">Class :</div>
+        <div  ngbDropdownToggle class="btntop poppins" class="hide-toggle-icon poppins-r text-transparent bg-clip-text gradient-color text-sm group-hover:text-white" style="color:#767278;font-size: 15px;">Course A</div><img ngbDropdownToggle class="btntop poppins"  style="width: 20px;height: 15px;" src="assets/teacher/icondown.png">
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="toggle">
+            <button ngbDropdownItem>Attendance</button>
+            <button class="btnwrap" ngbDropdownItem>Grades of Student</button>
+            <button ngbDropdownItem>Assesment</button>
+        </div>
+    </div>
+
+  <div class="flex space-x-2 text-center poppins-b">
+    <td class="shadow-boxz rounded btn1 text-xs"><button class="mt-1.5">EDIT COURSE</button></td>
+     <td class="shadow-boxz rounded btn2 text-xs"><button class="mt-1.5">REMOVE COURSE</button></td>
+  </div>
+
+</div>
+<div (click)="lessonsko()" class=" mx-1 rounded-xl">
+  <div class="mx-10 grid gap-4 grid-cols-3  h-1/5  pt-4 pb-10 grid-rows-none" *ngIf="courses != null">
+    <!-- <div > -->
+      <app-card *ngFor="let course of courses" [difficulty] = "course.difficulty"  [picture]="'https://www.artlex.com/wp-content/uploads/2022/02/andras-vas-Bd7gNnWJBkU-unsplash-819x1024.jpg'" [number]="course.lessoncount +'x Lesson'"
+      [lecture]="course.course" [profilepic]="course.profile" [name]="course.firstname +' '+ course.lastname" [job]="course.job"></app-card>
+    <!-- </div> -->
+  </div>
+
+  <div class="mx-10">
+  <br>
+  <button routerLink="/teacher/lab/lessons"  routerLinkActive="active-link">Lessons</button>
+  
+  <router-outlet></router-outlet>
+  </div>
+  </div>
+  
+
+

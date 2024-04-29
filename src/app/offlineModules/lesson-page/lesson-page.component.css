@@ -1,0 +1,96 @@
+/* .frame {
+  position: relative;
+  width: 277px;
+  height: 324px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 4px 7px 7px #00000040;
+}
+
+.frame .overlap-group {
+  position: absolute;
+  width: 238px;
+  height: 33px;
+  top: 268px;
+  left: 19px;
+  border-radius: 15px;
+  background: linear-gradient(180deg, rgb(1, 114, 175) 0%, rgb(116, 254, 189) 100%);
+}
+
+.frame .text-wrapper {
+  position: absolute;
+  top: 2px;
+  left: 76px;
+  font-family: "Poppins-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 25.7px;
+  white-space: nowrap;
+}
+
+.frame .div {
+  position: absolute;
+  width: 265px;
+  top: 217px;
+  left: 6px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #929292;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 15px;
+}
+
+.frame .text-wrapper-2 {
+  position: absolute;
+  width: 193px;
+  height: 31px;
+  top: 186px;
+  left: 42px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #5e5e6a;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 25.7px;
+}
+
+.frame .image {
+  position: absolute;
+  width: 234px;
+  height: 159px;
+  top: 18px;
+  left: 22px;
+  object-fit: cover;
+} */
+/* 
+.textcolor{
+    color: #5f6368;
+  } */
+
+
+
+  /* Custom CSS for additional styling */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, #06b6d4, #3b82f6);
+}
+
+/* Animation for hover effects */
+.transition {
+  transition: all 0.3s ease;
+}
+
+.transition:hover {
+  transform: translateY(-5px);
+}

@@ -1,0 +1,67 @@
+{
+  "title": "Hiragana Vocabulary Quiz",
+  "description": "Test your knowledge of Japanese vocabulary. Match the given words with their correct meanings in romanji.",
+    "items": [
+      {
+        "question": "さくら",
+        "answer": "sakura",
+        "hint": "The Japanese word for cherry blossoms.",
+        "options": ["aoi", "ine", "sakura", "nihon"]
+      },
+      {
+        "question": "にほん",
+        "answer": "nihon",
+        "hint": "The Japanese word for Japan.",
+        "options": ["nihon", "ineko", "asagohan", "tabemono"]
+      },
+      {
+        "question": "あおい",
+        "answer": "aoi",
+        "hint": "The Japanese word for blue or green.",
+        "options": ["aoi", "inu", "tegami", "ie"]
+      },
+      {
+        "question": "いぬ",
+        "answer": "inu",
+        "hint": "The Japanese word for dog.",
+        "options": ["ie", "inu", "sakura", "kami"]
+      },
+      {
+        "question": "ねこ",
+        "answer": "neko",
+        "hint": "The Japanese word for cat.",
+        "options": ["neko", "ie", "nihon", "tabemono"]
+      },
+      {
+        "question": "たべもの",
+        "answer": "tabemono",
+        "hint": "The Japanese word for food.",
+        "options": ["ineko", "tabemono", "nihon", "aoi"]
+      },
+      {
+        "question": "あさごはん",
+        "answer": "asagohan",
+        "hint": "The Japanese word for breakfast.",
+        "options": ["aoi", "asagohan", "kami", "ine"]
+      },
+      {
+        "question": "いえ",
+        "answer": "ie",
+        "hint": "The Japanese word for house.",
+        "options": ["kami", "ie", "sakura", "tegami"]
+      },
+      {
+        "question": "てがみ",
+        "answer": "tegami",
+        "hint": "The Japanese word for letter or mail.",
+        "options": ["tabemono", "tegami", "ie", "neko"]
+      },
+      {
+        "question": "かみ",
+        "answer": "kami",
+        "hint": "The Japanese word for paper or god/spirit.",
+        "options": ["nihon", "kami", "sakura", "asagohan"]
+      }
+    ]
+  }
+  

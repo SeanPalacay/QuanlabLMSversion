@@ -1,0 +1,64 @@
+<div class="container">
+  <!-- Container for back button and dropdown -->
+  <div class="buttons-container">
+    <!-- Back button on the left side -->
+    <div class="back-container">
+      <div class="w-auto flex">
+        <button
+          class="back-button flex items-center poppins-b shadow-sm text-lg rounded-lg px-3 py-1.5 bg-transparent bg-gradient-to-r from-green-300 via-purple-600 to-blue-500 text-transparent bg-clip-text hover:scale-105 hover:ease-out duration-300"
+          (click)="navigateBack()"
+        >
+          Back
+        </button>
+      </div>
+    </div>
+
+    <!-- Dropdown on the right side -->
+    <div class="dropdown-container">
+      <div class="dropdown">
+        <select [(ngModel)]="selectedOption">
+          <option *ngFor="let option of dropdownOptions" [value]="option">{{ option }}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Charts container below the dropdown and back button -->
+  <div class="charts-container">
+    <!-- Bar Chart -->
+    <div class="chart-container">
+      <ngx-charts-bar-vertical
+        [view]="[1500, 300]"
+        [scheme]="colorScheme"
+        [results]="barChartData1"
+        [gradient]="gradient"
+        [xAxis]="true"
+        [yAxis]="true"
+        [legend]="true"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        xAxisLabel="Students"
+        yAxisLabel="Quiz 1 Score"
+      >
+      </ngx-charts-bar-vertical>
+    </div>
+
+    <!-- Line Chart -->
+    <div class="chart-container">
+      <ngx-charts-line-chart
+        [view]="[1500, 300]"
+        [scheme]="colorScheme"
+        [results]="lineChartData"
+        [gradient]="gradient"
+        [xAxis]="true"
+        [yAxis]="true"
+        [legend]="true"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        xAxisLabel="Students"
+        yAxisLabel="Quiz 1 Score"
+      >
+      </ngx-charts-line-chart>
+    </div>
+  </div>
+</div>

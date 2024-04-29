@@ -1,0 +1,61 @@
+{
+  "title": "Academic Discussions",
+  "description": "Enhance your French speaking skills with phrases suitable for academic discussions. Focus on precise pronunciation and intellectual intonation.",
+  "instructions": [
+    "Below, you'll find a list of phrases that are key to engaging in academic conversations in French.",
+    "Your task is to record yourself speaking each phrase.",
+    "Ensure your pronunciation matches the provided text as closely as possible.",
+    "Try to maintain an analytical and scholarly speaking pace.",
+    "After recording each phrase, listen to your recording and compare it to the text.",
+    "Focus on intonation, clarity, and the articulate expression of academic concepts.",
+    "Repeat the recording process as many times as needed to improve your pronunciation."
+  ],
+  "items": [
+    {
+      "question": "Quelle est votre approche de la recherche académique ?",
+      "answer": "Quelle est votre approche de la recherche académique ?"
+    },
+    {
+      "question": "Discutons du cadre théorique.",
+      "answer": "Discutons du cadre théorique."
+    },
+    {
+      "question": "Je suis curieux de connaître votre perspective académique.",
+      "answer": "Je suis curieux de connaître votre perspective académique."
+    },
+    {
+      "question": "Pouvez-vous élaborer sur la méthodologie utilisée ?",
+      "answer": "Pouvez-vous élaborer sur la méthodologie utilisée ?"
+    },
+    {
+      "question": "Quelles sont les principales conclusions de votre étude ?",
+      "answer": "Quelles sont les principales conclusions de votre étude ?"
+    },
+    {
+      "question": "Analysons de manière critique le document de recherche.",
+      "answer": "Analysons de manière critique le document de recherche."
+    },
+    {
+      "question": "J'apprécie l'approche interdisciplinaire.",
+      "answer": "J'apprécie l'approche interdisciplinaire."
+    },
+    {
+      "question": "Le discours académique est essentiel pour l'apprentissage.",
+      "answer": "Le discours académique est essentiel pour l'apprentissage."
+    },
+    {
+      "question": "Comment pouvons-nous intégrer les connaissances académiques dans la pratique ?",
+      "answer": "Comment pouvons-nous intégrer les connaissances académiques dans la pratique ?"
+    },
+    {
+      "question": "Explorons les implications de cette étude.",
+      "answer": "Explorons les implications de cette étude."
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and intellectual, ideal for engaging in academic discussions in French.",
+    "5-7 correct pronunciations": "Good! Your pronunciation is mostly correct, with a strong grasp of academic phrases in French. Some areas may need refinement for full scholarly articulation.",
+    "2-4 correct pronunciations": "Fair. You're able to communicate basic academic concepts in French, but further practice is needed for effective scholarly discussions.",
+    "0-1 correct pronunciations": "Needs improvement. Focus on practicing these academic discussion phrases to enhance your French speaking skills in scholarly contexts."
+  }
+}

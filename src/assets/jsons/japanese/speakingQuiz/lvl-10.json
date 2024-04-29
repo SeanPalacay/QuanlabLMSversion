@@ -1,0 +1,61 @@
+{
+  "title": "Expressing Opinions",
+  "description": "Enhance your Japanese speaking skills with phrases used for expressing opinions. Emphasize clear pronunciation and assertive intonation.",
+  "instructions": [
+    "Below is a list of phrases for expressing opinions in Japanese.",
+    "Record yourself speaking each phrase.",
+    "Strive for clear and confident pronunciation.",
+    "Maintain a conversational and assertive pace.",
+    "After recording, listen to your playback and compare it to the text.",
+    "Pay attention to intonation, clarity, and fluency in Japanese.",
+    "Repeat the recording process as necessary to improve your Japanese speaking skills."
+  ],
+  "items": [
+    {
+      "question": "いい考えだと思います。 (Ii kangae da to omoimasu.)",
+      "answer": "いい考えだと思います。 (Ii kangae da to omoimasu.)"
+    },
+    {
+      "question": "あなたには同意できません。 (Anata ni wa doui dekimasen.)",
+      "answer": "あなたには同意できません。 (Anata ni wa doui dekimasen.)"
+    },
+    {
+      "question": "私の意見では、それは高すぎます。 (Watashi no iken dewa, sore wa takasugimasu.)",
+      "answer": "私の意見では、それは高すぎます。 (Watashi no iken dewa, sore wa takasugimasu.)"
+    },
+    {
+      "question": "コーヒーよりお茶の方がいいです。 (Koohii yori ocha no hou ga ii desu.)",
+      "answer": "コーヒーよりお茶の方がいいです。 (Koohii yori ocha no hou ga ii desu.)"
+    },
+    {
+      "question": "興味深い点ですね。 (Kyoumibukai ten desu ne.)",
+      "answer": "興味深い点ですね。 (Kyoumibukai ten desu ne.)"
+    },
+    {
+      "question": "それについては確信がありません。 (Sore ni tsuite wa kakushin ga arimasen.)",
+      "answer": "それについては確信がありません。 (Sore ni tsuite wa kakushin ga arimasen.)"
+    },
+    {
+      "question": "この曲が大好きです。 (Kono kyoku ga daisuki desu.)",
+      "answer": "この曲が大好きです。 (Kono kyoku ga daisuki desu.)"
+    },
+    {
+      "question": "この天気は好きではありません。 (Kono tenki wa suki de wa arimasen.)",
+      "answer": "この天気は好きではありません。 (Kono tenki wa suki de wa arimasen.)"
+    },
+    {
+      "question": "その映画は素晴らしかったです。 (Sono eiga wa subarashikatta desu.)",
+      "answer": "その映画は素晴らしかったです。 (Sono eiga wa subarashikatta desu.)"
+    },
+    {
+      "question": "もっと旅行するべきだと思います。 (Motto ryokou suru beki da to omoimasu.)",
+      "answer": "もっと旅行するべきだと思います。 (Motto ryokou suru beki da to omoimasu.)"
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and confident, demonstrating strong skills in expressing opinions in Japanese.",
+    "5-7 correct pronunciations": "Good! Your pronunciation is mostly correct, with a solid grasp of opinion-expressing phrases in Japanese. There are areas to refine for improved clarity.",
+    "2-4 correct pronunciations": "Fair. You can communicate your opinions in Japanese, but need significant improvement in pronunciation.",
+    "0-1 correct pronunciations": "Needs improvement. Consider practicing more to enhance your Japanese speaking skills, or seek additional resources for learning."
+  }
+}

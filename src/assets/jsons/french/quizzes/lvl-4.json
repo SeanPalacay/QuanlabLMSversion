@@ -1,0 +1,101 @@
+{
+  "title": "French Language Essentials - Easy Mode",
+  "description": "Choose the English equivalent of the given French language.",
+  "items": [
+    {
+      "question": "Pourriez-vous parler plus lentement ?",
+      "choices": [
+        "Could you speak more slowly?",
+        "Could you speak louder?",
+        "Do you speak French?",
+        "Can you repeat?"
+      ],
+      "answer": "Could you speak more slowly?"
+    },
+    {
+      "question": "Je comprends un peu",
+      "choices": [
+        "I understand a little",
+        "I don't understand",
+        "I understand perfectly",
+        "I'm learning French"
+      ],
+      "answer": "I understand a little"
+    },
+    {
+      "question": "Quel est votre avis ?",
+      "choices": [
+        "What is your name?",
+        "What is your advice?",
+        "What is your opinion?",
+        "Where are you from?"
+      ],
+      "answer": "What is your opinion?"
+    },
+    {
+      "question": "Je suis d'accord",
+      "choices": ["I'm happy", "I'm lost", "I agree", "I'm late"],
+      "answer": "I agree"
+    },
+    {
+      "question": "Je ne suis pas d'accord",
+      "choices": [
+        "I'm not ready",
+        "I disagree",
+        "I don't know",
+        "I'm not here"
+      ],
+      "answer": "I disagree"
+    },
+    {
+      "question": "Cela ne me dérange pas",
+      "choices": [
+        "I don't mind",
+        "I don't like it",
+        "I'm not sure",
+        "It's not right"
+      ],
+      "answer": "I don't mind"
+    },
+    {
+      "question": "Pourriez-vous me conseiller...?",
+      "choices": [
+        "Could you advise me...?",
+        "Could you help me...?",
+        "Do you have...?",
+        "Can I have...?"
+      ],
+      "answer": "Could you advise me...?"
+    },
+    {
+      "question": "Je cherche l'arrêt de bus",
+      "choices": [
+        "I'm looking for the bus stop",
+        "I'm waiting for the bus",
+        "I'm on the bus",
+        "I missed the bus"
+      ],
+      "answer": "I'm looking for the bus stop"
+    },
+    {
+      "question": "Pouvez-vous me donner des directions ?",
+      "choices": [
+        "Can you give me directions?",
+        "Can you show me the map?",
+        "Do you know where this is?",
+        "Are you from here?"
+      ],
+      "answer": "Can you give me directions?"
+    },
+    {
+      "question": "Je voudrais réserver une table pour deux",
+      "choices": [
+        "I would like to reserve a table for two",
+        "I would like to order for two",
+        "I'm looking for a table",
+        "I have a reservation"
+      ],
+      "answer": "I would like to reserve a table for two"
+    }
+  ]
+}

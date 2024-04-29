@@ -1,0 +1,61 @@
+{
+  "title": "Expressing Opinions",
+  "description": "Practice English phrases used for expressing opinions. Emphasize clear pronunciation and confident intonation.",
+  "instructions": [
+    "Below is a list of phrases that are useful for expressing your opinions.",
+    "Record yourself speaking each phrase.",
+    "Aim for clear and assertive pronunciation.",
+    "Maintain a conversational and steady pace.",
+    "After recording, listen to your playback and compare it to the text.",
+    "Pay attention to intonation, clarity, and fluency.",
+    "Repeat the recording process as needed to improve your pronunciation."
+  ],
+  "items": [
+    {
+      "question": "I think it's a good idea.",
+      "answer": "I think it's a good idea."
+    },
+    {
+      "question": "I don't agree with you.",
+      "answer": "I don't agree with you."
+    },
+    {
+      "question": "In my opinion, it's too expensive.",
+      "answer": "In my opinion, it's too expensive."
+    },
+    {
+      "question": "I prefer tea over coffee.",
+      "answer": "I prefer tea over coffee."
+    },
+    {
+      "question": "That's an interesting point.",
+      "answer": "That's an interesting point."
+    },
+    {
+      "question": "I'm not sure about that.",
+      "answer": "I'm not sure about that."
+    },
+    {
+      "question": "I love this song.",
+      "answer": "I love this song."
+    },
+    {
+      "question": "I don't like this weather.",
+      "answer": "I don't like this weather."
+    },
+    {
+      "question": "That movie was amazing.",
+      "answer": "That movie was amazing."
+    },
+    {
+      "question": "I think we should travel more.",
+      "answer": "I think we should travel more."
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and confident, effectively expressing your opinions.",
+    "5-7 correct pronunciations": "Good! You're mostly accurate in expressing your opinions, but some phrases could be improved for clarity.",
+    "2-4 correct pronunciations": "Fair. You can communicate your opinions, but your pronunciation needs more work for clearer expression.",
+    "0-1 correct pronunciations": "Needs improvement. Focus on practicing these phrases to better express your opinions in English."
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "title": "At the Supermarket",
+  "description": "Improve your Japanese speaking skills with phrases typically used at a supermarket. Focus on clear pronunciation and appropriate intonation.",
+  "instructions": [
+    "Below is a list of phrases you might use at a supermarket in Japanese.",
+    "Record yourself speaking each phrase.",
+    "Aim for clear and natural pronunciation.",
+    "Maintain a conversational and steady pace.",
+    "After recording, listen to your playback and compare it to the text.",
+    "Pay attention to intonation, clarity, and fluency in Japanese.",
+    "Repeat the recording process as necessary to improve your Japanese speaking skills."
+  ],
+  "items": [
+    {
+      "question": "パンはどこですか？ (Pan wa doko desu ka?)",
+      "answer": "パンはどこですか？ (Pan wa doko desu ka?)"
+    },
+    {
+      "question": "リンゴはいくらですか？ (Ringo wa ikura desu ka?)",
+      "answer": "リンゴはいくらですか？ (Ringo wa ikura desu ka?)"
+    },
+    {
+      "question": "これはオーガニックですか？ (Kore wa ooganikku desu ka?)",
+      "answer": "これはオーガニックですか？ (Kore wa ooganikku desu ka?)"
+    },
+    {
+      "question": "牛乳は売っていますか？ (Gyuunyuu wa utte imasu ka?)",
+      "answer": "牛乳は売っていますか？ (Gyuunyuu wa utte imasu ka?)"
+    },
+    {
+      "question": "卵が必要です。 (Tamago ga hitsuyou desu.)",
+      "answer": "卵が必要です。 (Tamago ga hitsuyou desu.)"
+    },
+    {
+      "question": "レジはどこですか？ (Reji wa doko desu ka?)",
+      "answer": "レジはどこですか？ (Reji wa doko desu ka?)"
+    },
+    {
+      "question": "袋をもらえますか？ (Fukuro o moraemasu ka?)",
+      "answer": "袋をもらえますか？ (Fukuro o moraemasu ka?)"
+    },
+    {
+      "question": "米はありますか？ (Kome wa arimasu ka?)",
+      "answer": "米はありますか？ (Kome wa arimasu ka?)"
+    },
+    {
+      "question": "これは新鮮ですか？ (Kore wa shinsen desu ka?)",
+      "answer": "これは新鮮ですか？ (Kore wa shinsen desu ka?)"
+    },
+    {
+      "question": "冷凍食品はどこですか？ (Reitou shokuhin wa doko desu ka?)",
+      "answer": "冷凍食品はどこですか？ (Reitou shokuhin wa doko desu ka?)"
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and accurate, demonstrating strong skills in Japanese supermarket language.",
+    "5-7 correct pronunciations": "Good! Your pronunciation is mostly correct, with a good grasp of supermarket phrases in Japanese. There are areas to refine for improved clarity.",
+    "2-4 correct pronunciations": "Fair. You can communicate basic needs in a Japanese supermarket, but need significant improvement in pronunciation.",
+    "0-1 correct pronunciations": "Needs improvement. Consider practicing more to enhance your Japanese speaking skills, or seek additional resources for learning."
+  }
+}

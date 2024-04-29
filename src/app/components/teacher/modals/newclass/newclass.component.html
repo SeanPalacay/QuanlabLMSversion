@@ -1,0 +1,161 @@
+<div class="modal-content custom-modal-content">
+  <form #classForm="ngForm">
+    <div class="inputwrap mt-2">
+      <input
+        [(ngModel)]="className"
+        [ngModelOptions]="{ standalone: true }"
+        name="className"
+        #nameCtrl="ngModel"
+        type="text"
+        placeholder="Enter class name:"
+        [ngClass]="{ 'invalid-input': nameCtrl.invalid && nameCtrl.touched }"
+        required
+      />
+      <div class="min-h-5 align-middle flex place-items-center ml-2">
+        <p
+          *ngIf="nameCtrl.invalid && nameCtrl.touched"
+          class="text-red-600 text-sm"
+        >
+          Field is Required
+        </p>
+      </div>
+      <input
+        [(ngModel)]="classCode"
+        [ngModelOptions]="{ standalone: true }"
+        name="classCode"
+        #codeCtrl="ngModel"
+        type="text"
+        placeholder="Enter class code:"
+        [ngClass]="{ 'invalid-input': codeCtrl.invalid && codeCtrl.touched }"
+        required
+      />
+      <div class="min-h-5 align-middle flex place-items-center ml-2">
+        <p
+          *ngIf="codeCtrl.invalid && codeCtrl.touched"
+          class="text-red-600 text-sm"
+        >
+          Field is Required
+        </p>
+      </div>
+
+      <select
+        class="pt-2"
+        #courseCtrl="ngModel"
+        [(ngModel)]="course"
+        [ngModelOptions]="{ standalone: true }"
+        name="course"
+        id="course"
+        [ngClass]="{
+          'invalid-input': course == '' && courseCtrl.touched,
+          'text-gray-400': course == ''
+        }"
+      >
+        <option value="" disabled selected hidden>Select Course:</option>
+        <option
+          [value]="course.value.id"
+          *ngFor="let course of courses | keyvalue"
+        >
+          {{ course.value.course }}
+        </option>
+      </select>
+      <div class="min-h-5 align-middle flex place-items-center ml-2">
+        <p
+          *ngIf="course == '' && courseCtrl.touched"
+          class="text-red-600 text-sm"
+        >
+          Field is Required
+        </p>
+      </div>
+      
+      <!-- <input
+        [(ngModel)]="timeSchedule"
+        [ngModelOptions]="{ standalone: true }"
+        name="timeSchedule"
+        #timeCtrl="ngModel"
+        type="text"
+        placeholder="Ex. 9:00 AM - 12:00 PM"
+        [ngClass]="{ 'invalid-input': timeCtrl.invalid && timeCtrl.touched }"
+        required
+      />
+      <div class="min-h-5 align-middle flex place-items-center ml-2">
+        <p
+          *ngIf="timeCtrl.invalid && timeCtrl.touched"
+          class="text-red-600 text-sm"
+        >
+          Field is Required
+        </p>
+      </div> -->
+
+      <div class="mb-2">Time Schedule</div>
+      <div class="flex items-center">
+        <div class="flex items-center">
+          <select [(ngModel)]="startHour" name="startHour" class="mr-1" (change)="updateTimeSchedule()">
+            <option value="" disabled selected>h</option>
+            <option *ngFor="let h of hours" [value]="h">{{ h }}</option>
+          </select>
+          <span>:</span>
+          <select [(ngModel)]="startMinute" name="startMinute" class="ml-1 mr-1" (change)="updateTimeSchedule()">
+            <option value="" disabled selected>m</option>
+            <option *ngFor="let m of minutes" [value]="m">{{ m }}</option>
+          </select>
+          <select [(ngModel)]="startPeriod" name="startPeriod" class="ml-1 mr-4 text-xs" (change)="updateTimeSchedule()">
+            <option value="" disabled selected>p</option>
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+          </select>
+        </div>
+        <div class="flex items-center">
+          <span>-</span>
+        </div>
+        <div class="flex items-center ml-4">
+          <select [(ngModel)]="endHour" name="endHour" class="mr-1" (change)="updateTimeSchedule()">
+            <option value="" disabled selected>h</option>
+            <option *ngFor="let h of hours" [value]="h">{{ h }}</option>
+          </select>
+          <span>:</span>
+          <select [(ngModel)]="endMinute" name="endMinute" class="ml-1 mr-1" (change)="updateTimeSchedule()">
+            <option value="" disabled selected>m</option>
+            <option *ngFor="let m of minutes" [value]="m">{{ m }}</option>
+          </select>
+          <select [(ngModel)]="endPeriod" name="endPeriod" class="ml-1 mr-1 text-xs" (change)="updateTimeSchedule()">
+            <option value="" disabled selected>p</option>
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+          </select>
+        </div>
+      </div>
+      <div class="min-h-5 align-middle flex place-items-center ml-2">
+        <p *ngIf="(startHour === '' || startMinute === '' || startPeriod === '' || endHour === '' || endMinute === '' || endPeriod === '')" class="text-red-600 text-sm">Fields are Required</p>
+      </div>
+      
+      
+      <div class="text-gray-500 h-auto">
+        <span class="font-semibold mr-1">Schedule:</span>
+        <label *ngFor="let day of weekDays" class="checkbox-label">
+          <input
+            class="mr-0.5 ml-1"
+            type="checkbox"
+            [(ngModel)]="day.checked"
+            [checked]="day.checked"
+            [ngModelOptions]="{ standalone: true }"
+            (change)="updateDaySchedule(day.name, $event)"
+          />
+          {{ day.name }}
+        </label>
+        <div *ngIf="showDayScheduleError" class="text-red-600 text-sm">
+          At least one day must be selected
+        </div>
+      </div>
+
+      <div class="btnwrap">
+        <button
+          class="save"
+          (click)="classForm.form.markAllAsTouched(); manageClass()"
+        >
+          Save
+        </button>
+        <button class="cancel" (click)="closeModal(null)">Cancel</button>
+      </div>
+    </div>
+  </form>
+</div>

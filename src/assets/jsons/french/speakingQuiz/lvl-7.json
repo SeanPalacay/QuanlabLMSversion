@@ -1,0 +1,61 @@
+{
+  "title": "At Home",
+  "description": "Improve your French speaking skills with phrases commonly used at home. Focus on clear pronunciation and familial intonation.",
+  "instructions": [
+    "Below, you'll find a list of common phrases you might use at home in French.",
+    "Your task is to record yourself speaking each phrase.",
+    "Ensure your pronunciation matches the provided text as closely as possible.",
+    "Try to maintain a natural and clear speaking pace.",
+    "After recording each phrase, listen to your recording and compare it to the text.",
+    "Focus on intonation, clarity, and fluency.",
+    "Repeat the recording process as many times as needed to improve your pronunciation."
+  ],
+  "items": [
+    {
+      "question": "Avez-vous nourri le chat ?",
+      "answer": "Avez-vous nourri le chat ?"
+    },
+    {
+      "question": "Je fais la lessive.",
+      "answer": "Je fais la lessive."
+    },
+    {
+      "question": "Pouvez-vous nettoyer votre chambre ?",
+      "answer": "Pouvez-vous nettoyer votre chambre ?"
+    },
+    {
+      "question": "Nous dînons à 19 heures.",
+      "answer": "Nous dînons à 19 heures."
+    },
+    {
+      "question": "Éteignez la télévision, s'il vous plaît.",
+      "answer": "Éteignez la télévision, s'il vous plaît."
+    },
+    {
+      "question": "Je prends une douche.",
+      "answer": "Je prends une douche."
+    },
+    {
+      "question": "L'évier de la cuisine fuit.",
+      "answer": "L'évier de la cuisine fuit."
+    },
+    {
+      "question": "Avez-vous verrouillé la porte ?",
+      "answer": "Avez-vous verrouillé la porte ?"
+    },
+    {
+      "question": "Il est temps d'aller au lit.",
+      "answer": "Il est temps d'aller au lit."
+    },
+    {
+      "question": "Pouvez-vous mettre la table ?",
+      "answer": "Pouvez-vous mettre la table ?"
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and accurate. You demonstrate a strong command of home-related French.",
+    "5-7 correct pronunciations": "Good! Your pronunciation is mostly correct, with a good grasp of household phrases in French. There are some areas to refine for improved clarity.",
+    "2-4 correct pronunciations": "Fair. You can navigate basic conversations at home in French, but there are several areas needing significant improvement.",
+    "0-1 correct pronunciations": "Needs improvement. Consider practicing more to enhance your French pronunciation skills, or seek additional resources for learning."
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "title": "Fill in the Blanks - Medium Mode",
+  "description": "This intermediate-level quiz challenges you to fill in the blanks with the correct French translations of the given Tagalog words or phrases.",
+  "instructions": [
+    "Each sentence contains a blank space where a Tagalog word is provided in parentheses.",
+    "Translate the Tagalog word into French and fill in the blank.",
+    "Ensure the French word correctly completes the sentence in terms of both meaning and grammatical structure.",
+    "Review your answers before submission."
+  ],
+  "items": [
+    {
+      "question": "Chaque matin, elle aime sentir l'odeur des _____ frais dans le jardin. (bulaklak)",
+      "suggestedAnswer": "fleurs"
+    },
+    {
+      "question": "Il a appris à cuisiner le _____ traditionnel de sa grand-mère. (adobo)",
+      "suggestedAnswer": "adobo"
+    },
+    {
+      "question": "Lors de notre dernière visite, nous avons vu un _____ très rare au zoo. (unggoy)",
+      "suggestedAnswer": "singe"
+    },
+    {
+      "question": "Ma _____ préférée est la lecture avant de dormir. (libangan)",
+      "suggestedAnswer": "passetemps"
+    },
+    {
+      "question": "Le _____ est un élément essentiel de leur plat national. (kanin)",
+      "suggestedAnswer": "riz"
+    },
+    {
+      "question": "Il porte toujours un chapeau pour se protéger du _____ en été. (araw)",
+      "suggestedAnswer": "soleil"
+    },
+    {
+      "question": "Les enfants aiment jouer sous la _____ pendant les chaudes journées d'été. (ulan)",
+      "suggestedAnswer": "pluie"
+    },
+    {
+      "question": "Nous avons planté un _____ dans notre jardin l'année dernière, et il commence déjà à porter des fruits. (puno ng mangga)",
+      "suggestedAnswer": "manguier"
+    },
+    {
+      "question": "Son animal préféré est le _____ parce qu'il aime le miel. (bubuyog)",
+      "suggestedAnswer": "abeille"
+    },
+    {
+      "question": "Pour le dessert, nous avons préparé une tarte aux _____ fraîches. (mansanas)",
+      "suggestedAnswer": "pommes"
+    }
+  ],
+  "scoring": {
+    "10 correct answers": "Excellent! Your translation skills are quite impressive.",
+    "7-9 correct answers": "Great job! You're almost there, with just a little more practice needed.",
+    "4-6 correct answers": "Good effort! You've shown a solid understanding, but room for improvement remains.",
+    "1-3 correct answers": "A good start! Keep studying and practicing to enhance your skills.",
+    "0 correct answers": "It's a challenging start, but don't give up! Learning a new language takes time and practice."
+  }
+}

@@ -1,0 +1,61 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr; /* One column */
+  grid-template-rows: auto auto 1fr; /* Two rows for buttons and two rows for charts */
+  gap: 20px; /* Gap between grid items */
+  height: 100vh; /* Full height */
+  padding: 20px; /* Padding around the grid */
+}
+
+.buttons-container {
+  grid-column: 1 / -1; /* Span all columns */
+  display: flex;
+  justify-content: space-between; /* Space buttons evenly */
+  align-items: center; /* Center items vertically */
+}
+
+.dropdown-container,
+.back-container {
+  display: inline-block; /* Display as inline block */
+}
+
+.dropdown-container {
+  background-color: #ffffff; /* White background */
+  border-radius: 10px; /* Rounded corners */
+  margin-left: 10px;
+  color: black !important;
+}
+
+.dropdown {
+  font-weight: bold; /* Font weight */
+  font-size: 1rem; /* Font size */
+  padding: 8px 16px; /* Padding */
+  border-radius: 8px; /* Rounded corners */
+  color: blueviolet !important; /* White text color */
+  border: none; /* Remove border */
+  cursor: pointer; /* Cursor style */
+  appearance: none; /* Remove default appearance */
+  outline: none; /* Remove outline */
+}
+
+.dropdown:focus {
+  outline: none; /* Remove outline */
+}
+
+.back-button {
+  margin-right: 20px; /* Add margin between buttons */
+}
+
+.charts-container {
+  grid-column: 1 / -1; /* Span all columns */
+  display: grid;
+  grid-template-rows: 1fr 1fr; /* Two rows for charts */
+  gap: 20px; /* Gap between grid items */
+}
+
+.chart-container {
+  background-color: #ffffff; /* White background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1); /* Box shadow */
+  padding: 20px; /* Padding inside the container */
+}

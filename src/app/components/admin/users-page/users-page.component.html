@@ -1,0 +1,161 @@
+<div class="main-container">
+  <div class="button-container">
+    <button class="poppins-b delete" (click)="delete()" *ngIf="selectedOption === 'Students' || selectedOption === 'Teachers' || selectedOption === 'Administrators'">
+      <!-- <img src="assets/delete.png" alt="Delete Icon" /> -->
+      <i class='bx bx-trash mr-2'></i>
+      <span>Delete</span>
+    </button>
+    <button class="poppins-b" *ngIf="selectedOption === 'Teachers'" (click)="addTeachers()">
+      <img src="assets/add.png" alt="Add Icon" />
+      <span>Add Teacher</span>
+    </button>
+    <button class="poppins-b" *ngIf="selectedOption === 'Administrators'" (click)="addPrincipal()">
+      <img src="assets/add.png" alt="Add Icon" />
+      <span>Add Admin</span>
+    </button>
+
+    <!-- <button class="poppins-b" *ngIf="selectedOption === 'Students'" (click)="addStudents()">
+      <img src="assets/add.png" alt="Add Icon" />
+      <span>Add Student</span>
+    </button> -->
+
+    <button class="poppins-b add2" *ngIf="selectedOption === 'Teachers'" (click)="editDetailsTeacher()">
+      <img src="assets/edit.png" alt="Edit Icon" />
+      <span>Edit</span>
+    </button>
+    <button class="poppins-b add2" *ngIf="selectedOption === 'Students'" (click)="editDetailsStudent()">
+      <img src="assets/edit.png" alt="Edit Icon" />
+      <span>Edit</span>
+    </button>
+    <button class="poppins-b add2" *ngIf="selectedOption === 'Administrators'" (click)="editDetailsPrincipal()">
+      <img src="assets/edit.png" alt="Edit Icon" />
+      <span>Edit</span>
+    </button>
+
+    <div class="button-container dropdown">
+      <button
+        class="poppins-b"
+        (click)="toggleDropdown()"
+        [ngClass]="{ active: isDropdownOpen }"
+      >
+        <img src="assets/dropdown-icon.png" alt="Dropdown Icon" />
+        <span *ngIf="selectedOption === 'Students'">Students</span>
+        <span *ngIf="selectedOption === 'Teachers'">Teachers</span>
+        <span *ngIf="selectedOption === 'Administrators'">Admin</span>
+        <div *ngIf="isDropdownOpen" class="dropdown-content">
+          <button
+            class="dropdown-value poppins"
+            (click)="selectOption('Students')"
+          >
+            Students
+          </button>
+          <button
+            class="dropdown-value poppins"
+            (click)="selectOption('Teachers')"
+          >
+            Teachers
+          </button>
+          <button
+          class="dropdown-value poppins"
+          (click)="selectOption('Administrators')"
+        >
+          Admin
+        </button>
+        </div>
+      </button>
+    </div>
+  </div>
+  
+  <div class="table-container">
+    <table>
+     
+        <ng-container *ngIf="selectedOption == 'Students' else ifOption">
+          <thead class="poppins-b">
+            <tr>
+              <th>Student ID</th>
+              <th>Last Name</th>
+              <th>First Name</th>
+              <th>Email</th>
+              <th>Last Seen</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody class="poppins">
+          <tr *ngFor="let student of students" (click)="selectUser(student)" [ngClass]="{ 'selected': selectedUser === student }">
+            <td *ngIf="!student.token">{{ student.visibleid }}</td>
+            <td *ngIf="student.token"> ----------- </td>
+            <td>{{ student.lastname }}</td>
+            <td>{{ student.firstname }}</td>
+            <td>{{ student.email }}</td>
+            <td *ngIf="!student.token">{{ parseDate(student.lastseen) }}</td>
+            <td *ngIf="student.token"> ----------- </td>
+            <td>{{ student.approved || student.token == null ? 'Approved' : 'Pending' }}</td>
+            <td class="actions">
+              <button class="accept-btn" (click)="acceptStudent(student)" *ngIf="!student.approved && student.token != null">
+                <i class='bx bx-check' style="color: green; font-size: 24px;"></i>
+              </button>
+              <button class="cancel-btn" (click)="cancelStudent(student)" *ngIf="!student.approved && student.token != null">
+                <i class='bx bx-x' style="color: red; font-size: 24px;"></i>
+              </button>
+            </td>
+          </tr>
+          </tbody>
+        </ng-container>
+        
+        <ng-template  #ifOption>
+        <ng-container *ngIf="selectedOption === 'Administrators'; else showTeachers">
+          <thead class="poppins-b">
+            <tr>
+              <th>Role</th>
+              <th>Last Name</th>
+              <th>First Name</th>
+              <th>Email</th>
+              <th>Last Seen</th>
+            </tr>
+          </thead>
+          <tbody class="poppins">
+            <tr>
+          <tr *ngFor="let admin of admins" (click)="selectUser(admin)" [ngClass]="{ 'selected': selectedUser === admin }">
+            <td>{{admin.role}}</td>
+            <td>{{admin.lastname}}</td>
+            <td>{{admin.firstname}}</td>
+            <td>{{admin.email}}</td>
+            <td>{{parseDate(admin.lastseen)}}</td>
+          </tr>
+        </tbody>
+        </ng-container>
+      </ng-template>
+        <ng-template #showTeachers>
+          <thead class="poppins-b">
+            <tr>
+              <th>Student ID</th>
+              <th>Last Name</th>
+              <th>First Name</th>
+              <th>Email</th>
+              <th>Last Seen</th>
+            </tr>
+          </thead>
+          <tbody class="poppins">
+          <tr *ngFor="let teacher of teachers" (click)="selectUser(teacher)" [ngClass]="{ 'selected': selectedUser === teacher }">
+            <td>{{ teacher.visibleid }}</td>
+            <td>{{ teacher.lastname }}</td>
+            <td>{{ teacher.firstname }}</td>
+            <td>{{ teacher.email }}</td>
+            <td>{{ parseDate(teacher.lastseen) }}</td>
+            <!-- <td>{{ teacher.approved ? 'Approved' : '' }}</td> -->
+            <!-- <td class="actions">
+              <button class="accept-btn" (click)="acceptTeacher(teacher)" *ngIf="!teacher.approved">
+                <i class='bx bx-check' style="color: green; font-size: 24px;"></i>
+              </button>
+              <button class="cancel-btn" (click)="cancelTeacher(teacher)" *ngIf="!teacher.approved">
+                <i class='bx bx-x' style="color: red; font-size: 24px;"></i>
+              </button>
+            </td> -->
+          </tr>
+        </tbody>
+        </ng-template>
+   
+    </table>
+  </div>
+</div>

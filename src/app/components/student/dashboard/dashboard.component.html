@@ -1,0 +1,12 @@
+<body class="flex h-screen bg-white">
+  <app-sidebar *ngIf="shouldShowHeader"></app-sidebar>
+
+  <main class="flex-1 p-4 overflow-y-auto">
+    <div>
+      <app-headerz></app-headerz>
+    </div>
+    <router-outlet></router-outlet>
+  </main>
+</body>
+
+<app-footer> </app-footer>

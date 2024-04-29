@@ -1,0 +1,59 @@
+{
+  "title": "Beginner English to Japanese Translation Quiz - Easy Mode",
+  "description": "Test your basic understanding of the Japanese language by translating these simple English words and phrases into Japanese. Ideal for beginners.",
+  "instructions": [
+    "Read each English word or phrase carefully.",
+    "Write the Japanese translation of the word or phrase using Romaji (Latin script).",
+    "Spelling accuracy is important for a correct answer.",
+    "After completing all questions, submit your answers for scoring."
+  ],
+  "items": [
+    {
+      "question": "What is the Japanese translation of 'to consider'?",
+      "suggestedAnswer": "kangaeru"
+    },
+    {
+      "question": "What is the Japanese translation of 'responsibility'?",
+      "suggestedAnswer": "sekinin"
+    },
+    {
+      "question": "What is the Japanese translation of 'to communicate'?",
+      "suggestedAnswer": "tsuujin suru"
+    },
+    {
+      "question": "What is the Japanese translation of 'perspective'?",
+      "suggestedAnswer": "shiten"
+    },
+    {
+      "question": "What is the Japanese translation of 'to influence'?",
+      "suggestedAnswer": "eikyou o ataeru"
+    },
+    {
+      "question": "What is the Japanese translation of 'challenge'?",
+      "suggestedAnswer": "chousen"
+    },
+    {
+      "question": "What is the Japanese translation of 'to achieve'?",
+      "suggestedAnswer": "tassei suru"
+    },
+    {
+      "question": "What is the Japanese translation of 'inspiration'?",
+      "suggestedAnswer": "hagemi"
+    },
+    {
+      "question": "What is the Japanese translation of 'to negotiate'?",
+      "suggestedAnswer": "koushou suru"
+    },
+    {
+      "question": "What is the Japanese translation of 'commitment'?",
+      "suggestedAnswer": "ketsui"
+    }
+  ],
+  "scoring": {
+    "10 correct answers": "Excellent! You have a perfect understanding of these basic English to Japanese translations.",
+    "7-9 correct answers": "Very good! You have a strong grasp of most translations, with a little room for improvement.",
+    "4-6 correct answers": "Good effort! You're on the right track, but reviewing some translations could be beneficial.",
+    "1-3 correct answers": "A decent start! Keep practicing to improve your translation skills.",
+    "0 correct answers": "It seems you're new to this. Keep studying and practicing!"
+  }
+}

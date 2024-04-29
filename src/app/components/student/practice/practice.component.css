@@ -1,0 +1,16 @@
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+}
+@media screen and (max-width: 640px) {
+  .btn-container {
+    justify-content: end;
+  }
+}
+@media screen and (max-width: 456px) {
+  .backBtn-container {
+    display: none;
+  }
+}

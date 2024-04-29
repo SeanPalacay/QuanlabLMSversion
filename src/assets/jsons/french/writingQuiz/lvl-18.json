@@ -1,0 +1,59 @@
+{
+  "title": "French Error Detection - Hard Mode",
+  "description": "Test your proficiency in French by identifying errors in common sentences. This quiz is designed for advanced learners.",
+  "instructions": [
+    "Read each sentence carefully.",
+    "Identify the word that is incorrect in the context of the sentence.",
+    "Write down the incorrect word as your answer.",
+    "Check your answers at the end of the quiz to see explanations and correct forms."
+  ],
+  "items": [
+    {
+      "question": "Il a mangé une grande tranche de gâteau malgré qu'il n'avait pas faim.",
+      "suggestedAnswer": "malgré"
+    },
+    {
+      "question": "Nous devrions prendre le parapluie au cas où qu'il pleuve plus tard.",
+      "suggestedAnswer": "qu'"
+    },
+    {
+      "question": "Cette artiste est connue pour avoir brisé les conventions dans son domaine artistique.",
+      "suggestedAnswer": "connue"
+    },
+    {
+      "question": "Les enfants jouaient dehors jusqu'à ce que il commence à pleuvoir.",
+      "suggestedAnswer": "ce"
+    },
+    {
+      "question": "Je me suis rendu compte que j'avais oublié mon portefeuille à la maison après être arrivé au bureau.",
+      "suggestedAnswer": "après"
+    },
+    {
+      "question": "Elle a réussi à convaincre son ami, bien qu'il était très sceptique au début.",
+      "suggestedAnswer": "était"
+    },
+    {
+      "question": "Tous les étudiants doivent soumettre leurs projets avant la fin du semestre prochaine.",
+      "suggestedAnswer": "prochaine"
+    },
+    {
+      "question": "Il faut que nous soyons attentifs aux détails pour éviter de faire des erreurs grossières.",
+      "suggestedAnswer": "grossières"
+    },
+    {
+      "question": "Le musée offre des visites guidées gratuits pour les écoles primaires.",
+      "suggestedAnswer": "gratuits"
+    },
+    {
+      "question": "Son explication était si compliqué que personne n'a pu comprendre.",
+      "suggestedAnswer": "compliqué"
+    }
+  ],
+  "scoring": {
+    "10 correct answers": "Exceptionnel! Your understanding of French grammar and vocabulary is impressive.",
+    "7-9 correct answers": "Très bien! You have a strong grasp on French, with minor areas for improvement.",
+    "4-6 correct answers": "Bien! You're on the right track, but paying closer attention to details will help.",
+    "1-3 correct answers": "Un bon début! Keep studying the nuances of French grammar and vocabulary.",
+    "0 correct answers": "C'est un début. Focus on learning basic rules and common expressions."
+  }
+}

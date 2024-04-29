@@ -1,0 +1,39 @@
+<div class="container mx-auto p-4">
+    <!-- Total Words Searched and Total Minutes Session Statistics -->
+    <div class="grid grid-cols-2 gap-4 mb-4">
+      <!-- Total Words Searched -->
+      <div class="bg-blue-200 p-4 rounded-md">
+        <h2 class="text-lg font-semibold mb-2">Total Words Cached</h2>
+        <p class="text-xl">{{ getTotalWordsSearched() }}</p>
+      </div>
+  
+      <!-- Total Minutes Session -->
+      <div class="bg-green-200 p-4 rounded-md">
+        <h2 class="text-lg font-semibold mb-2">Total Monthly Time Session</h2>
+        <p class="text-xl">{{ formatMinutesToHoursAndMinutes(getTotalMinutesSession()) }}</p>
+      </div>
+    </div>
+  
+    <!-- Class Details Table -->
+    <h1 class="text-2xl font-semibold mb-4">Class Details</h1>
+  
+    <table class="min-w-full border rounded-lg overflow-hidden">
+      <thead class="bg-gray-800 text-white">
+        <tr>
+          <th class="py-2 px-4">Class Name</th>
+          <th class="py-2 px-4">Teacher</th>
+          <th class="py-2 px-4">Students</th>
+          <th class="py-2 px-4">Minutes per Session</th>
+        </tr>
+      </thead>
+      <tbody class="bg-gray-100">
+        <tr *ngFor="let classDetail of classDetails">
+          <td class="py-2 px-4">{{ classDetail.className }}</td>
+          <td class="py-2 px-4">{{ classDetail.teacher }}</td>
+          <td class="py-2 px-4">{{ classDetail.numStudents }}</td>
+          <td class="py-2 px-4">{{ classDetail.minutes }} mins.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

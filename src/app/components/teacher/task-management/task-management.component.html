@@ -1,0 +1,140 @@
+<div class="main-container">
+  <div class="small-container">
+    <button class="back-button poppins font-bold" (click)="navigateBack()">
+      Back
+    </button>
+    <!-- <div class="date-container">
+      <p class="date poppins-b">
+        Date: <span id="current-date" class="poppins">{{ currentDate }}</span>
+      </p>
+    </div> -->
+  </div>
+  <div class="main-content-container">
+    <div class="column-1">
+      <!-- <div class="analytics-container">
+        <div class="analytics">
+          <div class="analytics-label">
+            <h5 class="poppins">PENDING<br />TASKS</h5>
+          </div>
+          <div class="analytics-value"><h1 class="poppins-b">5</h1></div>
+        </div>
+        <div class="analytics">
+          <div class="analytics-label">
+            <h5 class="poppins">UPCOMING<br />DEADLINES</h5>
+          </div>
+          <div class="analytics-value"><h1 class="poppins-b">2</h1></div>
+        </div>
+        <div class="analytics">
+          <div class="analytics-label">
+            <h5 class="poppins">OVERDUE<br />TASKS</h5>
+          </div>
+          <div class="analytics-value"><h1 class="poppins-b">1</h1></div>
+        </div>
+      </div> -->
+      <div class="inbox-container">
+        <div class="inbox-title-container">
+          <p class="poppins-b">STUDENT SUBMISSIONS INBOX</p>
+        </div>
+
+        <div *ngFor="let submission of submissions" class="inbox-list mt-1">
+          <div class="submission-item">
+            <div class="submission-title">
+              <p class="poppins">
+                <span *ngIf="submission.grade" class="bg-green-500 text-white px-2 py-1 rounded text-xs mr-2">Graded</span>
+                <span class="font-semibold"
+                  >{{ submission.firstname + " " + submission.lastname }}
+                </span>
+                - Submitted
+                <span class="font-semibold">{{ submission.title }}</span>
+                
+              </p>
+              
+            </div>
+            <div class="submission-buttons">
+              <button
+                (click)="
+                  submission.attachments
+                    ? openFile(submission.attachments.split('>')[0])
+                    : null
+                "
+              >
+                <img
+                  class="download-icon"
+                  src="assets/download.png"
+                  alt="Download Icon"
+                />
+              </button>
+              <button class="grade-button" (click)="navigateToTeacherView(submission)">
+                <p class="poppins-b">VIEW</p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column-2">
+      <div class="title-list-container">
+        <p class="list-title poppins-b">TASK MANAGEMENT LIST</p>
+      </div>
+      <div class="dropxnew-container">
+        <!-- <button class="dropdown-button">
+          <p class="poppins-b">Filter: Course</p>
+        </button> -->
+        <div ngbDropdown>
+          <button
+            type="button"
+            id="dropdownBasic1"
+            ngbDropdownToggle
+            class="dropdown-button poppins"
+          >
+            <img
+              class="dropdown-icon"
+              src="assets/dropdown-icon.png"
+              alt="dropdown icon"
+            />
+            <p>
+              Filter:
+              {{
+                filterCourse == "" ? "All" : courses.get(filterCourse).course
+              }}
+            </p>
+          </button>
+          <div ngbDropdownMenu class="toggle">
+            <button (click)="selectCourse('')" ngbDropdownItem>All</button>
+            <button
+              *ngFor="let coursel of courses | keyvalue"
+              (click)="selectCourse(coursel.value.id)"
+              ngbDropdownItem
+            >
+              {{ coursel.value.course }}
+            </button>
+          </div>
+        </div>
+        <button class="new-task-button" (click)="taskCreation()">
+          <img class="plus-icon" src="assets/add.png" alt="Plus Icon" />
+          <p class="poppins-b">NEW TASK</p>
+        </button>
+      </div>
+      <div class="table-container">
+        <table>
+          <thead class="poppins-b">
+            <tr>
+              <th>Task Title</th>
+              <th>Due Date</th>
+              <th>Course</th>
+            </tr>
+          </thead>
+          <tbody class="poppins">
+            <ng-container *ngFor="let task of tasks">
+              <tr *ngIf="task.courseid == filterCourse || filterCourse == ''">
+                <td>{{ task.title }}</td>
+                <td>{{ task.deadline }}</td>
+                <td>{{ task.course }}</td>
+              </tr>
+            </ng-container>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

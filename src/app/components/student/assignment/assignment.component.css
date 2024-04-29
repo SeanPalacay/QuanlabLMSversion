@@ -1,0 +1,29 @@
+@media (max-width: 640px) {
+    .scrollable-cards {
+      overflow-x: auto;
+      white-space: nowrap;
+      margin-bottom: -1rem; /* Remove unnecessary space at the bottom */
+    }
+  
+    .scrollable-cards .grid {
+      flex-wrap: nowrap;
+    }
+  
+    .scrollable-cards .card {
+      width: 80vw; /* Adjust the width as needed */
+      margin-right: 1rem; /* Add spacing between cards */
+    }
+  
+    .scrollable-cards .assignment-card {
+      overflow-x: auto; /* Make only assignment cards scrollable */
+    }
+  
+    .scrollable-cards .assignment-card p {
+      white-space: normal;
+    }
+  
+    .scrollable-cards .card p {
+      display: none; /* Hide paragraph content for all cards on small screens */
+    }
+  }
+  

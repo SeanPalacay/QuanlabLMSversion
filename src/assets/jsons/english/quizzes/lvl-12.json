@@ -1,0 +1,106 @@
+{
+  "title": "Vocabulary and Idioms Quiz",
+  "description": "Test your knowledge of vocabulary and idiomatic expressions with this quiz. Answer questions related to synonyms, antonyms, idioms, and more to enhance your language skills.",
+  "items": [
+    {
+      "question": "Which of these words is not a synonym of 'pensive'?",
+      "choices": [
+        "brooding",
+        "somber",
+        "meditative",
+        "jovial"
+      ],
+      "answer": "jovial"
+    },
+    {
+      "question": "Fill in the blank: 'He was so _______ that he couldn't even remember his own name.'",
+      "choices": [
+        "forgetful",
+        "amnesiac",
+        "absent-minded",
+        "distraught"
+      ],
+      "answer": "amnesiac"
+    },
+    {
+      "question": "What is the meaning of the phrase 'to be at sixes and sevens'?",
+      "choices": [
+        "to be in a state of confusion",
+        "to be in a state of agreement",
+        "to be in a state of happiness",
+        "to be in a state of sadness"
+      ],
+      "answer": "to be in a state of confusion"
+    },
+    {
+      "question": "Which of these words is the opposite of 'gregarious'?",
+      "choices": [
+        "outgoing",
+        "sociable",
+        "friendly",
+        "reclusive"
+      ],
+      "answer": "reclusive"
+    },
+    {
+      "question": "Which of these words is not a type of precipitation?",
+      "choices": [
+        "rain",
+        "snow",
+        "sleet",
+        "fog"
+      ],
+      "answer": "fog"
+    },
+    {
+      "question": "What is the past tense of 'sing'?",
+      "choices": [
+        "sang",
+        "sung",
+        "sunk",
+        "sensed"
+      ],
+      "answer": "sang"
+    },
+    {
+      "question": "What is the meaning of the idiom 'to bite the bullet'?",
+      "choices": [
+        "to face a difficult or unpleasant task",
+        "to run away from a difficult or unpleasant task",
+        "to talk about a difficult or unpleasant task",
+        "to ignore a difficult or unpleasant task"
+      ],
+      "answer": "to face a difficult or unpleasant task"
+    },
+    {
+      "question": "Which of these words is not a type of government?",
+      "choices": [
+        "democracy",
+        "monarchy",
+        "republic",
+        "anarchy"
+      ],
+      "answer": "anarchy"
+    },
+    {
+      "question": "What is the present participle of 'write'?",
+      "choices": [
+        "writing",
+        "written",
+        "wrote",
+        "writ"
+      ],
+      "answer": "writing"
+    },
+    {
+      "question": "What is the meaning of the phrase 'to take something with a grain of salt'?",
+      "choices": [
+        "to believe something completely",
+        "to believe something partially",
+        "to disbelieve something completely",
+        "to disbelieve something partially"
+      ],
+      "answer": "to believe something partially"
+    }
+  ]
+}

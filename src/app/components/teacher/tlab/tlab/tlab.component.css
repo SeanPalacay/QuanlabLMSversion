@@ -1,0 +1,32 @@
+.hide-toggle-icon::after {
+    display: none !important;
+}   
+
+
+.btn1{
+    width: 125px;
+    height: 30px;
+    background: linear-gradient(to right, rgb(1, 114, 175) 0%, rgb(116, 254, 189) 100%);
+    color: #e1f3fd;
+    }
+ .btn2{
+    width: 125px;
+    height: 30px;
+        background: red;
+        color: #e1f3fd; 
+        }
+
+ .newclass button{
+            width: 200px;
+            height: 45px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 15px #00000040;
+            display: flex;
+            justify-content: center; /* Horizontally center */
+            align-items: center;
+            font-size: 20px;
+            }
+.newclass button img{
+                height: 25px;
+                margin-right: 5px;
+            }

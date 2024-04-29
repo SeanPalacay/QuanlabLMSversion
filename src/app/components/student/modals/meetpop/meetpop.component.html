@@ -1,0 +1,54 @@
+<!-- join-modal.component.html -->
+<div class="modal-overlay">
+    <div class="modal-container border-none px-4" >
+        <div   ngbDropdown>
+        <button (click)="checkIfHasClass()"  id="dropdownBasic1" ngbDropdownToggle class="hide-toggle-icon new-task-button ml-auto mr-auto mt-5 [tit]" >
+            <p class="poppins-b overflow-hidden">
+                <span *ngIf="classObj ==  null">CHOOSE CLASS</span>
+                <span *ngIf="classObj != null" [title]="classObj.class">{{classObj.class}}</span>
+            </p> 
+            <img src="assets/teacher/icondown.png">
+          </button>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1" [ngClass]="{'hide':classes.length <= 0}">
+            <!-- <ng-container *ngIf="isTeacher" > -->
+                <button *ngFor="let class of classes"
+                (click)="setClass(class)"
+                class="dropdown-item my-button truncate overflow-hidden w-[215px]"
+                ngbDropdownItem>
+          <span class="font-bold">{{class.class}} </span> <br>
+          <span class="font-thin text-sm">{{class.course}}</span>
+        </button>
+                    <!-- </ng-container> -->
+          </div>
+        </div>
+        
+        <div class="controls">
+            <button (click)="joinNow()" class="shadow-boxz outline-none join-now-button glow-pulse poppins-b " [ngClass]="{'gradient-color': classObj != null, 'bg-gray-500': classObj == null}">Join Now!</button>
+            <button class="outline-none exit-button mb-2 ml-5 rounded shadow-boxz poppins-b" (click)="cancelCreation()">
+                <!-- Replace 'your-exit-icon-url' with the actual URL of your exit icon -->
+                <span>Cancel</span>
+            </button>
+        </div>
+        <div class="ml-20 mr-24 icons justify-between flex mt-3">
+            <div class="toggle-button flex">
+                <img class="mr-2 mt-0.5" *ngIf="!isMicMuted" src="assets/notmute.png" alt="Mic Icon" style="width: 20px; height: 20px;">
+                <img class="mr-2 mt-0.5" *ngIf="isMicMuted" src="assets/mute.png" alt="Mute Icon" style="width: 20px; height: 20px;">
+
+                <label class="switch">
+                    <input type="checkbox" (change)="toggleMic()">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="toggle-button flex">
+                <!-- <img class="mr-2" *ngIf="!isVideoDisabled" src="assets/spiderman.png" alt="Video Icon"> -->
+                <i class='bx bx-video mr-2 mt-[-2px] text-lg text-teal-500' *ngIf="!isVideoDisabled" ></i>
+                <i class='bx bxs-video-off mr-2 mt-[-2px] text-lg text-teal-500' *ngIf="isVideoDisabled" ></i>
+                <!-- <img class="mr-2" *ngIf="isVideoDisabled" src="assets/tonzxz.jpg" alt="Video Off Icon"> -->
+                <label class="switch">
+                    <input type="checkbox" (change)="toggleVideo()">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>

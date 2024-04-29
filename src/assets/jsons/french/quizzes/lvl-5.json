@@ -1,0 +1,106 @@
+{
+  "title": "French Language Essentials - Easy Mode",
+  "description": "Choose the English equivalent of the given French language.",
+  "items": [
+    {
+      "question": "Pouvez-vous me recommander un bon restaurant ?",
+      "choices": [
+        "Can you recommend a good restaurant?",
+        "Do you know a good restaurant?",
+        "Where is a good restaurant?",
+        "How is the restaurant?"
+      ],
+      "answer": "Can you recommend a good restaurant?"
+    },
+    {
+      "question": "Quelle est la spécialité de la maison ?",
+      "choices": [
+        "What is the house specialty?",
+        "What is the chef's recommendation?",
+        "What is your favorite dish?",
+        "How is the food prepared?"
+      ],
+      "answer": "What is the house specialty?"
+    },
+    {
+      "question": "Je souffre d'allergies alimentaires",
+      "choices": [
+        "I have food allergies",
+        "I don't like this food",
+        "I prefer vegetarian food",
+        "I'm looking for organic food"
+      ],
+      "answer": "I have food allergies"
+    },
+    {
+      "question": "Pouvez-vous adapter ce plat ?",
+      "choices": [
+        "Can you change this dish?",
+        "Can you cook this differently?",
+        "Can you make this spicy?",
+        "Can you adapt this dish?"
+      ],
+      "answer": "Can you adapt this dish?"
+    },
+    {
+      "question": "Je voudrais annuler ma réservation",
+      "choices": [
+        "I would like to cancel my reservation",
+        "I would like to change my reservation",
+        "I would like to confirm my reservation",
+        "I'm running late for my reservation"
+      ],
+      "answer": "I would like to cancel my reservation"
+    },
+    {
+      "question": "Pourriez-vous m'expliquer ce terme ?",
+      "choices": [
+        "Could you explain this term to me?",
+        "Do you understand this term?",
+        "Can you use this in a sentence?",
+        "What does this word mean?"
+      ],
+      "answer": "Could you explain this term to me?"
+    },
+    {
+      "question": "Je cherche un cours de français avancé",
+      "choices": [
+        "I'm looking for an advanced French course",
+        "I'm looking for a beginner French course",
+        "I want to learn French",
+        "I'm teaching French"
+      ],
+      "answer": "I'm looking for an advanced French course"
+    },
+    {
+      "question": "Pouvez-vous corriger mes erreurs ?",
+      "choices": [
+        "Can you correct my mistakes?",
+        "Can you make a mistake?",
+        "Do you understand my errors?",
+        "Why am I wrong?"
+      ],
+      "answer": "Can you correct my mistakes?"
+    },
+    {
+      "question": "Je travaille sur mon accent",
+      "choices": [
+        "I'm working on my accent",
+        "I have a strong accent",
+        "Can you understand my accent?",
+        "I want to change my accent"
+      ],
+      "answer": "I'm working on my accent"
+    },
+    {
+      "question": "Pouvez-vous parler plus naturellement, s'il vous plaît ?",
+      "choices": [
+        "Can you speak more naturally, please?",
+        "Can you speak more slowly, please?",
+        "Can you speak louder, please?",
+        "Can you write it down, please?"
+      ],
+      "answer": "Can you speak more naturally, please?"
+    }
+  ]
+}

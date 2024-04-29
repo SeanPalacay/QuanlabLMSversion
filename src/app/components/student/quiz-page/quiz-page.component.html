@@ -1,0 +1,163 @@
+<!-- quiz-page.component.html -->
+<div class="bg-gray-100 h-full w-full flex flex-col items-center">
+  <div class="w-auto p-6 bg-white rounded-md shadow-md mx-4 marginthisbox">
+    <!-- Introductory Text -->
+    <div class="mx-auto p-8 bg-white shadow-md rounded-md mb-6">
+      <div class="flex items-center">
+        <div class="w-full">
+          <h1 class="text-3xl font-bold mb-4">{{ title }}</h1>
+          <p class="text-lg">{{ description }}</p>
+        </div>
+        <!-- Image on the right -->
+        <img
+          src="assets/quiz1.jpg"
+          alt="Quiz Image"
+          class="w-2/12 ml-4 rounded-md"
+        />
+      </div>
+    </div>
+
+    <!-- Timer -->
+    <div *ngIf="mode !='listening'" class="text-center mb-4">
+      <p class="text-lg font-semibold">
+        Time Remaining:
+        <span class="text-red-600">{{ secondsToMinutes(timeRemaining) }}</span>
+      </p>
+    </div>
+
+    <div *ngIf="currentQuestionIndex < questions.length">
+      <ng-container *ngIf="mode === 'reading'; else listening">
+        <h2 class="text-xl font-semibold mb-4">
+          {{ questions[currentQuestionIndex].question }}
+        </h2>
+      </ng-container>
+      <ng-template #listening>
+        <div class="poppins flex flex-col w-full justify-center items-center gap-1.5 mb-3">
+          <h2 class="text-2xl font-semibold text-blue-600">
+            <span *ngIf="!generating">
+              <i class="bx bx-headphone"></i> Listen Carefully
+            </span>
+            <span *ngIf="generating">
+              Wait for your question....
+            </span>
+          </h2>
+          <button (click)="textToSpeech()" class="flex items-center gap-2">
+            <i class="text-gray-600 bx text-2xl bx-play-circle"></i>
+            <span class="text-gray-600"> Play Again</span>
+          </button>
+        </div>
+      </ng-template>
+      <!-- Choices in 2 columns and 2 rows -->
+      <div
+        *ngIf="questions[currentQuestionIndex].type <= 1; else identification"
+        class="poppins grid grid-cols-2 gap-4"
+      >
+        <button
+          *ngFor="
+            let choice of questions[currentQuestionIndex].choices;
+            trackBy: trackByFn;
+            let i = index
+          "
+          class="py-2 px-4 bg-blue-500 text-white rounded-md hover:bg-orange-600 hover:text-white focus:bg-orange-600 focus:text-white"
+          [ngClass]="{
+            'text-xl': mode != 'reading'
+          }"
+          (click)="selectAnswer(choice.id)"
+        >
+          {{ choice.text }}
+          <i *ngIf="showResult" class="ml-2"></i>
+        </button>
+      </div>
+      <ng-template #identification>
+        <!-- Input box for the answer -->
+        <input
+          type="text"
+          class="w-full py-2 px-4 border-2 border-gray-300 rounded-md mb-4"
+          [(ngModel)]="questions[currentQuestionIndex].selectedAnswers[0]"
+          placeholder="Type your answer here"
+        />
+      </ng-template>
+
+      <!-- Navigation Buttons -->
+      <div class="mt-6 flex justify-between">
+        <button
+          class="py-2 px-4 text-white rounded-md"
+          (click)="prevQuestion()"
+          [ngClass]="{
+            'bg-green-500': backtracking,
+            'bg-gray-500': !backtracking
+          }"
+          [disabled]="!backtracking"
+        >
+          Previous
+        </button>
+        <button
+          class="py-2 px-4 bg-green-500 text-white rounded-md"
+          (click)="nextQuestion()"
+          [disabled]="isButtonDisabled"
+        >
+          Next
+        </button>
+      </div>
+    </div>
+
+    <!-- Result Popup -->
+    <div *ngIf="showResult" class="mt-8">
+      <p class="score text-center text-2xl font-bold mb-3.5">
+        Quiz Result: {{ correctAnswers }}/{{ questions.length }}
+      </p>
+
+      <!-- Show Correct Answers -->
+      <ng-container *ngIf="showResult && review">
+        <div
+          *ngFor="let question of questions; let qIndex = index"
+          class="poppins text-gray-600"
+        >
+          <p class="text-white font-semibold bg-blue-500 rounded-md p-2.5">
+            {{ qIndex + 1 }}. {{ question.question }}
+          </p>
+          <ul class="p-2.5">
+            <li
+              *ngFor="let choice of question.choices; let cIndex = index"
+              [ngClass]="{
+                Correct: isAnswerCorrect(question, choice.id),
+                Incorrect: isAnswerIncorrect(question, choice.id),
+                'font-bold':
+                  isUserSelectedAnswer(question, choice.id) &&
+                  !isAnswerCorrect(question, choice.id)
+              }"
+            >
+              {{ choice.text }}
+              <i
+                *ngIf="isAnswerCorrect(question, cIndex)"
+                class="text-green-600 font-bold icon-check"
+                >✓</i
+              >
+              <i
+                *ngIf="isAnswerIncorrect(question, cIndex)"
+                class="text-red-600 font-bold icon-times"
+                >✗</i
+              >
+            </li>
+            <p
+              *ngIf="isQuestionUnanswered(question)"
+              class="text-orange-500 font-bold"
+            >
+              Unanswered
+            </p>
+          </ul>
+        </div>
+      </ng-container>
+
+      <!-- Centered "Done" button -->
+      <div class="text-center mb-3">
+        <button
+          class="py-2 px-4 bg-blue-600 text-white rounded-md mt-4 hover:bg-orange-600 hover:text-white focus:bg-orange-600 focus:text-white"
+          (click)="resetQuiz()"
+        >
+          Done
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

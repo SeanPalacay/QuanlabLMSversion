@@ -1,0 +1,59 @@
+{
+  "title": "Japanese Conversation Completion Quiz - Hard Mode",
+  "description": "Complete the blanks in these Japanese conversation snippets. This quiz tests your ability to understand and use conversational Japanese effectively.",
+  "instructions": [
+    "Read each conversation snippet carefully.",
+    "Type the appropriate word or phrase in Japanese using Romaji to complete the sentence.",
+    "The case (uppercase or lowercase) of your answer does not matter, as long as the spelling is correct.",
+    "After completing all questions, submit your answers for scoring."
+  ],
+  "items": [
+    {
+      "question": "Sumimasen, _______ nanji desu ka? (Excuse me, what time is it now?)",
+      "suggestedAnswer": "ima"
+    },
+    {
+      "question": "Ashita _______ ni ikimasu ka? (Are you going to the beach tomorrow?)",
+      "suggestedAnswer": "umi"
+    },
+    {
+      "question": "Kono hon o _______ kudasai. (Please lend me this book.)",
+      "suggestedAnswer": "kashite"
+    },
+    {
+      "question": "Konban _______ o shimasu ka? (What are you doing tonight?)",
+      "suggestedAnswer": "nani"
+    },
+    {
+      "question": "Raishuu no doyoubi _______ desu ka? (Are you free next Saturday?)",
+      "suggestedAnswer": "hima"
+    },
+    {
+      "question": "Kore wa anata no _______ desu ka? (Is this your bag?)",
+      "suggestedAnswer": "kaban"
+    },
+    {
+      "question": "Nihon ni _______ koto ga arimasu ka? (Have you ever been to Japan?)",
+      "suggestedAnswer": "itta"
+    },
+    {
+      "question": "Kyou tenki ga _______ ne. (The weather is nice today, isn't it?)",
+      "suggestedAnswer": "ii"
+    },
+    {
+      "question": "Osushi ga _______ desu ka? (Do you like sushi?)",
+      "suggestedAnswer": "suki"
+    },
+    {
+      "question": "Kippu o _______ de kaemasu ka? (Where can I buy tickets?)",
+      "suggestedAnswer": "doko"
+    }
+  ],
+  "scoring": {
+    "10 correct answers": "Outstanding! You have a great understanding of Japanese conversation.",
+    "7-9 correct answers": "Very good! You're quite skilled in conversational Japanese.",
+    "4-6 correct answers": "Good job! You're on the right track, but there's room for improvement.",
+    "1-3 correct answers": "A decent start! Keep practicing your conversational skills.",
+    "0 correct answers": "Conversational Japanese can be challenging. Keep studying and practicing!"
+  }
+}

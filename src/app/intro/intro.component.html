@@ -1,0 +1,165 @@
+<div #rootElement>
+<div class="lawas">
+    <div class="container">
+        <section class="gallery">
+            <div class="galer">
+                <div class="galer__content">
+                    <h2 class="poppins-b text-2xl">Welcome to QuanLab</h2>
+                </div>
+            </div>
+            
+            <div class="galer">
+                <div class="galer__content">
+                    <div
+                    class="galer-media galer-media_left rounded-3xl"
+                    style="background-image: url(assets/introimg/1.webp)"
+                    ></div>
+                </div>
+        </div>
+        
+        <div class="galer galer_bg">
+          <div class="galer__content">
+            <video
+  class="galer-media galer-media_right"
+  src="assets/media/lapa.mp4"
+  autoplay
+  loop
+  muted
+></video>
+
+            </div>
+        </div>
+        
+        <div class="galer"></div>
+        
+        <div class="galer">
+            <div class="frame__content text-right">
+                <h3>About the system</h3>
+                <p>
+                    <a class="overlock-i">QuanLab </a>is a cutting-edge digital Language Classroom that provides a comprehensive and interactive platform for language learning and education. 
+                    <br />
+                    Explore the endless possibilities of learning and enhancing your language skills with QuanLab.
+                </p>
+            </div>
+        </div>
+        
+        <div class="galer galer_bg">
+            <div class="galer__content">
+                <div
+                class="galer-media galer-media_left"
+                style="background-image: url(assets/introimg/2.webp)"
+                ></div>
+            </div>
+        </div>
+        
+        <div class="galer"></div>
+        
+        <div class="galer galer_bg">
+            <div class="galer__content">
+                <video
+                class="galer-media galer-media_right"
+                src="assets/media/lapa.mp4"
+                autoplay
+                loop
+                muted
+                ></video>
+            </div>
+        </div>
+        
+        <div class="galer"></div>
+        
+        <div class="galer">
+            <div class="galer__content text-left">
+                <h3>Interactive Language Learning</h3>
+                <p>
+                    QuanLab offers interactive language learning experiences with a wide range of multimedia resources, exercises, and assessments. Whether you're a student, teacher, or language enthusiast, QuanLab provides the tools you need to succeed in language acquisition and proficiency.
+                </p>
+            </div>
+        </div>
+        
+        <div class="galer galer_bg">
+            <div class="galer__content">
+                <div
+                class="galer-media galer-media_right"
+                style="background-image: url(assets/images/4.webp)"
+                ></div>
+            </div>
+        </div>
+        <div class="galer">
+            <div class="galer__content">
+              <h3>Engaging Animations</h3>
+              <p>
+                QuanLab incorporates engaging animations to make language learning fun and interactive. Our animated lessons help you grasp language concepts with ease and retain knowledge effectively.
+              </p>
+            </div>
+          </div>
+          
+          <div class="galer galer_bg">
+            <div class="galer__content">
+              <div
+                class="galer-media galer-media_left"
+                style="background-image: url(assets/introimg/3.webp)"
+              ></div>
+            </div>
+          </div>
+          
+          <div class="galer">
+            <div class="galer__content">
+              <h3>Rich Multimedia Content</h3>
+              <p>
+                QuanLab offers a rich repository of multimedia resources, including videos, audio clips, and interactive exercises. Immerse yourself in a multimedia learning experience that enhances your language skills.
+              </p>
+            </div>
+          </div>
+        
+
+          <div class="galer galer_bg">
+            <div class="galer__content">
+                <video
+                class="galer-media galer-media_right"
+                src="assets/media/lapa.mp4"
+                autoplay
+                loop
+                muted
+                ></video>
+            </div>
+        </div>
+        
+        <div class="galer"></div>
+        <div class="galer"></div>
+        
+        <div class="galer galer_bg">
+            <div class="galer__content">
+                <div
+                class="galer-media galer-media_right"
+                style="background-image: url(assets/introimg/5.webp)"
+                ></div>
+            </div>
+        </div>
+        
+        <div class="galer galer_bg">
+            <div class="galer__content">
+                <video
+                class="galer-media"
+                src="assets/media/lapa.mp4"
+                autoplay
+                loop
+                muted
+                ></video>
+            </div>
+        </div>
+        
+        <div class="galer"></div>
+        <div class="galer"></div>
+        
+        <div class="galer">
+            <div class="galer__content text-3xl">© Quanby IT Solutions</div>
+        </div>
+    </section>
+</div>
+
+<img class="soundbutton" [class.paused]="!toggleSound" src="assets/introimg/sound.gif" alt="Alt" (click)="toggleSound = !toggleSound; toggleAudio()" />
+<audio class="audio" src="assets/media/po.mp3" loop #audioPlayer></audio>
+
+</div>
+</div>

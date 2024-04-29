@@ -1,0 +1,61 @@
+{
+  "title": "French Language Essentials - Medium Mode",
+  "description": "Test your knowledge with these finish-the-sentence French phrases.",
+  "items": [
+    {
+      "question": "La Provence est célèbre pour ses champs de...",
+      "choices": ["blé", "tournesol", "lavande", "vigne"],
+      "answer": "lavande"
+    },
+    {
+      "question": "Le « métro » est un système de transport en commun principalement souterrain à...",
+      "choices": ["Paris", "Lyon", "Marseille", "Bordeaux"],
+      "answer": "Paris"
+    },
+    {
+      "question": "« Liberté, égalité, fraternité » est la devise de la...",
+      "choices": [
+        "République française",
+        "Monarchie britannique",
+        "Fédération russe",
+        "Union européenne"
+      ],
+      "answer": "République française"
+    },
+    {
+      "question": "Le musée du Louvre est l'un des plus grands musées d'art et d'histoire du monde, situé à...",
+      "choices": ["Londres", "New York", "Paris", "Rome"],
+      "answer": "Paris"
+    },
+    {
+      "question": "La ratatouille est un plat traditionnel de la cuisine...",
+      "choices": ["normande", "provençale", "bretonne", "alsacienne"],
+      "answer": "provençale"
+    },
+    {
+      "question": "Le château de Versailles était la résidence des rois de France Louis XIV, Louis XV, et...",
+      "choices": ["Louis XVI", "Napoléon", "Charles de Gaulle", "François Ier"],
+      "answer": "Louis XVI"
+    },
+    {
+      "question": "L'Hexagone est un surnom souvent utilisé pour désigner la...",
+      "choices": ["Belgique", "Suisse", "France", "Allemagne"],
+      "answer": "France"
+    },
+    {
+      "question": "La crème brûlée est un dessert consistant en une crème custard sous une couche de...",
+      "choices": ["chocolat", "caramel durci", "confiture", "crème fouettée"],
+      "answer": "caramel durci"
+    },
+    {
+      "question": "Le Mont Blanc, le plus haut sommet d'Europe occidentale, se trouve dans les...",
+      "choices": ["Pyrénées", "Alpes", "Vosges", "Jura"],
+      "answer": "Alpes"
+    },
+    {
+      "question": "La « haute couture » est une expression française reconnue mondialement dans le domaine de la...",
+      "choices": ["gastronomie", "musique", "mode", "littérature"],
+      "answer": "mode"
+    }
+  ]
+}

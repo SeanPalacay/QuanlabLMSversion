@@ -1,0 +1,100 @@
+<!-- quiz-page.component.html -->
+<div class="bg-gray-100 h-full w-full flex flex-col items-center">
+  <div class="w-11/12 p-6 bg-white rounded-md shadow-md marginthisbox">
+    <!-- Introductory Text -->
+    <div class="mx-auto p-8 bg-white shadow-md rounded-md mb-6">
+      <div class="flex items-center">
+        <div class="w-full">
+          <h1 class="text-3xl font-bold mb-4">{{ title }}</h1>
+          <p class="text-lg">{{ description }}</p>
+        </div>
+        <!-- Image on the right -->
+        <img
+          src="assets/quiz1.jpg"
+          alt="Quiz Image"
+          class="w-2/12 ml-4 rounded-md"
+        />
+      </div>
+    </div>
+
+    <!-- Timer -->
+    <div class="text-center mb-4">
+      <p class="text-lg font-semibold">
+        Time Remaining:
+        <span class="text-red-600">{{ secondsToMinutes(timeRemaining) }}</span>
+      </p>
+    </div>
+
+    <!-- Question -->
+    <div *ngIf="currentQuestionIndex < questions.length">
+      <h2 class="text-xl font-semibold mb-4">
+        {{ questions[currentQuestionIndex].question }}
+      </h2>
+
+      <!-- Input box for the answer -->
+      <input
+        type="text"
+        class="w-full py-2 px-4 border-2 border-gray-300 rounded-md mb-4"
+        [(ngModel)]="userAnswer"
+        [disabled]="!inputEnabled"
+        placeholder="Type your answer here"
+      />
+
+      <!-- Navigation Buttons -->
+      <div class="mt-2 flex justify-between">
+        <button
+          class="py-2 px-4 text-white rounded-md"
+          (click)="prevQuestion()"
+          [ngClass]="{
+            'bg-green-500': backtracking,
+            'bg-gray-500': !backtracking
+          }"
+        >
+          Previous
+        </button>
+        <button
+          class="py-2 px-4 bg-green-500 text-white rounded-md"
+          (click)="nextQuestion()"
+          [disabled]="isButtonDisabled"
+        >
+          Next
+        </button>
+      </div>
+    </div>
+
+   <!-- Result Popup -->
+<div *ngIf="showResult" class="mt-8">
+  <p class="text-lg font-semibold text-gray-800">
+    Quiz Result: <span class="text-green-600">{{ correctAnswersCount }}/{{ questions.length }}</span>
+  </p>
+
+  <!-- Show Answers with Correctness Indicators -->
+  <ng-container *ngIf="review">
+    <div *ngFor="let question of questions; let i = index" class="mt-4">
+      <p class="font-semibold text-gray-800">{{ question.question }}</p>
+      <p>
+        Your Answer:
+        <span [ngClass]="{ 'text-red-600': question.userAnswer !== question.suggestedAnswer, 'text-blue-600': question.userAnswer === question.suggestedAnswer }">
+          {{ question.userAnswer || "No answer provided" }}
+        </span>
+      </p>
+      <p>
+        Correct Answer:
+        <span class="text-green-600">{{ question.suggestedAnswer }}</span>
+      </p>
+    </div>
+  </ng-container>
+
+  <!-- Centered "Done" button -->
+  <div class="text-center">
+    <button
+      class="py-2 px-4 bg-blue-500 text-white rounded-md my-4 hover:bg-blue-600 hover:text-white focus:bg-blue-600 focus:text-white"
+      (click)="resetQuiz()"
+    >
+      Done
+    </button>
+  </div>
+</div>
+
+  </div>
+</div>

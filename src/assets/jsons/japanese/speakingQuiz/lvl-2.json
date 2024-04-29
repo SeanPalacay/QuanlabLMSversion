@@ -1,0 +1,61 @@
+{
+  "title": "Simple Personal Questions",
+  "description": "Improve your Japanese speaking skills with simple personal questions. Focus on clear pronunciation and appropriate intonation.",
+  "instructions": [
+    "Below is a list of simple personal questions in Japanese.",
+    "Record yourself speaking each phrase.",
+    "Aim for clear and natural pronunciation.",
+    "Maintain a conversational and steady pace.",
+    "After recording, listen to your playback and compare it to the text.",
+    "Pay attention to intonation, clarity, and fluency in Japanese.",
+    "Repeat the recording process as necessary to improve your Japanese speaking skills."
+  ],
+  "items": [
+    {
+      "question": "お名前は何ですか？ (Onamae wa nan desu ka?)",
+      "answer": "お名前は何ですか？ (Onamae wa nan desu ka?)"
+    },
+    {
+      "question": "出身はどこですか？ (Shusshin wa doko desu ka?)",
+      "answer": "出身はどこですか？ (Shusshin wa doko desu ka?)"
+    },
+    {
+      "question": "年齢はいくつですか？ (Nenrei wa ikutsu desu ka?)",
+      "answer": "年齢はいくつですか？ (Nenrei wa ikutsu desu ka?)"
+    },
+    {
+      "question": "ペットは飼っていますか？ (Petto wa katteimasu ka?)",
+      "answer": "ペットは飼っていますか？ (Petto wa katteimasu ka?)"
+    },
+    {
+      "question": "好きな色は何ですか？ (Suki na iro wa nan desu ka?)",
+      "answer": "好きな色は何ですか？ (Suki na iro wa nan desu ka?)"
+    },
+    {
+      "question": "今何時ですか？ (Ima nanji desu ka?)",
+      "answer": "今何時ですか？ (Ima nanji desu ka?)"
+    },
+    {
+      "question": "お腹は空いていますか？ (Onaka wa suiteimasu ka?)",
+      "answer": "お腹は空いていますか？ (Onaka wa suiteimasu ka?)"
+    },
+    {
+      "question": "音楽は好きですか？ (Ongaku wa suki desu ka?)",
+      "answer": "音楽は好きですか？ (Ongaku wa suki desu ka?)"
+    },
+    {
+      "question": "手伝ってもらえますか？ (Tetsudatte moraemasu ka?)",
+      "answer": "手伝ってもらえますか？ (Tetsudatte moraemasu ka?)"
+    },
+    {
+      "question": "トイレはどこですか？ (Toire wa doko desu ka?)",
+      "answer": "トイレはどこですか？ (Toire wa doko desu ka?)"
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and accurate, showing a strong command of basic Japanese personal questions.",
+    "5-7 correct pronunciations": "Good! Your pronunciation is mostly correct, with a good grasp of basic Japanese. There are some areas to refine for improved clarity.",
+    "2-4 correct pronunciations": "Fair. You have a basic ability to pronounce Japanese phrases, but there are several areas needing significant improvement.",
+    "0-1 correct pronunciations": "Needs improvement. Consider practicing more to enhance your Japanese speaking skills, or seek additional resources for learning."
+  }
+}

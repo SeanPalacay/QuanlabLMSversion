@@ -1,0 +1,26 @@
+<!-- For Lesson interface -->
+<div class="frame ">
+  <div class="container background w-full h-screen overflow-hidden rounded-md m-4 ">
+    <!-- for cards -->
+    <div *ngFor="let lesson of lessons; let i = index" class="lesson p-4 bg-white rounded-md shadow-md m-2 flex items-center justify-between">
+      <div class="flex items-center space-x-2">
+        <i class=" book fas fa-book text-blue-500 text-2xl"></i>
+        <h4 class="text-lg">
+          <span class="pname">{{ professorName }} posted a new material:</span>
+          <span class="font-bold"> Lesson {{ i+1 }} </span> 
+          <span>{{ lesson.title }}</span>
+        </h4>
+      </div>
+      <div class="flex items-center space-x-4">
+        <div class="download hover:scale-125 hover:text-blue-700" (click)="openEdit()">
+          <i class="fas fa-pencil-alt"></i> 
+        </div>
+        <div class="settings hover:scale-125 hover:text-blue-700">
+          <i class="fas fa-trash-alt"></i> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

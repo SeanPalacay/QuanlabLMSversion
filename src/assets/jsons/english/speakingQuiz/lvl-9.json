@@ -1,0 +1,61 @@
+{
+  "title": "Socializing and Leisure",
+  "description": "Improve your English speaking skills with phrases often used in socializing and leisure activities. Focus on clear pronunciation and friendly intonation.",
+  "instructions": [
+    "Below is a list of phrases typically used in social and leisure settings.",
+    "Record yourself speaking each phrase.",
+    "Aim for clear and natural pronunciation.",
+    "Keep your speech at a conversational and steady pace.",
+    "After recording, listen to your playback and compare it to the text.",
+    "Pay attention to intonation, clarity, and fluency.",
+    "Repeat the recording process as needed to improve your pronunciation."
+  ],
+  "items": [
+    {
+      "question": "Do you want to go to the movies?",
+      "answer": "Do you want to go to the movies?"
+    },
+    {
+      "question": "Let's have a picnic in the park.",
+      "answer": "Let's have a picnic in the park."
+    },
+    {
+      "question": "I enjoy playing tennis.",
+      "answer": "I enjoy playing tennis."
+    },
+    {
+      "question": "Would you like to dance?",
+      "answer": "Would you like to dance?"
+    },
+    {
+      "question": "Let's meet for coffee.",
+      "answer": "Let's meet for coffee."
+    },
+    {
+      "question": "I'm going to the gym.",
+      "answer": "I'm going to the gym."
+    },
+    {
+      "question": "Do you play any instruments?",
+      "answer": "Do you play any instruments?"
+    },
+    {
+      "question": "I'm reading a great book.",
+      "answer": "I'm reading a great book."
+    },
+    {
+      "question": "Do you want to play video games?",
+      "answer": "Do you want to play video games?"
+    },
+    {
+      "question": "Let's go shopping this weekend.",
+      "answer": "Let's go shopping this weekend."
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and accurate, showing great ability in social and leisure communication.",
+    "5-7 correct pronunciations": "Good! You pronounce most social and leisure phrases correctly with some areas for improvement.",
+    "2-4 correct pronunciations": "Fair. You understand basic social phrases but need to improve your pronunciation for more effective communication.",
+    "0-1 correct pronunciations": "Needs improvement. Focus more on practicing these phrases to enhance your English speaking skills in social and leisure contexts."
+  }
+}

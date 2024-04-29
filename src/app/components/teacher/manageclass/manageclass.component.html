@@ -1,0 +1,430 @@
+<div class="mx-10">
+  <div class="container_top !justify-between flex items-center space-x-4">
+    <div class="newclass p-3 shadow-md rounded">
+      <button class="poppins-b flex items-center" (click)="openModal()">
+        <img src="assets/teacher/manageclass/Plus.png" alt="add" class="mr-2" />
+        NEW CLASS
+      </button>
+    </div>
+    <div class="img">
+      <img src="assets/teacher/manageclass/image_vector.png" alt="image" />
+    </div>
+    <div class="newclass  p-3 shadow-md rounded">
+      <button class="poppins-b flex items-center" (click)="openStudentModal()">
+       
+        STUDENTS
+      </button>
+    </div>
+
+    <!-- start student -->
+
+
+    <!--end student -->
+  </div>
+  <div class="container mt-6">
+    <div class="list w-full shadow-sm">
+      <div>
+        <h1 class="text-3xl poppins-b text-gray-600 text-center mb-4">
+          List of Classes
+        </h1>
+
+        <div class="table-container rounded">
+          <table class="w-full">
+            <thead>
+              <tr>
+                <th class="text-sm lg:text-base">Schedule</th>
+                <th class="text-sm lg:text-base">Course</th>
+                <th class="text-sm lg:text-base">Class Name</th>
+                <th class="text-sm lg:text-base">Class Code</th>
+                <th class="text-sm lg:text-base">Student Count</th>
+                <th class="text-sm lg:text-base">Action</th>
+              </tr>
+            </thead>
+            <tbody *ngFor="let class of classes">
+              <tr
+                (click)="selectClass(class.id)"
+                class="cursor-pointer hover:bg-blue-100 active:bg-blue-200 select-none"
+                [ngClass]="{ 'bg-white': selectedClass == class.id }"
+              >
+                <td class="text-xs lg:text-base">{{ class.schedule }}</td>
+                <td class="text-xs lg:text-base">{{ class.course }}</td>
+                <td class="text-xs lg:text-base">{{ class.class }}</td>
+                <td class="text-xs lg:text-base">{{ class.classcode }}</td>
+                <td class="text-xs lg:text-base">{{ class.studentcount }}</td>
+                <td class="justify-center space-x-2 text-center">
+                  <button
+                    (click)="
+                      openEditModal(
+                        class.id,
+                        class.class,
+                        class.classcode,
+                        parsetime(class.schedule)[0],
+                        parsetime(class.schedule)[1],
+                        class.courseid
+                      )
+                    "
+                    class="cursor-pointer"
+                  >
+                    <img
+                      src="assets/edt.png"
+                      alt=""
+                      class="w-5 h-5"
+                    />
+                  </button>
+                  <button
+                    (click)="deleteClass(class.id)"
+                    class="cursor-pointer"
+                  >
+                    <img
+                      src="assets/rem.png"
+                      alt=""
+                      class="w-5 h-5"
+                    />
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- <div class="regwrap -mr-2"> -->
+    <!-- <div class="approve">
+            <div class="regcontent">
+                <div class="table">
+                    <h1 class="poppins-b">Approve Registration</h1>
+                    <table class="poppins">
+                        <tbody class="h-36">
+                            <tr>
+                                <td class="student border">student 1</td>
+                                <td class="btn1 border"><button>View</button></td>
+                                <td class="btn2 border"><button>Remove</button></td>
+                            </tr>  
+                            <tr>
+                                <td class="student border">student 1</td>
+                                <td class="btn1 border"><button>View</button></td>
+                                <td class="btn2 border"><button>Remove</button></td>
+                            </tr>                      
+                            <tr>
+                                <td class="student border">student 1</td>
+                                <td class="btn1 border"><button>View</button></td>
+                                <td class="btn2 border"><button>Remove</button></td>
+                            </tr>  
+                            <tr>
+                                <td class="student border">student 1</td>
+                                <td class="btn1 border"><button>View</button></td>
+                                <td class="btn2 border"><button>Remove</button></td>
+                            </tr>   
+                            <tr>
+                                <td class="student border">student 1</td>
+                                <td class="btn1 border"><button>View</button></td>
+                                <td class="btn2 border"><button>Remove</button></td>
+                            </tr>  
+                        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div> -->
+
+    <!-- <div class="pendingwrap">
+            <div class="pending">
+                <div class="pendingcontent">
+                    <div class="table">
+                        <div class="title">
+                            <h1 class="poppins-b">Pending Registration</h1>
+                            <div class="poppins-b titlecont">Auto Accept<input type="checkbox" id="switch" /><label for="switch">Toggle</label></div>
+                        </div>
+                        <table class="poppins">
+                            <tbody>
+                            <tr>
+                                <td class="student border">student 1</td>
+                                <td class="btn1 border"><button>Accept</button></td>
+                                <td class="btn2 border"><button>Reject</button></td>
+                            </tr>  
+                            <tr>
+                                <td class="student border">student 1</td>
+                                <td class="btn1 border"><button>Accept</button></td>
+                                <td class="btn2 border"><button>Reject</button></td>
+                            </tr>  
+                            <tr>
+                                <td class="student border">student 1</td>
+                                <td class="btn1 border"><button>Accept</button></td>
+                                <td class="btn2 border"><button>Reject</button></td>
+                            </tr>                      
+                            <tr>
+                                <td class="student border">student 1</td>
+                                <td class="btn1 border"><button>Accept</button></td>
+                                <td class="btn2 border"><button>Reject</button></td>
+                            </tr>  
+                            <tr>
+                                <td class="student border">student 1</td>
+                                <td class="btn1 border"><button>Accept</button></td>
+                                <td class="btn2 border"><button>Reject</button></td>
+                            </tr>                          
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    <!-- 
+        <div class="analytics">
+            <button class="poppins" routerLink="/teacher/studentA&D">CLASS ANALYTICS <img src="assets/teacher/manageclass/Receive.png" alt=""></button>
+        </div> -->
+    <!-- </div> -->
+
+
+
+    
+    <div *ngIf="studentModal" class="fixed inset-0 z-10 bg-gray-500 bg-opacity-75 flex items-center justify-center">
+      <div class="bg-white h-1/2 w-1/2 ml-60 p-8 rounded-lg flex flex-col items-center">
+        <div class="flex items-center justify-between w-full mb-4"> 
+          <h2 class="text-xl font-bold">List of Students</h2>
+          <button (click)="closeStudentModal()" class="text-red-500 hover:text-red-700">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+
+        <!-- list-->
+       
+        <div class="!w-full table-container rounded">
+          <table class="w-full">
+            <thead>
+              <tr>
+              
+                <th class="text-sm lg:text-base">Name of Student</th>
+                <th class="text-sm lg:text-base">Course</th>
+                <th class="text-sm lg:text-base">Class Name</th>
+                <th class="text-sm lg:text-base text-center">Action</th>
+              </tr>
+            </thead>
+            <tbody *ngFor="let student of students">
+              <tr
+             
+              class="cursor-pointer hover:bg-blue-100 active:bg-blue-200 select-none"
+              [ngClass]="{ 'bg-white': selectedStudent == student.id }"
+            >
+              <td class="text-xs lg:text-base">{{ student.firstname }} {{student.lastname}} </td>
+              <td class="text-xs lg:text-base">  {{student.course}} </td>
+              <td class="text-xs lg:text-base">  {{student.class}} </td>
+            
+
+          
+        
+                <td class="justify-center space-x-2 text-center">
+                  <i class="far fa-eye cursor-pointer text-teal-500" (click)="viewStudentProfile(student)"></i>
+
+                  <i class="fa-solid fa-trash cursor-pointer text-red-500 " (click)="openConfirmDelete(student)"></i>
+                </td>
+                </tr>
+            </tbody>
+          </table>
+
+          <!-- edit student profile-->
+
+          <div *ngIf="editStudentProfile" class="overflow-y-auto fixed inset-0 z-20 bg-gray-500 bg-opacity-70 flex items-center justify-center">
+            <div class="w-1/4 h-7/12 ml-60 bg-white p-8 rounded-lg flex flex-col ">
+
+              <div class="flex justify-end w-full"> 
+                <!-- <h2 class="text-xl font-bold">Student's Profile</h2> -->
+                <button (click)="closeStudentProfileModal()" class="text-red-500 hover:text-red-700">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+              
+            
+            <div *ngIf="!editing">
+              <div *ngIf="selectedStudentId">
+
+                <div class="flex justify-center" *ngFor="let student of students">
+                  <ng-container  class="rounded-md shadow-boxz " *ngIf="student.id === selectedStudentId">
+                    <div class="h-20 w-20 rounded-full border">
+                      <img
+                        src="{{ student.profile ? getURL(student.profile): noProfile()}}"
+                        class="object-cover"
+                        alt="Profile Image"
+                      />
+                    </div>
+                  </ng-container>
+                </div>
+
+                <div class="flex justify-center" *ngFor="let student of students">
+                    
+                  <ng-container *ngIf="student.id === selectedStudentId">
+
+                   
+                      <p class="text-teal-500 font-extrabold text-2xl"> {{ student.firstname }} {{student.lastname}} </p>
+                    
+
+                  </ng-container>
+                </div>
+
+                
+                <table class="w-full h-full mb-3  !border-0">
+                  <tbody> 
+                    
+
+                    <tr *ngFor="let student of students">
+                      <ng-container *ngIf="student.id === selectedStudentId">
+                        <td class="  !border-0">Email Address:</td>
+                        <td class="font-semibold !border-0">{{ student.email }}</td>
+                      </ng-container>
+                    </tr>
+                    <tr *ngFor="let student of students">
+                      <ng-container *ngIf="student.id === selectedStudentId">
+                        <td class="  !border-0">Birthday:</td>
+                        <td class="font-semibold !border-0">{{ student.birthdate }} </td>
+                      </ng-container>
+                    </tr>
+                    <tr *ngFor="let student of students">
+                      <ng-container *ngIf="student.id === selectedStudentId">
+                        <td class="  !border-0">Sex:</td>
+                        <td class="font-semibold !border-0">{{ student.gender }} </td>
+                      </ng-container>
+                    </tr>
+                    <tr *ngFor="let student of students">
+                      <ng-container *ngIf="student.id === selectedStudentId">
+                        <td class="  !border-0">Nationality:</td>
+                        <td class="font-semibold !border-0">{{ student.nationality }} </td>
+                      </ng-container>
+                    </tr>
+                    <tr *ngFor="let student of students">
+                      <ng-container *ngIf="student.id === selectedStudentId">
+                        <td class="  !border-0">Address:</td>
+                        <td class="font-semibold !border-0">{{ student.address }} </td>
+                      </ng-container>
+                    </tr>
+
+
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- edit -->
+
+            <div *ngIf="editing">
+              <div *ngIf="selectedStudentId">
+
+                <div class="flex justify-center" *ngFor="let student of students">
+                  <ng-container  class="rounded-md shadow-boxz " *ngIf="student.id === selectedStudentId">
+                    <div class="h-20 w-20 rounded-full border">
+                      <img
+                        src="{{ student.profile ? getURL(student.profile): noProfile()}}"
+                        class="object-cover"
+                        alt="Profile Image"
+                      />
+                    </div>
+                  </ng-container>
+                </div>
+
+                <div class="flex justify-center" *ngFor="let student of students">
+                    
+                  <ng-container *ngIf="student.id === selectedStudentId">
+                  
+                    <input type="text" class="!border  border-black text-green-500" [(ngModel)]="student.firstname"
+                    >
+                    <input type="text" class="!border border-black text-green-500" [(ngModel)]="student.lastname">
+                  
+                  </ng-container>
+                </div>
+
+                
+                <table class="w-full h-full mb-3  !border-0">
+                  <tbody> 
+                    
+
+                    <tr *ngFor="let student of students">
+                      <ng-container *ngIf="student.id === selectedStudentId">
+                        <td class="  !border-0">Email Address:</td>
+                        <td class="font-semibold !border-0">{{ student.email }}</td>
+                      </ng-container>
+                    </tr>
+                    <tr *ngFor="let student of students">
+                      <ng-container *ngIf="student.id === selectedStudentId">
+                        <td class="  !border-0">Birthday:</td>
+                        <td class="font-semibold !border-0">{{ student.birthdate }} </td>
+                      </ng-container>
+                    </tr>
+                    <tr *ngFor="let student of students">
+                      <ng-container *ngIf="student.id === selectedStudentId">
+                        <td class="  !border-0">Sex:</td>
+                        <td class="font-semibold !border-0">{{ student.gender }} </td>
+                      </ng-container>
+                    </tr>
+                    <tr *ngFor="let student of students">
+                      <ng-container *ngIf="student.id === selectedStudentId">
+                        <td class="  !border-0">Nationality:</td>
+                        <td class="font-semibold !border-0">{{ student.nationality }} </td>
+                      </ng-container>
+                    </tr>
+                    <tr *ngFor="let student of students">
+                      <ng-container *ngIf="student.id === selectedStudentId">
+                        <td class="  !border-0">Address:</td>
+                        <td class="font-semibold !border-0">{{ student.address }} </td>
+                      </ng-container>
+                    </tr>
+
+
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+         
+            <!-- end edit-->
+            
+            
+               <!-- end infos -->
+
+              <div class="flex justify-center content-center !items-center gap-x-4"> 
+                <button class="rounded-md py-2 px-8 shadow-boxz bg-green-500" (click)="toggleEdit()">
+                  <p *ngIf="!editing" class="text-white font-semibold text-md">
+                     EDIT
+                  </p> 
+                  <p *ngIf="editing" class="text-white font-semibold text-md">
+                    SAVE
+                </p> 
+              </button>
+
+              
+              </div>
+             
+          
+            </div>
+          </div>
+
+          <!-- end edit student profile-->
+
+          <!-- delete -->
+          <div *ngIf="confirmDelete" class="fixed inset-0 z-20 bg-gray-500 bg-opacity-70 flex items-center justify-center">
+            <div class="w-1/4 h-1/4 bg-white p-8 rounded-lg flex flex-col items-center justify-center">
+         
+              <h2 class="text-xl font-bold mb-4">Delete Student?</h2>
+            
+              <div class="flex gap-x-4 justify-center">
+                <div class="flex bg-green-500 justify-center h-10 w-10 rounded-full"> 
+                  <button class="text-xl text-white" (click)=" noConfirmDelete()">
+                    <i class="fas fa-times"></i> 
+                  </button>
+                </div>
+                <div class="flex  bg-red-500 justify-center h-10 w-10 rounded-full"> 
+                <button class="text-xl text-white" (click)=" yesConfirmDelete()">
+                  <i class="fas fa-check"></i> 
+                </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end delete-->
+  
+        <!-- end list-->
+      </div>
+    </div>
+    

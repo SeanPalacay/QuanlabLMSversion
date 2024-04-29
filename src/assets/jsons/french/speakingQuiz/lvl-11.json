@@ -1,0 +1,61 @@
+{
+  "title": "Advanced Conversations",
+  "description": "Enhance your French speaking skills with phrases suitable for advanced conversations. Focus on precise pronunciation and sophisticated intonation.",
+  "instructions": [
+    "Below, you'll find a list of complex phrases that might be used in advanced conversations in French.",
+    "Your task is to record yourself speaking each phrase.",
+    "Ensure your pronunciation matches the provided text as closely as possible.",
+    "Try to maintain a natural yet sophisticated speaking pace.",
+    "After recording each phrase, listen to your recording and compare it to the text.",
+    "Focus on intonation, clarity, and the nuanced expression of ideas.",
+    "Repeat the recording process as many times as needed to improve your pronunciation."
+  ],
+  "items": [
+    {
+      "question": "Approfondissons les détails.",
+      "answer": "Approfondissons les détails."
+    },
+    {
+      "question": "Quelle est votre perspective sur cette question ?",
+      "answer": "Quelle est votre perspective sur cette question ?"
+    },
+    {
+      "question": "Je suis intrigué par les nuances culturelles.",
+      "answer": "Je suis intrigué par les nuances culturelles."
+    },
+    {
+      "question": "Pouvez-vous élaborer sur ce concept ?",
+      "answer": "Pouvez-vous élaborer sur ce concept ?"
+    },
+    {
+      "question": "Explorons des solutions alternatives.",
+      "answer": "Explorons des solutions alternatives."
+    },
+    {
+      "question": "J'apprécie votre approche nuancée.",
+      "answer": "J'apprécie votre approche nuancée."
+    },
+    {
+      "question": "Quel est le thème sous-jacent ici ?",
+      "answer": "Quel est le thème sous-jacent ici ?"
+    },
+    {
+      "question": "Je trouve le contexte historique fascinant.",
+      "answer": "Je trouve le contexte historique fascinant."
+    },
+    {
+      "question": "Engageons-nous dans une discussion stimulante.",
+      "answer": "Engageons-nous dans une discussion stimulante."
+    },
+    {
+      "question": "Vos idées sont exprimées de manière réfléchie.",
+      "answer": "Vos idées sont exprimées de manière réfléchie."
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and refined, perfect for engaging in advanced conversations in French.",
+    "5-7 correct pronunciations": "Good! Your pronunciation is mostly correct, with a strong grasp of complex phrases in French. Some areas may need refinement for full clarity and sophistication.",
+    "2-4 correct pronunciations": "Fair. You're able to participate in more advanced French conversations, but further practice is needed to communicate complex ideas effectively.",
+    "0-1 correct pronunciations": "Needs improvement. Focus on practicing these advanced phrases to enhance your French speaking skills for complex discussions."
+  }
+}

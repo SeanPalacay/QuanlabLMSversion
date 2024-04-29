@@ -1,0 +1,117 @@
+{
+  "title": "Easy English Quiz 6",
+  "description": "Test your basic English skills with this 10-question quiz. Good luck!",
+  "instructions": [
+    "Read each question carefully and select the best answer from the choices provided.",
+    "There is only one correct answer for each question.",
+    "Once you have answered all the questions, click the \"Submit\" button to see your score."
+  ],
+  "items": [
+    {
+      "question": "Which of these words means 'hot'?",
+      "choices": [
+        "cold",
+        "warm",
+        "freezing",
+        "boiling"
+      ],
+      "answer": "boiling"
+    },
+    {
+      "question": "What is the opposite of 'left'?",
+      "choices": [
+        "right",
+        "up",
+        "down",
+        "forward"
+      ],
+      "answer": "right"
+    },
+    {
+      "question": "What is the past tense of 'drink'?",
+      "choices": [
+        "drank",
+        "drunk",
+        "drinked",
+        "drinken"
+      ],
+      "answer": "drank"
+    },
+    {
+      "question": "Which of these sentences is grammatically correct?",
+      "choices": [
+        "She goed to the park.",
+        "She go to the park.",
+        "She goes to the park.",
+        "She is go to the park."
+      ],
+      "answer": "She goes to the park."
+    },
+    {
+      "question": "What is the present tense of 'to sleep'?",
+      "choices": [
+        "sleep",
+        "slept",
+        "sleeping",
+        "slepen"
+      ],
+      "answer": "sleep"
+    },
+    {
+      "question": "Which of these words means 'happy'?",
+      "choices": [
+        "sad",
+        "excited",
+        "angry",
+        "joyful"
+      ],
+      "answer": "joyful"
+    },
+    {
+      "question": "What is the opposite of 'fast'?",
+      "choices": [
+        "slow",
+        "quick",
+        "rapid",
+        "swift"
+      ],
+      "answer": "slow"
+    },
+    {
+      "question": "Which of these words means 'new'?",
+      "choices": [
+        "old",
+        "ancient",
+        "modern",
+        "recent"
+      ],
+      "answer": "recent"
+    },
+    {
+      "question": "What is the past tense of 'write'?",
+      "choices": [
+        "writed",
+        "written",
+        "wrote",
+        "writen"
+      ],
+      "answer": "wrote"
+    },
+    {
+      "question": "Which of these sentences is grammatically correct?",
+      "choices": [
+        "I goed to the store.",
+        "I go to the store.",
+        "I goes to the store.",
+        "I am go to the store."
+      ],
+      "answer": "I go to the store."
+    }
+  ],
+  "scoring": {
+    "8-10 correct answers": "Excellent! You have a strong command of basic English.",
+    "5-7 correct answers": "Good! You have a good understanding of basic English, but there are a few areas where you could improve.",
+    "2-4 correct answers": "Fair. You have a basic understanding of English, but there are many areas where you need to improve.",
+    "0-1 correct answers": "Needs improvement. You should consider taking an English language course or using resources to improve your English skills."
+  }
+}

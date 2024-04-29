@@ -1,0 +1,91 @@
+{
+  "title": "Advanced Vocabulary and Grammar Quiz (Part 2)",
+  "description": "Continue to challenge yourself with this advanced vocabulary and grammar quiz. Test your knowledge of word usage, adverb placement, spelling, parallel structure, and more to enhance your language skills.",
+  "items": [
+    {
+      "question": "Identify the correct usage of the word 'querulous' in a sentence.",
+      "choices": [
+        "Her querulous tone conveyed annoyance.",
+        "The garden was filled with querulous flowers.",
+        "He solved the problem with a querulous approach.",
+        "Querulously, he accepted the challenge."
+      ],
+      "answer": "Her querulous tone conveyed annoyance."
+    },
+    {
+      "question": "Choose the sentence with the correct use of the word 'jejune':",
+      "choices": [
+        "The meal was jejune, lacking in flavor.",
+        "She presented a jejune argument.",
+        "Jejune clouds covered the sky.",
+        "His jejune personality made him popular."
+      ],
+      "answer": "The meal was jejune, lacking in flavor."
+    },
+    {
+      "question": "Identify the correct spelling of the word meaning 'to make a harsh sound'?",
+      "choices": ["Grate", "Great", "Greatt", "Grait"],
+      "answer": "Grate"
+    },
+    {
+      "question": "Select the sentence with the correct use of the adverb 'tacitly':",
+      "choices": [
+        "He tacitly agreed to the terms.",
+        "The tacitly agreement was signed.",
+        "Tacitly, she whispered the secret.",
+        "Tacitly accepting, the decision was made."
+      ],
+      "answer": "He tacitly agreed to the terms."
+    },
+    {
+      "question": "Identify the correct form of the irregular verb 'drive' in the past perfect tense.",
+      "choices": ["Driven", "Drove", "Drived", "Drave"],
+      "answer": "Driven"
+    },
+    {
+      "question": "Choose the sentence with the correct use of the word 'obfuscate':",
+      "choices": [
+        "The clear instructions helped, not obfuscated.",
+        "Obfuscate language can be confusing.",
+        "Obfuscating the issue clarified things.",
+        "The obfuscation made the point clear."
+      ],
+      "answer": "Obfuscating the issue clarified things."
+    },
+    {
+      "question": "Identify the correct sentence with a proper parallel structure:",
+      "choices": [
+        "She likes hiking, running, and to swim.",
+        "He enjoys playing tennis, reading, and hiking.",
+        "To dance, singing, and painting are her hobbies.",
+        "I like swimming, to hike, and playing tennis."
+      ],
+      "answer": "He enjoys playing tennis, reading, and hiking."
+    },
+    {
+      "question": "What is the correct plural form of 'syllabus'?",
+      "choices": ["Syllabi", "Syllabuses", "Syllabusses", "Syllabii"],
+      "answer": "Syllabi"
+    },
+    {
+      "question": "Select the sentence with the correct use of the semicolon:",
+      "choices": [
+        "She traveled to Paris, London, and Rome; she loved Europe.",
+        "He was tired; he decided to take a nap.",
+        "They studied all night; however, the exam was challenging.",
+        "The dog barked loudly, and the cat jumped; scared."
+      ],
+      "answer": "She traveled to Paris, London, and Rome; she loved Europe."
+    },
+    {
+      "question": "Identify the correct use of the word 'languish' in a sentence.",
+      "choices": [
+        "The flowers languished in the sunlight.",
+        "He showed a languish interest in the topic.",
+        "Languish fruits were picked from the tree.",
+        "Her languish attitude brightened the room."
+      ],
+      "answer": "The flowers languished in the sunlight."
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "title": "Grammar and Language Mastery Quiz",
+  "description": "Test your grammar and language mastery with this quiz. Answer questions related to irregular verbs, subjunctive mood, synonyms, dangling modifiers, plural forms, homophones, and correct conditional forms to sharpen your language skills.",
+  "items": [
+    {
+      "question": "Identify the correct form of the irregular verb 'swim' in the past perfect tense.",
+      "choices": ["Swam", "Swum", "Swing", "Swimming"],
+      "answer": "Swum"
+    },
+    {
+      "question": "Choose the sentence with the correct use of the subjunctive mood:",
+      "choices": [
+        "If I was you, I would take the job.",
+        "If I were you, I would take the job.",
+        "If I been you, I would take the job.",
+        "If I am you, I will take the job."
+      ],
+      "answer": "If I were you, I would take the job."
+    },
+    {
+      "question": "Select the word that is a synonym for 'obfuscate'.",
+      "choices": ["Clarify", "Illuminate", "Confuse", "Elucidate"],
+      "answer": "Confuse"
+    },
+    {
+      "question": "Identify the correct sentence with a dangling modifier:",
+      "choices": [
+        "Running down the street, the flowers caught my attention.",
+        "The flowers caught my attention running down the street.",
+        "While running down the street, the flowers caught my attention.",
+        "The flowers caught my attention while running down the street."
+      ],
+      "answer": "Running down the street, the flowers caught my attention."
+    },
+    {
+      "question": "What is the correct plural form of 'index'?",
+      "choices": ["Indexes", "Indices", "Indexs", "Indicies"],
+      "answer": "Indices"
+    },
+    {
+      "question": "Choose the sentence with the correct use of the word 'flabbergasted':",
+      "choices": [
+        "She was flabbergasted at the beautiful scenery.",
+        "The flabbergasted book was captivating.",
+        "He flabbergasted the audience with his speech.",
+        "Their flabbergasted reactions were audible."
+      ],
+      "answer": "She was flabbergasted at the beautiful scenery."
+    },
+    {
+      "question": "Identify the correct homophone pair for the sentence: 'The _____ of the company is essential.'",
+      "choices": ["Principle / Principal", "Affect / Effect", "Stationary / Stationery", "Compliment / Complement"],
+      "answer": "Principle / Principal"
+    },
+    {
+      "question": "Which of the following sentences uses the correct conditional form?",
+      "choices": [
+        "If he would have known, he will come early.",
+        "If she knew, she would have told us.",
+        "If I see her, I will tell her the news.",
+        "If they will ask, I would have helped."
+      ],
+      "answer": "If she knew, she would have told us."
+    },
+    {
+      "question": "Identify the correct use of the word 'ubiquity' in a sentence.",
+      "choices": [
+        "His ubiquity in the workplace is acknowledged.",
+        "The ubiquity of the forest was breathtaking.",
+        "Ubiquity is important for effective communication.",
+        "She showed ubiquity in her diverse skills."
+      ],
+      "answer": "Ubiquity is important for effective communication."
+    },
+    {
+      "question": "Select the sentence with the correct use of the adverb 'insidiously':",
+      "choices": [
+        "The sun rose insidiously over the horizon.",
+        "She completed the task insidiously.",
+        "The insidiously music filled the room.",
+        "The disease spread insidiously throughout the population."
+      ],
+      "answer": "The disease spread insidiously throughout the population."
+    }
+  ]
+}

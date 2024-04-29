@@ -1,0 +1,56 @@
+{
+  "title": "French Language Essentials - Hard Mode",
+  "description": "Challenge your French skills by identifying the error in each sentence.",
+  "items": [
+    {
+      "question": "Je préfère le thé au café, parce qu'il est moins fort et plus santé.",
+      "choices": ["préfère", "parce", "fort", "santé"],
+      "answer": "santé"
+    },
+    {
+      "question": "Les étudiants ont étudié pendant toute la nuit pour l'examen, qui était très difficile.",
+      "choices": ["ont", "toute", "pour", "qui"],
+      "answer": "pour"
+    },
+    {
+      "question": "Mon ami m'a dit que son livre préféré était 'Le Petit Prince', que j'ai aussi beaucoup aimé.",
+      "choices": ["dit", "était", "que", "beaucoup"],
+      "answer": "que"
+    },
+    {
+      "question": "Quand je suis arrivé à la gare, le train avait déjà quitté, ce qui m'a fait manquer mon rendez-vous.",
+      "choices": ["Quand", "déjà", "ce qui", "fait"],
+      "answer": "déjà"
+    },
+    {
+      "question": "Le gouvernement a annoncé de nouvelles mesures pour combattre le changement climatique, incluant la réduction des émissions de carbone.",
+      "choices": ["a", "pour", "incluant", "des"],
+      "answer": "incluant"
+    },
+    {
+      "question": "Cette recette nécessite peu d'ingrédients : seulement du lait, des oeufs, et de la farine, ce qui la rend très simple à préparer.",
+      "choices": ["nécessite", "seulement", "et", "ce qui"],
+      "answer": "et"
+    },
+    {
+      "question": "Bien qu'elle ait travaillé dur, elle n'a pas réussi à obtenir la promotion qu'elle désirait tant.",
+      "choices": ["Bien", "ait", "à", "qu'elle"],
+      "answer": "à"
+    },
+    {
+      "question": "Lors de notre dernière réunion, nous avons discuté des stratégies pour améliorer notre efficacité, y compris la mise en place d'un nouveau logiciel.",
+      "choices": ["Lors", "des", "y compris", "d'un"],
+      "answer": "y compris"
+    },
+    {
+      "question": "Il est important de boire suffisamment d'eau chaque jour pour rester hydraté, surtout pendant les mois d'été.",
+      "choices": ["de", "suffisamment", "pour", "surtout"],
+      "answer": "de"
+    },
+    {
+      "question": "Après plusieurs heures de négociations, les deux pays ont finalement signé un accord de paix, espérant mettre fin à des années de conflit.",
+      "choices": ["Après", "finalement", "un", "à"],
+      "answer": "à"
+    }
+  ]
+}

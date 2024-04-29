@@ -1,0 +1,119 @@
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.w-full {
+  animation: slideDown 1s ease forwards;
+}
+
+
+
+.qlab-desc p,
+.input-div input,
+.checkbox-div,
+.submit-btn button,
+.register {
+    padding: 10px;
+}
+
+
+
+.my-div {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  width: 360px;
+  max-width: 100%;
+  overflow: hidden;
+  color: white;
+  transition: background-color 0.5s ease-in;
+  background: linear-gradient(to bottom right,#74FEBD,#0172AF,#42c2b7);
+}
+
+.my-div::before {
+  content: "";
+  position: absolute;
+  left: 20%;
+  top: 10%;
+  height: 50%;
+  width: 70%;
+  transform-origin: 60%;
+  animation: blob 8s infinite cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  background: linear-gradient(45deg, #0273af, #74FEBD);
+  filter: blur(50px) brightness(125%);
+  z-index: 1;
+}
+
+.my-div::after {
+  content: "";
+  position: absolute;
+  left: 40%;
+  top: 30%;
+  height: 80%;
+  width: 70%;
+  transform-origin: 60%;
+  animation: blob 10s infinite cubic-bezier(0.215, 0.61, 0.355, 1) reverse;
+  background: linear-gradient(45deg, #0273af, #74FEBD);
+  filter: blur(50px) brightness(125%);
+  z-index: 1;
+}
+
+.my-div .text {
+  position: relative;
+  z-index: 2;
+}
+@keyframes blob {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(300px, 390px) scale(1.1);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+@keyframes blob-reverse {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(300px, 390px) scale(1.1);
+  }
+  100% {
+    transform: translate(0, 0) rotate(-360deg);
+  }
+}
+
+.floating {
+  animation: float 5s ease-in-out infinite;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.gradint {
+  background-image: linear-gradient(to right, var(--tw-gradient-color), var(--tw-gradient-color));
+  background-size: 300% 100%;
+}
+/* Add this media query to make the background transparent on large screens */
+@media (min-width: 1024px) {
+  .gradint{
+    background: transparent;
+  }
+}

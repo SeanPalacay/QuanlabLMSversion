@@ -1,0 +1,91 @@
+{
+  "title": "Grammar and Vocabulary Quiz",
+  "description": "Test your grammar and vocabulary skills with this quiz. Answer questions related to correct spelling, word usage, punctuation, synonyms, and more to enhance your language proficiency.",
+  "items": [
+    {
+      "question": "What is the correct spelling of the word meaning 'a sudden and violent overthrow of a government'?",
+      "choices": ["Coup", "Coop", "Koop", "Kuup"],
+      "answer": "Coup"
+    },
+    {
+      "question": "Identify the correct usage of the word 'ubiquitous' in a sentence.",
+      "choices": [
+        "The sun is ubiquitous in the sky.",
+        "Her ubiquitous behavior caused a stir.",
+        "The ubiquitous tree provided shade.",
+        "He was ubiquitous to attend the meeting."
+      ],
+      "answer": "The ubiquitous tree provided shade."
+    },
+    {
+      "question": "Choose the sentence with the correct punctuation:",
+      "choices": [
+        "I cannot go out; I have to finish my homework.",
+        "I cannot go out I have to finish my homework",
+        "I cannot go out, I have to finish my homework",
+        "I cannot go out: I have to finish my homework"
+      ],
+      "answer": "I cannot go out; I have to finish my homework."
+    },
+    {
+      "question": "Which of the following is a hyperbole?",
+      "choices": [
+        "It's a bit chilly today.",
+        "I've told you a million times.",
+        "She was as busy as a bee.",
+        "The river flows gently."
+      ],
+      "answer": "I've told you a million times."
+    },
+    {
+      "question": "Identify the correct synonym for 'ephemeral'.",
+      "choices": ["Enduring", "Transient", "Eternal", "Perpetual"],
+      "answer": "Transient"
+    },
+    {
+      "question": "What is the correct plural form of 'octopus'?",
+      "choices": ["Octopuses", "Octopi", "Octopodes", "Octopussies"],
+      "answer": "Octopuses"
+    },
+    {
+      "question": "Select the sentence with the correct subject-verb agreement:",
+      "choices": [
+        "The team are playing well.",
+        "Neither of them were present.",
+        "Each of the students is required to submit their assignment.",
+        "The staff is on lunch break."
+      ],
+      "answer": "The staff is on lunch break."
+    },
+    {
+      "question": "Choose the correct usage of the word 'ambiguous':",
+      "choices": [
+        "The instructions were clear and ambiguous.",
+        "His ambiguous attitude confused everyone.",
+        "The ambiguous sky cleared up later.",
+        "She received an ambiguous response to her question."
+      ],
+      "answer": "She received an ambiguous response to her question."
+    },
+    {
+      "question": "Which of the following is a correctly punctuated compound sentence?",
+      "choices": [
+        "She ran quickly, yet she missed the bus.",
+        "He didn't finish his dinner, because he was not hungry.",
+        "Although it rained, but the event continued.",
+        "They reached the destination, their journey was long."
+      ],
+      "answer": "She ran quickly, yet she missed the bus."
+    },
+    {
+      "question": "Identify the correct use of the word 'supercilious' in a sentence.",
+      "choices": [
+        "His supercilious behavior made him popular.",
+        "The supercilious mountain stood tall.",
+        "She gave a supercilious smile after winning.",
+        "The supercilious of the situation was evident."
+      ],
+      "answer": "She gave a supercilious smile after winning."
+    }
+  ]
+}

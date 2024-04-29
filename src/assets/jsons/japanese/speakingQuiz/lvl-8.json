@@ -1,0 +1,61 @@
+{
+  "title": "Health and Wellness",
+  "description": "Improve your Japanese speaking skills with phrases typically used in health and wellness situations. Focus on clear pronunciation and appropriate intonation.",
+  "instructions": [
+    "Below is a list of phrases you might use in health and wellness contexts in Japanese.",
+    "Record yourself speaking each phrase.",
+    "Aim for clear and concerned pronunciation.",
+    "Maintain a conversational and steady pace.",
+    "After recording, listen to your playback and compare it to the text.",
+    "Pay attention to intonation, clarity, and fluency in Japanese.",
+    "Repeat the recording process as necessary to improve your Japanese speaking skills."
+  ],
+  "items": [
+    {
+      "question": "医者の予約を取りたいです。 (Isha no yoyaku o toritai desu.)",
+      "answer": "医者の予約を取りたいです。 (Isha no yoyaku o toritai desu.)"
+    },
+    {
+      "question": "気分が悪いです。 (Kibun ga warui desu.)",
+      "answer": "気分が悪いです。 (Kibun ga warui desu.)"
+    },
+    {
+      "question": "最寄りの薬局はどこですか？ (Moyori no yakkyoku wa doko desu ka?)",
+      "answer": "最寄りの薬局はどこですか？ (Moyori no yakkyoku wa doko desu ka?)"
+    },
+    {
+      "question": "頭痛がします。 (Zutsuu ga shimasu.)",
+      "answer": "頭痛がします。 (Zutsuu ga shimasu.)"
+    },
+    {
+      "question": "何か痛みはありますか？ (Nanika itami wa arimasu ka?)",
+      "answer": "何か痛みはありますか？ (Nanika itami wa arimasu ka?)"
+    },
+    {
+      "question": "風邪の薬を飲んでいます。 (Kaze no kusuri o nonde imasu.)",
+      "answer": "風邪の薬を飲んでいます。 (Kaze no kusuri o nonde imasu.)"
+    },
+    {
+      "question": "救急車を呼んでください。 (Kyuukyuusha o yonde kudasai.)",
+      "answer": "救急車を呼んでください。 (Kyuukyuusha o yonde kudasai.)"
+    },
+    {
+      "question": "健康診断が必要です。 (Kenkou shindan ga hitsuyou desu.)",
+      "answer": "健康診断が必要です。 (Kenkou shindan ga hitsuyou desu.)"
+    },
+    {
+      "question": "足を捻挫しました。 (Ashi o nenza shimashita.)",
+      "answer": "足を捻挫しました。 (Ashi o nenza shimashita.)"
+    },
+    {
+      "question": "貝類アレルギーがあります。 (Kairui arerugii ga arimasu.)",
+      "answer": "貝類アレルギーがあります。 (Kairui arerugii ga arimasu.)"
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and accurate, demonstrating strong skills in Japanese health and wellness language.",
+    "5-7 correct pronunciations": "Good! Your pronunciation is mostly correct, with a good grasp of health and wellness phrases in Japanese. There are areas to refine for improved clarity.",
+    "2-4 correct pronunciations": "Fair. You can communicate basic needs in Japanese health and wellness contexts, but need significant improvement in pronunciation.",
+    "0-1 correct pronunciations": "Needs improvement. Consider practicing more to enhance your Japanese speaking skills, or seek additional resources for learning."
+  }
+}

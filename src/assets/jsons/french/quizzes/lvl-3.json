@@ -1,0 +1,86 @@
+{
+  "title": "French Language Essentials - Easy Mode",
+  "description": "Choose the English equivalent of the given French language.",
+  "items": [
+    {
+      "question": "Comment ça va ?",
+      "choices": [
+        "How are you?",
+        "Where are you?",
+        "What's your name?",
+        "How old are you?"
+      ],
+      "answer": "How are you?"
+    },
+    {
+      "question": "À bientôt",
+      "choices": ["Goodbye forever", "See you soon", "Please", "Thank you"],
+      "answer": "See you soon"
+    },
+    {
+      "question": "C'est combien ?",
+      "choices": [
+        "How much is it?",
+        "What is it?",
+        "Where is it?",
+        "Who is it?"
+      ],
+      "answer": "How much is it?"
+    },
+    {
+      "question": "Je voudrais...",
+      "choices": ["I would like...", "I have...", "I am...", "I go..."],
+      "answer": "I would like..."
+    },
+    {
+      "question": "Où est... ?",
+      "choices": ["Where is...?", "What is...?", "How is...?", "Who is...?"],
+      "answer": "Where is...?"
+    },
+    {
+      "question": "Quelle heure est-il ?",
+      "choices": [
+        "What day is it?",
+        "What time is it?",
+        "How are you?",
+        "Where are you?"
+      ],
+      "answer": "What time is it?"
+    },
+    {
+      "question": "Je ne sais pas",
+      "choices": [
+        "I don't know",
+        "I don't want",
+        "I don't like",
+        "I don't understand"
+      ],
+      "answer": "I don't know"
+    },
+    {
+      "question": "Pouvez-vous répéter ?",
+      "choices": [
+        "Can you help me?",
+        "Can you repeat?",
+        "Do you understand?",
+        "What did you say?"
+      ],
+      "answer": "Can you repeat?"
+    },
+    {
+      "question": "Ça va bien, merci",
+      "choices": ["I'm fine, thanks", "I'm lost", "I'm sorry", "I'm happy"],
+      "answer": "I'm fine, thanks"
+    },
+    {
+      "question": "Parlez-vous anglais ?",
+      "choices": [
+        "Do you speak English?",
+        "Do you speak French?",
+        "Where are you from?",
+        "What is your name?"
+      ],
+      "answer": "Do you speak English?"
+    }
+  ]
+}

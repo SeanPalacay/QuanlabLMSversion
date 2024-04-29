@@ -1,0 +1,240 @@
+<div class="modal-content custom-modal-content" [ngClass]="myCustomClass">
+  <div class="modal-header">
+    <div class="titlehead poppins-b">
+      <h1>CREATE QUIZ</h1>
+    </div>
+  </div>
+
+  <div class="allwarp">
+    <div class="content">
+      <div class="leftwrap">
+        <input [(ngModel)]="title" type="text" placeholder="Quiz Title :" />
+        <textarea
+          [(ngModel)]="description"
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+          placeholder="Description :"
+        ></textarea>
+      </div>
+      <div class="midwrap">
+        <input
+          [(ngModel)]="timelimit"
+          type="number"
+          placeholder="Time Limit :"
+          min="1"
+          required
+        />
+        <input
+          type="text"
+          class="mt-2 deadline"
+          [(ngModel)]="deadline"
+          name="deadline"
+          id="deadline"
+          placeholder="Deadline:"
+          onfocus="this.type='date'"
+          onblur="this.type='text'"
+          required
+          style="padding-left: 10px"
+        />
+        <select [(ngModel)]="course" name="course">
+          <option value="" disabled selected hidden>Select Course</option>
+          <option *ngFor="let _course of courses" value="{{ _course.id }}">
+            {{ _course.title }}
+          </option>
+        </select>
+
+        <!-- <div class="file">
+                <label for="file-upload" class="file-label">
+                  <img src="assets/teacher/Link.png" alt="Attach audio feedback">
+                  <span class="poppins">{{ selectedFileName || 'Attach Media' }}</span>
+                </label>
+                <input id="file-upload" type="file" (change)="onFileSelected($event)">
+              </div> -->
+      </div>
+      <div class="rightwrap">
+        <h3 class="poppins">Quiz Settings</h3>
+        <div class="poppins">
+          <input [(ngModel)]="settings.random_question" type="checkbox" /><span
+            >Randomize Question</span
+          >
+        </div>
+        <div class="poppins">
+          <input [(ngModel)]="settings.allow_backtrack" type="checkbox" /><span
+            >Allow Backtracking</span
+          >
+        </div>
+        <div class="poppins">
+          <input [(ngModel)]="settings.allow_review" type="checkbox" /><span
+            >Allow Review After Submission</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="questions">
+      <div class="flexwrap">
+        <div class="leftwrap">
+          <div
+            *ngFor="let question of questions; let i = index"
+            class="thisflex mt-3"
+          >
+            <div class="Q1">
+              <div class="mode">
+                <h1 class="poppins-b">Question #{{ i + 1 }}</h1>
+                <select
+                  [(ngModel)]="question.type"
+                  (change)="setType(question)"
+                  name="language"
+                  id="language"
+                  class="poppins"
+                >
+                  <option
+                    class="placeholder poppins-b"
+                    value=""
+                    disabled
+                    selected
+                    hidden
+                  >
+                    Select Type
+                  </option>
+                  <option
+                    *ngFor="let type of types; let val = index"
+                    [value]="val"
+                  >
+                    {{ types[val] }}
+                  </option>
+                </select>
+              </div>
+              <textarea
+                *ngIf="question.type != '2'"
+                [(ngModel)]="question.question"
+                name=""
+                id=""
+                cols="30"
+                rows="10"
+                placeholder="Enter Question :"
+              ></textarea>
+              <div *ngIf="question.type == '2'" class="type2">
+                <div class="q">
+                  <input
+                    [(ngModel)]="question.question"
+                    type="text"
+                    placeholder="Enter Question #1:"
+                  />
+                </div>
+                <div class="ml-5 a">
+                  <input
+                    [(ngModel)]="question.answer"
+                    type="text"
+                    placeholder="Enter Answer :"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div *ngIf="question.type == '0'" class="options">
+              <h1 class="poppins-b">Options</h1>
+              <div class="optionflex">
+                <div class="input1">
+                  <div class="flex">
+                    <input
+                      [(ngModel)]="question.options[0]"
+                      type="text"
+                      placeholder="Option #1:"
+                    />
+                    <input
+                      (change)="setMultipleAnswer('0', question)"
+                      class="flex-1"
+                      type="checkbox"
+                    />
+                  </div>
+                  <div class="flex">
+                    <input
+                      [(ngModel)]="question.options[1]"
+                      type="text"
+                      placeholder="Option #2:"
+                    />
+                    <input
+                      (change)="setMultipleAnswer('1', question)"
+                      class="flex-1"
+                      type="checkbox"
+                    />
+                  </div>
+                </div>
+                <div class="input2">
+                  <div class="flex">
+                    <input
+                      [(ngModel)]="question.options[2]"
+                      type="text"
+                      placeholder="Option #3:"
+                    />
+                    <input
+                      (change)="setMultipleAnswer('2', question)"
+                      class="flex-1"
+                      type="checkbox"
+                    />
+                  </div>
+                  <div class="flex">
+                    <input
+                      [(ngModel)]="question.options[3]"
+                      type="text"
+                      placeholder="Option #4:"
+                    />
+                    <input
+                      (change)="setMultipleAnswer('3', question)"
+                      class="flex-1"
+                      type="checkbox"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              *ngIf="question.type == '1'"
+              class="options flex justify-center flex-col"
+            >
+              <div class="type2">
+                <div class="a align-middle place-content-center">
+                  <h1 class="poppins-b">TRUE/FALSE</h1>
+                  <div class="awrap">
+                    <button
+                      (click)="setTFAnswer('T', question)"
+                      class="true poppins"
+                      [ngClass]="{ active: question.answer == 'T' }"
+                    >
+                      TRUE
+                    </button>
+                    <button
+                      (click)="setTFAnswer('F', question)"
+                      class="false poppins"
+                      [ngClass]="{ active: question.answer == 'F' }"
+                    >
+                      FALSE
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="buttonwrap">
+    <button (click)="addNewItem()" class="add">ADD</button>
+    <div class="btnwrap">
+      <button
+        (click)="submit()"
+        class="save poppins"
+        [disabled]="!isTimeLimitValid()"
+      >
+        Save
+      </button>
+      <button class="cancel poppins" (click)="closeModal()">Cancel</button>
+    </div>
+  </div>
+</div>

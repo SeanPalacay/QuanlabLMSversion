@@ -1,0 +1,554 @@
+<div class="modal-content custom-modal-content" [ngClass]="myCustomClass">
+  <div class="w-full">
+    <div class="w-full">
+      <div>
+        <div class="flex justify-center gap-x-8 px-20 mb-4">
+          <!-- start 1v1 -->
+          <button 
+          [disabled]="!hasMeet() || solo" 
+          class=" z-0 relative items-center justify-center rounded-lg shadow-boxz  py-2.5 w-2/12 px-2 hover:!bg-teal-300 gap-x-4"
+            [ngClass]="{
+              'hover:!bg-teal-300': !editedLayout && hasMeet(),
+              'opacity-25': !hasMeet(),
+            
+              'gradient-color': solo,
+              'bg-white': !solo,
+              'text-black': !solo,
+              'text-white': solo,
+              
+             
+            }"
+            (click)="openSolo()"
+          >
+          <button (click)="closeSolo()" *ngIf="solo" class="z-50  absolute rounded-full bg-red-500 h-10 w-10 -left-4 -top-4 ">
+          <p class="text-white text-2xl">
+            <i class="fa-solid fa-xmark"></i>
+          </p>
+        </button>
+          <button  (click)="!getSolo() ? null : saveSolo()"   [disabled]="!getSolo()" *ngIf="solo" class="z-50 absolute rounded-full h-10 w-10 -right-4 -top-4 {{
+            getSolo() ? 'bg-green-500' : 'bg-gray-400'
+          }}">
+            <p class="text-white text-2xl">
+              <i class="fa-solid fa-check"></i>
+            </p>
+          </button>
+
+
+            <p class="text-lg font-semibold">One vs One</p>
+            <i class="fa-solid fa-user"></i>
+          </button>
+          <!-- groupings buttons-->
+          <div
+            class="flex content-center text-center gap-x-4"
+            *ngIf="groupings"
+          >
+            <!-- minus -->
+            <button
+              class="w-10 h-10 rounded-full shadow-boxz bg-teal-300"
+              (click)="bawasStudentGrouping()"
+            >
+
+
+
+              <p class="text-white"><i class="fa-solid fa-user-minus"></i></p>
+            </button>
+            <p class="mt-1.5 text-lg font-semibold">
+              Members: {{ groupingItems.length }} / {{ maxGrouping }}
+            </p>
+            <!-- add -->
+            <button
+              class="w-10 h-10 rounded-full shadow-boxz bg-teal-300"
+              (click)="addStudentGrouping()"
+            >
+              <p class="text-white"><i class="fa-solid fa-user-plus"></i></p>
+            </button>
+          </div>
+          <!-- end groupings buttons-->
+          <!-- end 1v1 -->
+
+          <!-- start groupings -->
+          <button
+            [disabled]="!hasMeet() || groupings"
+            [ngClass]="{
+              'hover:!bg-teal-300': hasMeet(),
+              'opacity-25': !hasMeet(),
+              
+              'gradient-color': groupings,
+              'bg-white': !groupings,
+              'text-black': !groupings,
+              'text-white': groupings,
+              
+            }"
+          
+            class="z-0 relative items-center justify-center rounded-lg shadow-boxz  py-2.5 w-2/12 px-2 hover:!bg-teal-300 gap-x-4"
+            (click)="openGroupings()"
+          >
+
+
+          <div *ngIf="groupings">  
+
+          <button (click)="closeGroupings()" *ngIf="groupings" class="z-50  absolute rounded-full bg-red-500 h-10 w-10 -left-4 -top-4 ">
+            <ng-container *ngIf="groupColor === 'blue'"
+            >
+            <p class="text-white text-2xl">
+              <i class="fa-solid fa-xmark"></i>
+            </p>
+          </ng-container>
+          </button>
+
+
+            <button   (click)="saveGroupings('blue')" *ngIf="groupings && groupNumbers() >= 1" class="bg-green-500 z-50 absolute rounded-full h-10 w-10 -right-4 -top-4 ">
+              <p class="text-white text-2xl font-semibold">
+              
+                <ng-container *ngIf="groupColor === 'blue'"
+                  ><i class="fa-solid fa-check"></i
+                ></ng-container>
+              </p>
+            </button>
+
+          </div>
+
+
+
+            <p class="text-center text-lg font-semibold">By Group</p>
+            <i class="fa-solid fa-users"></i>
+          </button>
+          <!-- end groupings -->
+
+
+
+
+
+
+          <button
+            [ngClass]="{
+              'hover:!bg-teal-300': hasMeet(),
+              'opacity-25': !hasMeet()
+            }"
+            [disabled]="!hasMeet()"
+            (click)="toggleModal()"
+            *ngIf="!groupings"
+            class="flex items-center justify-center rounded-lg shadow-boxz bg-white py-2.5 w-2/12 px-2 hover:!bg-teal-300 gap-x-4"
+          >
+            <p class="text-center text-lg font-semibold">Chat</p>
+            <i class="fa-solid fa-message"></i>
+          </button>
+
+          <!-- start real -->
+          <div
+            class="fixed chatMessage inset-0 h-full bg-gray-500 bg-opacity-75 flex items-center justify-center p-4"
+            *ngIf="isChatModalOpen"
+          >
+            <div
+              class="bg-white chatroom:h-4/5 w-1/2 rounded-lg overflow-hidden shadow-xl transform transition-all h-full"
+            >
+              <!-- start Chat Header -->
+              <div
+                class="bg-transparent border-b border-gray-200 flex items-center justify-between my-3"
+              >
+                <div class="text-lg font-semibold text-black mb-3 mx-4">
+                  Live Chat
+                </div>
+                <button
+                  (click)="toggleModal()"
+                  class="flex items-center mb-3 mx-4"
+                >
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </div>
+
+              <!-- end chat header -->
+
+              <!-- start Chat Messages -->
+
+              <div
+                class="flex-1 h-3/4 overflow-y-auto overflow-x-auto mx-4 mt-2"
+              >
+                <div *ngFor="let message of getMessages()">
+                  <div
+                    class="flex mb-4 items-center"
+                    *ngIf="message.senderID != particpantID"
+                  >
+                    <img
+                      [src]="
+                        message.profile
+                          ? getURL(message.profile)
+                          : 'https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg'
+                      "
+                      alt="Profile Picture"
+                      class="w-10 h-10 mt-2.5 rounded-full mr-4"
+                    />
+                    <div class="flex-grow">
+                      <div class="flex justify-between mx-1 overflow-x-auto">
+                        <div>
+                          <p class="font-normal text-xs text-gray-500">
+                            {{ message.senderName }}
+                          </p>
+                        </div>
+                        <div>
+                          <p class="font-normal text-xs text-gray-500">
+                            {{ message.time }}
+                          </p>
+                        </div>
+                      </div>
+
+                      <div
+                        class="bg-gray-300 p-2 text-sm rounded-2xl overflow-x-auto w-full"
+                      >
+                        {{ message.message }}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="flex mb-4 items-center"
+                    *ngIf="message.senderID == particpantID"
+                  >
+                    <div class="flex-grow">
+                      <div
+                        class="flex justify-between items-center mx-1 overflow-x-auto"
+                      >
+                        <div>
+                          <p class="font-normal text-xs text-gray-500">
+                            {{ message.time }}
+                          </p>
+                        </div>
+                        <div>
+                          <p class="font-normal text-xs text-gray-500">Me</p>
+                        </div>
+                      </div>
+                      <div
+                        class="bg-gray-300 text-wrap text-left p-2 text-sm rounded-2xl overflow-x-auto w-full"
+                      >
+                        {{ message.message }}
+                      </div>
+                    </div>
+
+                    <img
+                      [src]="
+                        message.profile
+                          ? getURL(message.profile)
+                          : 'https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg'
+                      "
+                      alt="Profile Picture"
+                      class="w-10 h-10 mt-2.5 rounded-full ml-4"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Chat Input Footer -->
+              <!-- <div class="bg-transparent border-t border-gray-200">
+                  <div class="flex items-center lg:mx-4 lg:my-4 mx-2 my-4">
+                    <input (keyup)="texthandler($event)" #messageInput type="text" placeholder="Type your message..." class="flex-1 px-2 py-1 rounded-full border border-teal-400 focus:outline-none focus:ring focus:border-gray-600">
+                    <button (click)="sendMessage()" class="ml-2 gradient-color text-white px-4 py-1.5 rounded-full">Send</button>
+                  </div>
+                </div> -->
+              <div class="bg-transparent">
+                <div class="flex items-center mx-1 my-3">
+                  <div
+                    class="relative flex items-center w-full shadow-boxz rounded-xl mx-3"
+                  >
+                    <input
+                      (keyup)="texthandler($event)"
+                      #messageInput
+                      type="text"
+                      placeholder="Type your message..."
+                      class="shadow-boxz flex-1 py-2 px-3 rounded-lg border border-teal-400 focus:outline-none focus:ring-black focus:border-gray-600 text-black font-normal"
+                    />
+                    <button
+                      (click)="sendMessage()"
+                      class="absolute right-2 top-1/2 transform -translate-y-1/2 cursor-pointer pr-3"
+                    >
+                      <i
+                        class="fa-solid fa-paper-plane text-transparent gradient-color bg-clip-text text-xl"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end real -->
+        </div>
+
+        <div
+          class="relative flex justify-center gap-x-12"
+          *ngFor="let row of [row1, row2, row3]; let i = index"
+        >
+          <div class="pb-5" *ngFor="let item of row">
+            <p
+              class="font-bold text-center {{
+                getAssignedName(item) != 'None'
+                  ? 'text-green-500'
+                  : 'text-red-500'
+              }}"
+            >
+              {{ item.label }}
+            </p>
+            <div>
+              <!-- default -->
+              <p
+                class="text-center text-6xl font-thin text-black mt-4"
+                *ngIf="layout"
+              >
+                <i class="fa-solid fa-tv"></i>
+              </p>
+              <!-- end default-->
+
+              <!-- start solo -->
+
+              <p
+                class="text-center text-6xl font-thin text-gray-100 mt-4"
+                *ngIf="editedLayout"
+                [ngClass]="{ 'text-teal-300': getSolo() == item,
+              'animate-bounce' : getSolo() == item  }"
+              >
+                <i class="fa-solid fa-tv"></i>
+              </p>
+
+              <!-- end solo-->
+
+              <!-- start groupings -->
+
+              <p
+                class="text-center text-6xl font-thin mt-4"
+                *ngIf="editedLayoutGroupings"
+                [ngClass]="{
+                  'text-blue-500':
+                    groupColor === 'blue' && groupingItems.includes(item)
+                }"
+              >
+                <i class="fa-solid fa-tv"></i>
+              </p>
+
+              <!-- end groupings -->
+              <!-- pag ma pili na for 1v1 -->
+              <p
+                class="text-6xl text-center font-thin text-gray-100 mt-4"
+                *ngIf="solo"
+              >
+                <button
+                  [ngClass]="{
+                    'hover:text-teal-300': getAssignedName(item) != 'None',
+                    'text-teal-300': getSolo() == item,
+                   
+
+                  }"
+                  [disabled]="getAssignedName(item) === 'None'"
+                  (click)="soloGropings(item)"
+                >
+                  <i class="fa-solid fa-tv"></i>
+                </button>
+              </p>
+
+              <!-- end kang  ma pili na for 1v1 -->
+
+              <!-- pag ma pili na for groupings -->
+              <p
+                class="text-6xl text-center font-thin text-gray-100 mt-4"
+                *ngIf="groupings"
+              >
+                <button
+                  [ngClass]="{
+                    'text-blue-500':
+                      groupColor === 'blue' && groupingItems.includes(item),
+                      
+                  }"
+                  [disabled]="getAssignedName(item) === 'None'"
+
+                
+                  (click)="dakolGroupings(item)"
+                >
+
+                  <i class="fa-solid fa-tv"></i>
+                </button>
+              </p>
+              <!-- end kang  ma pili na for groupings-->
+            </div>
+
+            <br />
+            <span
+              class=" font-bold {{
+                getAssignedName(item) != 'None'
+                  ? 'text-green-500'
+                  : 'text-red-500'
+              }}"
+              ><p class="text-center">{{ getAssignedName(item) }}</p></span
+            >
+          </div>
+          <div
+            class="absolute bottom-6 h-1 inset-x-14 bg-gradient-to-r from-primary to-secondary rounded-sm"
+          ></div>
+        </div>
+
+        <!-- <div class="flex justify-center gap-x-4" *ngIf="solo">
+          <button
+            class="w-10 h-10 rounded-full shadow-boxz bg-red-500"
+            (click)="closeSolo()"
+          >
+            <p class="text-white text-2xl">
+              <i class="fa-solid fa-xmark"></i>
+            </p>
+          </button>
+
+          <button
+            [disabled]="!getSolo()"
+            class=" w-10 h-10 rounded-full shadow-boxz  {{
+              getSolo() ? 'bg-green-500' : 'bg-gray-400'
+            }}"
+            (click)="!getSolo() ? null : saveSolo()"
+          >
+            <p class="text-white text-2xl">
+              <i class="fa-solid fa-check"></i>
+            </p>
+          </button>
+        </div> -->
+
+        <div class="mb-4 flex justify-center animate-bounce" *ngIf="editedLayout">
+          <button
+            (click)="selectModule()"
+            class="px-4 py-1.5 bg-green-500 rounded-lg shadow-boxz"
+          >
+            <p class="text-lg font-semibold text-white">Select Module</p>
+        </button>
+        </div>
+
+        <div
+          *ngIf="!hasMeet()"
+          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-opacity-50 backdrop-filter backdrop-blur"
+        >
+          <div class="h-full top-1/2 flex justify-center items-center gap-x-4">
+            <button
+              *ngIf="!showStartMeetingButton && speechLabs.length > 0"
+              (click)="showStartMeeting(0)"
+              class="flex items-center justify-center rounded-lg shadow-boxz bg-white py-2.5 w-2/12 px-2 hover:!shadow-xl gap-x-4"
+            >
+              <p class="text-gray-400 text-lg font-semibold">Speech Lab 1</p>
+            </button>
+
+            <button
+              *ngIf="!showStartMeetingButton && speechLabs.length > 0"
+              (click)="showStartMeeting(1)"
+              class="flex items-center justify-center rounded-lg shadow-boxz bg-white py-2.5 w-2/12 px-2 hover:!shadow-xl gap-x-4"
+            >
+              <p class="text-gray-400 text-lg font-semibold">Speech Lab 2</p>
+            </button>
+
+            <button
+              *ngIf="showStartMeetingButton"
+              class="flex items-center justify-center rounded-lg shadow-boxz bg-white py-2.5 w-2/12 px-2 hover:!shadow-xl gap-x-4"
+              (click)="startClass()"
+            >
+              <p class="text-gray-400 text-lg font-semibold">Start Meeting</p>
+            </button>
+          </div>
+        </div>
+
+        <!-- <div *ngIf="!startMeet" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-opacity-50 backdrop-filter backdrop-blur">
+
+          <button *ngIf="!showStartMeetingButton" (click)="showStartMeeting()" class="flex items-center justify-center rounded-lg shadow-boxz bg-white py-2.5 w-2/12 px-2 hover:!bg-teal-300 gap-x-4">
+            <p class="text-lg font-semibold">Speech Lab 1</p>
+        </button>  
+        
+        <button *ngIf="!showStartMeetingButton" (click)="showStartMeeting()" class="flex items-center justify-center rounded-lg shadow-boxz bg-white py-2.5 w-2/12 px-2 hover:!bg-teal-300 gap-x-4">
+            <p class="text-lg font-semibold">Speech Lab 2</p>
+        </button>
+        
+        
+        
+        <button (click)="enable" *ngIf="showStartMeetingButton" class="flex items-center justify-center rounded-lg shadow-boxz bg-white py-2.5 w-2/12 px-2 hover:!bg-teal-300 gap-x-4" >
+          <p class="text-lg font-semibold">Start Meeting</p>
+      </button>
+     
+        </div> -->
+        <div class="mb-4 flex justify-center animate-bounce" *ngIf="editedLayoutGroupings">
+          <a
+            (click)="selectModuleGroup()"
+            class="px-4 py-1.5 bg-green-500 rounded-lg shadow-boxz"
+          >
+            <p class="text-lg font-semibold text-white">Select Module</p>
+          </a>
+        </div>
+
+
+        <div class="flex justify-center gap-x-4">
+          <button
+          [disabled]="!hasMeet()"
+          class="flex items-center justify-center shadow-boxz p-2 w-14 h-14 rounded-full"
+          [ngClass]="{
+            'opacity-25': !hasMeet(),
+            'animate-pulse': micIsOn(),
+            'bg-white': !micIsOn(),
+            'bg-green-500': micIsOn(),
+            'text-white': micIsOn()
+          }"
+          (click)="onMic()"
+        >
+          <p class="text-lg font-semibold">
+            <i class="fa-solid" [ngClass]="{ 'fa-microphone': micIsOn(), 'fa-microphone-slash': !micIsOn() }"></i>
+          </p>
+        </button>
+        
+
+        <button
+  *ngIf="hasMeet()"
+  class="flex items-center justify-center shadow-boxz p-2 w-14 bg-red-500 h-14 rounded-full"
+  (click)="confirmEndClass()"
+>
+  <p class="text-lg font-semibold text-white">
+    <i class="fa-solid fa-phone-slash"></i>
+  </p>
+</button>
+
+        </div>
+
+      
+        <!-- <div class="flex justify-center gap-x-4 px-4" *ngIf="groupings">
+         
+        <button
+            class="w-10 h-10 rounded-full shadow-boxz bg-red-500"
+            (click)="closeGroupings()"
+          >
+
+          <ng-container *ngIf="groupColor === 'blue'"
+          >
+          <p class="text-white text-2xl">
+            <i class="fa-solid fa-xmark"></i>
+          </p>
+        </ng-container>
+           
+          </button>
+         
+         
+          <button
+            *ngIf="groupNumbers() >= 1"
+            class="bg-blue-500 rounded-full h-10 w-10"
+            (click)="saveGroupings('blue')"
+          >
+            <p class="text-white text-2xl font-semibold">
+          
+              <ng-container *ngIf="groupColor === 'blue'"
+                ><i class="fa-solid fa-check"></i
+              ></ng-container>
+            </p>
+          </button>
+        </div> -->
+      </div>
+      <!-- <div ngbDropdown class=" w-full"> -->
+      <!-- <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+            {{ speechLabs.length ? speechLabs[speechLabSelected].name: 'Labs not loaded'}}
+          </button> -->
+      <!-- <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button (click)="selectLab(i)" *ngFor="let lab of speechLabs; let i = index" ngbDropdownItem>{{lab.name}}</button>
+          </div> -->
+
+      <!-- <div class="text-center justify-center items-center p-3">
+        <Button class="py-2 px-14 shadow-boxz border border-1-[black] rounded-lg hover:bg-[skyblue]" (click)="save()" >
+          <p class=" text-lg font-semibold text-gray-900"> Save </p></Button>
+      </div> -->
+      <!-- </div> -->
+    </div>
+  </div>
+
+
+</div>

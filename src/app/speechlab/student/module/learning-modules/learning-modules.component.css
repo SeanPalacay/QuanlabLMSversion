@@ -1,0 +1,7 @@
+.card-image {
+    width: 300px; /* Specify your desired width */
+    height: 200px; /* Specify your desired height */
+    object-fit: cover; /* Ensures the image covers the entire area */
+    border-radius: 10px; /* Adds rounded corners */
+  }
+  

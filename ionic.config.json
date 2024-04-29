@@ -1,0 +1,7 @@
+{
+  "name": "quanlab",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "custom"
+}

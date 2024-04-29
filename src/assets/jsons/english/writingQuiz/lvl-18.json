@@ -1,0 +1,58 @@
+{
+  "title": "Advanced English Proficiency Quiz - Hard Mode",
+  "description": "This quiz challenges your understanding of advanced English grammar, vocabulary, and idiomatic expressions.",
+  "instructions": [
+    "Read each question or prompt carefully.",
+    "Provide the most appropriate and advanced response or correction.",
+    "Submit your answers after completing all the questions."
+  ],
+  "items": [
+    {
+      "question": "Explain 'to hit the nail on the head'.",
+      "suggestedAnswer": "To be exactly right."
+    },
+    {
+      "question": "Complete the sentence: 'The novel's ending was rather ___.'",
+      "suggestedAnswer": "anticlimactic"
+    },
+    {
+      "question": "Correct the error: 'Her enthusiasm and energy knows no bounds.'",
+      "suggestedAnswer": "know no bounds."
+    },
+    {
+      "question": "What does 'cogent' mean?",
+      "suggestedAnswer": "Clear and persuasive."
+    },
+    {
+      "question": "Rewrite using a different tense: 'She is reading a book.'",
+      "suggestedAnswer": "She read a book."
+    },
+    {
+      "question": "Correct this sentence: 'Neither John nor Mary want to leave.'",
+      "suggestedAnswer": "Neither John nor Mary wants to leave."
+    },
+    {
+      "question": "Synonym for 'lucid'.",
+      "suggestedAnswer": "Clear"
+    },
+    {
+      "question": "Finish the sentence: 'Despite the challenges, he remained ___.'",
+      "suggestedAnswer": "resolute"
+    },
+    {
+      "question": "What does 'to pull someone's leg' mean?",
+      "suggestedAnswer": "To joke or tease someone."
+    },
+    {
+      "question": "Find the error: 'Each of these answers seems correct.'",
+      "suggestedAnswer": "No error."
+    }
+  ],
+  "scoring": {
+    "10 correct answers": "Excellent! You've shown great proficiency in Filipino to English translation.",
+    "7-9 correct answers": "Very good! You've mastered most of the words with a few left to learn.",
+    "4-6 correct answers": "Good effort! You're learning well, keep practicing to improve further.",
+    "1-3 correct answers": "Nice try! Some words are tricky, but with more practice, you'll get there.",
+    "0 correct answers": "This level is tough, but don't get discouraged. Review and try again!"
+  }
+}

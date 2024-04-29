@@ -1,0 +1,28 @@
+<div class="container w-full h-full mx-auto flex flex-col relative mb-2">
+  <div class="flex-grow overflow-auto">
+    <div class="flex items-center justify-start mt-4 px-10">
+      <!-- Back Button Container -->
+      <div class="bg-gray-200 rounded-xl p-3">
+        <!-- Add Back Button -->
+        <button (click)="goBack()" class="flex items-center text-transparent bg-gradient-to-r from-[#1084b0] to-[#5be0b9] bg-clip-text font-bold">
+          <i class="fa-solid fa-arrow-left mr-2"></i> BACK
+        </button>
+      </div>
+    </div>
+    <div class="flex items-center justify-center mt-4">
+      <div class="grid gap-4 md:px-10 sm:px-12 xs:px-3 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-2">
+        <div *ngFor="let item of array">
+          <div *ngIf="item.title && item.image">
+            <div class="flex items-center justify-center w-full px-0 bg-white border shadow-xl lg:h-72 xs:h-52 supertiti:h-72 rounded-xl">
+              <div class="p-8 space-y-1 overflow-hidden">
+                <h1 class="text-center uppercase font-extrabold text-gray-800">{{item.title}}</h1>
+                <img alt="picture" src="{{item.image}}" class="lg:w-[80%] py-2 text mx-auto">
+                <button (click)="redirectToOtherPage(item.route, item)" class="text-white w-[100%] rounded-[50px] font-bold text-lg bg-gradient-to-r from-primary to-secondary lg:p-1 sm:p-2 xs:p-2">OPEN</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

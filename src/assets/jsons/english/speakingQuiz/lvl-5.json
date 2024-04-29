@@ -1,0 +1,61 @@
+{
+  "title": "Travel and Transportation",
+  "description": "Practice English phrases for travel and transportation situations. Concentrate on accurate pronunciation and appropriate intonation.",
+  "instructions": [
+    "Below is a list of phrases useful for travel and transportation.",
+    "Record yourself speaking each phrase.",
+    "Aim for clear and natural pronunciation.",
+    "Keep your pace steady and conversational.",
+    "After recording, listen to the playback and compare it to the written text.",
+    "Focus on the intonation, clarity, and fluency of each phrase.",
+    "Repeat the recording process as needed to enhance your pronunciation skills."
+  ],
+  "items": [
+    {
+      "question": "Where's the train station?",
+      "answer": "Where's the train station?"
+    },
+    {
+      "question": "I need a single ticket.",
+      "answer": "I need a single ticket."
+    },
+    {
+      "question": "Does this bus go to the city center?",
+      "answer": "Does this bus go to the city center?"
+    },
+    {
+      "question": "I'd like to rent a car.",
+      "answer": "I'd like to rent a car."
+    },
+    {
+      "question": "Where can I park?",
+      "answer": "Where can I park?"
+    },
+    {
+      "question": "What time does the train leave?",
+      "answer": "What time does the train leave?"
+    },
+    {
+      "question": "How do I get to the airport?",
+      "answer": "How do I get to the airport?"
+    },
+    {
+      "question": "Can I have a map?",
+      "answer": "Can I have a map?"
+    },
+    {
+      "question": "Is there a subway nearby?",
+      "answer": "Is there a subway nearby?"
+    },
+    {
+      "question": "How long does the journey take?",
+      "answer": "How long does the journey take?"
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! You have a strong command of pronunciation in travel and transportation contexts.",
+    "5-7 correct pronunciations": "Good! Your pronunciation is mostly accurate, with some minor areas for improvement.",
+    "2-4 correct pronunciations": "Fair. You have a basic grasp of travel-related phrases, but there are several areas where your pronunciation could improve.",
+    "0-1 correct pronunciations": "Needs improvement. Consider more practice in travel and transportation phrases to enhance your English speaking skills."
+  }
+}

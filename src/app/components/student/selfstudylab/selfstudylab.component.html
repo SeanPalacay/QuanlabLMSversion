@@ -1,0 +1,49 @@
+<div class="top-container flex justify-start items-center mt-4">
+  <button
+    class="bg-transparent text-gray-500 font-bold py-2 px-4 ml-6 rounded-md border-gray-500 border-2 border-solid shadow-md"
+    (click)="goBack()"
+  >
+    <i class="fas fa-arrow-left"></i>
+  </button>
+  <div class="flex flex-col items-start">
+    <p class="instruction poppins mx-8 text-gray-600 text-2xl">
+      Select
+      <a class="poppins-b gradient-color text-transparent bg-clip-text">
+        Language:</a
+      >
+    </p>
+    <p class="description my-2 mx-12 text-gray-700 text-xl poppins">
+      Select Japanese, English, or French, and let the language lab be your
+      gateway to a world of words.
+    </p>
+  </div>
+</div>
+
+<div class="container mx-auto flex flex-wrap justify-center p-2 gap-4">
+  <!-- Card 1 -->
+  <a class="cursor-pointer" (click)="goToPractice('English')">
+    <div
+      class="max-w-sm lg:h-96 lg:w-96 h-52 w-60 rounded-xl overflow-hidden shadow-lg mx-2 my-4 gradient-color-updown flex items-center justify-center"
+    >
+      <div class="font-bold text-4xl text-white opacity-75">ENGLISH</div>
+    </div>
+  </a>
+
+  <!-- Card 2 -->
+  <a class="cursor-pointer" (click)="goToPractice('French')">
+    <div
+      class="max-w-sm lg:h-96 lg:w-96 h-52 w-60 rounded-xl overflow-hidden shadow-lg mx-2 my-4 gradient-color-updown flex items-center justify-center"
+    >
+      <div class="font-bold text-4xl text-white opacity-75">FRENCH</div>
+    </div>
+  </a>
+
+  <!-- Card 3 -->
+  <a class="cursor-pointer" (click)="goToPractice('Japanese')">
+    <div
+      class="max-w-sm lg:h-96 lg:w-96 h-52 w-60 rounded-xl overflow-hidden shadow-lg mx-2 my-4 gradient-color-updown flex items-center justify-center"
+    >
+      <div class="font-bold text-4xl text-white opacity-75">JAPANESE</div>
+    </div>
+  </a>
+</div>

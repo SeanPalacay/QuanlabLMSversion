@@ -1,0 +1,34 @@
+
+<div class="modal-overlay">
+    <div class="modal-container border-none">
+        <div class="course-image ml-6 mt-6">
+            <!-- Replace 'your-course-image-url' with the actual URL of your course image -->
+            <img src="assets/images/speak.png" alt="Course Image">
+        </div>
+        <div class="controls">
+            <button (click)="joinNow()" class="shadow-boxz outline-none join-now-button glow-pulse poppins-b gradient-color">Join Now!</button>
+            <button class="outline-none exit-button mb-2 ml-5 rounded shadow-boxz poppins-b" (click)="cancelCreation()">
+                <!-- Replace 'your-exit-icon-url' with the actual URL of your exit icon -->
+                <span>Cancel</span>
+            </button>
+        </div>
+        <div class="ml-20 mr-24 icons justify-between flex mt-3">
+            <div class="toggle-button flex">
+                <img class="mr-2" *ngIf="!isMicMuted" src="assets/record.png" alt="Mic Icon">
+                <img class="mr-2" *ngIf="isMicMuted" src="assets/mega.png" alt="Mute Icon">
+                <label class="switch">
+                    <input type="checkbox" (change)="toggleMic()">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="toggle-button flex">
+                <img class="mr-2" *ngIf="!isVideoDisabled" src="assets/spiderman.png" alt="Video Icon">
+                <img class="mr-2" *ngIf="isVideoDisabled" src="assets/tonzxz.jpg" alt="Video Off Icon">
+                <label class="switch">
+                    <input type="checkbox" (change)="toggleVideo()">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,61 @@
+{
+  "title": "Health and Wellness",
+  "description": "Enhance your English speaking skills with phrases frequently used in health and wellness contexts. Concentrate on clear pronunciation and appropriate intonation.",
+  "instructions": [
+    "Below is a list of phrases you might use in health and wellness situations.",
+    "Record yourself speaking each phrase.",
+    "Strive for clear, precise pronunciation.",
+    "Maintain a conversational and steady pace.",
+    "After recording, listen to your playback and compare it to the text.",
+    "Pay attention to intonation, clarity, and fluency.",
+    "Repeat the recording process as necessary to improve your pronunciation."
+  ],
+  "items": [
+    {
+      "question": "I need to make a doctor's appointment.",
+      "answer": "I need to make a doctor's appointment."
+    },
+    {
+      "question": "I feel sick.",
+      "answer": "I feel sick."
+    },
+    {
+      "question": "Where's the nearest pharmacy?",
+      "answer": "Where's the nearest pharmacy?"
+    },
+    {
+      "question": "I have a headache.",
+      "answer": "I have a headache."
+    },
+    {
+      "question": "Do you have any pain?",
+      "answer": "Do you have any pain?"
+    },
+    {
+      "question": "I'm taking medicine for a cold.",
+      "answer": "I'm taking medicine for a cold."
+    },
+    {
+      "question": "Can you call an ambulance?",
+      "answer": "Can you call an ambulance?"
+    },
+    {
+      "question": "I need a health check-up.",
+      "answer": "I need a health check-up."
+    },
+    {
+      "question": "I sprained my ankle.",
+      "answer": "I sprained my ankle."
+    },
+    {
+      "question": "I'm allergic to shellfish.",
+      "answer": "I'm allergic to shellfish."
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and accurate, demonstrating a strong ability to communicate in health-related contexts.",
+    "5-7 correct pronunciations": "Good! Your pronunciation is mostly correct, with some areas needing refinement for clarity in medical settings.",
+    "2-4 correct pronunciations": "Fair. You have a basic understanding of health-related phrases, but there are several areas where your pronunciation could be improved.",
+    "0-1 correct pronunciations": "Needs improvement. More practice is needed to enhance your English speaking skills in health and wellness scenarios."
+  }
+}

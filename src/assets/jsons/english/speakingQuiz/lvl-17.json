@@ -1,0 +1,61 @@
+{
+  "title": "Scientific Conversations",
+  "description": "Enhance your English speaking skills with phrases used in scientific conversations. Emphasize clear, analytical pronunciation and a methodical tone.",
+  "instructions": [
+    "Below is a list of phrases typically used in scientific contexts.",
+    "Record yourself speaking each phrase.",
+    "Aim for clear, precise, and analytical pronunciation.",
+    "Maintain a steady and methodical pace.",
+    "After recording, listen to your playback and compare it to the text.",
+    "Pay attention to intonation, clarity, and fluency in a scientific context.",
+    "Repeat the recording process as necessary to improve your language skills in scientific discussions."
+  ],
+  "items": [
+    {
+      "question": "What's the hypothesis of your experiment?",
+      "answer": "What's the hypothesis of your experiment?"
+    },
+    {
+      "question": "Let's discuss the scientific methodology.",
+      "answer": "Let's discuss the scientific methodology."
+    },
+    {
+      "question": "I'm intrigued by the research in this field.",
+      "answer": "I'm intrigued by the research in this field."
+    },
+    {
+      "question": "Can you explain the empirical evidence?",
+      "answer": "Can you explain the empirical evidence?"
+    },
+    {
+      "question": "Scientific rigor is crucial in our discussions.",
+      "answer": "Scientific rigor is crucial in our discussions."
+    },
+    {
+      "question": "What are the ethical considerations in your study?",
+      "answer": "What are the ethical considerations in your study?"
+    },
+    {
+      "question": "Let's explore the scientific advancements.",
+      "answer": "Let's explore the scientific advancements."
+    },
+    {
+      "question": "I value evidence-based scientific discussions.",
+      "answer": "I value evidence-based scientific discussions."
+    },
+    {
+      "question": "How can we apply scientific principles in real-world scenarios?",
+      "answer": "How can we apply scientific principles in real-world scenarios?"
+    },
+    {
+      "question": "Let's analyze the implications of this scientific discovery.",
+      "answer": "Let's analyze the implications of this scientific discovery."
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and suits the analytical nature of scientific conversations.",
+    "5-7 correct pronunciations": "Good! You pronounce most scientific phrases correctly, with some areas for improvement for clarity in scientific discussions.",
+    "2-4 correct pronunciations": "Fair. You understand the basics of scientific language, but need more practice for effective communication in scientific settings.",
+    "0-1 correct pronunciations": "Needs improvement. Focus on practicing these scientific phrases to enhance your English speaking skills in scientific contexts."
+  }
+}

@@ -1,0 +1,395 @@
+<div class="mx-10">
+    
+    <div class="mt-4 flex lg:gap-x-8 gap-x-0 w-full h-64">
+    
+        <!-- Input -->
+            <div class="w-4/5 h-2/3 flex lg:flex-row flex-col "></div>
+
+            <div class="w-full h-full lg:ml-36 ml-0 shadow-boxz z-50 rounded mt-15 relative" >
+
+                <div class="rounded shadow-boxz bg-white" style="position:absolute; top: -20px; left: 31px; width: 290px; height: 50px; box-shadow: 0 0 10px #74FEBD;">   
+                    <div class="ml-4 mt-2.5 animate-wave text-center poppins-b text-transparent bg-clip-text gradient-color text-2xl" style="display: flex; align-items: center;">
+                        <img src="assets/mega.png" alt="Megaphone Icon" style="width: 25px; height: 25px; margin-right: 8px;">
+                        <span>BROADCAST NOW!</span>
+                    </div>
+                    
+                    
+                    
+                    
+                    
+            
+                </div>
+              
+                <!-- Arrow Icon -->
+                <div class="flex w-full h-10 items-start justify-between">
+
+                    <div class="ml-1 w-1/2 h-12">
+                    </div> 
+                <div class="flex items-center justify-center mt-2 mr-2">          
+                </div>       
+            </div>
+                   <div class="h-52 -mt-2 rounded">
+                    <div class="mt-1.5 rounded-xl flex flex-row ">
+                        <div (click)="checkDropdown(classes, 'Currently you have no class to alert')" ngbDropdown class="ghover ml-8 lg:w-1/4 mt-2 h-6 shadow-boxz rounded flex items-center justify-center boxkolor">
+                            <div ngbDropdownToggle class="btntop poppins"  class="poppins-r text-transparent bg-clip-text gradient-color text-sm group-hover:text-white" style="font-size: 8px;">Class :</div>
+                            <div  ngbDropdownToggle class="btntop poppins" class="hide-toggle-icon poppins-r text-transparent bg-clip-text gradient-color text-sm group-hover:text-white" style="color:#767278;font-size: 8px;">{{classToBroadcast==null? 'Select Class': classToBroadcast.class}}</div><img ngbDropdownToggle class="btntop poppins"  style="width: 20px;height: 15px;" src="assets/teacher/icondown.png">
+                            <div  *ngIf="classes.length" ngbDropdownMenu aria-labelledby="dropdownBasic1" class="toggle">
+                                <!-- <button ngbDropdownItem>Attendance</button> -->
+                                <button (click)="setBroadcastClass(class)" *ngFor="let class of classes" ngbDropdownItem><b>{{class.course}}</b> {{class.class}}</button>
+                                <!-- <button ngbDropdownItem>Assesment</button> -->
+                            </div>
+                        </div>
+                        <div ngbDropdown class="ghover ml-8 lg:w-1/4 mt-2 h-6 shadow-boxz rounded flex items-center justify-center boxkolor">
+                            <div ngbDropdownToggle class="btntop poppins"  class="poppins-r text-transparent bg-clip-text gradient-color text-sm group-hover:text-white" style="font-size: 8px;">Type :</div>
+                            <div  ngbDropdownToggle class="btntop poppins" class="hide-toggle-icon poppins-r text-transparent bg-clip-text gradient-color text-sm group-hover:text-white" style="color:#767278;font-size: 8px;">{{broadcastType}}</div><img ngbDropdownToggle class="btntop poppins"  style="width: 20px;height: 15px;" src="assets/teacher/icondown.png">
+                            <div  *ngIf="comtypes.length" ngbDropdownMenu aria-labelledby="dropdownBasic1" class="toggle">
+                                <!-- <button ngbDropdownItem>Attendance</button> -->
+                                <button (click)="setBroadcastType(type)" *ngFor="let type of comtypes" ngbDropdownItem>{{type}}</button>
+                                <!-- <button ngbDropdownItem>Assesment</button> -->
+                            </div>
+                        </div>
+                        <!-- <div ngbDropdown class="ghover mr-4 mt-2 w-1/5 lg:ml-40 ml-20 h-6 rounded flex items-center justify-center" style="border: 1px solid #bfbfbf;">
+                            <div ngbDropdownToggle class="btntop poppins ml-3 poppins-b text-transparent bg-clip-text gradient-color text-xl group-hover:text-white" style="font-size: 8px;">Schedule Alert</div>
+                            <img ngbDropdownToggle class="btntop poppins mr-2" style="width: 20px; height: 15px;" src="assets/teacher/icondown.png">                        
+                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="toggle">
+                                <button ngbDropdownItem>Attendance</button>
+                                <button class="btnwrap" ngbDropdownItem>Grades of Student</button>
+                                <button ngbDropdownItem>Assessment</button>
+                            </div>
+                        </div> -->
+                        
+                        
+                        </div>
+                        <input [(ngModel)]="broadcast" type="text" class="boxkolor mt-3 ml-8 mr-4 h-7 lg:w-11/12 w-10/12 shadow-sm rounded flex items-center justify-center pl-2 outline-none font-bold" placeholder="Broadcast Description :" style="font-size: 8px;">
+                        <label  class="boxkolor cursor-pointer mt-2 ml-8 mr-4 h-20 lg:w-11/12 w-10/12 shadow-sm rounded flex items-center justify-center" style="display: block; position: relative; overflow: hidden;">
+                            <span class="text-transparent bg-clip-text gradient-color" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 15px;">{{broadcastContent==null?'Click to browse audio files':getBroadcastFilename() }}</span>
+                            <input class="cursor-pointer " type="file" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0;" accept="audio/*" (change)="handleFileSelect($event)">
+                        </label>
+                                                
+                        <button (click)="sendBroadcast()" class="mt-3 ml-auto mr-auto h-7 w-20 shadow-boxz rounded flex items-center justify-center gradient-color">
+                            <p class="poppins-b text-transparent text-white  text-xs">Broadcast</p>
+                        </button>
+
+                </div>         
+             </div>
+            </div>   
+    
+    
+    
+            <div class="mt-2 flex lg:flex-row flex-col gap-x-0 lg:gap-x-8 w-full h-80 lg:justify-between">
+        
+            <div class="lg:w-4/5 w-full shadow-boxz rounded flex flex-col misij gradient-color relative">
+                <div class="flex justify-center">
+                    <p class="mt-3.5 ml-7 mr-8 poppins-b text-transparent bg-clip-text text-white text-xl">Chat</p>
+                    <!-- <div (click)="checkHasContent(languages)" ngbDropdown class="ghover mr-4 mt-2 h-6 w-36 shadow-boxz rounded flex items-center justify-center  "[ngClass]="{'bg-slate-400': languages.length <= 0, 'bg-white':languages.length> 0}">
+                        <div ngbDropdownToggle class="btntop poppins" class="poppins-r text-transparent bg-clip-text gradient-color text-sm group-hover:text-white" style="font-size: 8px;">Lang :</div>
+                        <div ngbDropdownToggle class="btntop poppins" class="hide-toggle-icon poppins-r text-transparent bg-clip-text gradient-color text-sm group-hover:text-white" style="color:#767278;font-size: 8px;">
+                            <span *ngIf="selectedlanguage == null;"> Select Language </span> 
+                            <span *ngIf="selectedlanguage != null">{{getFirstLetters(selectedlanguage.language)}}</span>
+                        </div>
+                        <img ngbDropdownToggle class="btntop poppins" style="width: 20px;height: 15px;" src="assets/teacher/icondown.png">
+                        <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="toggle"  [ngClass]="{'hide':languages.length <= 0}">
+                            <button (click)="selectLanguage(lang)" *ngFor="let lang of languages" ngbDropdownItem>{{lang.language}}</button>
+                        </div>
+                    </div> -->
+                    
+                    <!-- <div (click)="checkHasContent(courses)" ngbDropdown class="ghover mr-4 mt-2 h-6 w-36 shadow-boxz rounded flex items-center justify-center " [ngClass]="{'bg-slate-300': courses.length <= 0, 'bg-white':courses.length> 0}">
+                        <div ngbDropdownToggle class="btntop poppins" class="poppins-r text-transparent bg-clip-text gradient-color text-sm group-hover:text-white" style="font-size: 8px;">Course :</div>
+                        <div ngbDropdownToggle class="btntop poppins" class="hide-toggle-icon poppins-r text-transparent bg-clip-text gradient-color text-sm group-hover:text-white" style="color:#767278;font-size: 8px;">
+                            <span *ngIf="selectedcourse == null;"> Select Course </span> 
+                            <span *ngIf="selectedcourse != null">{{getFirstLetters(selectedcourse.course)}}</span>
+                        </div>
+                        <img ngbDropdownToggle class="btntop poppins"  style="width: 20px;height: 15px;" src="assets/teacher/icondown.png">
+                        <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="toggle" [ngClass]="{'hide':courses.length <= 0}">
+                            <button (click)="selectCourse(course)" *ngFor="let course of courses" ngbDropdownItem>{{course.course}}</button>
+                        </div>
+                    </div>
+                     -->
+                    <!-- <div (click)="checkHasContent(classes)" ngbDropdown class="ghover mr-4 w-1/4 mt-2 h-6 shadow-boxz rounded flex items-center justify-center" [ngClass]="{'bg-slate-300': classes.length <= 0, 'bg-white':classes.length> 0}">
+                        <div ngbDropdownToggle class="btntop poppins"  class="poppins-r text-transparent bg-clip-text gradient-color text-sm group-hover:text-white" style="font-size: 8px;">Class :</div>
+                        <div  ngbDropdownToggle class="btntop poppins" class="hide-toggle-icon poppins-r text-transparent bg-clip-text gradient-color text-sm group-hover:text-white" style="color:#767278;font-size: 8px;">
+                            <span *ngIf="selectedclass == null;"> Select Class </span> 
+                            <span *ngIf="selectedclass != null">{{selectedclass.class}}</span>
+                        </div><img ngbDropdownToggle class="btntop poppins"  style="width: 20px;height: 15px;" src="assets/teacher/icondown.png">
+                        <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="toggle" [ngClass]="{'hide':classes.length <= 0}">
+                            <button (click)="selectClass(class)" *ngFor="let class of classes" ngbDropdownItem>{{class.class}}</button>
+                        </div>
+                    </div> -->
+                </div>  
+    
+                <div class="page1 h-full bg-white p-2 mt-2" *ngIf="!showPage1">
+                    
+                <div class="directmisij flex justify-between items-center">
+                    <button (click)="togglePages()">
+                    <svg width="20" height="20" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 6L5 16L15 26" stroke="#464646" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7 16H27" stroke="#464646" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div>
+                        <div class="ml-8 text-sm" style="color: #7F7F7F;">Boss Ken</div>
+                        <div class="text-transparent bg-clip-text gradient-color text-center text-xs ml-8">online</div> <!-- Change to "Offline" and adjust color as needed -->
+                    </div>
+                    <div>
+                        <img class="piktur" src="assets/tonzxz.jpg" alt="Profile Image">              
+                    </div>
+                    
+                </div>
+                <hr class="mt-1">
+                <div class="h-96 bg-white flex flex-col justify-between p-4">
+                    <div class="p-2 shadow-boxz rounded-bl-none rounded-lg" style="background-color: #E1F3FD; color: #7F7F7F;">
+                        Chat Bubble 1
+                    </div>
+                    <div class="gradient-color shadow-boxz text-white p-2 rounded-br-none rounded-lg ml-auto">
+                        Chat Bubble 2
+                    </div>
+                </div>
+                
+                    <div class="search-box-container flex items-center p-0.5 max-w-md w-11/12 h-7 bg-white border-gradient1 rounded-xl shadow-md mt-12 ml-auto mr-auto">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.8125 11.25V16.875C17.8125 18.4283 16.5533 19.6875 15 19.6875C13.4467 19.6875 12.1875 18.4283 12.1875 16.875V9.375C12.1875 6.78617 14.2862 4.6875 16.875 4.6875C19.4638 4.6875 21.5625 6.78617 21.5625 9.375V18.75C21.5625 22.3744 18.6244 25.3125 15 25.3125C11.3756 25.3125 8.4375 22.3744 8.4375 18.75L8.4375 11.25V11.25" stroke="url(#paint0_linear_622_1148)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <defs>
+                            <linearGradient id="paint0_linear_622_1148" x1="15" y1="4.6875" x2="15" y2="25.3125" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#0477AF"/>
+                            <stop offset="1" stop-color="#6BF3BC"/>
+                            </linearGradient>
+                            </defs>
+                            </svg>
+                             <input class="appearance-none bg-transparent border-none w-full poppins ml-2 mr-3 py-1 px-2 leading-tight focus:outline-none text-black text-xs" type="text" placeholder="Write Something..." aria-label="Search" />
+                        <button class="search-button -mr-0.5 borderborder-white border-solid rounded-md gradient-color  w-20 h-7 flex items-center justify-center">
+                           <p class="poppins-b text-xs text-white">Send</p>
+                        </button>
+                    </div>
+                    
+            
+                </div>
+                
+                <div class="page2 overflow-hidden rounded-b bg-white p-2 mt-2" *ngIf="showPage1" style="height: 550px;">
+            
+                <div class="directmisij flex justify-between items-center">
+
+                    <div class="search-box-container flex items-center p-0.5 max-w-md w-11/12 h-6 bg-white border-gradient1 rounded-xl shadow-md mt-2 ml-auto mr-auto">
+                        <input [disabled]="listen" [(ngModel)]="search" (keyup)="searchPeople($event)" id="person_search" class="appearance-none bg-transparent border-none w-full poppins ml-2 mr-3 py-1 px-2 leading-tight focus:outline-none text-black text-xs" type="text" placeholder="Search" aria-label="Search" />
+                        <button class="search-button -mr-0.5 borderborder-white border-solid rounded-r-md search-color w-11 h-6 flex items-center justify-center">
+                            <img src="assets/search.png" alt="Search Icon" class="search-icon w-5 h-5" />
+                        </button>
+                    </div>    
+                   
+                    </div>
+                    <div class="directmisij">
+                       
+                    </div>
+                
+                    <!-- Your content goes here -->
+                     <!-- <div (click)="togglePages()" class="propayl">
+                      
+                        <div class="loobpropayl" >
+                            <div class="ayuspropayl">
+                                <img class="border-gradient piktur" src="assets/tonzxz.jpg" alt="Profile Image">
+                                <div>
+                                    <p class="ngaran">Mike Maxwell</p>
+                                    <p class="directmessage">It sounds good</p>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    
+                       
+                    </div>  -->
+
+
+                     <!-- chat -->
+
+                    <ng-container *ngIf="!searching; else searchingPeople " >
+                        <ng-container *ngIf="people.length; else showConvos" >
+                          <button (click)="openChatModal(person)" *ngFor="let person of people"   class="propayl flex flex-col " >
+                            
+                            <div class="loobpropayl" >
+                                <div class="ayuspropayl">
+                                    <img src="{{getUrl(person.profile)}}" alt="Profile Picture" class="border-gradient piktur">
+                                    <div>
+                                        <p class=" ngaran">{{person.firstname + ' '+ person.lastname}}</p>
+                                        <p class=" directmessage text-left">{{person.lastseen == 'Just now' ? 'Online' : 'Last seen ' + person.lastseen}}</p>
+                                    </div>
+                                   
+                                </div>
+                             
+                              
+                            </div>
+                          </button>
+                        </ng-container>
+                        <!-- <ng-template #showConvos> -->
+                          <ng-template #showConvos>
+                            <ng-container *ngIf="getConvos().length; else empty" >
+                              <button (click)="openChatModal(person)"  *ngFor="let person of getConvos()" class="propayl flex flex-col">
+                              
+                                <div class="loobpropayl" >
+                                    <div class="ayuspropayl">
+                                        <img class="border-gradient piktur" src="{{getUrl(person.profile)}}" alt="Profile Image">
+                                        <div>
+                                            <p class="ngaran">{{person.firstname + ' '+ person.lastname}}</p>
+                                            <p class="directmessage text-left">{{person.lastmessage}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                              </button>
+
+                            </ng-container>
+                            <ng-template #empty>
+                              <div class="mt-2 border-dashed border-2 border-slate-300 rounded-md h-32 w-full flex flex-col justify-center items-center">
+                                <span>No Inbox</span>
+                                <span>Start a conversation!</span>
+                              </div>
+                            </ng-template>
+                          </ng-template>
+                        <!-- </ng-template> -->
+                        
+               
+
+                      </ng-container>
+                      <ng-template #searchingPeople >
+                        <div class="mt- rounded-md h-32 w-full flex flex-col justify-center items-center">
+                          <span>Searching for people ... </span>
+                        </div>
+                      </ng-template>
+
+                      <!-- chat -->
+                    <!-- <div class="flex items-center justify-center absolute bottom-5 left-0 right-0">
+                        <div (click)="createMeet()" class="ghover h-7 w-20 shadow-boxz rounded flex items-center justify-center" [ngClass]="{'gradient-color': selectedclass != null, 'bg-slate-500': selectedclass == null}">
+                            <p class="poppins-b text-transparent text-white text-xs">Create Meet</p>
+                        </div>
+                    </div> -->
+                </div>
+                
+            </div>
+            
+            <div *ngIf="chatShowModal" [@fadeInOut] class="modal-overlayzz">
+    
+
+              <div class="modal-contentzz flex flex-col h-3/4 w-4/5 lg:w-1/4">
+           
+                <header class="px-4 py-3 lg:py-4 text-gray-700 flex justify-between items-center">
+                  <button (click)="closeChatModal()" class="text-blue-500 focus:outline-none">
+                    <i class=" fas fa-arrow-left text-transparent gradient-color bg-clip-text"></i>
+                  </button>
+                  
+                  <h1 class="text-xl text-center font-semibold flex-1">{{chat.firstname +' '+ chat.lastname}}</h1>
+                  <button (click)="closeModals()" class="text-blue-500 focus:outline-none">
+                    <i class="fas fa-close text-transparent gradient-color bg-clip-text "></i> 
+                  </button>
+                </header>
+                
+                
+                  <div class="linya"> </div>
+                
+                
+                  <main class="flex-1 overflow-y-scroll p-4">
+                  
+                    <div class="flex flex-col ">
+                   
+                      <ng-container *ngFor="let message of getMessages()" >
+                        <!-- user ini ken-->
+                          <div *ngIf="user.id == message.senderid; else notMe" class="bg-blue-500 mb-2 rounded-xl text-right p-2 max-w-64 self-end">
+                            <h1 class="text-white">{{message.message}}</h1>
+                          </div>
+                          <!-- ken sa teacher ini-->
+                         <ng-template #notMe>
+                          <div class="bg-gray-500 p-2 pr-4 mb-2 rounded-xl text-left max-w-64 self-start">
+                            <h1 class="text-white">{{message.message}}</h1>
+                          </div>
+                         </ng-template>
+                      </ng-container>
+          
+                   
+                    </div>
+                  </main>
+                
+              
+                  <footer>
+                    <div class="bg-transparent ">
+                      <div class="flex items-center mx-1 my-3">
+                        <div class="relative flex items-center w-full shadow-boxz rounded-xl mx-3">
+                          <input #messageInput type="text" [(ngModel)]="message" placeholder="Type your message..." class="shadow-boxz flex-1 py-2 px-3 rounded-lg border border-teal-400 focus:outline-none focus:ring-black focus:border-gray-600 text-black font-normal">
+                          <button (click)="chat.anonymous? sendMessageAnonymous() : sendMessage()" class="absolute right-2 top-1/2 transform -translate-y-1/2 cursor-pointer pr-3">
+                            <i class="fa-solid fa-paper-plane text-transparent gradient-color bg-clip-text text-xl"></i>
+                          </button>
+                        </div>
+                        
+                    
+                        
+                          
+                      </div>
+                    </div>
+                  </footer>
+                </div>  
+          
+          
+              </div>
+          
+            
+            <!-- Mic -->
+            <!-- You can add your mic element here -->
+        
+           <!-- Container -->
+           <div class="w-full h-64 shadow-boxz rounded mt-13 relative" >
+            <div class="flex w-full h-10 items-start justify-between">
+                <!-- Input -->
+                <div class="ml-1 w-1/2 h-full">
+
+                </div> 
+                <!-- Arrow Icon -->
+                <div class="flex items-center justify-center mt-2 mr-2">
+                   
+                </div>
+            </div>
+            <!-- New Body -->
+            <div class="h-full">
+                <div class="-mt-1 rounded-xl flex flex-row">
+                    <div (click)="checkDropdown(classes, 'Currently you have no class to alert')" ngbDropdown class="ghover ml-8 lg:w-1/4 mt-2 h-6 shadow-boxz rounded flex items-center justify-center boxkolor">
+                        <div ngbDropdownToggle class="btntop poppins"  class="poppins-r text-transparent bg-clip-text gradient-color text-sm group-hover:text-white" style="font-size: 8px;">Class :</div>
+                        <div  ngbDropdownToggle class="btntop poppins" class="hide-toggle-icon poppins-r text-transparent bg-clip-text gradient-color text-sm group-hover:text-white" style="color:#767278;font-size: 8px;">{{classToAlert==null? 'Select Class': classToAlert.class}}</div><img ngbDropdownToggle class="btntop poppins"  style="width: 20px;height: 15px;" src="assets/teacher/icondown.png">
+                        <div  *ngIf="classes.length" ngbDropdownMenu aria-labelledby="dropdownBasic1" class="toggle">
+                            <!-- <button ngbDropdownItem>Attendance</button> -->
+                            <button (click)="setAlertClass(class)" *ngFor="let class of classes" ngbDropdownItem><b>{{class.course}}</b> {{class.class}}</button>
+                            <!-- <button ngbDropdownItem>Assesment</button> -->
+                        </div>
+                    </div>
+                    <div ngbDropdown class="ghover ml-8 lg:w-1/4 mt-2 h-6 shadow-boxz rounded flex items-center justify-center boxkolor">
+                        <div ngbDropdownToggle class="btntop poppins"  class="poppins-r text-transparent bg-clip-text gradient-color text-sm group-hover:text-white" style="font-size: 8px;">Type :</div>
+                        <div  ngbDropdownToggle class="btntop poppins" class="hide-toggle-icon poppins-r text-transparent bg-clip-text gradient-color text-sm group-hover:text-white" style="color:#767278;font-size: 8px;">{{alertType}}</div><img ngbDropdownToggle class="btntop poppins"  style="width: 20px;height: 15px;" src="assets/teacher/icondown.png">
+                        <div  *ngIf="comtypes.length" ngbDropdownMenu aria-labelledby="dropdownBasic1" class="toggle">
+                            <!-- <button ngbDropdownItem>Attendance</button> -->
+                            <button (click)="setAlertType(type)" *ngFor="let type of comtypes" ngbDropdownItem>{{type}}</button>
+                            <!-- <button ngbDropdownItem>Assesment</button> -->
+                        </div>
+                    </div>
+                    <!-- <div ngbDropdown class="ghover mr-4 mt-2 w-1/5  lg:ml-40 ml-20  h-6 rounded flex items-center justify-center"style="border: 1px solid #bfbfbf;">
+                        <div ngbDropdownToggle class="btntop poppins"  class="ml-3 poppins-b text-transparent bg-clip-text gradient-color text-xl group-hover:text-white" style="font-size: 8px;">Schedule Alert</div><img ngbDropdownToggle class="btntop poppins mr-2" style="width: 20px;height: 15px;" src="assets/teacher/icondown.png">                        
+                        <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="toggle">
+                            <button ngbDropdownItem>Attendance</button>
+                            <button class="btnwrap" ngbDropdownItem>Grades of Student</button>
+                            <button ngbDropdownItem>Assesment</button>
+                        </div>
+                    </div> -->
+                    </div>
+                    <input [(ngModel)]="alertDesc" type="text" class="mt-3 ml-8 mr-4 h-7 lg:w-11/12 w-10/12 shadow-sm rounded flex items-center justify-center pl-2 boxkolor outline-none font-bold"  placeholder="Alert Description :" style="font-size: 8px;">
+                    <input [(ngModel)]="alertMessage" type="text" class="mt-2 ml-8 mr-4 h-20 lg:w-11/12 w-10/12 shadow-sm rounded flex pl-2 boxkolor outline-none font-bold" placeholder="Alert Message :" style="font-size: 8px; padding-bottom: 50px;">
+                    
+                    <button (click)="sendAlert()" class="mt-3 ml-auto mr-auto h-7 lg:mb-0 mb-4 w-20 shadow-boxz rounded flex items-center justify-center bg-red-500">
+                        <p class="poppins-b text-transparent text-white  text-xs">Send Alert</p>
+                    </button>
+        </div>
+
+
+
+
+        <div  class="rounded shadow-boxz bg-white" style="position:absolute; top: -20px; left: 31px; width: 200px; height: 50px; box-shadow: 0 0 10px #74FEBD;"> 
+            <div class="ml-4 mt-2.5 animate-wave text-center poppins-b text-transparent bg-clip-text gradient-color text-2xl" style="display: flex; align-items: center;">
+                <img src="assets/alert.png" alt="Megaphone Icon" style="width: 25px; height: 25px; margin-right: 8px;">
+                <span>Send Alert!</span>
+        </div>
+        
+            
+    
+    
+    

@@ -1,0 +1,77 @@
+<div class="container mx-auto border-2 border-gray-400 rounded-xl relative w-full max-w-4/5 h-4/5 flex flex-col justify-center items-center overflow-y-auto px-4 pt-10 py-6 mt-2 overflow-x-hidden">
+  <!-- Back button -->
+  <button (click)="redirectToOtherPage()" class="text-lg text-slate-600/80 absolute top-0 left-2 flex justify-center items-center p-2">
+    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 512 512">
+      <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M328 112L184 256l144 144"/>
+    </svg>
+    Back
+  </button>
+
+  <!-- Lesson content -->
+  <div class="hidden h-full w-full justify-center  lg:flex">
+    <div class="relative overflow-x-hidden h-full border rounded-3xl bg-no-repeat bg-center bg-contain bg-white">
+      <div (click)="prevPage()" class="h-[10%] bottom-0 select-none  w-full opacity-0 hover:!opacity-100 hover:bg-blue-500  absolute z-10 transition-all cursor-pointer flex  justify-center items-center text-white font-bold text-lg">
+        Previous Page
+      </div>  
+      <div class="h-full w-full">
+        <pdf-viewer
+      class="overflow-hidden block w-[500px] h-full"
+      [zoom]="1"
+      [src]="pdfBase" [render-text]="true" [page]="currentPage"  [show-all]="false" [original-size]="true"  [fit-to-page]="true" (after-load-complete)="afterLoadComplete($event)"></pdf-viewer>  
+      </div>
+    </div>
+    <div  *ngIf="currentPage < totalPages" class="relative  overflow-x-hidden h-full border rounded-3xl bg-no-repeat bg-center bg-contain bg-white">
+      <div (click)="nextPage()" class="h-[10%] bottom-0 select-none  w-full opacity-0 hover:!opacity-100 hover:bg-blue-500  absolute z-10 transition-all cursor-pointer flex  justify-center items-center text-white font-bold text-lg">
+        Next Page
+      </div>
+      <div class="h-full w-full">
+        <pdf-viewer
+      class="overflow-hidden block w-[500px] h-full"
+      [zoom]="1"  
+      [src]="pdfBase" [render-text]="true" [page]="currentPage+1"  [show-all]="false" [original-size]="true"  [fit-to-page]="true" (after-load-complete)="afterLoadComplete($event)"></pdf-viewer>  
+      </div>
+    </div>
+  </div>
+
+  <div class=" flex lg:hidden h-full w-full justify-center">
+    <div class="relative overflow-x-hidden h-full border rounded-3xl bg-no-repeat bg-center bg-contain bg-white">
+      <div *ngIf="currentPage < totalPages; else back" (click)="nextPage()" class="h-[10%] bottom-0 select-none opacity-0 hover:!opacity-100  w-full hover:bg-blue-500  absolute z-10 transition-all cursor-pointer flex  justify-center items-center text-white font-bold text-lg">
+        Next Page
+      </div>
+      <ng-template #back>
+           <div (click)="prevPage()" class="h-[10%] bottom-0 select-none  w-full opacity-0 hover:!opacity-100 hover:bg-blue-500  absolute z-10 transition-all cursor-pointer flex  justify-center items-center text-white font-bold text-lg">
+              Previous Page
+            </div>  
+      </ng-template>
+      <div class="h-full w-full">
+        <pdf-viewer
+      class="overflow-hidden block w-[500px] h-full"
+      [zoom]="1"
+      [src]="pdfBase" [render-text]="true" [page]="currentPage"  [show-all]="false" [original-size]="true"  [fit-to-page]="true" (after-load-complete)="afterLoadComplete($event)"></pdf-viewer>  
+      </div>
+    </div>
+  </div>
+  <!-- <div class="overflow-x-hidden h-full border rounded-3xl lg:p-5 md:p-2 sm:p-2 smallest:p-2 bg-no-repeat bg-center bg-contain"> -->
+    <!-- <div *ngIf="lessonData">
+      <ng-container *ngIf="lessonData.lessons[currentLessonIndex]">
+        <h2 class="text-2xl font-bold mb-4">{{ lessonData.lessons[currentLessonIndex].lines[0] }}</h2>
+        <img *ngIf="lessonData.lessons[currentLessonIndex].image" src="{{ lessonData.lessons[currentLessonIndex].image }}" alt="Lesson Image" class="mb-4 card-image">
+        <ul>
+          <li *ngFor="let line of lessonData.lessons[currentLessonIndex].lines.slice(1)" class="mb-2">
+            {{ line }}
+          </li>
+        </ul>
+      </ng-container>
+      <div *ngIf="!lessonData.lessons[currentLessonIndex]" class="text-center text-gray-600 mt-4">No lesson data available</div>
+    </div>
+    <div *ngIf="!lessonData" class="text-center text-gray-600 mt-4">No lesson data available</div> -->
+  <!-- </div> -->
+
+  <!-- Next button -->
+  <button [disabled]="disableAttempt" *ngIf="currentPage >= totalPages && contentLoaded" (click)="proceedToQuiz()" class="mt-4 px-6 py-2  {{disableAttempt?'bg-green-500 hover:bg-green-600':'bg-blue-500 hover:bg-blue-600'}} text-white font-bold rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+    {{disableAttempt ? 'Quiz Submitted':'Proceed to Quiz'}}
+  </button>
+  <div *ngIf="disableAttempt && currentPage >= totalPages && contentLoaded" class="text-green-600 text-lg font-bold">
+    Score: {{attempt.takenpoints}}/{{attempt.totalpoints}}
+  </div>
+</div>

@@ -1,0 +1,63 @@
+<!-- 
+    <div class="my-14 rounded-xl">
+      <div class="mx-10 grid gap-4 grid-cols-4  h-1/5  py-10 grid-rows-2">  
+          <div class="frame" *ngFor="let lesson of lessons">
+            <div class="overlap-group"><div class="text-wrapper">View Lesson</div></div>
+            <p class="div text-center">{{lesson.details}}</p>
+            <div class="text-wrapper-2 text-center">{{lesson.title}}s</div>
+            <img class="image" [src]="lesson.background? getURL(lesson.background) : 'assets/images/speak.png'" />
+          </div>
+      </div> 
+    </div> -->
+
+<!-- NEED
+1. Title
+2. Description
+3. PPT, PDF, WORD, Audio, Link, image, Video
+-->
+
+<div class="w-auto flex">
+    <button
+      class=" bg-white ml-4 mb-2 flex items-center poppins-b shadow-sm text-lg rounded-lg px-3 py-1.5 bg-transparent bg-gradient-to-r from-green-300 via-purple-600 to-blue-500 text-transparent bg-clip-text hover:scale-105 hover:ease-out duration-300"
+      (click)="navigateBack()"
+    >
+      Back
+    </button>
+  </div>
+<div class="flex flex-col w-full h-[80vh] place-content-center items-center justify-center" *ngIf="lessons.length <= 0">
+    <img class="filter saturate-100 object-contain h-96 w-96" [src]="'assets/ikos.png'">
+   <div class="mt-2" > Currently, this course has no lessons.</div>
+</div>
+<div *ngFor="let lesson of lessons" class="w-full bg-white p-4 rounded-md shadow-md mx-3 mb-3">
+        <div class="flex">
+            <div class="flex items-center mb-4">
+                <i class="fas fa-book text-4xl mr-2 textcolor"></i>
+                <h2 class="text-4xl font-bold">{{lesson.title}}</h2>
+            </div>
+        <div>
+            <div class="flex items-center">
+                <button *ngIf="!isDone(lesson)" (click)="markAsDone(lesson)" class="text-white poppins-sb ml-4 px-2 py-2 font-medium bg-blue-500 hover:bg-blue-600 rounded mr-2">
+                    Mark as done
+                </button>
+                <button *ngIf="isDone(lesson)" class="text-white poppins-sb ml-4 px-4 py-2 font-medium bg-green-500 hover:bg-green-600 rounded mr-2">
+                    Done
+                </button>
+            </div>
+        </div>
+        </div>
+    <div class="mb-4 flex items-center textcolor">
+        <span class="text-xl mr-2">{{lesson.firstname + ' ' + lesson.lastname}}</span>
+        <span class="text-xl"><span class="mx-2">•</span></span>
+        <span class="text-xl">{{parseTime(lesson.time)}}</span>
+    </div>
+    <hr class="my-4 border-t border-black"> <!-- Line separating professor info and description -->
+    <p class="text-gray-600 mb-4" *ngIf="lesson.details" >{{lesson.details}}</p>
+    <div class="mb-4" *ngIf="lesson.attachments">
+        <strong>Attachments:</strong>
+        <ul class="list-disc pl-4">
+            <li class="cursor-pointer select-none" ><a  (click)="openFile(lesson.attachments.split('>')[0])" class="text-blue-500">{{lesson.attachments.split(">")[1]}}</a></li>
+        </ul>
+    </div>
+
+ 
+</div>

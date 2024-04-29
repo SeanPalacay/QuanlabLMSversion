@@ -1,0 +1,61 @@
+{
+  "title": "Environmental Discussions",
+  "description": "Enhance your French speaking skills with phrases suitable for environmental discussions. Focus on clear pronunciation and environmentally conscious intonation.",
+  "instructions": [
+    "Below, you'll find a list of phrases that are key to engaging in conversations about environmental issues in French.",
+    "Your task is to record yourself speaking each phrase.",
+    "Ensure your pronunciation matches the provided text as closely as possible.",
+    "Try to maintain an environmentally conscious and persuasive speaking pace.",
+    "After recording each phrase, listen to your recording and compare it to the text.",
+    "Focus on intonation, clarity, and the articulate expression of environmental concerns and solutions.",
+    "Repeat the recording process as many times as needed to improve your pronunciation."
+  ],
+  "items": [
+    {
+      "question": "La durabilité environnementale est une question urgente.",
+      "answer": "La durabilité environnementale est une question urgente."
+    },
+    {
+      "question": "Discutons des initiatives écologiques.",
+      "answer": "Discutons des initiatives écologiques."
+    },
+    {
+      "question": "Je suis passionné par les efforts de conservation.",
+      "answer": "Je suis passionné par les efforts de conservation."
+    },
+    {
+      "question": "Que pouvons-nous faire pour protéger l'environnement ?",
+      "answer": "Que pouvons-nous faire pour protéger l'environnement ?"
+    },
+    {
+      "question": "La conscience environnementale est cruciale pour les générations futures.",
+      "answer": "La conscience environnementale est cruciale pour les générations futures."
+    },
+    {
+      "question": "Explorons les pratiques durables dans la vie quotidienne.",
+      "answer": "Explorons les pratiques durables dans la vie quotidienne."
+    },
+    {
+      "question": "Je valorise les discussions sur l'éthique environnementale.",
+      "answer": "Je valorise les discussions sur l'éthique environnementale."
+    },
+    {
+      "question": "Comment pouvons-nous faire face ensemble au changement climatique ?",
+      "answer": "Comment pouvons-nous faire face ensemble au changement climatique ?"
+    },
+    {
+      "question": "Promouvons la prise de décision consciente de l'environnement.",
+      "answer": "Promouvons la prise de décision consciente de l'environnement."
+    },
+    {
+      "question": "Quel rôle les individus peuvent-ils jouer dans la conservation de l'environnement ?",
+      "answer": "Quel rôle les individus peuvent-ils jouer dans la conservation de l'environnement ?"
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and environmentally aware, ideal for engaging in discussions about sustainability in French.",
+    "5-7 correct pronunciations": "Good! Your pronunciation is mostly correct, with a strong grasp of environmental phrases in French. Some areas may need refinement for full eco-conscious effectiveness.",
+    "2-4 correct pronunciations": "Fair. You're able to communicate basic environmental concepts in French, but further practice is needed for effective environmental advocacy.",
+    "0-1 correct pronunciations": "Needs improvement. Focus on practicing these environmental discussion phrases to enhance your French speaking skills in eco-conscious contexts."
+  }
+}

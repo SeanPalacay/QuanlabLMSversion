@@ -1,0 +1,66 @@
+{
+  "title": "French Language Essentials - Easy Mode",
+  "description": "Choose the English equivalent of the given French language.",
+  "items": [
+    {
+      "question": "Bonjour",
+      "choices": ["Goodbye", "Thank you", "Excuse me", "Hello"],
+      "answer": "Hello"
+    },
+    {
+      "question": "Merci",
+      "choices": ["Yes", "No", "Hello", "Thank you"],
+      "answer": "Thank you"
+    },
+    {
+      "question": "Oui",
+      "choices": ["Yes", "No", "Hello", "Thank you"],
+      "answer": "Yes"
+    },
+    {
+      "question": "Non",
+      "choices": ["Yes", "No", "Hello", "Thank you"],
+      "answer": "No"
+    },
+    {
+      "question": "Bonjour (le matin)",
+      "choices": ["Good evening", "Hello", "Good morning", "Thank you"],
+      "answer": "Good morning"
+    },
+    {
+      "question": "Bonsoir",
+      "choices": ["Good morning", "Hello", "Good evening", "Thank you"],
+      "answer": "Good evening"
+    },
+    {
+      "question": "Excusez-moi",
+      "choices": ["Yes", "No", "Excuse me / I'm sorry", "Thank you"],
+      "answer": "Excuse me"
+    },
+    {
+      "question": "Comment allez-vous ?",
+      "choices": [
+        "Goodbye",
+        "How are you?",
+        "Excuse me / I'm sorry",
+        "Thank you"
+      ],
+      "answer": "How are you?"
+    },
+    {
+      "question": "Merci pour votre travail",
+      "choices": [
+        "Yes",
+        "Thank you for your hard work",
+        "Excuse me / I'm sorry",
+        "Hello"
+      ],
+      "answer": "Thank you for your hard work"
+    },
+    {
+      "question": "Qu'est-ce que c'est ?",
+      "choices": ["Yes", "No", "What is this?", "Hello"],
+      "answer": "What is this?"
+    }
+  ]
+}

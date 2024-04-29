@@ -1,0 +1,59 @@
+{
+  "title": "Fill in the Blanks - Medium Mode",
+  "description": "This intermediate-level quiz challenges you to fill in the blanks with the correct French translations of the given Tagalog words or phrases.",
+  "instructions": [
+    "Each sentence contains a blank space where a Tagalog word is provided in parentheses.",
+    "Translate the Tagalog word into French and fill in the blank.",
+    "Ensure the French word correctly completes the sentence in terms of both meaning and grammatical structure.",
+    "Review your answers before submission."
+  ],
+  "items": [
+    {
+      "question": "Après avoir couru, il boit toujours un verre d'_____ pour se rafraîchir. (tubig)",
+      "suggestedAnswer": "eau"
+    },
+    {
+      "question": "Elle a acheté un nouveau _____ pour son anniversaire. (libro)",
+      "suggestedAnswer": "livre"
+    },
+    {
+      "question": "Nous regardons les étoiles dans le ciel chaque _____ claire. (gabi)",
+      "suggestedAnswer": "nuit"
+    },
+    {
+      "question": "Mon frère apprend à jouer de la _____ à l'école. (gitara)",
+      "suggestedAnswer": "guitare"
+    },
+    {
+      "question": "La _____ est son fruit préféré pendant l'été. (mangga)",
+      "suggestedAnswer": "mangue"
+    },
+    {
+      "question": "Il porte un _____ rouge pour la fête de Noël. (damit)",
+      "suggestedAnswer": "vêtement"
+    },
+    {
+      "question": "La famille se réunit pour manger un grand repas chaque _____ du Nouvel An. (gabi)",
+      "suggestedAnswer": "soir"
+    },
+    {
+      "question": "Elle collectionne des _____ de différents pays du monde. (selyo)",
+      "suggestedAnswer": "timbres"
+    },
+    {
+      "question": "Les enfants jouent avec leur _____ dans le parc. (aso)",
+      "suggestedAnswer": "chien"
+    },
+    {
+      "question": "Pour le petit déjeuner, il préfère toujours du _____ avec du beurre. (tinapay)",
+      "suggestedAnswer": "pain"
+    }
+  ],
+  "scoring": {
+    "10 correct answers": "Excellent! Your translation skills are quite impressive.",
+    "7-9 correct answers": "Great job! You're almost there, with just a little more practice needed.",
+    "4-6 correct answers": "Good effort! You've shown a solid understanding, but room for improvement remains.",
+    "1-3 correct answers": "A good start! Keep studying and practicing to enhance your skills.",
+    "0 correct answers": "It's a challenging start, but don't give up! Learning a new language takes time and practice."
+  }
+}

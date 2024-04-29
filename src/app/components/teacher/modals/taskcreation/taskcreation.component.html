@@ -1,0 +1,37 @@
+<div class="modal-content custom-modal-content">
+      <div class="inputwrap">
+        <div class="titlehead poppins-b"><h1>TASK CREATION FORM</h1></div>
+
+        <div class="container">
+       <div class="titleinput">
+        <input [(ngModel)]="title"  class="poppins" type="text" placeholder="Task Title :">
+       </div>
+       <div class="text">
+        <textarea [(ngModel)]="description"  name="" id="" cols="30" rows="10" placeholder="Description :"></textarea>
+        <!-- <select name="language" id="language" class="poppins">
+          <option class="placeholder poppins-b" value="" disabled selected hidden>Language Proficiency</option>
+          <option value="beginner">Beginner</option>
+          <option value="intermediate">Intermediate</option>
+          <option value="advanced">Advanced</option>
+        </select> -->
+    </div>
+        <div class="deadline">
+          <input type="email"  [(ngModel)]="deadline" name="deadline" id="deadline" placeholder="Deadline" onfocus="this.type='date'" onblur="this.type='text'" required style="padding-left: 10px;">
+            <!-- <input type="text" placeholder="Deadline :"> -->
+            <label class="cursor-pointe" for="fileinput" [ngClass]="{'!bg-green-200': file!=null}"><img src="assets/teacher/Link.png" alt="" ></label>
+            <input class="hidden" id="fileinput" type="file" (change)="onFileSelected($event)">
+        </div>
+        <div class="text">
+            <select [(ngModel)]="course" name="course" id="course" class="poppins">
+              <option class="placeholder poppins-b" value="" disabled selected hidden>Select Course</option>
+              <option *ngFor="let _course of courses" value="{{_course.id}}">{{_course.course}}</option>
+            </select>
+        </div>
+    </div>
+        <div class="btnwrap">
+            <button (click)="createTask()" class="save poppins">Save</button>
+            <button class="cancel poppins"(click)="closeModal()">Cancel</button>
+        </div>
+      </div>  
+    
+</div>

@@ -1,0 +1,61 @@
+{
+  "title": "Advanced Conversations",
+  "description": "Enhance your Japanese speaking skills with phrases used for advanced conversations. Focus on clear pronunciation and intellectual intonation.",
+  "instructions": [
+    "Below is a list of phrases suitable for advanced conversations in Japanese.",
+    "Record yourself speaking each phrase.",
+    "Strive for clear, articulate, and thoughtful pronunciation.",
+    "Maintain a conversational yet profound pace.",
+    "After recording, listen to your playback and compare it to the text.",
+    "Pay attention to intonation, clarity, and fluency in Japanese.",
+    "Repeat the recording process as necessary to improve your Japanese speaking skills."
+  ],
+  "items": [
+    {
+      "question": "詳細について話し合いましょう。 (Shousai ni tsuite hanashiaimashou.)",
+      "answer": "詳細について話し合いましょう。 (Shousai ni tsuite hanashiaimashou.)"
+    },
+    {
+      "question": "この件についてのあなたの見解は何ですか？ (Kono ken ni tsuite no anata no kenkai wa nan desu ka?)",
+      "answer": "この件についてのあなたの見解は何ですか？ (Kono ken ni tsuite no anata no kenkai wa nan desu ka?)"
+    },
+    {
+      "question": "文化的なニュアンスに興味があります。 (Bunkateki na nyuansu ni kyoumi ga arimasu.)",
+      "answer": "文化的なニュアンスに興味があります。 (Bunkateki na nyuansu ni kyoumi ga arimasu.)"
+    },
+    {
+      "question": "その概念についてもっと詳しく説明してもらえますか？ (Sono gainen ni tsuite motto kuwashiku setsumei shite moraemasu ka?)",
+      "answer": "その概念についてもっと詳しく説明してもらえますか？ (Sono gainen ni tsuite motto kuwashiku setsumei shite moraemasu ka?)"
+    },
+    {
+      "question": "代替案について探求しましょう。 (Daitaian ni tsuite tankyuu shimashou.)",
+      "answer": "代替案について探求しましょう。 (Daitaian ni tsuite tankyuu shimashou.)"
+    },
+    {
+      "question": "あなたの繊細なアプローチに感謝します。 (Anata no sensai na apuroochi ni kansha shimasu.)",
+      "answer": "あなたの繊細なアプローチに感謝します。 (Anata no sensai na apuroochi ni kansha shimasu.)"
+    },
+    {
+      "question": "ここでの基本的なテーマは何ですか？ (Koko de no kihonteki na teema wa nan desu ka?)",
+      "answer": "ここでの基本的なテーマは何ですか？ (Koko de no kihonteki na teema wa nan desu ka?)"
+    },
+    {
+      "question": "歴史的な背景が魅力的です。 (Rekishi-teki na haikei ga miryokuteki desu.)",
+      "answer": "歴史的な背景が魅力的です。 (Rekishi-teki na haikei ga miryokuteki desu.)"
+    },
+    {
+      "question": "刺激的な議論に参加しましょう。 (Shigekiteki na giron ni sanka shimashou.)",
+      "answer": "刺激的な議論に参加しましょう。 (Shigekiteki na giron ni sanka shimashou.)"
+    },
+    {
+      "question": "あなたの洞察は考え抜かれています。 (Anata no dousatsu wa kangaenukarete imasu.)",
+      "answer": "あなたの洞察は考え抜かれています。 (Anata no dousatsu wa kangaenukarete imasu.)"
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and sophisticated, suitable for advanced conversations in Japanese.",
+    "5-7 correct pronunciations": "Good! Your pronunciation is largely effective, with some areas needing refinement for advanced dialogues.",
+    "2-4 correct pronunciations": "Fair. You're able to engage in complex conversations, but your pronunciation needs further refinement.",
+    "0-1 correct pronunciations": "Needs improvement. Focus on practicing these advanced phrases to enhance your Japanese speaking skills."
+  }
+}

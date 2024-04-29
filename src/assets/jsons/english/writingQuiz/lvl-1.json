@@ -1,0 +1,59 @@
+{
+  "title": "Basic Filipino to English Translation Quiz",
+  "description": "Test your skills in translating basic Filipino words into English. This quiz is designed for beginners.",
+  "instructions": [
+    "Read each Filipino word carefully.",
+    "Write the English translation of the word.",
+    "The case (uppercase or lowercase) of your answer does not matter, as long as the spelling is correct.",
+    "After completing all questions, submit your answers for scoring."
+  ],
+  "items": [
+    {
+      "question": "What is the English translation of 'aso'?",
+      "suggestedAnswer": "dog"
+    },
+    {
+      "question": "What is the English translation of 'araw'?",
+      "suggestedAnswer": "sun"
+    },
+    {
+      "question": "What is the English translation of 'bahay'?",
+      "suggestedAnswer": "house"
+    },
+    {
+      "question": "What is the English translation of 'bata'?",
+      "suggestedAnswer": "child"
+    },
+    {
+      "question": "What is the English translation of 'tubig'?",
+      "suggestedAnswer": "water"
+    },
+    {
+      "question": "What is the English translation of 'kamay'?",
+      "suggestedAnswer": "hand"
+    },
+    {
+      "question": "What is the English translation of 'puno'?",
+      "suggestedAnswer": "tree"
+    },
+    {
+      "question": "What is the English translation of 'puso'?",
+      "suggestedAnswer": "heart"
+    },
+    {
+      "question": "What is the English translation of 'bulaklak'?",
+      "suggestedAnswer": "flower"
+    },
+    {
+      "question": "What is the English translation of 'isda'?",
+      "suggestedAnswer": "fish"
+    }
+  ],
+  "scoring": {
+    "10 correct answers": "Excellent! You have a perfect understanding of these basic Filipino words.",
+    "7-9 correct answers": "Very good! You have a strong grasp of most words, with a little room for improvement.",
+    "4-6 correct answers": "Good effort! You're on the right track, but reviewing some words could be beneficial.",
+    "1-3 correct answers": "A decent start! Keep practicing to improve your translation skills.",
+    "0 correct answers": "It seems you're new to this. Keep studying and practicing!"
+  }
+}

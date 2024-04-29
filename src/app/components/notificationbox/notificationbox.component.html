@@ -1,0 +1,42 @@
+<div class="notification-box rounded-md" cdkDrag cdkDragRootElement=".notification-box">
+    <div class="header flex px-3 pt-3" cdkDragHandle>
+     <h1 class="poppins-b text-2xl">Notifications</h1>
+     <div class="ml-12">
+        <!-- <button class="bg-white rounded-md p-1"><img src="assets/Notificationbox/Frame.png" alt="" class="size-4"></button>  -->
+        <!-- <button class="bg-white rounded-md ml-2 p-1"><img src="assets/Notificationbox/delete.png" alt="" class="size-4"></button> -->
+        <button (click)="markAllAsRead()" class="rounded-md ml-2 p-1">
+            <i class='bx bxs-inbox text-white text-2xl' ></i>
+        </button>
+    </div>
+    </div>
+    <ng-container *ngIf="getNotifications().length; else empty" >
+        <div  class=" p-3 cursor-pointer overflow-y-auto min-h-52 max-h-96">
+            <div class="bg-slate-100 w-full p-2 min-h-52 rounded-md mb-2 align-middle">
+                <div *ngFor="let notification of getNotifications(); let i = index" [ngClass]="{'bg-white':notification.status != 'seen'}" class="bg-slate-100 hover:!bg-slate-200 p-2 rounded-md mb-2"  (click)="openMial(notification, i)">
+                    <div class="flex">
+                        <!-- <img src="assets/Notificationbox/mail_fill.png" alt="" class="size-6 mt-2"> -->
+                        <i *ngIf="!isUrgent(notification.title)" class='bx bxs-envelope text-xl text-gray-400' [ngClass]="{'text-yellow-400': notification.status != 'seen'}" ></i>
+                        <i *ngIf="isUrgent(notification.title)" class='bx bxs-error-alt text-xl text-gray-400' [ngClass]="{'text-red-500': notification.status != 'seen'}" ></i>
+                        <div class="ml-3">
+                            <div class="poppins-b text-[#7F7F7F]"><h2 [innerHTML]="removeUrgentTag(notification.title)"></h2></div>
+                            <div class="poppins text-[#7F7F7F] whitespace-break-spaces text-clip">
+                                <p>{{ parseDate(notification.timestamp) }}</p>
+                                
+                              </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </ng-container>
+    <ng-template #empty>
+      <div class=" p-2  overflow-y-auto max-h-96">
+        <div class="bg-slate-50 w-full p-2 min-h-52 rounded-md mb-2 flex justify-center items-center">
+            Your notification is empty.
+        </div>
+      </div>
+    </ng-template>
+  </div>
+  

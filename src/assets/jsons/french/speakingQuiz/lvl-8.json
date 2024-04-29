@@ -1,0 +1,61 @@
+{
+  "title": "Health and Wellness",
+  "description": "Improve your French speaking skills with phrases commonly used in health and wellness contexts. Focus on clear pronunciation and compassionate intonation.",
+  "instructions": [
+    "Below, you'll find a list of common phrases related to health and wellness in French.",
+    "Your task is to record yourself speaking each phrase.",
+    "Ensure your pronunciation matches the provided text as closely as possible.",
+    "Try to maintain a natural and clear speaking pace.",
+    "After recording each phrase, listen to your recording and compare it to the text.",
+    "Focus on intonation, clarity, and fluency.",
+    "Repeat the recording process as many times as needed to improve your pronunciation."
+  ],
+  "items": [
+    {
+      "question": "Je dois prendre rendez-vous chez le médecin.",
+      "answer": "Je dois prendre rendez-vous chez le médecin."
+    },
+    {
+      "question": "Je me sens malade.",
+      "answer": "Je me sens malade."
+    },
+    {
+      "question": "Où est la pharmacie la plus proche ?",
+      "answer": "Où est la pharmacie la plus proche ?"
+    },
+    {
+      "question": "J'ai mal à la tête.",
+      "answer": "J'ai mal à la tête."
+    },
+    {
+      "question": "Avez-vous des douleurs ?",
+      "answer": "Avez-vous des douleurs ?"
+    },
+    {
+      "question": "Je prends des médicaments pour un rhume.",
+      "answer": "Je prends des médicaments pour un rhume."
+    },
+    {
+      "question": "Pouvez-vous appeler une ambulance ?",
+      "answer": "Pouvez-vous appeler une ambulance ?"
+    },
+    {
+      "question": "J'ai besoin d'un bilan de santé.",
+      "answer": "J'ai besoin d'un bilan de santé."
+    },
+    {
+      "question": "Je me suis foulé la cheville.",
+      "answer": "Je me suis foulé la cheville."
+    },
+    {
+      "question": "Je suis allergique aux crustacés.",
+      "answer": "Je suis allergique aux crustacés."
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and empathetic, perfect for discussing health and wellness in French.",
+    "5-7 correct pronunciations": "Good! Your pronunciation is mostly correct, with a good grasp of medical phrases in French. There are some areas to refine for improved clarity.",
+    "2-4 correct pronunciations": "Fair. You can navigate basic health conversations in French, but there are several areas needing significant improvement.",
+    "0-1 correct pronunciations": "Needs improvement. Consider practicing more to enhance your French pronunciation skills, or seek additional resources for learning."
+  }
+}

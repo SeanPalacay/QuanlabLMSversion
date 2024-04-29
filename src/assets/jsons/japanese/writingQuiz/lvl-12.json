@@ -1,0 +1,59 @@
+{
+  "title": "Japanese Sentence Completion Quiz - Medium Mode",
+  "description": "Test your Japanese vocabulary and grammar knowledge by completing sentences. This quiz is designed for intermediate learners.",
+  "instructions": [
+    "Read each sentence carefully.",
+    "Fill in the blank with the correct Japanese word in Romaji.",
+    "The case (uppercase or lowercase) of your answer does not matter, as long as the spelling is correct.",
+    "After completing all questions, submit your answers for scoring."
+  ],
+  "items": [
+    {
+      "question": "Asa, kohi to _____ wo tabemasu. (In the morning, I eat coffee and bread.)",
+      "suggestedAnswer": "pan"
+    },
+    {
+      "question": "Kono _____ wa amari takaku arimasen. (This book is not very expensive.)",
+      "suggestedAnswer": "hon"
+    },
+    {
+      "question": "Watashi wa _____ de Nihongo wo benkyou shimasu. (I study Japanese on my computer.)",
+      "suggestedAnswer": "pasokon"
+    },
+    {
+      "question": "Kare wa _____ de kaimono wo suru no ga suki desu. (He likes shopping at the supermarket.)",
+      "suggestedAnswer": "suupaa"
+    },
+    {
+      "question": "Watashi no inu wa _____ ga daisuki desu. (My dog loves playing with a ball.)",
+      "suggestedAnswer": "booru"
+    },
+    {
+      "question": "Kanojo wa _____ ni ikimasu. (She goes to the library.)",
+      "suggestedAnswer": "toshokan"
+    },
+    {
+      "question": "Watashitachi wa _____ de eiga wo mimashita. (We watched a movie on TV.)",
+      "suggestedAnswer": "terebi"
+    },
+    {
+      "question": "Watashi wa _____ de Nihon ni ikimasu. (I will go to Japan by plane.)",
+      "suggestedAnswer": "hikouki"
+    },
+    {
+      "question": "Kare wa _____ ga totemo jouzu desu. (He is very good at playing the guitar.)",
+      "suggestedAnswer": "gitaa"
+    },
+    {
+      "question": "Kono _____ wa watashi no desu. (This camera is mine.)",
+      "suggestedAnswer": "kamera"
+    }
+  ],
+  "scoring": {
+    "10 correct answers": "Outstanding! Your grasp of Japanese vocabulary and sentence structure is excellent.",
+    "7-9 correct answers": "Very good! You have a strong understanding with minor areas for improvement.",
+    "4-6 correct answers": "Good job! You're on the right track, but there's room to grow.",
+    "1-3 correct answers": "Fair effort. Keep practicing to enhance your Japanese skills.",
+    "0 correct answers": "A tough challenge, but don't give up! Study and practice will help you improve."
+  }
+}

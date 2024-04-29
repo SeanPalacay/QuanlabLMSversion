@@ -1,0 +1,191 @@
+.propayl{
+    overflow-y: auto;
+  }
+  
+  .loobpropayl{
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  
+  .ayuspropayl{
+    display: flex; align-items: center;
+  }
+  .misij{
+    margin-top: -270px;
+    margin-bottom: 10px;
+  }
+
+  .mt-13 {
+    margin-top:52px;
+  }
+
+  .mt-15 {
+    margin-top: 10px;
+  }
+  @media screen and (max-width: 500px) {
+  
+
+    .mt-13 {
+      margin-top:360px; 
+      margin-bottom: 100px; 
+    }
+
+    .mt-15 {
+      margin-top: 650px;
+    }
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  } 
+  
+  .dropdown-content a {
+    color: grey;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .ghover:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
+  }
+  
+  /* Hide the default arrow icon in the dropdown toggle with the specified class */
+.hide-toggle-icon::after {
+    display: none !important;
+}
+.boxkolor{
+    background-color: #E1F3FD;
+}
+
+.directmisij{
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .textmisij{
+    margin: 0;font-size: 10px; margin-left:8px;color: #7F7F7F;
+  }
+
+  .piktur{
+    height: 30px; width: 30px; border-radius: 50%; margin-left: 10px; margin-right: 10px;
+  }
+  .border-gradient1 { 
+  
+    background-image: linear-gradient(white, white), 
+                      linear-gradient(to right, var(--tw-gradient-color));
+    background-origin: border-box;
+    background-clip: content-box, border-box; 
+    box-decoration-break: clone;
+  }
+
+
+  .directmisij{
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .textmisij{
+    margin: 0;font-size: 10px; margin-left:8px;color: #7F7F7F;
+  }
+  
+  .propayl{
+    overflow-y: auto; max-height: 390px;
+  }
+  
+  .loobpropayl{
+    display: flex; justify-content: space-between; align-items: center; margin-top:10px;
+  }
+  
+  .ayuspropayl{
+    display: flex; align-items: center;
+  }
+  
+  .piktur{
+    height: 30px; width: 30px; border-radius: 50%; margin-left: 10px; margin-right: 10px;
+  }
+  
+  .ngaran{
+    margin: 0;font-size: 13px; text-align: left;;
+  }
+  
+  .directmessage{
+    margin: 0;font-size: 9px; color: #7F7F7F;
+  }
+  
+  .taym{
+    margin: 0; font-size: 9px; margin-right: 10px; color: #7F7F7F;
+  }
+  .misijno{
+    color: white; border-radius: 50%; width: 10px; height: 10px; font-size: 6px; text-align: center;
+  }
+
+
+  .cut-diagonal {
+    clip-path: polygon(35% 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  @media only screen and (max-width: 975px) {
+    .contianerflex{
+      display: block;
+    }
+    .boxes{
+      width: 100%;
+    }
+  } 
+
+  
+  .animate-bounce {
+    animation: bounce 3s ease-in-out infinite;
+  }
+  .animate-bounce:hover {
+    filter: drop-shadow(0 0 2em #24f0ffaa);
+  }
+
+
+.modal-overlayzz {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; 
+}
+
+.modal-contentzz {
+  background: white;
+  border-radius: 8px;
+  animation: fadeInOut 0.3s ease-in-out;
+  z-index: 9999; 
+}
+
+@keyframes fadeInOut {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: transparent; 
+  
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent; 
+
+}

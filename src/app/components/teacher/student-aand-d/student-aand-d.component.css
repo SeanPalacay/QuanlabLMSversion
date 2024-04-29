@@ -1,0 +1,241 @@
+body{
+    padding: 20px;
+    padding-left: 40px;
+    padding-top: 0px;
+    overflow-y: auto;
+}
+.select{
+    display: flex;
+}
+.topbutton div .btntop{
+    background-color: #ffffff;
+    color: transparent;
+    background-image: linear-gradient(to right, rgb(1, 114, 175) 0%, rgb(116, 254, 189) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    display: flex;
+    border-radius: 12px;
+    height: 43px;
+    box-shadow: 0px 4px 15px #00000040;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+    padding-right: 5px;
+}
+.topbutton div .btntop span{
+  color: black;
+  margin-left: 10px;
+}
+.toggle button{
+    text-align: center;
+    }
+    .toggle .btnwrap{
+        border-top: 1px solid #00000040;
+        border-bottom: 1px solid #00000040;
+    }
+.toggle{
+    margin-left: 20px;
+}
+.toggle button:hover{
+color: rgb(116, 254, 189);
+text-align: center;
+}
+
+
+.list{
+    width:250px;
+    height:310px;
+    background-color: #e1f3fd;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px #00000040;
+    margin-top: 20px;
+    padding: 20px;
+    
+}
+.list .table table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 12px; /* Apply border-radius to the table */
+    overflow: hidden; /* Hide the overflowing border-radius */
+    max-height: 250px;
+  }
+  
+  .table th,
+  .table td {
+    border-bottom: 1px solid #00000040;
+    padding: 8px;
+    padding-left: 14px;
+    width: 300px;
+    border-radius: 0; /* Reset border-radius for table cells */
+  }
+  .table td{
+    font-size: 13px;
+    color: rgb(101, 100, 100);
+    cursor: pointer;
+  }
+  .table td:hover{
+    background-image: linear-gradient(to right, rgb(1, 114, 175) 0%, rgb(116, 254, 189) 100%); /* Gradient for background */
+    -webkit-background-clip: text; /* Clip text to the background */
+    background-clip: text;
+    color: transparent; /* Set text color to transparent */
+  }
+  
+  .table th {
+    background-image: linear-gradient(to right, rgb(1, 114, 175) 0%, rgb(116, 254, 189) 100%);
+    font-weight: bold;
+    color: white;
+    font-size: 15px;
+    padding: 4px;
+    padding-left: 14px;
+  }
+
+  .table tbody {
+    max-height: 150px; /* Change this value as needed */
+    overflow-y: auto;
+    display: block;
+}
+.table thead {
+    display: table;
+    width: 100%;
+}
+.table > h1 {
+    background: linear-gradient(to right, rgb(1, 114, 175) 0%, rgb(116, 254, 189) 100%);
+    -webkit-background-clip: text; 
+    background-clip: text;
+     color: transparent; 
+     font-size: 18px;
+}
+  .table .sched{
+    width: 277px;
+  }
+table{
+    margin-top: 10px;
+}
+.list .apply{
+    margin-left: 39%;
+    margin-top: 20px;
+}
+.list .apply button{
+    background-color: #fffffff6;
+    color: transparent;
+    background-image: linear-gradient(to right, rgb(1, 114, 175) 0%, rgb(116, 254, 189) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    display: flex;
+    border-radius: 12px;
+    height: 20px;
+    box-shadow: 0px 4px 15px #00000040;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 15px;
+}
+.container2{
+padding-right: 20px;
+}
+.container2 .graphwrap{
+    height: 600px;
+    width: 1000px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 1px 20px #00000040;
+}
+
+.btnwrap button{
+    height: 30px;
+    width: 160px;
+    background: linear-gradient(to right, rgb(1, 114, 175) 0%, rgb(116, 254, 189) 100%);
+    margin-top: 20px;
+    border-radius: 12px;
+    color: white;
+    margin-left: 50px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .select{
+        display: block;
+    }
+    .container{
+        display: flex;
+    }
+    .container .list2{
+        margin-left: 50px;
+    }
+    .container2{
+        padding-right: 20px;
+        }
+        .container2 .graphwrap{
+            margin-top: 50px;
+            height:400px;
+            width: 580px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0px 1px 20px #00000040;
+        }
+        .container2 .btnwrap{
+            margin-left: -50px;
+        }
+}
+
+@media only screen and (max-width: 900px) {
+    .select{
+        display: block;
+    }
+    .container{
+        display: block;
+    }
+    .container .list2{
+        margin-left: 0px;
+    }
+    .container2{
+        padding-right: 20px;
+        }
+        .container2 .graphwrap{
+            margin-top: 50px;
+            height:400px;
+            width: 580px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0px 1px 20px #00000040;
+        }
+        .container2 .btnwrap{
+            margin-left: -20px;
+        }
+        .btnwrap button{
+            height: 30px;
+            width: 160px;
+            margin-left: 20px;
+        }
+}
+
+@media only screen and (max-width: 855px) {
+    .select{
+        display: block;
+    }
+    .container{
+        display: block;
+    }
+    .container .list2{
+        margin-left: 0px;
+    }
+    .container2{
+        padding-right: 20px;
+        }
+        .container2 .graphwrap{
+            margin-top: 50px;
+            height:400px;
+            width: auto;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0px 1px 20px #00000040;
+        }
+        .container2 .btnwrap{
+            margin-left: -20px;
+        }
+        .btnwrap button{
+            height: 30px;
+            width: 160px;
+            margin-left: 20px;
+        }
+}

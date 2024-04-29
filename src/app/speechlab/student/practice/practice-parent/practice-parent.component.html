@@ -1,0 +1,95 @@
+<div *ngIf="!denied || isTeacher else notGranted" class="h-3/4 mt-4 gap-4">
+    <div class="rounded-xl">
+      <div
+        class="h-auto pb-11 mx-6 gap-2 grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 max-[400px]:grid-cols-1 max-[500px]:grid-cols-2"
+      >
+        <div *ngFor="let item of array; let i = index">
+          <a>
+            <button
+                (click)="openModule(item)"
+              class="relative w-full h-full mx-auto text-left bg-white shadow-boxz rounded-2xl overflow-hidden md:h-11/12` md:text-center"
+            >
+              <div
+                class="absolute flex justify-center place-items-center z-10 top-0 left-0 bg-blue-950 w-full h-full bg-opacity-75"
+                *ngIf="item.disabled"
+              >
+                <div class="text-white text-3xl font-bold">
+                  Module {{ i + 1 }}
+                  <span class="font-thin max-[640px]:hidden">LOCKED</span>
+                </div>
+              </div>
+              <div
+                class="absolute z-0 top-0 left-0 backdrop-filter backdrop-blur-md w-full h-full"
+                *ngIf="item.disabled"
+              ></div>
+              <img
+                class="w-full h-64 object-cover"
+                src="assets/login/school.png"
+                alt="Card Image"
+              />
+              <div class="py-2 items-center justify-between">
+                <div class="mt-2 items-center text-center">
+                  <div
+                    class="font-bold lg:block text-gray-700 text-base line-clamp-2"
+                  >
+                   {{item.title}}
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-4 text-center mx-4">
+                <button
+                  class="gradient-color rounded-3xl text-white text-sm py-2 px-5 md:w-auto h-10 md:h-auto"
+                >
+                  Start
+                </button>
+              </div>
+            </button>
+          </a>
+        </div>
+      </div>
+  
+      <!-- <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 justify-center">
+              <div *ngFor="let level of levels; let i = index">
+                <a (click)="openQuiz(i)">
+                  <div class="m-2 bg-white shadow-md rounded-md overflow-hidden">
+                    <div class="gradient-color cursor-pointer text-white text-center py-2 sm:py-4">
+                      <i class="fa-solid fa-book-open-reader text-lg md:text-xl"></i>
+                      <div class="text-lg sm:text-xl md:text-2xl font-bold">Level 1</div>
+                      <div class="text-base sm:text-lg md:text-xl">Level Name</div>
+                    </div>
+                  </div>
+                </a>
+                  <div class="flex-grow px-6 py-4">
+                    <div class="font-bold text-sm sm:text-base line-clamp-2">LEVEL {{i+1}}<span class="font-thin">LOCKED</span></div>
+                  </div>
+              </div>
+            </div>
+             
+             <!-- <div class="h-3/4 mt-4 gap-2 grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 max-[400px]:grid-cols-1 max-[500px]:grid-cols-2">
+              <div *ngFor="let level of levels; let i = index">
+                <a (click)="openQuiz(i)">
+              <div class="flex p-4 sm:p-8 justify-center items-stretch">
+                <div class="w-full sm:max-w-64 h-auto sm:h-96 overflow-hidden bg-white rounded shadow-lg flex flex-col">
+                  <img class="w-full h-48 sm:h-full object-cover" src="assets/login/school.png" alt="Card Image">
+                  <div class="flex-grow px-6 py-4">
+                    <div class="font-bold text-sm sm:text-base line-clamp-2">LEVEL {{i+1}}: {{level.title}}</div>
+                    <p class="text-gray-700 text-base line-clamp-2">
+                      {{level.description}}
+                    </p>
+                  </div>
+                  <button class="w-full py-2 bg-blue-500 text-white font-bold">Start Now!</button>
+                </div>
+              </div>
+              </a>
+            </div>
+            </div>
+             -->
+    </div>
+  </div>
+
+  <ng-template #notGranted>
+    <div class="h-3/4 mt-4 gap-4 flex justify-center items-center">
+      You are not assigned to any speech lab.
+    </div>
+  </ng-template>

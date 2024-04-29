@@ -1,0 +1,166 @@
+.border-gradient1 { 
+  
+  background-image: linear-gradient(white, white), 
+                    linear-gradient(to right, var(--tw-gradient-color));
+  background-origin: border-box;
+  background-clip: content-box, border-box; 
+  box-decoration-break: clone;
+}
+
+
+
+.kontint{
+  margin-right: -120px;
+}
+
+/* Tooltip styles */
+[title]:hover::before,
+[title]:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: all 0.3s ease;
+  z-index: 9999999; /* Extremely high z-index value */
+}
+
+[title]::before,
+[title]::after {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: 9999999; /* Extremely high z-index value */
+}
+
+[title]::before {
+  content: '';
+  position: absolute;
+  bottom: calc(100% + 5px);
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  border: 5px solid transparent;
+  border-bottom-color: rgba(113, 113, 113, 0.8);
+}
+
+[title]::after {
+  content: attr(title);
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background-color: rgba(113, 113, 113, 0.8);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Additional styles */
+.curclas {
+  overflow: visible; /* Ensure the tooltip is not clipped */
+}
+.overvview{
+  display: flex; justify-content: space-between; align-items: center; margin-top:-1px;
+}
+
+.textover{
+  display: flex; align-items: center;
+}
+
+.enrol{
+  margin: 0;font-size: 10px;color: #7F7F7F;
+}
+.comple{
+  margin: 0;font-size: 10px; color: #7F7F7F;
+}
+
+.courseover{
+  flex-shrink: 0; width: 300px;
+}
+.curclas{
+  flex-shrink: 0; width: 180px;
+}
+
+.misij{
+  margin-top: -100px; background-color: #E1F3FD;
+}
+.directmisij{
+  display: flex; justify-content: space-between; align-items: center;
+}
+.textmisij{
+  margin: 0;font-size: 10px; margin-left:8px;color: #7F7F7F;
+}
+
+.propayl{
+  overflow-y: auto; max-height: 200px;
+}
+
+.loobpropayl{
+  display: flex; justify-content: space-between; align-items: center; margin-top:10px;
+}
+
+.ayuspropayl{
+  display: flex; align-items: center;
+}
+
+.piktur{
+  height: 30px; width: 30px; border-radius: 50%; margin-left: 10px; margin-right: 10px;
+}
+
+.ngaran{
+  margin: 0;font-size: 13px;
+}
+
+.directmessage{
+  margin: 0;font-size: 9px; color: #7F7F7F;
+}
+
+.taym{
+  margin: 0; font-size: 9px; margin-right: 10px; color: #7F7F7F;
+}
+
+.misijno{
+  color: white; border-radius: 50%; width: 10px; height: 10px; font-size: 6px; text-align: center;
+}
+/* Add this CSS to style the horizontal layout */
+
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.islide {
+  animation: slideIn 2s ease forwards;
+}
+.islide1 {
+  animation: slideIn 3s ease forwards;
+}
+
+
+.greyniclei{
+  color:#7F7F7F;
+}
+
+.floating {
+  animation: float 2.5s ease-in-out infinite;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

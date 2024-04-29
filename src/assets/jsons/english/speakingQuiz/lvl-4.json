@@ -1,0 +1,61 @@
+{
+  "title": "At the Restaurant",
+  "description": "Enhance your English communication skills with phrases commonly used in a restaurant. Focus on clear pronunciation and proper intonation.",
+  "instructions": [
+    "Below, you'll find a list of phrases you might use in a restaurant.",
+    "Record yourself speaking each phrase.",
+    "Aim for clear and natural pronunciation.",
+    "Keep your pace steady and conversational.",
+    "After recording, listen to the playback and compare it to the written text.",
+    "Pay special attention to the intonation, clarity, and fluency.",
+    "Repeat the recording process as necessary to improve your pronunciation."
+  ],
+  "items": [
+    {
+      "question": "I'd like a table for two.",
+      "answer": "I'd like a table for two."
+    },
+    {
+      "question": "Can I see the menu?",
+      "answer": "Can I see the menu?"
+    },
+    {
+      "question": "I'm allergic to peanuts.",
+      "answer": "I'm allergic to peanuts."
+    },
+    {
+      "question": "A glass of water, please.",
+      "answer": "A glass of water, please."
+    },
+    {
+      "question": "I'll have the chicken.",
+      "answer": "I'll have the chicken."
+    },
+    {
+      "question": "Can I have the bill?",
+      "answer": "Can I have the bill?"
+    },
+    {
+      "question": "Is service included?",
+      "answer": "Is service included?"
+    },
+    {
+      "question": "I'm a vegetarian.",
+      "answer": "I'm a vegetarian."
+    },
+    {
+      "question": "Do you have desserts?",
+      "answer": "Do you have desserts?"
+    },
+    {
+      "question": "This is too spicy.",
+      "answer": "This is too spicy."
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is accurate and clear, showing a strong understanding of common restaurant phrases.",
+    "5-7 correct pronunciations": "Good! You pronounce most of the restaurant phrases correctly. Some phrases need a bit more practice for clarity.",
+    "2-4 correct pronunciations": "Fair. You have a basic understanding of restaurant phrases, but there's room for significant improvement in pronunciation.",
+    "0-1 correct pronunciations": "Needs improvement. Focus on practicing these restaurant phrases more to enhance your English speaking skills."
+  }
+}

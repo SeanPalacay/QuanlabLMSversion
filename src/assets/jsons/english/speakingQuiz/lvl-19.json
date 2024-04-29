@@ -1,0 +1,61 @@
+{
+  "title": "Environmental Discussions",
+  "description": "Enhance your English speaking skills with phrases used in discussions about the environment. Focus on clear, informed pronunciation and an environmentally conscious intonation.",
+  "instructions": [
+    "Below is a list of phrases commonly used in environmental contexts.",
+    "Record yourself speaking each phrase.",
+    "Strive for clear, articulate, and environmentally conscious pronunciation.",
+    "Maintain a steady and informative pace.",
+    "After recording, listen to your playback and compare it to the text.",
+    "Pay attention to intonation, clarity, and fluency in an environmental context.",
+    "Repeat the recording process as necessary to improve your language skills in environmental discussions."
+  ],
+  "items": [
+    {
+      "question": "Environmental sustainability is a pressing issue.",
+      "answer": "Environmental sustainability is a pressing issue."
+    },
+    {
+      "question": "Let's discuss eco-friendly initiatives.",
+      "answer": "Let's discuss eco-friendly initiatives."
+    },
+    {
+      "question": "I'm passionate about conservation efforts.",
+      "answer": "I'm passionate about conservation efforts."
+    },
+    {
+      "question": "What steps can we take to protect the environment?",
+      "answer": "What steps can we take to protect the environment?"
+    },
+    {
+      "question": "Environmental awareness is crucial for future generations.",
+      "answer": "Environmental awareness is crucial for future generations."
+    },
+    {
+      "question": "Let's explore sustainable practices in daily life.",
+      "answer": "Let's explore sustainable practices in daily life."
+    },
+    {
+      "question": "I value discussions on environmental ethics.",
+      "answer": "I value discussions on environmental ethics."
+    },
+    {
+      "question": "How can we address climate change collectively?",
+      "answer": "How can we address climate change collectively?"
+    },
+    {
+      "question": "Let's promote eco-conscious decision-making.",
+      "answer": "Let's promote eco-conscious decision-making."
+    },
+    {
+      "question": "What role can individuals play in environmental conservation?",
+      "answer": "What role can individuals play in environmental conservation?"
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and reflects an understanding of environmental issues.",
+    "5-7 correct pronunciations": "Good! Your pronunciation is mostly accurate, with some areas needing refinement for environmental discussions.",
+    "2-4 correct pronunciations": "Fair. You have a basic grasp of environmental language, but need more practice for effective communication.",
+    "0-1 correct pronunciations": "Needs improvement. Focus on practicing these environmental phrases to enhance your English speaking skills in eco-conscious conversations."
+  }
+}

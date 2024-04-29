@@ -1,0 +1,352 @@
+<div class=" h-screen lg:h-screen md:h-screen  marginPhone mx-4 "> 
+
+    <style>
+
+       
+    </style>
+    <div class="flex w-full gap-x-4 h-3/5 mt-10 containerflex"> 
+        <div class="w-4/6 h-full shadow-boxz rounded videosy">
+            <div class="flex justify-between items-center font-semibold mx-6 my-1.5 min-h-7"> 
+                <!--header -->
+                <div> 
+                    <p class="font-bold text-black text-lg"> {{meetingHeader}} </p>
+                </div>
+                <div> 
+                    <p class="font-normal text-gray-500 text-sm "> {{teacherName}}</p>
+                </div>
+           </div>
+
+
+         
+              <!--video container -->
+             
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+<!--video container -->
+<div #videoContainer class="relative mx-6 marginPhone h-4/5 shadow-boxz rounded-xl overflow-hidden">
+    <!--video-->
+    <div *ngIf="webCamLoading || shareScreenLoading" class="flex place-content-center justify-center h-full w-full absolute top-0 left-0 bg-black opacity-55 ">
+        <div>
+            Loading
+        </div>
+    </div>
+   <div class="w-full h-full relative bg-black "*ngIf="showScreen == 2 ">
+    <div *ngIf="shareSrc != undefined" class="absolute mt-2 ml-2 text-lime-100 bg-gray-700 opacity-60">{{participantSharing.name}} is Sharing Screen</div>
+    <video  class="videoR lg:object-fill lg:w-full lg:h-full  h-full w-full object-scale-down" [srcObject]="mainSrc.stream" #local_video [autoplay]="true" [muted]="true" *ngIf="mainSrc != undefined && shareSrc == undefined"></video>
+    <video  class="videoR lg:object-fill lg:w-full lg:h-full  h-full w-full object-scale-down" [srcObject]="shareSrc.stream" #local_video [autoplay]="true" [muted]="true" *ngIf="shareSrc != undefined"></video>
+    <img src="https://i.pinimg.com/736x/66/b8/58/66b858099df3127e83cb1f1168f7a2c6.jpg"  class="w-full h-full object-cover" *ngIf="mainSrc == undefined && shareSrc == undefined">
+    
+    <!--buttons at the bottom-->
+    <div class="flex justify-center gap-x-4 absolute bottom-4 left-0 right-0">
+        <button (click)="toggleWebcam()" class="w-10 h-10  text-white rounded-full focus:outline-none" [ngClass]="{'bg-blue-500':isWebCamOn, 'bg-red-500':!isWebCamOn, 'opacity-65':webCamLoading}"><i class="fas fa-video"></i></button>
+        <button (click)="toggleMic()" class="w-10 h-10 text-white rounded-full focus:outline-none" [ngClass]="{'bg-green-500':isMicOn , 'bg-red-500':!isMicOn, 'opacity-65': micLoading}"><i class="fas fa-microphone"></i></button>
+        <button (click)="shareScreen()" class="w-10 h-10 bg-orange-500 text-white rounded-full focus:outline-none"
+            [ngClass]="{'opacity-65' : shareScreenLoading , 'bg-orange-500': isSharingScreen ,'bg-red-500': !isSharingScreen}"
+        ><i class="fas fa-desktop"></i></button>
+        <button (click)="leaveMeeting()" class="w-10 h-10 bg-yellow-500 text-white rounded-full focus:outline-none"><i class="fas fa-phone"></i></button>
+    </div>
+    <div class="flex justify-center gap-x-4 absolute bottom-20 left-0 right-0" *ngIf="isFullScreen && showParticipants">
+       
+        <div *ngFor="let src of activeParticipants| keyvalue; let i = index" class="shadow-boxz lg:rounded-3xl rounded lg:h-32 lg:w-32  w-20 h-20 relative overflow-hidden" [style.display]="shouldDisplay(i) ? 'block' : 'none'">
+            <div *ngIf="src.value?.isLoading" class="flex place-content-center justify-center h-full w-full absolute top-0 left-0 bg-black opacity-55 ">
+                <div>
+                    Loading
+                </div>
+            </div>
+            <video  class="w-full h-full object-cover" [srcObject]="src.value.stream"  #received_video [autoplay]="true" *ngIf="src.value.stream != undefined"></video>
+            <img src="https://i.pinimg.com/736x/66/b8/58/66b858099df3127e83cb1f1168f7a2c6.jpg"  class="w-full h-full object-cover" *ngIf="src.value.stream == undefined">
+        </div>
+        <div *ngFor="let src of participants| keyvalue; let i = index" class="shadow-boxz lg:rounded-3xl rounded lg:h-32 lg:w-32 w-20 h-20 relative overflow-hidden" [style.display]="shouldDisplay(i) ? 'block' : 'none'">
+            <div *ngIf="src.value?.isLoading" class="flex place-content-center justify-center h-1/2 w-full absolute top-0 left-0 bg-black opacity-55 ">
+                <div>
+                    Loading
+                </div>
+            </div>
+            <video  class="w-full h-full object-cover" [srcObject]="src.value.stream"  #received_video [autoplay]="true" *ngIf="src.value.stream != undefined"></video>
+            <img src="https://i.pinimg.com/736x/66/b8/58/66b858099df3127e83cb1f1168f7a2c6.jpg"  class="w-full h-full object-cover" *ngIf="src.value.stream == undefined">
+        </div>
+ 
+    </div>
+
+    <!-- PARTICIPANTS IN FULL SCREEN-->
+
+    
+    <!-- END OF PARTICIPANTS IN FULLSCREEN-->
+
+
+    <!-- upper left -->
+
+    
+    <div class="flex flex-col gap-y-3 absolute top-4 left-4">
+        <!-- chat modal -->
+        <!-- button lang-->
+        <button  (click)="toggleModal()" class="w-10 h-10 bg-gray-500 text-white rounded-full focus:outline-none md:hidden lg:hidden"><i class="fa-solid fa-message"></i></button>
+        <!-- start real -->
+        <div class="fixed chatMessage inset-0 h-full bg-gray-500 bg-opacity-75 flex items-center justify-center p-4" *ngIf="isChatModalOpen">
+            <div class="bg-white chatroom:h-3/4 w-full rounded-lg overflow-hidden shadow-xl transform transition-all h-full">
+              <!-- start Chat Header -->
+              <div class="bg-transparent border-b border-gray-200 flex items-center justify-between  my-3">
+
+                <div class="text-lg font-semibold text-black  mb-3 mx-4">Live Chat</div>
+                <button (click)="toggleModal()" class="flex items-center mb-3 mx-4">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </div>
+              
+            
+                <!-- end chat header -->
+
+              <!-- start Chat Messages -->
+            
+           <div class="flex-1 h-3/4 overflow-y-auto overflow-x-auto mx-4 mt-2">
+                <div *ngFor="let message of messages">
+                    <div class="flex mb-4 items-center" *ngIf="message.senderID != particpantID">
+                        <img [src]="(message.profile)? getURL(message.profile):'https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg'" alt="Profile Picture" class="w-10 h-10 mt-2.5 rounded-full mr-4">
+                        <div class="flex-grow">
+                            <div class="flex justify-between mx-1 overflow-x-auto"> 
+                                <div>
+                                    <p class="font-normal text-xs text-gray-500"> {{message.senderName}} </p>
+                                </div>
+                                <div>
+                                    <p class="font-normal text-xs text-gray-500"> {{message.time}}</p>
+                                </div>
+                            </div>
+                         
+                            <div class="bg-gray-300 p-2 text-sm rounded-2xl overflow-x-auto w-full " >{{message.message}}</div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="flex mb-4 items-center" *ngIf="message.senderID == particpantID">
+                        <div class="flex-grow">
+                            <div class="flex justify-between items-center mx-1 overflow-x-auto"> 
+                                <div>
+                                    <p class="font-normal text-xs text-gray-500">{{message.time}}</p>
+                                </div>
+                                <div>
+                                    <p class="font-normal text-xs text-gray-500">Me</p>
+                                </div>
+                            </div>
+                            <div class="bg-gray-300 text-wrap text-left p-2 text-sm rounded-2xl  overflow-x-auto w-full ">
+                                {{message.message}}
+                            </div>
+                        </div>
+                 
+                        <img [src]="(message.profile)? getURL(message.profile):'https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg'" alt="Profile Picture" class="w-10 h-10 mt-2.5 rounded-full ml-4">
+                    </div>
+                    
+                </div>
+                
+            </div>
+              <!-- Chat Input Footer -->
+              <!-- <div class="bg-transparent border-t border-gray-200">
+                <div class="flex items-center lg:mx-4 lg:my-4 mx-2 my-4">
+                  <input (keyup)="texthandler($event)" #messageInput type="text" placeholder="Type your message..." class="flex-1 px-2 py-1 rounded-full border border-teal-400 focus:outline-none focus:ring focus:border-gray-600">
+                  <button (click)="sendMessage()" class="ml-2 gradient-color text-white px-4 py-1.5 rounded-full">Send</button>
+                </div>
+              </div> -->
+              <div class="bg-transparent ">
+                <div class="flex items-center mx-1 my-3">
+                  <div class="relative flex items-center w-full shadow-boxz rounded-xl mx-3">
+                      <input (keyup)="texthandler($event)" #messageInput type="text" placeholder="Type your message..." class=" shadow-boxz flex-1 py-2 px-3 rounded-lg border border-teal-400 focus:outline-none focus:ring-black focus:border-gray-600 text-black font-normal">
+                      <button (click)="sendMessage()" class="absolute right-2 top-1/2 transform -translate-y-1/2 cursor-pointer pr-3">
+                        <i class="fa-solid fa-paper-plane text-transparent gradient-color bg-clip-text text-xl"></i>
+                      </button>
+                    </div>
+                    
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- end real -->
+         <!-- end chat modal-->
+        <button *ngIf="isFullScreen"  class="w-10 h-10 bg-gray-500 text-white lg:hidden rounded-full focus:outline-none" (click)="changeOrientation()"  ><i class="fa-solid fa-rotate"></i></button>
+
+    </div>
+
+    <!--buttons in the upper right-->
+    <div class="flex flex-col gap-y-3 absolute top-4 right-4">
+        <button (click)="toggleFullScreen()" class="w-10 h-10 bg-gray-500 text-white rounded-full focus:outline-none"><i class="fas fa-expand"></i></button>
+        <button *ngIf="isFullScreen"  (click)="toggleParticipants()" class="w-10 h-10 bg-gray-500 text-white rounded-full focus:outline-none"><i class="fas fa-user"></i></button>
+
+    </div>
+   </div>
+
+   <div *ngIf="showScreen == 0" class="w-full h-full bg-slate-900 flex place-items-center justify-center">
+        <button *ngIf="participantType == '0'" (click)="meetSettings()" class="text-white w-40 h-12 rounded-lg primary-color"> Join Meeting</button>
+        <button *ngIf="participantType == '1'" (click)="meetSettings()" class="text-white w-40 h-12 rounded-lg primary-color"> Start Meeting</button>
+   </div>
+   <div *ngIf="showScreen == 1" class="w-full h-full bg-slate-900 flex place-items-center justify-center">
+    <h1 class="text-white"*ngIf="participantType == '0'"> You're about to join the class ... </h1>
+    <h1 class="text-white"*ngIf="participantType == '1'"> You're about to start the class ... </h1>
+</div>
+   
+
+    
+</div>
+
+                <!--controls bottom-->
+
+            
+        
+        
+            <!--foooter-->
+            <div class="mx-6 my-2 flex justify-between min-7">
+                <div>
+                    <p class="font-normal text-sm text-gray-500 " *ngIf="showScreen == 2">{{participantSize}} students online</p>
+                </div>
+                <div>
+                    <!-- <p class="font-normal text-sm text-gray-500" *ngIf="showScreen == 2">Class ends in: 45 min</p> -->
+                </div>
+            </div>
+            
+        </div>
+           
+
+
+        <!-- Live chat -->
+        <div class="flex-1 flex flex-col rounded-lg shadow-boxz margin-up margin-down h-full livechat">
+            <!-- Chat Header -->
+            <div class="bg-transparent border-b border-gray-200 flex shadow-2xl rounded-lg items-center">
+              <div class="text-lg font-semibold mx-4 my-3 text-black">Live Chat</div>
+            </div>
+            
+         
+            <!-- Chat Messages -->
+            <div class="flex-1 overflow-y-auto mx-4 mt-2">
+                <div *ngFor="let message of messages">
+                    <div class="flex mb-4 items-center" *ngIf="message.senderID != particpantID">
+                        <img [src]="(message.profile)? getURL(message.profile):'https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg'" alt="Profile Picture" class="w-12 h-12 rounded-full mr-4">
+                        <div class="flex-grow">
+                            <div class="flex justify-between mx-1 overflow-x-auto"> 
+                                <div>
+                                    <p class="font-normal text-xs text-gray-500"> {{message.senderName}} </p>
+                                </div>
+                                <div>
+                                    <p class="font-normal text-xs text-gray-500"> {{message.time}}</p>
+                                </div>
+                            </div>
+                         
+                            <div class="bg-gray-300 p-2 text-sm rounded-2xl w-full" >{{message.message}}</div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="flex mb-4 items-center" *ngIf="message.senderID == particpantID">
+                        <div class="flex-grow">
+                            <div class="flex justify-between items-center mx-1 overflow-x-auto"> 
+                                <div>
+                                    <p class="font-normal text-xs text-gray-500">{{message.time}}</p>
+                                </div>
+                                <div>
+                                    <p class="font-normal text-xs text-gray-500">Me</p>
+                                </div>
+                            </div>
+                            <div class="bg-gray-300 text-wrap text-left p-2 text-sm rounded-2xl  w-full ">
+                                {{message.message}}
+                            </div>
+                        </div>
+                 
+                        <img [src]="(message.profile)? getURL(message.profile):'https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg'" alt="Profile Picture" class="w-12 h-12 rounded-full ml-4">
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+      
+            <!-- Chat Input -->
+            <div class="bg-transparent">
+              <div class="flex items-center lg:mx-4 lg:my-3 mx-1 my-4">
+                <div class="relative flex items-center w-full shadow-boxz rounded-xl mx-3">
+                    <input (keyup)="texthandler($event)" #messageInput type="text" placeholder="Type your message..." class="flex-1 py-2 px-3 rounded-lg border border-teal-400 focus:outline-none focus:ring-black focus:border-gray-600 text-black font-normal">
+                    <button (click)="sendMessage()" class="absolute right-2 top-1/2 transform -translate-y-1/2 cursor-pointer pr-3">
+                      <i class="fa-solid fa-paper-plane text-transparent gradient-color bg-clip-text text-xl"></i>
+                    </button>
+                  </div>
+                  
+              </div>
+            </div>
+          </div> 
+        </div>
+<!-- end-->
+<!-- <button class="openchatbtn poppins-b" (click)="openChat()">Live Chat</button> -->
+
+
+
+<!--- start -->
+   
+<div class="flex w-full h-32 gap-x-4"> 
+
+<!-- participants-->
+    <div class="w-full h-full"> 
+        <!--title-->
+        <div class="flex justify-between items-center font-semibold my-1.5"> 
+            <div> 
+                <p > Participants  </p>
+            </div>    
+            <div class="flex "> 
+                <button (click)="moveLeft()" class="rounded-3xl px-1 py-1 font-black"> &lt; </button>
+                <button (click)="moveRight()" class="rounded-3xl px-1 py-1 font-black"> &gt; </button>
+            </div>
+        </div>
+       
+         <!-- tawo container-->
+
+         <div class="flex lg:gap-x-4 gap-x-1 mb-10 h-full lg:w-1/2 w-full taowrap">
+            <div *ngFor="let src of activeParticipants| keyvalue; let i = index" class="shadow-boxz lg:rounded-3xl rounded lg:w-1/4 w-full h-full relative overflow-hidden" [style.display]="shouldDisplay(i) ? 'block' : 'none'">
+                <div *ngIf="src.value?.isLoading" class="flex place-content-center justify-center h-full w-full absolute top-0 left-0 bg-black opacity-55 ">
+                    <div>
+                        Loading
+                    </div>
+                </div>
+                <video  class="w-full h-full object-cover" [srcObject]="src.value.stream"  #received_video [autoplay]="true" *ngIf="src.value.stream != undefined"></video>
+                <img src="https://i.pinimg.com/736x/66/b8/58/66b858099df3127e83cb1f1168f7a2c6.jpg"  class="w-full h-full object-cover" *ngIf="src.value.stream == undefined">
+            </div>
+            <div *ngFor="let src of participants| keyvalue; let i = index" class="shadow-boxz ;g:rounded-3xl rounded lg:w-1/4 w-full h-full relative overflow-hidden" [style.display]="shouldDisplay(i) ? 'block' : 'none'">
+                <div *ngIf="src.value?.isLoading" class="flex place-content-center justify-center h-1/2 w-full absolute top-0 left-0 bg-black opacity-55 ">
+                    <div>
+                        Loading
+                    </div>
+                </div>
+                <video  class="w-full h-full object-cover" [srcObject]="src.value.stream"  #received_video [autoplay]="true" *ngIf="src.value.stream != undefined"></video>
+                <img src="https://i.pinimg.com/736x/66/b8/58/66b858099df3127e83cb1f1168f7a2c6.jpg"  class="w-full h-full object-cover" *ngIf="src.value.stream == undefined">
+            </div>
+         </div>
+    
+    <!-- end tawo -->
+    </div>
+
+    
+<!-- lesson module etc-->
+<!-- <div class="flex-1 flex-col rounded-lg mt-4">  -->
+    
+    <!-- <div class=" bg-transparent text-left buttonwrap ">
+      <button class="text-md font-normal rounded-3xl w-full shadow-boxz h-12 gradient-color text-white">Lesson Modules</button>
+
+      <button class="text-md font-normal  rounded-3xl  w-full shadow-boxz h-12 gradient-color text-white lessonbtn">Practice Exercises</button>
+    </div> -->
+
+    
+
+    <!-- Chat Messages -->
+   
+    <!-- </div> -->
+<!-- end module -->
+</div>
+
+
+<div *ngFor="let src of participantsAudio | keyvalue; let i = index" >
+    <audio [srcObject]="src.value.stream" [autoplay]="true" playsinline="true"></audio>
+</div>
+    <!-- end -->
+
+
+
+
+
+
+    
+</div>

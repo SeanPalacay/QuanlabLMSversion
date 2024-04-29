@@ -1,0 +1,61 @@
+{
+  "title": "Travel and Transportation",
+  "description": "Improve your Japanese speaking skills with phrases typically used in travel and transportation contexts. Focus on clear pronunciation and appropriate intonation.",
+  "instructions": [
+    "Below is a list of phrases you might use when traveling or using transportation in Japanese.",
+    "Record yourself speaking each phrase.",
+    "Aim for clear and natural pronunciation.",
+    "Maintain a conversational and steady pace.",
+    "After recording, listen to your playback and compare it to the text.",
+    "Pay attention to intonation, clarity, and fluency in Japanese.",
+    "Repeat the recording process as necessary to improve your Japanese speaking skills."
+  ],
+  "items": [
+    {
+      "question": "電車の駅はどこですか？ (Densha no eki wa doko desu ka?)",
+      "answer": "電車の駅はどこですか？ (Densha no eki wa doko desu ka?)"
+    },
+    {
+      "question": "片道切符が必要です。 (Katamichi kippu ga hitsuyou desu.)",
+      "answer": "片道切符が必要です。 (Katamichi kippu ga hitsuyou desu.)"
+    },
+    {
+      "question": "このバスは市内中心に行きますか？ (Kono basu wa shinai chuushin ni ikimasu ka?)",
+      "answer": "このバスは市内中心に行きますか？ (Kono basu wa shinai chuushin ni ikimasu ka?)"
+    },
+    {
+      "question": "レンタカーをしたいです。 (Rentakaa o shitai desu.)",
+      "answer": "レンタカーをしたいです。 (Rentakaa o shitai desu.)"
+    },
+    {
+      "question": "駐車場はどこですか？ (Chuushajou wa doko desu ka?)",
+      "answer": "駐車場はどこですか？ (Chuushajou wa doko desu ka?)"
+    },
+    {
+      "question": "電車は何時に出発しますか？ (Densha wa nanji ni shuppatsu shimasu ka?)",
+      "answer": "電車は何時に出発しますか？ (Densha wa nanji ni shuppatsu shimasu ka?)"
+    },
+    {
+      "question": "空港にはどう行きますか？ (Kuukou ni wa dou ikimasu ka?)",
+      "answer": "空港にはどう行きますか？ (Kuukou ni wa dou ikimasu ka?)"
+    },
+    {
+      "question": "地図をもらえますか？ (Chizu o moraemasu ka?)",
+      "answer": "地図をもらえますか？ (Chizu o moraemasu ka?)"
+    },
+    {
+      "question": "近くに地下鉄はありますか？ (Chikaku ni chikatetsu wa arimasu ka?)",
+      "answer": "近くに地下鉄はありますか？ (Chikaku ni chikatetsu wa arimasu ka?)"
+    },
+    {
+      "question": "旅行はどのくらいかかりますか？ (Ryokou wa dono kurai kakarimasu ka?)",
+      "answer": "旅行はどのくらいかかりますか？ (Ryokou wa dono kurai kakarimasu ka?)"
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and accurate, demonstrating strong skills in Japanese travel and transportation language.",
+    "5-7 correct pronunciations": "Good! Your pronunciation is mostly correct, with a good grasp of travel and transportation phrases in Japanese. There are areas to refine for improved clarity.",
+    "2-4 correct pronunciations": "Fair. You can communicate basic needs in Japanese travel and transportation contexts, but need significant improvement in pronunciation.",
+    "0-1 correct pronunciations": "Needs improvement. Consider practicing more to enhance your Japanese speaking skills, or seek additional resources for learning."
+  }
+}

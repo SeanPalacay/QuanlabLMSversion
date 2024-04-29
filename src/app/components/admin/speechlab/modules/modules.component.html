@@ -1,0 +1,85 @@
+<div class="main-container">
+    <div class="button-container">
+        <button class="poppins-b" (click)="openModal()">
+            <img src="assets/add.png" alt="Add Icon" />
+            <span>Add Lesson</span>
+          </button>
+    
+        <!-- <button class="poppins-b" *ngIf="selectedOption === 'Students'" (click)="addStudents()">
+            <img src="assets/add.png" alt="Add Icon" />
+            <span>Add Student</span>
+        </button> -->
+<!-- Import FormsModule in your Angular module to enable two-way data binding -->
+<!-- Example: import { FormsModule } from '@angular/forms'; and add it to the imports array in @NgModule -->
+<div>
+<button class="poppins-b" (click)="addModule()">
+
+    <span>Add Module</span>
+</button>
+
+
+</div>
+    </div>
+    <div class="h-20 bg-blue-500 text-2xl text-white font-bold flex justify-center items-center w-full">
+      MODULES
+    </div>
+    <div class="table-container">
+      <table>
+        <thead class="poppins-b">
+          <tr>
+            <th>ID</th>
+            <th>Module Name</th>
+            <th>Date</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody class="poppins">
+          <ng-container>
+            <tr *ngFor="let module of modules">
+                <td>{{module.id}}</td>
+                <td>{{module.name}}</td>
+                <td>{{module.timestamp}}</td>
+                <td><button class="border border-2-[black] p-2 rounded-md hover:bg-[skyblue]" (click)="deleteModule(module.id)">DELETE</button></td>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="h-20 bg-blue-500 text-2xl text-white font-bold flex justify-center items-center w-full">
+      LESSONS
+    </div>
+
+    <div class="table-container">
+      <table>
+        <thead class="poppins-b">
+          <tr>
+            <th>ID</th>
+            <th> Module </th>
+            <th> Lesson </th>
+            <th>Lesson File Name</th>
+            <th>Quiz File Name</th>
+            <th>Date</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody class="poppins">
+          <ng-container>
+            <tr *ngFor="let lesson of lessons">
+                <td>{{lesson.id}}</td>
+                <td>{{lesson.module}}</td>
+                <td>{{lesson.description}}</td>
+                <td>{{lesson.lessonfile.split('>')[1]}}</td>
+                <td>{{lesson.quizfile.split('>')[1]}}</td>
+                <td>{{lesson.timestamp}}</td>
+                <td>
+                  <button class="border border-2-[black] p-2 rounded-md hover:bg-[skyblue]" (click)="deleteLesson(lesson)">DELETE</button>
+                  <button class="border border-2-[black] p-2 rounded-md hover:bg-[#ebe487]" (click)="editLesson(lesson)" >EDIT</button>
+                </td>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

@@ -1,0 +1,117 @@
+<div class="mx-10">
+  <div class="flex justify-center mb-4 relative">
+    <button class="tooltip-button px-4 py-2 text-white gradient-color rounded transform transition duration-150 ease-in-out hover:scale-110 relative"
+            (click)="toggleDropdown()" data-tooltip="Choose language">
+      Language: {{selectedLanguageName}}
+    </button>
+    <div *ngIf="showDropdown" class="absolute left-1/2 transform -translate-x-1/2 mt-1 py-2 bg-white shadow-lg rounded z-10">
+      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" (click)="selectLanguage('en', 'English'); $event.preventDefault()">English</a>
+      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" (click)="selectLanguage('ja', 'Japanese'); $event.preventDefault()">Japanese</a>
+      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" (click)="selectLanguage('fr', 'French'); $event.preventDefault()">French</a>
+    </div>
+  </div>
+  
+
+  <div class="text-to-speech-container flex gap-x-4 w-full h-56">
+    <div class="w-full h-full flex">
+      <textarea
+        maxlength="50"
+        id="textToSpeak"
+        rows="4"
+        class="flex-1 p-2.5 text-sm text-gray-900 rounded focus:outline-none bg-transparent shadow-boxz"
+        placeholder="Type something to listen... (maximum of 50 characters)"
+        [(ngModel)]="textInput"
+      ></textarea>
+    </div>
+    
+
+    <!-- Mic -->
+    <div class="flex items-center justify-center mongo "
+
+    >
+      <label
+        for="thefile"
+ 
+        class="w-20 h-20 flex items-center border-gradient shadow-boxz justify-center"
+      >
+        <button
+          (click)="textToSpeech()"
+        >
+          <input
+          id="thefile"
+
+          style="display: none"
+        />
+        <img
+          class="mega"
+          src="assets/mega.png"
+          alt="adwda"
+        />
+        </button>
+      </label>
+    </div>
+
+    <!-- Audio with Equalizer -->
+    <div class="w-full min-w-80 shadow-boxz rounded relative">
+      <div class="absolute top-0 right-0 m-4">
+        <!-- Example SVG for a download icon; replace with your icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer download-icon" viewBox="0 0 24 24" fill="white" stroke="#66edbb" (click)="download()">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+        </svg>
+               
+      </div>
+      <div class="absolute top-0 left-0 ml-2 mt-2 text-gray-500" >Visualize your voice!</div>
+      <div class="pt-16 pr-4 pb-4 pl-4"> <!-- Adjust padding as needed -->
+        <audio class="hidden" id="audio" controls></audio> 
+        <canvas id="canvas" class="visualizer-canvas w-full h-40"></canvas>
+      </div>
+    </div>
+    
+  </div>
+
+  <!--Record and Listen -->
+
+  <div class="gap-x-4 w-full">
+    <div
+
+      class="mt-10 w-full flex shadow-boxz rounded items-center justify-between gap-10 woah"
+      style="background-color: #e1f3fd"
+    >
+      <!-- Content 1 -->
+      <div
+        class="box button"
+        (click)="startRecording()"
+        [class.pulse]="recording"
+      >
+        <div class="group">
+          <div class="overlap-group recs">
+            <div class="ellipse"></div>
+            <img class="microphone" src="assets/record.png" />
+          </div>
+          <div class="text-wrapper text-sm recs">Record Audio</div>
+        </div>
+      </div>
+
+      <!-- Content 2 -->
+      <div class="image button">
+        <img class="premium-vector hidden custom1130:inline-block" src="assets/tahaw.png" alt="" />
+      </div>
+
+      <!-- Content 3 -->
+      <div class="box button listenbox" (click)="playAudio()" [class.pulse]="playing">
+        <div class="group">
+          <div class="overlap-group1">
+            <div
+              class="ellipse1 gradient-color"
+              [ngClass]="{ 'animate-wave1': playing }"
+            ></div>
+            <img class="headphone" src="assets/head.png" />
+          </div>
+          <div class="text-wrapper text-center text-sm">Listen</div>
+        </div>
+      </div>
+
+      
+    </div>
+  </div>
+</div>

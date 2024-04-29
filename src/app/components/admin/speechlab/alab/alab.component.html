@@ -1,0 +1,50 @@
+<div class="w-full border border-blue-300">
+    <div class=" w-full bg-white border shadow">
+      <div ngbDropdown class="d-inline-block">
+        <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+          {{ speechLabs.length ? speechLabs[speechLabSelected].name: 'Labs not loaded'}}
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button (click)="selectLab(i)" *ngFor="let lab of speechLabs; let i = index" ngbDropdownItem>{{lab.name}}</button>
+
+      </div>
+      <div class='relative flex justify-center' *ngFor="let row of [row1, row2, row3]; let i = index">
+        <div class='pb-5' *ngFor="let item of row">
+         <p class="font-bold {{getAssignedName(item) != 'None'? 'text-green-500': 'text-red-500'}}">{{item.label}}</p>
+          <img src="{{item.icon}}" alt="">
+          <b>ID: </b><input class="w-[130px] border-b-2 border-solid {{getAssignedName(item) != 'None'? 'text-green-500': 'text-red-500'}}" placeholder="Enter Student ID" type="text" (keyup)="inputEvent($event, item)" id="ip{{i}}" name="ip{{i}}" [(ngModel)]="item.ip" required>
+          <br>
+          <span class="font-bold {{getAssignedName(item) != 'None'? 'text-green-500': 'text-red-500'}}">{{getAssignedName(item)}}</span>
+        </div>
+        <div class='absolute bottom-0 h-4 inset-x-14 bg-gradient-to-r from-primary to-secondary rounded-tr-xl rounded-tl-xl'></div>
+      </div>
+      <div class="text-center justify-center items-center p-3">
+      <Button class="p-2 border border-1-[black] rounded-md hover:bg-[skyblue]" (click)="save()" >SAVE</Button>
+    </div>
+  </div>
+
+  <div class="m-2 bg-white p-2 shadow-md mb-4">
+    <table class="w-full">
+      <tr class="bg-slate-200">
+        <th> Student Name </th>
+        <th> Student ID </th>
+        <th> Status </th>
+      </tr>
+      <ng-container *ngFor="let student of students" >
+        <tr>
+          <td class="{{checkIfAssigned(student)||checkIfAssignedOnOtherLab(student.visibleid)?'text-green-600':'text-red-600'}}">
+            {{student.firstname + ' ' +student.lastname}}
+          </td>
+          <td class="{{checkIfAssigned(student)||checkIfAssignedOnOtherLab(student.visibleid)?'text-green-600':'text-red-600'}}">
+            {{student.visibleid}}
+          </td>
+          <td class="{{checkIfAssigned(student)||checkIfAssignedOnOtherLab(student.visibleid)?'text-green-600':'text-red-600'}}">
+            {{checkIfAssigned(student)||checkIfAssignedOnOtherLab(student.visibleid)?'Assigned' +( checkIfAssignedOnOtherLab(student.visibleid) ? ' ('+getLabFromID(checkIfAssignedOnOtherLab(student.visibleid).labid).name+')':'') :'Not Assigned'}}
+          </td>
+        </tr>
+      </ng-container>
+     
+    </table>
+  </div>
+</div>
+  

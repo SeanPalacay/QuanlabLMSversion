@@ -1,0 +1,28 @@
+.tabs {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+}
+.tabs button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.tabs button:hover {
+  color: #fff;
+  font-weight: bold;
+  background-color: #00be65;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+.initial-message p {
+  color: #666;
+  text-align: center;
+  padding: 20px;
+}

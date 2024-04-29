@@ -1,0 +1,302 @@
+@media only screen and (max-width : 1366px) {
+	.hide-show{
+		display: none;
+	}
+}
+
+@media only screen and (max-width : 1024px) {
+	.contactForm{
+		margin-top: 30px;
+	}
+	.get-in-touch {
+		margin-top: 30px;
+	}
+
+}
+
+@media only screen and (max-width : 991px) {
+    .nav-link{
+        text-align: center;
+    }
+	#eduservices-course{
+		margin-top: -30px;
+	}
+	#eduservices-contact {
+         padding: 90px 0px 255px;
+	    
+	}
+	.hero-video {
+	    margin-top: 63px;
+	}
+	.why-choose-options:before{
+		content: "";
+	}
+	.boxes-area {
+		padding: 0;
+	}
+	.why-choose-us {
+	    padding-top: 0;
+	}
+	.navbar-nav .nav-item {
+		margin: 10px;
+	}
+	.color-set{
+		-moz-transition: .3s;
+		-o-transition: .3s;
+		-ms-transition: .3s;
+		-webkit-transition: .3s;
+		transition: .3s;
+	}
+	.why-choose-us .section-title {
+	    padding-top: 90px;
+	}
+	.main-banner {
+	    height: auto;
+	}
+	.hero-content {
+	    padding-top: 165px;
+	}
+    .recent-blog-section .grid .entry-details {
+        padding: 25px;
+    }
+    .start-Learn-btn.white-btn {
+		margin-top: 0px;
+	}
+    .single-pricing-table {
+    	margin-bottom: 15px;
+    }  
+    .get-in-touch {
+		 margin: 30px 0;
+	}
+	.contactForm{
+		margin-top: 0px;
+	}
+    .hide-show{
+		display: block !important;
+	}
+}
+
+@media only screen and (max-width : 767px) {
+    
+	.d-table {
+		display: block !important;
+	}
+	#eduservices-course{
+		margin-top: -90px;
+	}
+	#eduservices-pricing .col-lg-4:last-child .single-pricing-table{
+		padding-bottom: 0;
+	}
+	.d-table-cell {
+		display: block !important;
+	}
+	.owl-controls {
+		line-height: .1;
+	}
+	.owl-theme .owl-dots {
+		position: relative;
+		margin-top: 40px;
+		bottom: 0;
+	}
+	.owl-theme .owl-dots .owl-dot span {
+		background: #eee;
+	}
+	.section-title p {
+		max-width: 100%;
+	}
+	img {
+		width: 100%;
+	}
+	.main-banner::before {
+		background: #00c6ff;
+		background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);
+		background: linear-gradient(to right, #0072ff, #00c6ff);
+		opacity: .77;
+	}
+	.main-banner .owl-theme .owl-dots {
+        bottom: -40px;
+    }
+	.hero-content {
+	    padding-top: 90px;
+	}
+	.hero-content p {
+		max-width: 100%;
+	}
+	.main-banner-show::after {
+		display: none;
+	}
+	.boxes-area {
+		padding-top: 30px;
+		margin-top: 0;
+		padding-bottom: 60px;
+	}
+	.single-box {
+   		margin-bottom: 30px;
+	}
+	.boxes-area-two {
+		padding-bottom: 20px;
+	}
+	.pricing-content-btn {
+	    padding: 30px 0px 0px;
+	}
+    .tabs {
+	    margin-bottom: 25px;
+	}
+	.tabs li {
+		flex: 0 0 50%;
+		max-width: 50%;
+		margin-bottom: 20px;
+	}
+	.tabs li a {
+		padding: 20px 5px 10px;
+	}
+	.tabs li a i {
+		font-size: 25px;
+		margin-bottom: 10px;
+	}
+	.tabs li:last-child a {
+		border-radius: 0 0 30px 0;
+	}
+	.single-pricing-table{
+		margin-bottom: 30px;
+	}
+	.fun-facts-area {
+		padding-bottom: 50px;
+	}
+	.fun-fact {
+		margin-bottom: 40px;
+	}
+	.funFact {
+		margin-bottom: 70px;
+	}
+	.contact-box {
+		padding: 25px 15px;
+		margin-bottom: 30px;
+	}
+	.section-subscribe-st .btn {
+	    right: 0px;
+	}
+	.education-subscribe {
+       padding: 40px 20px 30px;
+	}
+	.blog-mt-30 {
+        margin-top: 0px !important;
+    }
+    .section-subscribe-st .form-control {
+        max-width: 570px !important;
+        width: 100% !important;
+    }
+    .subscribe-form-inner label {
+        padding-top: 15px;
+    }
+    .subscribe-form-inner br{
+        display: none;
+    }
+    .footer ul {
+        padding: 25px 0 20px;
+    } 
+    img.site-owner {
+	    max-width: 400px;
+	}
+    .copyright {
+	    padding-bottom: 30px;
+	}
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+	.d-table {
+		width: 100%;
+		height: 100%;
+		display: table !important;
+	}
+	.d-table-cell {
+		display: table-cell!important;;
+	}
+	.owl-controls {
+		line-height: .1;
+	}
+	.owl-theme .owl-dots {
+		position: relative;
+		margin-top: 40px;
+		bottom: 0;
+	}
+	.owl-theme .owl-dots .owl-dot span {
+		background: #eee;
+	}
+	.start-Learn-btn.white-btn {
+		color: #fff;
+		border-color: #fff;
+	}
+	.single-box {
+		margin-bottom: 30px;
+	}
+	.boxes-area-two {
+		padding-bottom: 40px;
+	}
+	.tabs {
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+	.tabs li {
+		-ms-flex: 0 0 33.3333%;
+		flex: 0 0 33.3333%;
+		max-width: 33.3333%;
+		padding-right: 10px;
+		padding-left: 10px;
+		margin-bottom: 15px;
+	}
+	.tabs_item_img img {
+		width: 100%;
+	}
+	.tabs li:last-child a {
+		border-radius: 0 0 30px 0;
+	}
+    .teacher .text p {
+	    width: 164px;
+	    margin: 0 auto;
+	}
+	.fun-facts-area {
+		padding-bottom: 30px;
+	}
+	.fun-fact {
+		margin-bottom: 40px;
+	}
+	.funFact {
+		margin-bottom: 60px;
+	}
+	.contact-box {
+		margin-bottom: 30px;
+	}
+	.get-in-touch {
+		margin-bottom: 30px;
+	}
+}
+
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+	.single-box {
+		padding: 30px 15px;
+	}
+	.teacher-members {
+		padding: 0 15px 0 0;
+	}
+	.tabs_item_content {
+		padding: 30px 20px;
+	}
+	.tabs_item_content ul {
+		margin: 10px 0 0 0;
+	}
+	.tabs_item_content .btn {
+		display: none;
+	}
+	.contact-box {
+		padding: 30px 15px;
+	}
+	.single-choose .single-choose-left img {
+	    padding-left: 11px;
+	}
+	.single-choose .single-choose-left, .single-choose .single-choose-right {
+	    padding: 25px 10px;
+	}
+}
+
+

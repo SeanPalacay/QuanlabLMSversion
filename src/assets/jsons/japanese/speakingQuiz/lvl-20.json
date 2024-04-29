@@ -1,0 +1,61 @@
+{
+  "title": "Digital Citizenship",
+  "description": "Enhance your Japanese speaking skills with phrases used for discussing digital citizenship. Focus on clear, responsible pronunciation and a forward-thinking tone.",
+  "instructions": [
+    "Below is a list of phrases you might use in discussions about digital citizenship in Japanese.",
+    "Record yourself speaking each phrase.",
+    "Aim for clear, conscientious, and future-oriented pronunciation.",
+    "Maintain a steady and reflective pace.",
+    "After recording, listen to your playback and compare it to the text.",
+    "Pay attention to intonation, clarity, and fluency in Japanese.",
+    "Repeat the recording process as necessary to improve your Japanese speaking skills for digital citizenship contexts."
+  ],
+  "items": [
+    {
+      "question": "デジタル責任を理解することが重要です。 (Dejitaru sekinin o rikai suru koto ga juuyou desu.)",
+      "answer": "デジタル責任を理解することが重要です。 (Dejitaru sekinin o rikai suru koto ga juuyou desu.)"
+    },
+    {
+      "question": "オンラインプライバシーの懸念について話しましょう。 (Onrain puraibashii no kenen ni tsuite hanashimashou.)",
+      "answer": "オンラインプライバシーの懸念について話しましょう。 (Onrain puraibashii no kenen ni tsuite hanashimashou.)"
+    },
+    {
+      "question": "現代におけるデジタルリテラシーの重要性は何ですか？ (Gendai ni okeru dejitaru riterashii no juuyousei wa nan desu ka?)",
+      "answer": "現代におけるデジタルリテラシーの重要性は何ですか？ (Gendai ni okeru dejitaru riterashii no juuyousei wa nan desu ka?)"
+    },
+    {
+      "question": "オンラインコミュニケーションの倫理的考慮は何ですか？ (Onrain komyunikeeshon no rinriteki kouryo wa nan desu ka?)",
+      "answer": "オンラインコミュニケーションの倫理的考慮は何ですか？ (Onrain komyunikeeshon no rinriteki kouryo wa nan desu ka?)"
+    },
+    {
+      "question": "積極的なデジタルカルチャーをどう促進しますか？ (Sekkyokuteki na dejitaru karuchaa o dou sokushin shimasu ka?)",
+      "answer": "積極的なデジタルカルチャーをどう促進しますか？ (Sekkyokuteki na dejitaru karuchaa o dou sokushin shimasu ka?)"
+    },
+    {
+      "question": "ソーシャルメディアが社会に与える影響は何ですか？ (Soosharu media ga shakai ni ataeru eikyou wa nan desu ka?)",
+      "answer": "ソーシャルメディアが社会に与える影響は何ですか？ (Soosharu media ga shakai ni ataeru eikyou wa nan desu ka?)"
+    },
+    {
+      "question": "デジタル市民権には批判的思考が必要です。 (Dejitaru shimin-ken ni wa hihanteki shikou ga hitsuyou desu.)",
+      "answer": "デジタル市民権には批判的思考が必要です。 (Dejitaru shimin-ken ni wa hihanteki shikou ga hitsuyou desu.)"
+    },
+    {
+      "question": "責任あるオンライン行動をどう評価しますか？ (Sekinin aru onrain koudou o dou hyouka shimasu ka?)",
+      "answer": "責任あるオンライン行動をどう評価しますか？ (Sekinin aru onrain koudou o dou hyouka shimasu ka?)"
+    },
+    {
+      "question": "サイバーハラスメントとオンラインいじめにどう対処しましょうか？ (Saibaa harasumento to onrain ijime ni dou taisho shimashou ka?)",
+      "answer": "サイバーハラスメントとオンラインいじめにどう対処しましょうか？ (Saibaa harasumento to onrain ijime ni dou taisho shimashou ka?)"
+    },
+    {
+      "question": "安全なデジタル環境を作るためにどのような措置が取れますか？ (Anzen na dejitaru kankyou o tsukuru tame ni dono you na sochi ga toremasu ka?)",
+      "answer": "安全なデジタル環境を作るためにどのような措置が取れますか？ (Anzen na dejitaru kankyou o tsukuru tame ni dono you na sochi ga toremasu ka?)"
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and informed, ideal for discussing digital citizenship in Japanese.",
+    "5-7 correct pronunciations": "Good! Most of your digital citizenship phrases are pronounced correctly, with some areas needing refinement for precision.",
+    "2-4 correct pronunciations": "Fair. You grasp the basics of digital citizenship, but more practice is needed for effective communication.",
+    "0-1 correct pronunciations": "Needs improvement. Focus on practicing these phrases to enhance your Japanese speaking skills in digital citizenship discussions."
+  }
+}

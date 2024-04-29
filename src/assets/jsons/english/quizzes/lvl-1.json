@@ -1,0 +1,117 @@
+{
+  "title": "Easy English Quiz",
+  "description": "Test your basic English skills with this 10-question quiz. Good luck!",
+  "instructions": [
+    "Read each question carefully and select the best answer from the choices provided.",
+    "There is only one correct answer for each question.",
+    "Once you have answered all the questions, click the \"Submit\" button to see your score."
+  ],
+  "items": [
+    {
+      "question": "What is the opposite of 'happy'?",
+      "choices": [
+        "excited",
+        "sad",
+        "angry",
+        "surprised"
+      ],
+      "answer": "sad"
+    },
+    {
+      "question": "Which of these words means 'big'?",
+      "choices": [
+        "small",
+        "large",
+        "tiny",
+        "gigantic"
+      ],
+      "answer": "large"
+    },
+    {
+      "question": "What is the past tense of 'go'?",
+      "choices": [
+        "goed",
+        "gone",
+        "went",
+        "gotten"
+      ],
+      "answer": "went"
+    },
+    {
+      "question": "Which of these sentences is grammatically correct?",
+      "choices": [
+        "I goed to the store.",
+        "I go to the store.",
+        "I goes to the store.",
+        "I am go to the store."
+      ],
+      "answer": "I go to the store."
+    },
+    {
+      "question": "What is the present tense of 'to eat'?",
+      "choices": [
+        "eat",
+        "ate",
+        "eaten",
+        "will eat"
+      ],
+      "answer": "eat"
+    },
+    {
+      "question": "Which of these words means 'cold'?",
+      "choices": [
+        "hot",
+        "warm",
+        "cool",
+        "freezing"
+      ],
+      "answer": "freezing"
+    },
+    {
+      "question": "What is the opposite of 'up'?",
+      "choices": [
+        "down",
+        "left",
+        "right",
+        "forward"
+      ],
+      "answer": "down"
+    },
+    {
+      "question": "Which of these words means 'small'?",
+      "choices": [
+        "large",
+        "tiny",
+        "big",
+        "gigantic"
+      ],
+      "answer": "tiny"
+    },
+    {
+      "question": "What is the past tense of 'see'?",
+      "choices": [
+        "seed",
+        "seen",
+        "saw",
+        "shown"
+      ],
+      "answer": "saw"
+    },
+    {
+      "question": "Which of these sentences is grammatically correct?",
+      "choices": [
+        "He run fast.",
+        "He runs fast.",
+        "He goed fast.",
+        "He am fast."
+      ],
+      "answer": "He runs fast."
+    }
+  ],
+  "scoring": {
+    "8-10 correct answers": "Excellent! You have a strong command of basic English.",
+    "5-7 correct answers": "Good! You have a good understanding of basic English, but there are a few areas where you could improve.",
+    "2-4 correct answers": "Fair. You have a basic understanding of English, but there are many areas where you need to improve.",
+    "0-1 correct answers": "Needs improvement. You should consider taking an English language course or using resources to improve your English skills."
+  }
+}

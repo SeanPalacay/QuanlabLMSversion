@@ -1,0 +1,77 @@
+{
+    "title": "Japanese Language Phrases",
+    "description": "Test your knowledge of basic Japanese phrases with this quiz.",
+    "items": [
+      {
+        "id": 1,
+        "question": "How do you say 'Hello' in Japanese?",
+        "answer": "Konnichiwa",
+        "options": ["Sayonara", "Arigatou", "Sumimasen", "Konnichiwa"],
+        "hint": "Common greeting"
+      },
+      {
+        "id": 2,
+        "question": "What is the Japanese word for 'Thank you'?",
+        "answer": "Arigatou",
+        "options": ["Hai", "Iie", "Konnichiwa", "Arigatou"],
+        "hint": "Expressing gratitude"
+      },
+      {
+        "id": 3,
+        "question": "Which word means 'Yes' in Japanese?",
+        "answer": "Hai",
+        "options": ["Hai", "Iie", "Konnichiwa", "Arigatou"],
+        "hint": "Affirmative response"
+      },
+      {
+        "id": 4,
+        "question": "How do you say 'No' in Japanese?",
+        "answer": "Iie",
+        "options": ["Hai", "Iie", "Konnichiwa", "Arigatou"],
+        "hint": "Negative response"
+      },
+      {
+        "id": 5,
+        "question": "What is the morning greeting in Japanese?",
+        "answer": "Ohayou gozaimasu",
+        "options": ["Konbanwa", "Konnichiwa", "Ohayou gozaimasu", "Arigatou"],
+        "hint": "Morning greeting"
+      },
+      {
+        "id": 6,
+        "question": "How do you greet someone in the evening in Japanese?",
+        "answer": "Konbanwa",
+        "options": ["Ohayou gozaimasu", "Konnichiwa", "Konbanwa", "Arigatou"],
+        "hint": "Evening greeting"
+      },
+      {
+        "id": 7,
+        "question": "What phrase is used to apologize or get someone's attention in Japanese?",
+        "answer": "Sumimasen",
+        "options": ["Hai", "Iie", "Sumimasen", "Arigatou"],
+        "hint": "Apology or seeking attention"
+      },
+      {
+        "id": 8,
+        "question": "How do you ask 'How are you?' in Japanese?",
+        "answer": "Ogenki desu ka",
+        "options": ["Sayonara", "Ogenki desu ka", "Sumimasen", "Arigatou"],
+        "hint": "Asking about well-being"
+      },
+      {
+        "id": 9,
+        "question": "How do you express appreciation for someone's hard work in Japanese?",
+        "answer": "Otsukaresama desu",
+        "options": ["Hai", "Otsukaresama desu", "Sumimasen", "Konnichiwa"],
+        "hint": "Common expression in the workplace"
+      },
+      {
+        "id": 10,
+        "question": "What question would you ask when you want to know what something is?",
+        "answer": "Kore wa nan desu ka",
+        "options": ["Hai", "Iie", "Kore wa nan desu ka", "Konnichiwa"],
+        "hint": "Asking about an object"
+      }
+    ]
+  }
+  

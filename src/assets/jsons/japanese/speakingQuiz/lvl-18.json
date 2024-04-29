@@ -1,0 +1,61 @@
+{
+  "title": "Philosophical Conversations",
+  "description": "Enhance your Japanese speaking skills with phrases used for philosophical conversations. Focus on clear, thoughtful pronunciation and introspective intonation.",
+  "instructions": [
+    "Below is a list of phrases you might use in philosophical conversations in Japanese.",
+    "Record yourself speaking each phrase.",
+    "Aim for clear, reflective, and deep pronunciation.",
+    "Maintain a conversational and philosophical pace.",
+    "After recording, listen to your playback and compare it to the text.",
+    "Pay attention to intonation, clarity, and fluency in Japanese.",
+    "Repeat the recording process as necessary to improve your Japanese speaking skills for philosophical contexts."
+  ],
+  "items": [
+    {
+      "question": "存在の意味について考えてみましょう。 (Sonzai no imi ni tsuite kangaete mimashou.)",
+      "answer": "存在の意味について考えてみましょう。 (Sonzai no imi ni tsuite kangaete mimashou.)"
+    },
+    {
+      "question": "あなたの哲学的な信念は何ですか？ (Anata no tetsugakuteki na shin'nen wa nan desu ka?)",
+      "answer": "あなたの哲学的な信念は何ですか？ (Anata no tetsugakuteki na shin'nen wa nan desu ka?)"
+    },
+    {
+      "question": "倫理哲学に興味があります。 (Rinri tetsugaku ni kyoumi ga arimasu.)",
+      "answer": "倫理哲学に興味があります。 (Rinri tetsugaku ni kyoumi ga arimasu.)"
+    },
+    {
+      "question": "意識の本質について議論しましょう。 (Ishiki no honshitsu ni tsuite giron shimashou.)",
+      "answer": "意識の本質について議論しましょう。 (Ishiki no honshitsu ni tsuite giron shimashou.)"
+    },
+    {
+      "question": "哲学的な議論は私たちの理解を深めます。 (Tetsugakuteki na giron wa watashitachi no rikai o fukamemasu.)",
+      "answer": "哲学的な議論は私たちの理解を深めます。 (Tetsugakuteki na giron wa watashitachi no rikai o fukamemasu.)"
+    },
+    {
+      "question": "あなたを惹きつける哲学的な疑問は何ですか？ (Anata o hikitsukeru tetsugakuteki na gimon wa nan desu ka?)",
+      "answer": "あなたを惹きつける哲学的な疑問は何ですか？ (Anata o hikitsukeru tetsugakuteki na gimon wa nan desu ka?)"
+    },
+    {
+      "question": "異なる哲学的視点を探求しましょう。 (Kotonaru tetsugakuteki shiten o tankyuu shimashou.)",
+      "answer": "異なる哲学的視点を探求しましょう。 (Kotonaru tetsugakuteki shiten o tankyuu shimashou.)"
+    },
+    {
+      "question": "哲学的な議論の深みを評価します。 (Tetsugakuteki na giron no fukami o hyouka shimasu.)",
+      "answer": "哲学的な議論の深みを評価します。 (Tetsugakuteki na giron no fukami o hyouka shimasu.)"
+    },
+    {
+      "question": "哲学は私たちの日常生活にどう貢献しますか？ (Tetsugaku wa watashitachi no nichijou seikatsu ni dou kouken shimasu ka?)",
+      "answer": "哲学は私たちの日常生活にどう貢献しますか？ (Tetsugaku wa watashitachi no nichijou seikatsu ni dou kouken shimasu ka?)"
+    },
+    {
+      "question": "このアイデアの哲学的な意味合いを反映しましょう。 (Kono aidea no tetsugakuteki na imiai o han'ei shimashou.)",
+      "answer": "このアイデアの哲学的な意味合いを反映しましょう。 (Kono aidea no tetsugakuteki na imiai o han'ei shimashou.)"
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and profound, well-suited for philosophical discussions in Japanese.",
+    "5-7 correct pronunciations": "Good! Most of your philosophical phrases are pronounced correctly, with some areas needing refinement for deeper clarity.",
+    "2-4 correct pronunciations": "Fair. You grasp the basics of philosophical discourse, but need more practice for effective communication.",
+    "0-1 correct pronunciations": "Needs improvement. Focus on practicing these philosophical phrases to enhance your Japanese speaking skills in thoughtful discussions."
+  }
+}

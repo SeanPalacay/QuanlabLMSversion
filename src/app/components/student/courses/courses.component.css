@@ -1,0 +1,16 @@
+@media screen and (max-width: 480px) {
+  
+    .instruction
+    {
+      font-size: 24px;
+    }
+    .description {
+      font-size: 18px;
+    }
+  
+  }
+  .selected {
+    background-color: #e5e7eb; /* Change this color to your desired highlight color */
+    color: #000; /* Change this color to your desired text color */
+  }
+  

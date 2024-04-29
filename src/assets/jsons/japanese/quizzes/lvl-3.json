@@ -1,0 +1,77 @@
+{
+  "title": "Japanese Language Essentials II",
+  "description": "Explore advanced Japanese expressions and phrases in this quiz.",
+    "items": [
+      {
+        "id": 11,
+        "question": "How do you say 'Goodbye' in Japanese?",
+        "answer": "Sayonara",
+        "options": ["Arigatou", "Konnichiwa", "Sumimasen", "Sayonara"],
+        "hint": "Parting phrase"
+      },
+      {
+        "id": 12,
+        "question": "What is the Japanese word for 'Excuse me' or 'I'm sorry'?",
+        "answer": "Sumimasen",
+        "options": ["Hai", "Iie", "Konnichiwa", "Sumimasen"],
+        "hint": "Apology or seeking attention"
+      },
+      {
+        "id": 13,
+        "question": "How do you express agreement in Japanese?",
+        "answer": "Hai",
+        "options": ["Hai", "Iie", "Konnichiwa", "Arigatou"],
+        "hint": "Affirmative response"
+      },
+      {
+        "id": 14,
+        "question": "What is the Japanese word for 'No'?",
+        "answer": "Iie",
+        "options": ["Hai", "Iie", "Konnichiwa", "Arigatou"],
+        "hint": "Negative response"
+      },
+      {
+        "id": 15,
+        "question": "How do you ask 'What is your name?' in Japanese?",
+        "answer": "Onamae wa nan desu ka",
+        "options": ["Anata wa dare desu ka", "Kore wa nan desu ka", "Onamae wa nan desu ka", "Arigatou"],
+        "hint": "Inquiring about someone's name"
+      },
+      {
+        "id": 16,
+        "question": "What is the Japanese word for 'I don't understand'?",
+        "answer": "Wakarimasen",
+        "options": ["Wakarimasu", "Iie", "Konnichiwa", "Wakarimasen"],
+        "hint": "Expressing lack of understanding"
+      },
+      {
+        "id": 17,
+        "question": "How do you say 'Please' in Japanese?",
+        "answer": "Onegaishimasu",
+        "options": ["Arigatou", "Sumimasen", "Onegaishimasu", "Sayonara"],
+        "hint": "Making a polite request"
+      },
+      {
+        "id": 18,
+        "question": "What is the Japanese word for 'Good morning'?",
+        "answer": "Ohayou gozaimasu",
+        "options": ["Konnichiwa", "Arigatou", "Ohayou gozaimasu", "Sayonara"],
+        "hint": "Morning greeting"
+      },
+      {
+        "id": 19,
+        "question": "How do you say 'I love you' in Japanese?",
+        "answer": "Ai shiteru",
+        "options": ["Arigatou", "Ai shiteru", "Sumimasen", "Sayonara"],
+        "hint": "Expressing love"
+      },
+      {
+        "id": 20,
+        "question": "What phrase is used to say 'You're welcome' in Japanese?",
+        "answer": "Douitashimashite",
+        "options": ["Arigatou", "Sumimasen", "Douitashimashite", "Sayonara"],
+        "hint": "Response to 'Thank you'"
+      }
+    ]
+  }
+  

@@ -1,0 +1,79 @@
+{
+  "title": "Medium English Quiz 1",
+  "description": "Test your English skills with this 10-question quiz. Good luck!",
+  "instructions": [
+    "Read each question carefully and select the best answer from the choices provided.",
+    "There is only one correct answer for each question.",
+    "Once you have answered all the questions, click the \"Submit\" button to see your score."
+  ],
+  "items": [
+    {
+      "question": "Which of these sentences is grammatically correct?",
+      "choices": [
+        "I wish I could go to the party.",
+        "I wish I can go to the party.",
+        "I wish I could have gone to the party."
+      ],
+      "answer": "I wish I could go to the party."
+    },
+    {
+      "question": "Which of these words means 'to make a formal declaration'?",
+      "choices": ["proclaim", "assert", "announce", "profess"],
+      "answer": "proclaim"
+    },
+    {
+      "question": "What is the past participle of 'strew'?",
+      "choices": ["strewn", "strewed", "strowed", "strewen"],
+      "answer": "strewn"
+    },
+    {
+      "question": "Which of these words means 'a feeling of intense dislike or aversion'?",
+      "choices": ["loathe", "detest", "abhor", "despise"],
+      "answer": "loathe"
+    },
+    {
+      "question": "What is the opposite of 'gregarious'?",
+      "choices": ["outgoing", "sociable", "friendly", "seclusive"],
+      "answer": "seclusive"
+    },
+    {
+      "question": "Which of these words means 'excessively or elaborately ornamented'?",
+      "choices": ["ornate", "embellished", "decorative", "adorned"],
+      "answer": "ornate"
+    },
+    {
+      "question": "What is the past tense of 'choose'?",
+      "choices": ["choose", "chosed", "chosen"],
+      "answer": "chose"
+    },
+    {
+      "question": "Which of these words means 'a person who is excessively or fanatically devoted to a particular cause or idea'?",
+      "choices": ["zealot", "bigot", "fanatic", "enthusiast"],
+      "answer": "zealot"
+    },
+    {
+      "question": "What is the present perfect tense of 'to wax'?",
+      "choices": [
+        "has waxed",
+        "have waxed",
+        "have been waxing",
+        "has been waxing"
+      ],
+      "answer": "has waxed"
+    },
+    {
+      "question": "Which of these sentences is grammatically correct?",
+      "choices": [
+        "Between you and I, I think she's lying.",
+        "Between you and me, I think she's lying."
+      ],
+      "answer": "Between you and me, I think she's lying."
+    }
+  ],
+  "scoring": {
+    "8-10 correct answers": "Excellent! You have a strong command of English.",
+    "5-7 correct answers": "Good! You have a good understanding of English, but there are a few areas where you could improve.",
+    "2-4 correct answers": "Fair. You have a basic understanding of English, but there are many areas where you need to improve.",
+    "0-1 correct answers": "Needs improvement. You should consider taking an English language course or using resources to improve your English skills."
+  }
+}

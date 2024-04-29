@@ -1,0 +1,42 @@
+
+
+        
+        
+<button class="w-full h-auto mx-auto text-left bg-slate-100 transition-all hover:scale-105 hover:shadow-xl will-change-scroll  hover:!bg-white shadow-lg rounded-2xl overflow-hidden">
+        <img class="w-full h-64 object-cover" src="{{picture}}" alt="Card Image">
+        <div class="px-6 py-2 flex items-center justify-between">
+            <div class="mt-2 flex items-center">
+                <span class="mr-2">▶️</span>
+                <div class="font-normal text-sm">{{number}}</div>
+            </div>
+            <div class="flex items-center">
+                <span class="cursor-pointer" [ngClass]="{'greyed-star': difficulty < 1}">⭐️</span>
+                <span class="cursor-pointer" [ngClass]="{'greyed-star': difficulty < 2}">⭐️</span>
+                <span class="cursor-pointer" [ngClass]="{'greyed-star': difficulty < 3}">⭐️</span>
+                <span class="cursor-pointer" [ngClass]="{'greyed-star': difficulty < 4}">⭐️</span>
+                <span class="cursor-pointer" [ngClass]="{'greyed-star': difficulty < 5}">⭐️</span>
+            </div>
+        </div>
+        <div class="h-20 mb-4 w-full">
+            <p class="text-gray-800 caledea text-xl font-bold px-6 mb-5">{{lecture}}</p>
+        </div>
+        <div class="linya border-solid border-gray-200"></div>
+        <div class="flex items-center justify-between mx-4 my-3">
+            <div class="flex items-center">
+                <img src="{{profilepic}}" class="w-10 h-10 object-cover rounded-full mr-4" alt="Profile Picture">
+                <div>
+                    <p class="text-sm font-semibold">{{name}}</p>
+                    <p class="text-sm text-gray-500">{{job}}</p>
+                </div>
+            </div>
+            <div *ngIf="enrolled>0" class="flex items-center ml-4"> <!-- Added ml-4 for margin left -->
+                <img class="w-5 h-5" src="assets/add-contact.png" alt="">
+                <p class="ml-2 overlock-i text-lime-600">ENROLLED</p>
+            </div>
+        </div>
+    </button>
+    
+
+    
+    
+    

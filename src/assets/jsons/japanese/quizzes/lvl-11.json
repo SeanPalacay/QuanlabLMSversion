@@ -1,0 +1,67 @@
+{
+  "title": "Hiragana Quiz - Set 3",
+  "description": "Test your knowledge of hiragana characters with this quiz. Identify the correct hiragana character for each given pronunciation.",
+    "items": [
+      {
+        "question": "な",
+        "answer": "na",
+        "hint": "Combination of two strokes: a diagonal line and a short horizontal line.",
+        "options": ["ne", "nu", "no", "na"]
+      },
+      {
+        "question": "に",
+        "answer": "ni",
+        "hint": "Resembles the letter 'ni' with a curve at the top.",
+        "options": ["no", "ne", "ni", "ha"]
+      },
+      {
+        "question": "ぬ",
+        "answer": "nu",
+        "hint": "Looks like the letter 'nu' with a curve at the top.",
+        "options": ["fu", "no", "nu", "he"]
+      },
+      {
+        "question": "ね",
+        "answer": "ne",
+        "hint": "Combination of two strokes: a long diagonal line and a short horizontal line.",
+        "options": ["ho", "ne", "fu", "ni"]
+      },
+      {
+        "question": "の",
+        "answer": "no",
+        "hint": "Combination of two strokes: a circle and a short line coming out from the right.",
+        "options": ["no", "ha", "ni", "fu"]
+      },
+      {
+        "question": "は",
+        "answer": "ha",
+        "hint": "Resembles the letter 'ha' with a curve at the top.",
+        "options": ["ho", "ni", "ha", "fu"]
+      },
+      {
+        "question": "ひ",
+        "answer": "hi",
+        "hint": "Combination of two strokes: a short horizontal line and a longer diagonal line.",
+        "options": ["fu", "ho", "ni", "hi"]
+      },
+      {
+        "question": "ふ",
+        "answer": "fu",
+        "hint": "Looks like the letter 'fu' with a curve at the top.",
+        "options": ["he", "ni", "fu", "ho"]
+      },
+      {
+        "question": "へ",
+        "answer": "he",
+        "hint": "Combination of two strokes: a short horizontal line and a curve.",
+        "options": ["he", "ho", "fu", "ni"]
+      },
+      {
+        "question": "ほ",
+        "answer": "ho",
+        "hint": "Combination of three strokes: a vertical line, a curve, and a short line.",
+        "options": ["fu", "ni", "ho", "he"]
+      }
+    ]
+  }
+  

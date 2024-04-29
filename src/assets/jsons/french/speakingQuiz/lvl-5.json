@@ -1,0 +1,61 @@
+{
+  "title": "Travel and Transportation",
+  "description": "Improve your French speaking skills with phrases commonly used for travel and transportation. Focus on clear pronunciation and practical intonation.",
+  "instructions": [
+    "Below, you'll find a list of common phrases related to travel and transportation in French.",
+    "Your task is to record yourself speaking each phrase.",
+    "Ensure your pronunciation matches the provided text as closely as possible.",
+    "Try to maintain a natural and clear speaking pace.",
+    "After recording each phrase, listen to your recording and compare it to the text.",
+    "Focus on intonation, clarity, and fluency.",
+    "Repeat the recording process as many times as needed to improve your pronunciation."
+  ],
+  "items": [
+    {
+      "question": "Où est la gare ?",
+      "answer": "Où est la gare ?"
+    },
+    {
+      "question": "J'ai besoin d'un billet simple.",
+      "answer": "J'ai besoin d'un billet simple."
+    },
+    {
+      "question": "Ce bus va-t-il au centre-ville ?",
+      "answer": "Ce bus va-t-il au centre-ville ?"
+    },
+    {
+      "question": "Je voudrais louer une voiture.",
+      "answer": "Je voudrais louer une voiture."
+    },
+    {
+      "question": "Où puis-je me garer ?",
+      "answer": "Où puis-je me garer ?"
+    },
+    {
+      "question": "À quelle heure part le train ?",
+      "answer": "À quelle heure part le train ?"
+    },
+    {
+      "question": "Comment puis-je aller à l'aéroport ?",
+      "answer": "Comment puis-je aller à l'aéroport ?"
+    },
+    {
+      "question": "Puis-je avoir une carte ?",
+      "answer": "Puis-je avoir une carte ?"
+    },
+    {
+      "question": "Y a-t-il un métro à proximité ?",
+      "answer": "Y a-t-il un métro à proximité ?"
+    },
+    {
+      "question": "Combien de temps dure le voyage ?",
+      "answer": "Combien de temps dure le voyage ?"
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and accurate. You demonstrate a strong command of travel-related French.",
+    "5-7 correct pronunciations": "Good! Your pronunciation is mostly correct, with a good grasp of transportation phrases in French. There are some areas to refine for improved clarity.",
+    "2-4 correct pronunciations": "Fair. You can navigate basic travel and transportation conversations in French, but there are several areas needing significant improvement.",
+    "0-1 correct pronunciations": "Needs improvement. Consider practicing more to enhance your French pronunciation skills, or seek additional resources for learning."
+  }
+}

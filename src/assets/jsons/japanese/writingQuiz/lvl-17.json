@@ -1,0 +1,59 @@
+{
+  "title": "Japanese Conversation Completion Quiz - Hard Mode",
+  "description": "Complete the blanks in these Japanese conversation snippets. This quiz tests your ability to understand and use conversational Japanese effectively.",
+  "instructions": [
+    "Read each conversation snippet carefully.",
+    "Type the appropriate word or phrase in Japanese using Romaji to complete the sentence.",
+    "The case (uppercase or lowercase) of your answer does not matter, as long as the spelling is correct.",
+    "After completing all questions, submit your answers for scoring."
+  ],
+  "items": [
+    {
+      "question": "Watashi wa kinou, _______ o mita. (Yesterday, I watched a movie.)",
+      "suggestedAnswer": "eiga"
+    },
+    {
+      "question": "Raishuu no doyoubi ni _______ ni ikimasen ka? (Shall we go to the beach next Saturday?)",
+      "suggestedAnswer": "umibe"
+    },
+    {
+      "question": "Kare wa _______ de shigoto o shite iru. (He works at a bank.)",
+      "suggestedAnswer": "ginkou"
+    },
+    {
+      "question": "Kono hon wa _______ ni tsuite desu. (This book is about history.)",
+      "suggestedAnswer": "rekishi"
+    },
+    {
+      "question": "Watashi wa mainichi _______ o nonde iru. (I drink coffee every day.)",
+      "suggestedAnswer": "koohii"
+    },
+    {
+      "question": "Kanojo wa _______ o benkyou shite imasu. (She is studying economics.)",
+      "suggestedAnswer": "keizai"
+    },
+    {
+      "question": "Kyou, watashi wa _______ de hirugohan o tabemashita. (Today, I ate lunch at a restaurant.)",
+      "suggestedAnswer": "resutoran"
+    },
+    {
+      "question": "Kare wa _______ ga jouzu desu. (He is good at playing the guitar.)",
+      "suggestedAnswer": "gitaa"
+    },
+    {
+      "question": "Watashitachi no kaisha wa _______ o yushutsu shite imasu. (Our company exports electronics.)",
+      "suggestedAnswer": "denshi buhin"
+    },
+    {
+      "question": "Kono supaaketto wa _______ made yatte imasu. (This supermarket is open until midnight.)",
+      "suggestedAnswer": "mayonaka"
+    }
+  ],
+  "scoring": {
+    "10 correct answers": "Outstanding! You have a great understanding of Japanese conversation.",
+    "7-9 correct answers": "Very good! You're quite skilled in conversational Japanese.",
+    "4-6 correct answers": "Good job! You're on the right track, but there's room for improvement.",
+    "1-3 correct answers": "A decent start! Keep practicing your conversational skills.",
+    "0 correct answers": "Conversational Japanese can be challenging. Keep studying and practicing!"
+  }
+}

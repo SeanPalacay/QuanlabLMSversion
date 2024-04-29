@@ -1,0 +1,56 @@
+{
+  "title": "French Language Essentials - Hard Mode",
+  "description": "Challenge your French skills by identifying the error in each sentence.",
+  "items": [
+    {
+      "question": "Il a expliqué que le succès de ce projet dépendrait non seulement de l'engagement des équipes, mais aussi de la disponibilité des ressources.",
+      "choices": ["a expliqué", "dépendrait", "non seulement", "des"],
+      "answer": "des"
+    },
+    {
+      "question": "Les habitants de cette ville sont fiers de leur patrimoine culturel et travaillent dur pour le préserver pour les générations futures.",
+      "choices": ["sont", "leur", "pour", "les"],
+      "answer": "pour"
+    },
+    {
+      "question": "Après avoir terminé ses études, elle a décidé de voyager à travers le monde pour découvrir de nouvelles cultures et apprendre des langues.",
+      "choices": ["Après", "a décidé", "à travers", "des"],
+      "answer": "des"
+    },
+    {
+      "question": "Lors d'une récente expédition en Antarctique, les scientifiques ont observé des changements alarmants dans les populations de manchots.",
+      "choices": ["Lors", "ont observé", "alarmants", "de"],
+      "answer": "de"
+    },
+    {
+      "question": "Le chef a utilisé une variété d'épices pour donner à son plat un goût unique qui reflète les traditions culinaires de sa région.",
+      "choices": ["a utilisé", "pour", "qui", "de sa"],
+      "answer": "de sa"
+    },
+    {
+      "question": "Bien que la technologie ait progressé à un rythme rapide, il reste encore beaucoup à faire pour assurer une accessibilité équitable à tous.",
+      "choices": ["Bien que", "ait", "beaucoup", "à tous"],
+      "answer": "à tous"
+    },
+    {
+      "question": "La récente réforme éducative vise à moderniser le curriculum en intégrant des sujets plus pertinents pour le monde actuel.",
+      "choices": ["vise", "à", "en", "plus"],
+      "answer": "en"
+    },
+    {
+      "question": "Les critiques ont loué le film pour sa direction artistique innovante et la profondeur de ses personnages, ce qui en fait un candidat sérieux pour les prix cinématographiques.",
+      "choices": ["ont loué", "pour", "ce qui", "en fait"],
+      "answer": "pour"
+    },
+    {
+      "question": "Dans son discours, le maire a souligné l'importance de l'unité communautaire face aux défis environnementaux actuels.",
+      "choices": ["Dans", "a souligné", "l'importance", "face"],
+      "answer": "face"
+    },
+    {
+      "question": "Cette initiative vise à encourager les jeunes à s'engager davantage dans la vie politique, espérant stimuler une nouvelle génération de leaders.",
+      "choices": ["vise", "à", "davantage", "espérant"],
+      "answer": "à"
+    }
+  ]
+}

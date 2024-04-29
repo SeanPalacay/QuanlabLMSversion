@@ -1,0 +1,86 @@
+{
+  "title": "Japanese Language Essentials",
+  "description": "Choose the English equivalent of the given Japanese terms.",
+  "items": [
+    {
+      "id": 1,
+      "question": "Konnichiwa",
+      "answer": "Hello",
+      "options": ["Goodbye", "Thank you", "Excuse me", "Hello"],
+      "hint": "Common greeting"
+    },
+    {
+      "id": 2,
+      "question": "Arigatou",
+      "answer": "Thank you",
+      "options": ["Yes", "No", "Hello", "Thank you"],
+      "hint": "Expressing gratitude"
+    },
+    {
+      "id": 3,
+      "question": "Hai",
+      "answer": "Yes",
+      "options": ["Yes", "No", "Hello", "Thank you"],
+      "hint": "Affirmative response"
+    },
+    {
+      "id": 4,
+      "question": "Iie",
+      "answer": "No",
+      "options": ["Yes", "No", "Hello", "Thank you"],
+      "hint": "Negative response"
+    },
+    {
+      "id": 5,
+      "question": "Ohayou gozaimasu",
+      "answer": "Good morning",
+      "options": ["Good evening", "Hello", "Good morning", "Thank you"],
+      "hint": "Morning greeting"
+    },
+    {
+      "id": 6,
+      "question": "Konbanwa",
+      "answer": "Good evening",
+      "options": ["Good morning", "Hello", "Good evening", "Thank you"],
+      "hint": "Evening greeting"
+    },
+    {
+      "id": 7,
+      "question": "Sumimasen",
+      "answer": "Excuse me / I'm sorry",
+      "options": ["Yes", "No", "Excuse me / I'm sorry", "Thank you"],
+      "hint": "Apology or seeking attention"
+    },
+    {
+      "id": 8,
+      "question": "Ogenki desu ka",
+      "answer": "How are you?",
+      "options": [
+        "Goodbye",
+        "How are you?",
+        "Excuse me / I'm sorry",
+        "Thank you"
+      ],
+      "hint": "Asking about well-being"
+    },
+    {
+      "id": 9,
+      "question": "Otsukaresama desu",
+      "answer": "Thank you for your hard work",
+      "options": [
+        "Yes",
+        "Thank you for your hard work",
+        "Excuse me / I'm sorry",
+        "Hello"
+      ],
+      "hint": "Common expression in the workplace"
+    },
+    {
+      "id": 10,
+      "question": "Kore wa nan desu ka",
+      "answer": "What is this?",
+      "options": ["Yes", "No", "What is this?", "Hello"],
+      "hint": "Asking about an object"
+    }
+  ]
+}

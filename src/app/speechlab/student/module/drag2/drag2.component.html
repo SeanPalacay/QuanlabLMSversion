@@ -1,0 +1,105 @@
+<div class="container">
+  <p class="story">
+   It was now five o'clock and Mrs. Wilson
+    <span
+      (drop)="onDrop1($event, 'said')"
+      (dragover)="allowDrop1($event)"
+      (dragstart)="onDragStart1($event, 'said')"
+      draggable="true"
+      id="said"
+      class="drop-target"
+    >
+      ______
+    </span>
+
+    it was time for her to go home. She
+    <span
+      (drop)="onDrop1($event, 'put')"
+      (dragover)="allowDrop1($event)"
+      (dragstart)="onDragStart1($event, 'put')"
+      draggable="true"
+      id="put"
+      class="drop-target"
+    >
+      ______
+    </span>
+    on her hat, coat, and gloves, and Mrs. Smith put the dead Sammy into a shopping bag. Mrs. Wilson
+    <span
+      (drop)="onDrop1($event, 'took')"
+      (dragover)="allowDrop1($event)"
+      (dragstart)="onDragStart1($event, 'took')"
+      draggable="true"
+      id="took"
+      class="drop-target"
+    >
+      ______
+    </span>
+    the shopping bag and
+    <span
+      (drop)="onDrop1($event, 'walked')"
+      (dragover)="allowDrop1($event)"
+      (dragstart)="onDragStart1($event, 'walked')"
+      draggable="true"
+      id="walked"
+      class="drop-target"
+    >
+      ______
+    </span>
+    to the bus stop. She
+    <span
+      (drop)="onDrop1($event, 'waited')"
+      (dragover)="allowDrop1($event)"
+      (dragstart)="onDragStart1($event, 'waited')"
+      draggable="true"
+      id="waited"
+      class="drop-target"
+    >
+      ______
+    </span>
+
+    long time for the bus, so she bought a newspaper. When the bus
+    <span
+      (drop)="onDrop1($event, 'arrived')"
+      (dragover)="allowDrop1($event)"
+      (dragstart)="onDragStart1($event, 'arrived')"
+      draggable="true"
+      id="arrived"
+      class="drop-target"
+    >
+      _____
+    </span>
+
+    she got on the bus, sat down, and put the shopping bag on the floor beside her feet. She then began to read the newspaper. When the bus arrived at her bus stop, she
+    <span
+      (drop)="onDrop1($event, 'got')"
+      (dragover)="allowDrop1($event)"
+      (dragstart)="onDragStart1($event, 'got')"
+      draggable="true"
+      id="got"
+      class="drop-target"
+    >
+      _____
+    </span>
+    off the bus and walked for about two minutes. Suddenly she
+    <span
+      (drop)="onDrop1($event, 'remembered')"
+      (dragover)="allowDrop1($event)"
+      (dragstart)="onDragStart1($event, 'remembered')"
+      draggable="true"
+      id="remembered"
+      class="drop-target"
+    >
+      _____
+    </span>
+    she left the shopping bag on the bus.
+  </p>
+
+  <div class="verbs-container">
+    <div *ngFor="let verb1 of verbs1" (dragstart)="onDragStart1($event, verb1)" draggable="true" class="verb-item">
+      {{ verb1 }}
+    </div>
+  </div>
+  <div class="score">
+    Score: {{ score1 }}
+  </div>
+</div>

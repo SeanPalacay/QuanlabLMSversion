@@ -1,0 +1,59 @@
+{
+  "title": "Fill in the Blanks - Medium Mode",
+  "description": "This intermediate-level quiz challenges you to fill in the blanks with the correct French translations of the given Tagalog words or phrases.",
+  "instructions": [
+    "Each sentence contains a blank space where a Tagalog word is provided in parentheses.",
+    "Translate the Tagalog word into French and fill in the blank.",
+    "Ensure the French word correctly completes the sentence in terms of both meaning and grammatical structure.",
+    "Review your answers before submission."
+  ],
+  "items": [
+    {
+      "question": "Chaque matin, elle aime boire du _____ chaud. (kape)",
+      "suggestedAnswer": "café"
+    },
+    {
+      "question": "Nous devons traverser la _____ pour atteindre l'autre côté de la ville. (ilog)",
+      "suggestedAnswer": "rivière"
+    },
+    {
+      "question": "Le _____ de Noël est décoré de lumières et d'ornements. (puno)",
+      "suggestedAnswer": "sapin"
+    },
+    {
+      "question": "Pour son dîner, il a commandé un grand _____ de viande. (piraso)",
+      "suggestedAnswer": "morceau"
+    },
+    {
+      "question": "Les enfants jouent à l'extérieur sous la _____ du soleil. (sikat)",
+      "suggestedAnswer": "lumière"
+    },
+    {
+      "question": "Il porte toujours son _____ porte-bonheur pour les examens. (anting-anting)",
+      "suggestedAnswer": "talisman"
+    },
+    {
+      "question": "La _____ commence à tomber doucement, couvrant les rues de blanc. (nieve)",
+      "suggestedAnswer": "neige"
+    },
+    {
+      "question": "Cette recette nécessite l'utilisation de _____ frais. (bawang)",
+      "suggestedAnswer": "ail"
+    },
+    {
+      "question": "Le _____ dans le ciel cette nuit est particulièrement brillant. (buwan)",
+      "suggestedAnswer": "lune"
+    },
+    {
+      "question": "Ils ont adopté un _____ de la rue pour lui donner un foyer aimant. (aso)",
+      "suggestedAnswer": "chien"
+    }
+  ],
+  "scoring": {
+    "10 correct answers": "Excellent! Your translation skills are quite impressive.",
+    "7-9 correct answers": "Great job! You're almost there, with just a little more practice needed.",
+    "4-6 correct answers": "Good effort! You've shown a solid understanding, but room for improvement remains.",
+    "1-3 correct answers": "A good start! Keep studying and practicing to enhance your skills.",
+    "0 correct answers": "It's a challenging start, but don't give up! Learning a new language takes time and practice."
+  }
+}

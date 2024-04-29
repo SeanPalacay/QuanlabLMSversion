@@ -1,0 +1,88 @@
+.gradient-color1 {
+  background-image: linear-gradient(
+    to right,
+    var(--tw-gradient-color),
+    var(--tw-gradient-color)
+  );
+  /* --tw-gradient-stops:  #0172AF, #74FEBD; */
+  /* --tw-gradient-from: #0172AF var(--tw-gradient-from-position); */
+  /* --tw-gradient-to: rgb(6 182 212 / 0) var(--tw-gradient-to-position); */
+  /* --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); */
+  /* --tw-gradient-to: #74FEBD var(--tw-gradient-to-position); */
+  background-size: 300% 100%;
+  overflow: hidden; /* Hide overflow content (if any) */
+  transition: transform 0.5s ease; /* Set the duration and timing function for both background and transform */
+}
+.gradient-color1:hover {
+  background: #0172af; /* Replace 'your-solid-color' with the desired solid color */
+  transform: scale(1.1); /* Adjust the scale factor for zoom effect */
+}
+.mode-container {
+  width: max-content;
+  min-width: 80%;
+  height: 100%;
+  display: flex;
+  gap: 6rem;
+}
+@media screen and (min-width: 769px) and (max-width: 1279px) {
+  .studentled-button,
+  .teacherled-button {
+    width: 14rem;
+    height: 16rem;
+  }
+  .instruction,
+  a {
+    font-size: 22px;
+  }
+  .description {
+    font-size: 18px;
+  }
+  .mode-container {
+    width: 80%;
+    height: 80%;
+    margin-left: 3rem;
+    gap: 3rem;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .studentled-button,
+  .teacherled-button {
+    width: 12rem;
+    height: 14rem;
+  }
+  .instruction,
+  a {
+    font-size: 20px;
+  }
+  .description {
+    font-size: 16px;
+  }
+  .mode-title p {
+    font-size: 20px;
+  }
+  .mode-container {
+    flex-direction: column;
+    gap: 4rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .studentled-button,
+  .teacherled-button {
+    width: 16rem;
+    height: 12rem;
+  }
+  .instruction,
+  a {
+    font-size: 20px;
+  }
+  .description {
+    font-size: 16px;
+  }
+  .mode-title p {
+    font-size: 18px;
+  }
+  .mode-container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}

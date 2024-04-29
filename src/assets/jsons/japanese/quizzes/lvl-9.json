@@ -1,0 +1,67 @@
+{
+  "title": "Hiragana Basics Quiz",
+  "description": "Test your knowledge of basic hiragana characters with this quiz.",
+    "items": [
+      {
+        "question": "あ",
+        "answer": "a",
+        "hint": "The first hiragana character.",
+        "options": ["u", "i", "e", "a"]
+      },
+      {
+        "question": "い",
+        "answer": "i",
+        "hint": "Looks like a straight line with a little hook at the top.",
+        "options": ["o", "e", "i", "ka"]
+      },
+      {
+        "question": "う",
+        "answer": "u",
+        "hint": "Resembles the letter 'u' with a curve.",
+        "options": ["ke", "u", "o", "ki"]
+      },
+      {
+        "question": "え",
+        "answer": "e",
+        "hint": "Similar to the letter 'e' but more rounded.",
+        "options": ["i", "e", "o", "ka"]
+      },
+      {
+        "question": "お",
+        "answer": "o",
+        "hint": "Looks like a circle with a little tail.",
+        "options": ["ku", "o", "ke", "ka"]
+      },
+      {
+        "question": "か",
+        "answer": "ka",
+        "hint": "Combination of two strokes: a short one and a longer one.",
+        "options": ["ki", "ka", "ke", "ku"]
+      },
+      {
+        "question": "き",
+        "answer": "ki",
+        "hint": "Starts with a short horizontal line, followed by two diagonal lines.",
+        "options": ["ku", "ka", "ke", "ki"]
+      },
+      {
+        "question": "く",
+        "answer": "ku",
+        "hint": "Resembles a letter 'ku' with a curve at the top.",
+        "options": ["ke", "ku", "ki", "ka"]
+      },
+      {
+        "question": "け",
+        "answer": "ke",
+        "hint": "Combination of two strokes: a long one and a short one.",
+        "options": ["ki", "ke", "ku", "ka"]
+      },
+      {
+        "question": "こ",
+        "answer": "ko",
+        "hint": "Looks like a circle with a small line coming out from the right.",
+        "options": ["ku", "ko", "ke", "ka"]
+      }
+    ]
+  }
+  

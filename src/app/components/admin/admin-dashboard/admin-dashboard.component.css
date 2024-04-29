@@ -1,0 +1,132 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 1rem;
+  margin: 2rem;
+  overflow-y: auto;
+  max-height: 100vh;
+}
+.row1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  flex: 1;
+}
+.stats-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  min-height: 100px;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+  background: linear-gradient(
+    to right,
+    rgb(1, 114, 175) 0%,
+    rgb(116, 254, 189) 100%
+  );
+  padding: 1rem;
+}
+.stats-container div {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  margin-top: 2rem;
+  padding-right: 4rem;
+  top: 30px;
+  left: 93px;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+}
+.stats-container h1 {
+  text-align: left;
+  font-size: 26px;
+  color: #fff;
+}
+.stats-container p {
+  text-align: center;
+  color: white;
+  font-size: 14px;
+}
+.vector {
+  height: 100%;
+  width: 100%;
+  bottom: 0px;
+}
+.row2 {
+  display: flex;
+  flex: 1;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.piechart {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+  padding: 10px;
+}
+.piechart p {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(
+    to right,
+    rgb(1, 114, 175) 0%,
+    rgb(116, 254, 189) 100%
+  );
+  text-align: center;
+}
+.graph {
+  background-color: #fff;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  padding: 10px;
+  flex: 3;
+}
+.graph p {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(
+    to right,
+    rgb(1, 114, 175) 0%,
+    rgb(116, 254, 189) 100%
+  );
+}
+.row3 {
+  flex: 1;
+}
+.row3 p {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(
+    to right,
+    rgb(1, 114, 175) 0%,
+    rgb(116, 254, 189) 100%
+  );
+  background-color: #fff;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+  padding: 10px;
+  border-radius: 8px;
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+  .stats-container h1 {
+    font-size: 22px;
+  }
+  .stats-container p {
+    color: white;
+    font-size: 10px;
+  }
+}

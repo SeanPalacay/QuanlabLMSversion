@@ -1,0 +1,58 @@
+{
+  "title": "Advanced English Proficiency Quiz - Hard Mode",
+  "description": "This quiz challenges your understanding of advanced English grammar, vocabulary, and idiomatic expressions.",
+  "instructions": [
+    "Read each question or prompt carefully.",
+    "Provide the most appropriate and advanced response or correction.",
+    "Submit your answers after completing all the questions."
+  ],
+  "items": [
+    {
+      "question": "Explain 'to cut corners'.",
+      "suggestedAnswer": "To do something in the easiest or cheapest way, often sacrificing quality."
+    },
+    {
+      "question": "Complete the sentence: 'His argument was full of ___.'",
+      "suggestedAnswer": "fallacies"
+    },
+    {
+      "question": "Correct the error: 'One of the dogs are missing.'",
+      "suggestedAnswer": "is missing."
+    },
+    {
+      "question": "What does 'esoteric' mean?",
+      "suggestedAnswer": "Intended for or understood by only a small number of people with specialized knowledge."
+    },
+    {
+      "question": "Rewrite in active voice: 'The decision was made by the committee.'",
+      "suggestedAnswer": "The committee made the decision."
+    },
+    {
+      "question": "Correct this sentence: 'Me and him went to the market.'",
+      "suggestedAnswer": "He and I went to the market."
+    },
+    {
+      "question": "Provide a synonym for 'pervasive'.",
+      "suggestedAnswer": "Widespread"
+    },
+    {
+      "question": "Finish the sentence: 'In spite of the heavy rain, they continued their hike with ___.'",
+      "suggestedAnswer": "determination"
+    },
+    {
+      "question": "What is the meaning of 'to throw in the towel'?",
+      "suggestedAnswer": "To give up or quit."
+    },
+    {
+      "question": "Identify the error: 'Each of the players have their own jersey.'",
+      "suggestedAnswer": "have their"
+    }
+  ],
+  "scoring": {
+    "10 correct answers": "Excellent! You've shown great proficiency in Filipino to English translation.",
+    "7-9 correct answers": "Very good! You've mastered most of the words with a few left to learn.",
+    "4-6 correct answers": "Good effort! You're learning well, keep practicing to improve further.",
+    "1-3 correct answers": "Nice try! Some words are tricky, but with more practice, you'll get there.",
+    "0 correct answers": "This level is tough, but don't get discouraged. Review and try again!"
+  }
+}

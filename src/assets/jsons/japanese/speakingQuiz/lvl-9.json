@@ -1,0 +1,61 @@
+{
+  "title": "Socializing and Leisure",
+  "description": "Improve your Japanese speaking skills with phrases typically used for socializing and leisure activities. Focus on clear pronunciation and friendly intonation.",
+  "instructions": [
+    "Below is a list of phrases you might use for socializing and leisure activities in Japanese.",
+    "Record yourself speaking each phrase.",
+    "Aim for clear and engaging pronunciation.",
+    "Maintain a conversational and steady pace.",
+    "After recording, listen to your playback and compare it to the text.",
+    "Pay attention to intonation, clarity, and fluency in Japanese.",
+    "Repeat the recording process as necessary to improve your Japanese speaking skills."
+  ],
+  "items": [
+    {
+      "question": "映画に行きませんか？ (Eiga ni ikimasen ka?)",
+      "answer": "映画に行きませんか？ (Eiga ni ikimasen ka?)"
+    },
+    {
+      "question": "公園でピクニックをしましょう。 (Kouen de pikunikku o shimashou.)",
+      "answer": "公園でピクニックをしましょう。 (Kouen de pikunikku o shimashou.)"
+    },
+    {
+      "question": "テニスが好きです。 (Tenisu ga suki desu.)",
+      "answer": "テニスが好きです。 (Tenisu ga suki desu.)"
+    },
+    {
+      "question": "踊りませんか？ (Odorimasen ka?)",
+      "answer": "踊りませんか？ (Odorimasen ka?)"
+    },
+    {
+      "question": "コーヒーを飲みに行きましょう。 (Koohii o nomi ni ikimashou.)",
+      "answer": "コーヒーを飲みに行きましょう。 (Koohii o nomi ni ikimashou.)"
+    },
+    {
+      "question": "ジムに行っています。 (Jimu ni itte imasu.)",
+      "answer": "ジムに行っています。 (Jimu ni itte imasu.)"
+    },
+    {
+      "question": "楽器は弾きますか？ (Gakki wa hikimasu ka?)",
+      "answer": "楽器は弾きますか？ (Gakki wa hikimasu ka?)"
+    },
+    {
+      "question": "素晴らしい本を読んでいます。 (Subarashii hon o yonde imasu.)",
+      "answer": "素晴らしい本を読んでいます。 (Subarashii hon o yonde imasu.)"
+    },
+    {
+      "question": "ビデオゲームをしませんか？ (Bideogeemu o shimashen ka?)",
+      "answer": "ビデオゲームをしませんか？ (Bideogeemu o shimashen ka?)"
+    },
+    {
+      "question": "週末に買い物に行きましょう。 (Shuumatsu ni kaimono ni ikimashou.)",
+      "answer": "週末に買い物に行きましょう。 (Shuumatsu ni kaimono ni ikimashou.)"
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and accurate, demonstrating strong skills in Japanese social and leisure language.",
+    "5-7 correct pronunciations": "Good! Your pronunciation is mostly correct, with a good grasp of social and leisure phrases in Japanese. There are areas to refine for improved clarity.",
+    "2-4 correct pronunciations": "Fair. You can communicate basic social and leisure needs in Japanese, but need significant improvement in pronunciation.",
+    "0-1 correct pronunciations": "Needs improvement. Consider practicing more to enhance your Japanese speaking skills, or seek additional resources for learning."
+  }
+}

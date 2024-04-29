@@ -1,0 +1,19 @@
+.box{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 5px;
+    border-radius: 5px;
+}
+.custom-modal-content {
+    border-radius: 10px;
+    height: fit-content;
+    width: 800px;
+    padding-top: 1%;
+    padding-bottom: 5%;
+  }
+  .custom-modal {
+    margin-left: -180px;
+  }
+  .modal-header {
+    justify-content: center;
+    align-items: center;
+  }

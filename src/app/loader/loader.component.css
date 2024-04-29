@@ -1,0 +1,41 @@
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999; /* Ensure it is above everything */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.loader-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #0172AF, #74FEBD);
+  opacity: 1; /* Apply opacity to the background only */
+  z-index: -1; /* Ensure the background is behind the spinner */
+
+}
+
+.loader {
+  position: relative; /* Ensure the spinner is positioned correctly relative to the overlay */
+  border: 4px solid transparent; /* Make the rest of the spinner transparent */
+  border-radius: 50%;
+  border-top: 4px solid #fff; /* Spinner color */
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite; /* Increased spin speed */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

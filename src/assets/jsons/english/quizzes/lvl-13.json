@@ -1,0 +1,57 @@
+{
+    "title": "English Grammar and Tenses Quiz",
+    "description": "Test your knowledge of English grammar and verb tenses with this quiz. Answer questions related to past tense, present tense, opposite words, and more to improve your understanding of the English language.",
+    "items": [
+      {
+        "question": "What is the past tense of 'eat'?",
+        "choices": ["eaten", "ate", "eated", "eat"],
+        "answer": "ate"
+      },
+      {
+        "question": "Which word means 'a large meal eaten in the evening'?",
+        "choices": ["dinner", "lunch", "breakfast", "supper"],
+        "answer": "dinner"
+      },
+      {
+        "question": "'She is reading a book.' is an example of what tense?",
+        "choices": ["present continuous", "present perfect", "past continuous", "past perfect"],
+        "answer": "present continuous"
+      },
+      {
+        "question": "Which word means 'to make something smaller'?",
+        "choices": ["enlarge", "reduce", "increase", "extend"],
+        "answer": "reduce"
+      },
+      {
+        "question": "What is the opposite of 'happy'?",
+        "choices": ["sad", "angry", "excited", "tired"],
+        "answer": "sad"
+      },
+      {
+        "question": "'The cat sat on the mat.' is an example of what tense?",
+        "choices": ["present perfect", "present continuous", "past simple", "future continuous"],
+        "answer": "past simple"
+      },
+      {
+        "question": "Which word means 'a sudden, violent storm with strong winds and rain'?",
+        "choices": ["tornado", "hurricane", "typhoon", "blizzard"],
+        "answer": "hurricane"
+      },
+      {
+        "question": "'Have you ever been to Paris?' is an example of what tense?",
+        "choices": ["present perfect", "present continuous", "past simple", "future continuous"],
+        "answer": "present perfect"
+      },
+      {
+        "question": "Which word means 'to make something dirty or untidy'?",
+        "choices": ["clean", "tidy", "mess up", "organize"],
+        "answer": "mess up"
+      },
+      {
+        "question": "'He will be working tomorrow.' is an example of what tense?",
+        "choices": ["present simple", "present continuous", "future continuous", "future simple"],
+        "answer": "future continuous"
+      }
+    ]
+  }
+  

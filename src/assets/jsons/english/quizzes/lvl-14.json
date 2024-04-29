@@ -1,0 +1,97 @@
+{
+  "title": "English Quiz - Medium Difficulty",
+  "description": "This quiz will test your knowledge of English grammar, vocabulary, and usage.",
+  "items": [
+   {
+    "question": "Which of the following sentences is grammatically correct?",
+    "choices": [
+     "I was going to the store when I saw him.",
+     "I went to the store when I saw him.",
+     "I had gone to the store when I saw him."
+    ],
+    "answer": "I was going to the store when I saw him."
+   },
+   {
+    "question": "What is the past tense of the verb 'eat'?",
+    "choices": [
+     "eated",
+     "ate",
+     "eat"
+    ],
+    "answer": "ate"
+   },
+   {
+    "question": "What is the future tense of the verb 'go'?",
+    "choices": [
+     "will go",
+     "goes",
+     "went"
+    ],
+    "answer": "will go"
+   },
+   {
+    "question": "Which of the following words is a synonym for 'happy'?",
+    "choices": [
+     "sad",
+     "joyful",
+     "angry"
+    ],
+    "answer": "joyful"
+   },
+   {
+    "question": "Which of the following words is a synonym for 'big'?",
+    "choices": [
+     "small",
+     "large",
+     "tiny"
+    ],
+    "answer": "large"
+   },
+   {
+    "question": "Which of the following words is an antonym for 'hot'?",
+    "choices": [
+     "warm",
+     "cold",
+     "cool"
+    ],
+    "answer": "cold"
+   },
+   {
+    "question": "Which of the following sentences is grammatically correct?",
+    "choices": [
+     "He gave the book to I.",
+     "He gave the book to me.",
+     "He gave me the book."
+    ],
+    "answer": "He gave me the book."
+   },
+   {
+    "question": "Which of the following sentences is grammatically correct?",
+    "choices": [
+     "I seen the movie last night.",
+     "I saw the movie last night.",
+     "I seed the movie last night."
+    ],
+    "answer": "I saw the movie last night."
+   },
+   {
+    "question": "Which of the following sentences is grammatically correct?",
+    "choices": [
+     "There's two books on the table.",
+     "There's two books on the table.",
+     "There are two books on the table."
+    ],
+    "answer": "There are two books on the table."
+   },
+   {
+    "question": "Which of the following sentences is grammatically correct?",
+    "choices": [
+     "He don't know the answer.",
+     "He doesn't know the answer.",
+     "He don't know the answer."
+    ],
+    "answer": "He doesn't know the answer."
+   }
+  ]
+ 
+}

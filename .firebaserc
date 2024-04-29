@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "qlab-ded1a": {
+      "hosting": {
+        "quanlab": [
+          "qlab-ded1a"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "qlab-ded1a"
+  }
+}

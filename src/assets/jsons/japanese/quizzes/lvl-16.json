@@ -1,0 +1,68 @@
+{
+  "title": "Japanese Greetings and Phrases Quiz",
+  "description": "Test your knowledge of essential Japanese greetings and phrases with this quiz. From 'Good morning' to 'Thank you' and beyond, each question provides options, a hint, and the correct answer in Japanese characters and Romaji. Immerse yourself in the politeness and cultural nuances of Japanese expressions!",
+  
+    "items": [
+      {
+        "question": "おはようございます",
+        "answer": "ohayou gozaimasu",
+        "options": ["ohayou gozaimasu", "konnichiwa", "konbanwa", "arigatou"],
+        "hint": "The Japanese greeting for 'Good morning.'"
+      },
+      {
+        "question": "こんにちは",
+        "answer": "konnichiwa",
+        "options": ["ohayou gozaimasu", "konnichiwa", "konbanwa", "arigatou"],
+        "hint": "The Japanese greeting for 'Hello' or 'Good afternoon.'"
+      },
+      {
+        "question": "こんばんは",
+        "answer": "konbanwa",
+        "options": ["ohayou gozaimasu", "konnichiwa", "konbanwa", "arigatou"],
+        "hint": "The Japanese greeting for 'Good evening.'"
+      },
+      {
+        "question": "ありがとう",
+        "answer": "arigatou",
+        "options": ["ohayou gozaimasu", "konnichiwa", "konbanwa", "arigatou"],
+        "hint": "The Japanese expression for 'Thank you.'"
+      },
+      {
+        "question": "ごめんなさい",
+        "answer": "gomen nasai",
+        "options": ["gomen nasai", "itadakimasu", "oyasuminasai", "arigatou"],
+        "hint": "The Japanese apology phrase for 'I'm sorry.'"
+      },
+      {
+        "question": "おはしをください",
+        "answer": "ohashi o kudasai",
+        "options": ["ohashi o kudasai", "itadakimasu", "oyasuminasai", "arigatou"],
+        "hint": "The Japanese phrase for 'Please give me chopsticks.'"
+      },
+      {
+        "question": "いただきます",
+        "answer": "itadakimasu",
+        "options": ["gomen nasai", "itadakimasu", "oyasuminasai", "arigatou"],
+        "hint": "The Japanese expression said before eating, similar to saying 'Bon appétit.'"
+      },
+      {
+        "question": "おつかれさまでした",
+        "answer": "otsukaresama deshita",
+        "options": ["otsukaresama deshita", "itadakimasu", "oyasuminasai", "arigatou"],
+        "hint": "The Japanese phrase used to thank someone for their hard work, similar to saying 'Thank you for your hard work.'"
+      },
+      {
+        "question": "おやすみなさい",
+        "answer": "oyasuminasai",
+        "options": ["oyasuminasai", "itadakimasu", "ohayou gozaimasu", "arigatou"],
+        "hint": "The Japanese phrase for 'Good night.'"
+      },
+      {
+        "question": "わたしは にほんご がくせい です",
+        "answer": "watashi wa nihongo gakusei desu",
+        "options": ["watashi wa nihongo gakusei desu", "itadakimasu", "oyasuminasai", "arigatou"],
+        "hint": "The Japanese phrase for 'I am a Japanese language student.'"
+      }
+    ]
+  }
+  

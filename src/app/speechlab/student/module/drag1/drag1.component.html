@@ -1,0 +1,32 @@
+<div class="container">
+  <h1 class="header">Complete the Text</h1>
+  
+  <div class="story">
+    <p>
+      <span *ngFor="let word of story">
+      {{word.sentence}}
+      <span
+        (drop)="onDrop($event, word.answer!)"
+        (dragover)="allowDrop($event)"
+        (dragstart)="onDragStart($event, word.answer!)"
+        draggable="true"
+        id="{{word.answer}}"
+        class="drop-target"
+      >
+       {{word.blank}}
+      </span>
+    </span>
+   </p>
+  </div>
+
+  <div class="verbs-container">
+    <div *ngFor="let verb of verbs" (dragstart)="onDragStart($event, verb)" draggable="true" class="verb-item">
+      <p>{{ verb }}</p>
+    </div>
+  </div>
+  
+ <div class="score">
+  Score: {{ score }}
+</div>
+
+</div>

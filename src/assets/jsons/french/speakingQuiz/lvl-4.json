@@ -1,0 +1,61 @@
+{
+  "title": "At the Restaurant",
+  "description": "Improve your French speaking skills with phrases commonly used at the restaurant. Focus on clear pronunciation and polite intonation.",
+  "instructions": [
+    "Below, you'll find a list of common phrases you might use at a restaurant in French.",
+    "Your task is to record yourself speaking each phrase.",
+    "Ensure your pronunciation matches the provided text as closely as possible.",
+    "Try to maintain a natural and clear speaking pace.",
+    "After recording each phrase, listen to your recording and compare it to the text.",
+    "Focus on intonation, clarity, and fluency.",
+    "Repeat the recording process as many times as needed to improve your pronunciation."
+  ],
+  "items": [
+    {
+      "question": "Je voudrais une table pour deux, s'il vous plaît.",
+      "answer": "Je voudrais une table pour deux, s'il vous plaît."
+    },
+    {
+      "question": "Puis-je voir le menu ?",
+      "answer": "Puis-je voir le menu ?"
+    },
+    {
+      "question": "Je suis allergique aux arachides.",
+      "answer": "Je suis allergique aux arachides."
+    },
+    {
+      "question": "Un verre d'eau, s'il vous plaît.",
+      "answer": "Un verre d'eau, s'il vous plaît."
+    },
+    {
+      "question": "Je prendrai le poulet.",
+      "answer": "Je prendrai le poulet."
+    },
+    {
+      "question": "L'addition, s'il vous plaît.",
+      "answer": "L'addition, s'il vous plaît."
+    },
+    {
+      "question": "Le service est-il inclus ?",
+      "answer": "Le service est-il inclus ?"
+    },
+    {
+      "question": "Je suis végétarien.",
+      "answer": "Je suis végétarien."
+    },
+    {
+      "question": "Avez-vous des desserts ?",
+      "answer": "Avez-vous des desserts ?"
+    },
+    {
+      "question": "C'est trop épicé pour moi.",
+      "answer": "C'est trop épicé pour moi."
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and accurate. You demonstrate a strong command of restaurant-related French.",
+    "5-7 correct pronunciations": "Good! Your pronunciation is mostly correct, with a good grasp of dining phrases in French. There are some areas to refine for improved clarity.",
+    "2-4 correct pronunciations": "Fair. You can navigate basic restaurant conversations in French, but there are several areas needing significant improvement.",
+    "0-1 correct pronunciations": "Needs improvement. Consider practicing more to enhance your French pronunciation skills, or seek additional resources for learning."
+  }
+}

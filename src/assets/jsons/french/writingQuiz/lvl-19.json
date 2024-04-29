@@ -1,0 +1,59 @@
+{
+  "title": "French Error Detection - Hard Mode",
+  "description": "Test your proficiency in French by identifying errors in common sentences. This quiz is designed for advanced learners.",
+  "instructions": [
+    "Read each sentence carefully.",
+    "Identify the word that is incorrect in the context of the sentence.",
+    "Write down the incorrect word as your answer.",
+    "Check your answers at the end of the quiz to see explanations and correct forms."
+  ],
+  "items": [
+    {
+      "question": "Elle a moins de problèmes que moi, mais ses soucis sont plus grave.",
+      "suggestedAnswer": "grave"
+    },
+    {
+      "question": "Après avoir fini ses devoirs, il a décidé de se relaxer pour le reste de la soirée.",
+      "suggestedAnswer": "relaxer"
+    },
+    {
+      "question": "Malgré ses efforts pour rester éveillé durant le cours, il s'endormait souvent.",
+      "suggestedAnswer": "éveillé"
+    },
+    {
+      "question": "La nouvelle loi exige que tous les citoyens a voté avant 20 heures.",
+      "suggestedAnswer": "a"
+    },
+    {
+      "question": "Son opinion sur le sujet était différent que la mienne, ce qui a mené à un débat intéressant.",
+      "suggestedAnswer": "différent"
+    },
+    {
+      "question": "Nous avons été surpris de découvrir que le restaurant était fermé à cause de rénovations inattendu.",
+      "suggestedAnswer": "inattendu"
+    },
+    {
+      "question": "Le chanteur, accompagné de son groupe, ont donné une performance émouvante.",
+      "suggestedAnswer": "ont"
+    },
+    {
+      "question": "Chaque étudiants de la classe doit présenter son projet individuellement.",
+      "suggestedAnswer": "étudiants"
+    },
+    {
+      "question": "Il faut que je me dépêche si je veux attraper le train de 8 heures du matin.",
+      "suggestedAnswer": "de"
+    },
+    {
+      "question": "Les habitants de cette ville sont très accueillant envers les nouveaux venus.",
+      "suggestedAnswer": "accueillant"
+    }
+  ],
+  "scoring": {
+    "10 correct answers": "Exceptionnel! Your understanding of French grammar and vocabulary is impressive.",
+    "7-9 correct answers": "Très bien! You have a strong grasp on French, with minor areas for improvement.",
+    "4-6 correct answers": "Bien! You're on the right track, but paying closer attention to details will help.",
+    "1-3 correct answers": "Un bon début! Keep studying the nuances of French grammar and vocabulary.",
+    "0 correct answers": "C'est un début. Focus on learning basic rules and common expressions."
+  }
+}

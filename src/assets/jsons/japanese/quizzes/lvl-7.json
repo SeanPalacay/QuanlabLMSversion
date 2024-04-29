@@ -1,0 +1,76 @@
+{
+  "title": "Polite and Positive Japanese Expressions Quiz",
+  "description": "Learn courteous and positive Japanese phrases for various social situations with this quiz.",
+  "items": [
+    {
+      "id": 51,
+      "question": "How do you say 'I'm sorry' for a mistake in Japanese?",
+      "answer": "Gomen nasai",
+      "options": ["Hai", "Iie", "Gomen nasai", "Arigatou"],
+      "hint": "Apologizing for a mistake"
+    },
+    {
+      "id": 52,
+      "question": "What is the Japanese word for 'Good luck'?",
+      "answer": "Ganbatte",
+      "options": ["Ohayou gozaimasu", "Ganbatte", "Konnichiwa", "Arigatou"],
+      "hint": "Wishing someone good luck or encouragement"
+    },
+    {
+      "id": 53,
+      "question": "How do you say 'I'm happy to meet you' in Japanese?",
+      "answer": "Hajimemashite",
+      "options": ["Iie", "Hajimemashite", "Konnichiwa", "Arigatou"],
+      "hint": "Expressing pleasure in meeting someone for the first time"
+    },
+    {
+      "id": 54,
+      "question": "What is the Japanese word for 'Hot' (spicy)?",
+      "answer": "Karai",
+      "options": ["Karai", "Iie", "Konnichiwa", "Arigatou"],
+      "hint": "Describing spicy food"
+    },
+    {
+      "id": 55,
+      "question": "How do you ask 'Where can I buy tickets?' in Japanese?",
+      "answer": "Kippu wa doko de kae-raremasu ka",
+      "options": ["Anata wa doko desu ka", "Kore wa nan desu ka", "Kippu wa doko de kae-raremasu ka", "Arigatou"],
+      "hint": "Inquiring about purchasing tickets"
+    },
+    {
+      "id": 56,
+      "question": "What is the Japanese word for 'Nice to meet you'?",
+      "answer": "Yoroshiku onegaishimasu",
+      "options": ["Wakarimasen", "Iie", "Yoroshiku onegaishimasu", "Wakarimasu"],
+      "hint": "Expressing anticipation or request for cooperation"
+    },
+    {
+      "id": 57,
+      "question": "How do you say 'I have a question' in Japanese?",
+      "answer": "Shitsumon ga arimasu",
+      "options": ["Sumimasen", "Arigatou", "Shitsumon ga arimasu", "Sayonara"],
+      "hint": "Indicating you have a question or inquiry"
+    },
+    {
+      "id": 58,
+      "question": "What is the Japanese word for 'Full' (satisfied with food)?",
+      "answer": "Onaka ippai",
+      "options": ["Konnichiwa", "Onaka ippai", "Sayonara", "Arigatou"],
+      "hint": "Expressing satisfaction after a meal"
+    },
+    {
+      "id": 59,
+      "question": "How do you say 'I understand' in Japanese?",
+      "answer": "Wakarimasu",
+      "options": ["Wakarimasu", "Iie", "Konnichiwa", "Arigatou"],
+      "hint": "Expressing comprehension or understanding"
+    },
+    {
+      "id": 60,
+      "question": "What is the Japanese word for 'Busy'?",
+      "answer": "Isogashii",
+      "options": ["Isogashii", "Iie", "Konnichiwa", "Arigatou"],
+      "hint": "Describing a state of being busy or occupied"
+    }
+  ]
+}

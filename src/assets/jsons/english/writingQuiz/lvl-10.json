@@ -1,0 +1,58 @@
+{
+  "title": "English Language Familiarization Quiz - Medium Difficulty",
+  "description": "Enhance your English skills with this quiz focusing on sentence construction, vocabulary, and common expressions.",
+  "instructions": [
+    "Read each question carefully.",
+    "Write your answer in English, focusing on correct usage and grammar.",
+    "After completing all questions, submit your answers for evaluation."
+  ],
+  "items": [
+    {
+      "question": "Rewrite in the passive voice: 'Someone has stolen my wallet.'",
+      "suggestedAnswer": "My wallet has been stolen."
+    },
+    {
+      "question": "What is the meaning of the phrasal verb 'to come across'?",
+      "suggestedAnswer": "To find or meet by chance."
+    },
+    {
+      "question": "Complete the sentence with the correct form of the verb: 'By the time we arrived, the play ___ (already, start).'",
+      "suggestedAnswer": "had already started"
+    },
+    {
+      "question": "What does the idiom 'to bite off more than you can chew' mean?",
+      "suggestedAnswer": "To take on a task that is too big or beyond one's ability."
+    },
+    {
+      "question": "Choose the correct word: 'His views on politics are quite ___ (heterodox/heterogeneous).'",
+      "suggestedAnswer": "heterodox"
+    },
+    {
+      "question": "Fill in the blank with a suitable conjunction: 'I would have gone to the party, ___ I was too tired.'",
+      "suggestedAnswer": "but"
+    },
+    {
+      "question": "What is the antonym of 'gregarious'?",
+      "suggestedAnswer": "Introverted"
+    },
+    {
+      "question": "Convert to indirect speech: 'The instructor said, \"You must complete this exercise by tomorrow.\"'",
+      "suggestedAnswer": "The instructor said that we must complete the exercise by the next day."
+    },
+    {
+      "question": "Rewrite the sentence in the future perfect tense: 'She finishes the report.'",
+      "suggestedAnswer": "She will have finished the report."
+    },
+    {
+      "question": "What does the word 'esoteric' mean?",
+      "suggestedAnswer": "Intended for or understood by only a small number of people with specialized knowledge or interest."
+    }
+  ],
+  "scoring": {
+    "10 correct answers": "Excellent! You've shown great proficiency in Filipino to English translation.",
+    "7-9 correct answers": "Very good! You've mastered most of the words with a few left to learn.",
+    "4-6 correct answers": "Good effort! You're learning well, keep practicing to improve further.",
+    "1-3 correct answers": "Nice try! Some words are tricky, but with more practice, you'll get there.",
+    "0 correct answers": "This level is tough, but don't get discouraged. Review and try again!"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "title": "At the Supermarket",
+  "description": "Practice English phrases that are commonly used in a supermarket setting. Focus on clear pronunciation and appropriate intonation.",
+  "instructions": [
+    "Below is a list of phrases you might use at the supermarket.",
+    "Record yourself speaking each phrase.",
+    "Strive for clear pronunciation and a natural tone.",
+    "Keep your speech at a conversational and steady pace.",
+    "Listen to your recordings and compare them with the text.",
+    "Pay attention to clarity, intonation, and fluency.",
+    "Repeat the recording process to enhance your pronunciation skills."
+  ],
+  "items": [
+    {
+      "question": "Where's the bread?",
+      "answer": "Where's the bread?"
+    },
+    {
+      "question": "How much are the apples?",
+      "answer": "How much are the apples?"
+    },
+    {
+      "question": "Is this organic?",
+      "answer": "Is this organic?"
+    },
+    {
+      "question": "Do you sell milk?",
+      "answer": "Do you sell milk?"
+    },
+    {
+      "question": "I need some eggs.",
+      "answer": "I need some eggs."
+    },
+    {
+      "question": "Where's the checkout?",
+      "answer": "Where's the checkout?"
+    },
+    {
+      "question": "Can I get a bag?",
+      "answer": "Can I get a bag?"
+    },
+    {
+      "question": "Do you have rice?",
+      "answer": "Do you have rice?"
+    },
+    {
+      "question": "Are these fresh?",
+      "answer": "Are these fresh?"
+    },
+    {
+      "question": "Where's the frozen food?",
+      "answer": "Where's the frozen food?"
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and accurate, showing a strong grasp of common supermarket phrases.",
+    "5-7 correct pronunciations": "Good! Your pronunciation is mostly correct. Work on refining certain phrases for better clarity.",
+    "2-4 correct pronunciations": "Fair. You can communicate basic needs in a supermarket but need to improve pronunciation in several phrases.",
+    "0-1 correct pronunciations": "Needs improvement. Focus more on practicing supermarket phrases to enhance your English speaking skills."
+  }
+}

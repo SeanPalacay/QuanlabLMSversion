@@ -1,0 +1,179 @@
+.custom-modal-content {
+    height: 610px;
+}
+.title{
+display:flex;
+margin-top: 10px;
+padding: 20px;
+}
+.title button{
+margin-left:45%;
+width: 25px;
+height: 25px;
+}
+.title h4{
+font-size: 30px;
+}
+
+.container{
+justify-content: center;
+align-items: center;
+justify-items: center;
+width: 100%;
+margin-top: 15px;
+}
+
+.top, .mid, .buttom, .google, .submit{
+text-align: center;
+}
+.top input[type="text"]{
+border-radius: 8px;
+height: 40px;
+width: 45%;
+border: 1px solid #9c9999;
+}
+
+input{
+  padding-left: 10px;
+}
+
+.mid input[type="text"],
+.mid input[type="email"]{
+border-radius: 8px;
+height: 40px;
+width:  95.5%;
+border: 1px solid #9c9999;
+margin-top: 20px;
+}
+.gender {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.gender label {
+margin-right: 10px;
+}
+
+.gender select {
+border-radius: 8px;
+height: 40px;
+width: 30%;
+border: 1px solid #9c9999;
+margin: 6px;
+margin-top: 20px;
+}
+
+.bottom input[type="text"],
+.bottom input[type="date"],
+.bottom input[type="email"],
+.bottom input[type="gender"],
+.bottom select {
+border-radius: 8px;
+height: 40px;
+width: 30%;
+border: 1px solid #9c9999;
+margin: 6px;
+margin-top: 20px;
+}
+
+.terms {
+display: flex;
+flex-direction: column;
+width: 85%;
+padding: 30px;
+margin-top: 20px;
+}
+
+.terms input[type="checkbox"] {
+height: 18px;
+width: 18px;
+border: 1px solid #0cc3e4;
+}
+
+.terms label {
+margin-left: 30px;
+}
+
+.submit button {
+box-shadow: 0px 4px 4px #00000040;
+background: linear-gradient(to right, rgb(1, 114, 175) 0%, rgb(116, 254, 189) 100%);
+width: 40%;
+height: 50px;
+border-radius: 12px;
+color: white;
+}
+
+.submit {
+margin-top: 20px;
+}
+
+
+.top input[type="text"]::placeholder {
+    padding-left: 6px; /* Adjust padding as needed */
+margin-left: -6px; /* Adjust margin as needed */
+}
+
+.mid input[type="text"]::placeholder,
+.mid input[type="email"]::placeholder {
+padding-left: 6px; /* Adjust padding as needed */
+margin-left: -6px; /* Adjust margin as needed */
+}
+.bottom input[type="text"]::placeholder,
+.bottom input[type="email"]::placeholder,
+.bottom select::placeholder {
+padding-left: 6px; /* Adjust padding as needed */
+margin-left: -6px; /* Adjust margin as needed */
+}
+
+.passwords input[type="password"]::placeholder,
+.passwords select::placeholder {
+padding-left: 6px; /* Adjust padding as needed */
+margin-left: -6px; /* Adjust margin as needed */
+}
+  /* Style the password and confirm password fields */
+.passwords input[type="password"] {
+    border-radius: 8px;
+    height: 40px;
+    width: 95.5%;
+    border: 1px solid #9c9999;
+    margin-top: 20px;
+  }
+  
+  /* Style the message span */
+  #message {
+    color: red;
+    font-size: 16px;
+  }
+  
+  .close:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .submit button:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+
+.shake {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-10px); }
+  40% { transform: translateX(10px); }
+  60% { transform: translateX(-10px); }
+  80% { transform: translateX(10px); }
+  100% { transform: translateX(0); }
+}
+
+.top input[type="text"].error-border {
+  border: 2px solid red !important;
+}
+
+.top input[type="text"].normal-border {
+  border: 2px solid #9c9999;
+  background-color: transparent;
+}

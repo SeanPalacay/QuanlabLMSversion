@@ -1,0 +1,56 @@
+{
+  "title": "French Language Essentials - Hard Mode",
+  "description": "Challenge your French skills by identifying the error in each sentence.",
+  "items": [
+    {
+      "question": "L'entreprise a annoncé un nouveau partenariat qui vise à développer des solutions innovantes pour le marché international.",
+      "choices": ["a annoncé", "qui", "à développer", "pour le"],
+      "answer": "pour le"
+    },
+    {
+      "question": "Les participants au séminaire ont eu l'occasion de rencontrer des experts dans leur domaine, ce qui a enrichi leur expérience d'apprentissage.",
+      "choices": ["au", "ont eu", "dans", "ce qui"],
+      "answer": "dans"
+    },
+    {
+      "question": "Le gouvernement a mis en place une série de mesures pour combattre la pollution et promouvoir un environnement plus sain.",
+      "choices": ["a mis", "pour", "et", "plus"],
+      "answer": "pour"
+    },
+    {
+      "question": "Cette œuvre d'art contemporain questionne les limites entre le réel et l'imaginaire, offrant une perspective unique sur notre société.",
+      "choices": ["d'art", "les", "entre", "unique"],
+      "answer": "les"
+    },
+    {
+      "question": "Le festival de musique a attiré des milliers de visiteurs venus de toute l'Europe, témoignant de son succès grandissant chaque année.",
+      "choices": ["a attiré", "venus", "de toute", "témoignant"],
+      "answer": "de toute"
+    },
+    {
+      "question": "Pour réussir dans ce domaine, il est essentiel de rester informé des dernières tendances et d'adapter continuellement sa stratégie.",
+      "choices": ["Pour", "de rester", "des", "d'adapter"],
+      "answer": "des"
+    },
+    {
+      "question": "La conférence a offert un aperçu des avancées technologiques récentes qui pourraient transformer notre approche des soins de santé.",
+      "choices": ["a offert", "des", "qui", "notre"],
+      "answer": "des"
+    },
+    {
+      "question": "Il est important de prendre en compte les feedbacks des clients pour améliorer constamment la qualité de nos services.",
+      "choices": ["de prendre", "les", "pour", "constamment"],
+      "answer": "les"
+    },
+    {
+      "question": "Les efforts de conservation ont permis de sauvegarder certaines espèces menacées d'extinction, soulignant l'importance de la protection de l'environnement.",
+      "choices": ["ont permis", "de sauvegarder", "menacées", "l'importance"],
+      "answer": "de sauvegarder"
+    },
+    {
+      "question": "En dépit des défis économiques, la compagnie continue d'investir dans la recherche et le développement pour rester à la pointe de l'innovation.",
+      "choices": ["En dépit", "continue", "dans", "à la"],
+      "answer": "dans"
+    }
+  ]
+}

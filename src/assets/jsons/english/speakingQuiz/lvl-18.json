@@ -1,0 +1,61 @@
+{
+  "title": "Philosophical Conversations",
+  "description": "Practice English phrases for engaging in philosophical conversations. Emphasize clear, thoughtful pronunciation and introspective intonation.",
+  "instructions": [
+    "Below is a list of phrases typically used in philosophical discussions.",
+    "Record yourself speaking each phrase.",
+    "Aim for clear, reflective, and deep pronunciation.",
+    "Maintain a steady and contemplative pace.",
+    "After recording, listen to your playback and compare it to the text.",
+    "Pay attention to intonation, clarity, and fluency in a philosophical context.",
+    "Repeat the recording process as necessary to improve your language skills in philosophical conversations."
+  ],
+  "items": [
+    {
+      "question": "Let's contemplate the meaning of existence.",
+      "answer": "Let's contemplate the meaning of existence."
+    },
+    {
+      "question": "What are your philosophical beliefs?",
+      "answer": "What are your philosophical beliefs?"
+    },
+    {
+      "question": "I'm interested in ethical philosophy.",
+      "answer": "I'm interested in ethical philosophy."
+    },
+    {
+      "question": "Can we discuss the nature of consciousness?",
+      "answer": "Can we discuss the nature of consciousness?"
+    },
+    {
+      "question": "Philosophical discourse enriches our understanding.",
+      "answer": "Philosophical discourse enriches our understanding."
+    },
+    {
+      "question": "What philosophical questions intrigue you?",
+      "answer": "What philosophical questions intrigue you?"
+    },
+    {
+      "question": "Let's explore different philosophical perspectives.",
+      "answer": "Let's explore different philosophical perspectives."
+    },
+    {
+      "question": "I appreciate the depth of philosophical discussions.",
+      "answer": "I appreciate the depth of philosophical discussions."
+    },
+    {
+      "question": "How can philosophy contribute to our daily lives?",
+      "answer": "How can philosophy contribute to our daily lives?"
+    },
+    {
+      "question": "Let's reflect on the philosophical implications of this idea.",
+      "answer": "Let's reflect on the philosophical implications of this idea."
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and well-suited for deep philosophical conversations.",
+    "5-7 correct pronunciations": "Good! Most of your phrases are pronounced correctly, but some might need further refinement for philosophical clarity.",
+    "2-4 correct pronunciations": "Fair. You understand basic philosophical concepts, but need more practice in pronunciation for effective communication.",
+    "0-1 correct pronunciations": "Needs improvement. Focus on practicing these philosophical phrases to enhance your English speaking skills in thoughtful discussions."
+  }
+}

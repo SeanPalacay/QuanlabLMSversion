@@ -1,0 +1,100 @@
+<div class="main-container">
+    <div class="button-container">
+        <button class="poppins-b" (click)="openModal()">
+            <img src="assets/add.png" alt="Add Icon" />
+            <span>Add Drill</span>
+          </button>
+
+<div>
+<button class="poppins-b" (click)="addModule()">
+
+    <span>Add Practice</span>
+</button>
+
+
+</div>
+    </div>
+    <div class="h-20 bg-blue-500 text-2xl text-white font-bold flex justify-center items-center w-full">
+      Practice
+    </div>
+    <div class="table-container">
+      <table>
+        <thead class="poppins-b">
+          <tr>
+            <th>ID</th>
+            <th>Practice Name</th>
+            <th>Date</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody class="poppins">
+          <ng-container>
+            <tr *ngFor="let t of practices">
+                <td>{{t.id}}</td>
+                <td>{{t.name}}</td>
+                <td>{{t.timestamp}}</td>
+                <td><button class="border border-2-[black] p-2 rounded-md hover:bg-[skyblue]" (click)="deleteModule(t.id)">DELETE</button>
+                <button class="border border-2-[black] p-2 rounded-md hover:bg-[skyblue]" (click)="openEdit(content)">Edit</button></td>
+
+                <!-- Edit Modal -->
+    <ng-template #content let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Edit Practice</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+      </div>
+      <div class="modal-body">
+        <label>Edit Practice Name</label><br>
+        <input type="text" [(ngModel)]="t.name" class="border border-gray-100 text-[grey]">
+      </div>
+      <button (click)="savePractice(t);modal.dismiss('Cross click')" >SAVE</button>
+    </ng-template>
+
+
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
+
+
+
+
+
+
+    <div class="h-20 bg-blue-500 text-2xl text-white font-bold flex justify-center items-center w-full">
+      Drills
+    </div>
+
+    <div class="table-container">
+      <table>
+        <thead class="poppins-b">
+          <tr>
+            <th>ID</th>
+            <th>Practice</th>
+            <th>Drill Name</th>
+            <th>Drill File Name</th>
+            <th>Audio File Name</th>
+            <th>Date</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody class="poppins">
+          <ng-container>
+            <tr *ngFor="let item of drills">
+                <td>{{item.id}}</td>
+                <td>{{item.practice}}</td>
+                <td>{{item.description}}</td>
+                <td>{{item.drillfile.split('>')[1]}}</td>
+                <td>{{item.audiofile.split('>')[1]}}</td>
+                <td>{{item.timestamp}}</td>
+                <td>
+                  <button class="border border-2-[black] p-2 rounded-md hover:bg-[skyblue]" (click)="deleteLesson(item)">DELETE</button>
+                  <button class="border border-2-[black] p-2 rounded-md hover:bg-[#ebe487]" (click)="editLesson(item)" >EDIT</button>
+                </td>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
+  </div>
+ 

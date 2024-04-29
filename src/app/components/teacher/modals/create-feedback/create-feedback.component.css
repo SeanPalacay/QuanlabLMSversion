@@ -1,0 +1,118 @@
+.custom-modal-content {
+    border-radius: 10px; /* Adjust the value to your desired border radius */
+    height: auto; /* Set the desired height */
+    /* You might need to adjust other styles based on your requirements */
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.inputwrap{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.inputwrap .titlehead h1{
+    background-image: linear-gradient(to right, rgb(1, 114, 175) 0%, rgb(116, 254, 189) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 20px;
+    text-align: center;
+}
+
+.inputwrap .titleinput .student {
+    width: 250px;
+    height: 50px;
+    background-color: #e1f3fd;
+    border-radius: 8px;
+    border: 1px solid;
+    border-color: #00000040;
+    padding: 20px;
+}
+.inputwrap .titleinput .task {
+    width: 100px;
+    height: 50px;
+    background-color: #e1f3fd;
+    border-radius: 8px;
+    border: 1px solid;
+    border-color: #00000040;
+    padding: 20px;
+    margin-left: 10px;
+}
+.container{
+    margin-top: 20px;
+}
+.text{
+    margin-top: 10px;
+}
+.text textarea {
+    width: 355px;
+    height: 180px;
+    background-color: #e1f3fd;
+    border-radius: 18px;
+    border: 1px solid;
+    border-color: #00000040;
+    padding: 20px;
+}
+
+.btnwrap .save{
+    height: 40px;
+    width: 80px;
+    background: linear-gradient(to right, rgb(1, 114, 175) 0%, rgb(116, 254, 189) 100%);
+    margin-top: 20px;
+    border-radius: 18px;
+    color: white;
+    margin-left: 50px;
+}
+
+
+.file {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .file-label {
+    display: flex;
+    cursor: pointer;
+    width: 355px;
+    height: 45px;
+    background-color: #e1f3fd;
+    border-radius: 18px;
+    border: 1px solid;
+    border-color:#00000040;
+    padding: 13px;
+  }
+  
+  .file-label img {
+    height: 50px;
+    width: 50px;
+    margin-right: 8px;
+    margin-top: -15px;
+  }
+  
+  .file-label span {
+    vertical-align: middle;
+    color: #737380;
+  }
+  
+  /* Hide the actual file input */
+  input[type="file"] {
+    display: none;
+  }
+  
+
+.btnwrap{
+    margin-left: -50px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.btnwrap .cancel{
+    height: 40px;
+    width: 80px;
+    background: red;
+    margin-top: 20px;
+    border-radius: 18px;
+    color: white;
+    margin-left: 20px;
+}

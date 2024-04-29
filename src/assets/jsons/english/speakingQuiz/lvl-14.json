@@ -1,0 +1,61 @@
+{
+  "title": "Technological Conversations",
+  "description": "Practice English phrases used in technology-related discussions. Emphasize clear, knowledgeable pronunciation and a confident tone.",
+  "instructions": [
+    "Below is a list of phrases commonly used in technological conversations.",
+    "Record yourself speaking each phrase.",
+    "Aim for clear, articulate, and informed pronunciation.",
+    "Maintain a steady and confident pace.",
+    "After recording, listen to your playback and compare it to the text.",
+    "Pay attention to intonation, clarity, and fluency in a technological context.",
+    "Repeat the recording process as necessary to improve your tech language skills."
+  ],
+  "items": [
+    {
+      "question": "What are the latest technological trends?",
+      "answer": "What are the latest technological trends?"
+    },
+    {
+      "question": "Let's discuss the impact of artificial intelligence.",
+      "answer": "Let's discuss the impact of artificial intelligence."
+    },
+    {
+      "question": "How can we leverage emerging technologies?",
+      "answer": "How can we leverage emerging technologies?"
+    },
+    {
+      "question": "I'm interested in blockchain technology.",
+      "answer": "I'm interested in blockchain technology."
+    },
+    {
+      "question": "Let's explore the potential of virtual reality.",
+      "answer": "Let's explore the potential of virtual reality."
+    },
+    {
+      "question": "What's your perspective on cybersecurity?",
+      "answer": "What's your perspective on cybersecurity?"
+    },
+    {
+      "question": "How can we integrate data analytics?",
+      "answer": "How can we integrate data analytics?"
+    },
+    {
+      "question": "Let's delve into the world of machine learning.",
+      "answer": "Let's delve into the world of machine learning."
+    },
+    {
+      "question": "What innovations do you foresee in the future?",
+      "answer": "What innovations do you foresee in the future?"
+    },
+    {
+      "question": "I'm fascinated by the evolution of technology.",
+      "answer": "I'm fascinated by the evolution of technology."
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and well-suited for complex technological discussions.",
+    "5-7 correct pronunciations": "Good! Your pronunciation is largely effective, with some areas needing refinement for technology-focused conversations.",
+    "2-4 correct pronunciations": "Fair. You have a basic grasp of technology-related language, but your pronunciation needs further development.",
+    "0-1 correct pronunciations": "Needs improvement. Focus more on practicing these phrases to enhance your English speaking skills in technological contexts."
+  }
+}

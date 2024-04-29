@@ -1,0 +1,61 @@
+{
+  "title": "Basic Greetings and Farewells",
+  "description": "Improve your Japanese speaking skills with basic greetings and farewells. Focus on clear pronunciation and appropriate intonation.",
+  "instructions": [
+    "Below is a list of common Japanese greetings and farewell phrases.",
+    "Record yourself speaking each phrase.",
+    "Aim for clear and natural pronunciation.",
+    "Maintain a conversational and steady pace.",
+    "After recording, listen to your playback and compare it to the text.",
+    "Pay attention to intonation, clarity, and fluency in Japanese.",
+    "Repeat the recording process as necessary to improve your Japanese speaking skills."
+  ],
+  "items": [
+    {
+      "question": "こんにちは、お元気ですか？ (Konnichiwa, ogenki desu ka?)",
+      "answer": "こんにちは、お元気ですか？ (Konnichiwa, ogenki desu ka?)"
+    },
+    {
+      "question": "おはようございます。 (Ohayou gozaimasu.)",
+      "answer": "おはようございます。 (Ohayou gozaimasu.)"
+    },
+    {
+      "question": "おやすみなさい。 (Oyasuminasai.)",
+      "answer": "おやすみなさい。 (Oyasuminasai.)"
+    },
+    {
+      "question": "また後で。 (Mata atode.)",
+      "answer": "また後で。 (Mata atode.)"
+    },
+    {
+      "question": "良い一日を。 (Yoi ichinichi o.)",
+      "answer": "良い一日を。 (Yoi ichinichi o.)"
+    },
+    {
+      "question": "調子はどうですか？ (Choushi wa dou desu ka?)",
+      "answer": "調子はどうですか？ (Choushi wa dou desu ka?)"
+    },
+    {
+      "question": "はじめまして。 (Hajimemashite.)",
+      "answer": "はじめまして。 (Hajimemashite.)"
+    },
+    {
+      "question": "どうしたの？ (Dou shita no?)",
+      "answer": "どうしたの？ (Dou shita no?)"
+    },
+    {
+      "question": "お気をつけて。 (Oki o tsukete.)",
+      "answer": "お気をつけて。 (Oki o tsukete.)"
+    },
+    {
+      "question": "バイバイ。 (Baibai.)",
+      "answer": "バイバイ。 (Baibai.)"
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and accurate, showing a strong command of basic Japanese greetings and farewells.",
+    "5-7 correct pronunciations": "Good! Your pronunciation is mostly correct, with a good grasp of basic Japanese. There are some areas to refine for improved clarity.",
+    "2-4 correct pronunciations": "Fair. You have a basic ability to pronounce Japanese phrases, but there are several areas needing significant improvement.",
+    "0-1 correct pronunciations": "Needs improvement. Consider practicing more to enhance your Japanese speaking skills, or seek additional resources for learning."
+  }
+}

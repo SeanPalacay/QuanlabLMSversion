@@ -1,0 +1,61 @@
+{
+  "title": "Technological Conversations",
+  "description": "Enhance your Japanese speaking skills with phrases used for technological conversations. Focus on clear, knowledgeable pronunciation and a future-oriented tone.",
+  "instructions": [
+    "Below is a list of phrases commonly used in technological discussions in Japanese.",
+    "Record yourself speaking each phrase.",
+    "Aim for clear, articulate, and informed pronunciation.",
+    "Maintain a steady and forward-thinking pace.",
+    "After recording, listen to your playback and compare it to the text.",
+    "Pay attention to intonation, clarity, and fluency in Japanese.",
+    "Repeat the recording process as necessary to improve your Japanese speaking skills in technological contexts."
+  ],
+  "items": [
+    {
+      "question": "最新の技術トレンドは何ですか？ (Saishin no gijutsu torendo wa nan desu ka?)",
+      "answer": "最新の技術トレンドは何ですか？ (Saishin no gijutsu torendo wa nan desu ka?)"
+    },
+    {
+      "question": "人工知能の影響について話し合いましょう。 (Jinkou chinou no eikyou ni tsuite hanashiaimashou.)",
+      "answer": "人工知能の影響について話し合いましょう。 (Jinkou chinou no eikyou ni tsuite hanashiaimashou.)"
+    },
+    {
+      "question": "新興技術をどう活用できますか？ (Shinkou gijutsu o dou katsuyou dekimasu ka?)",
+      "answer": "新興技術をどう活用できますか？ (Shinkou gijutsu o dou katsuyou dekimasu ka?)"
+    },
+    {
+      "question": "ブロックチェーン技術に興味があります。 (Burokkucheen gijutsu ni kyoumi ga arimasu.)",
+      "answer": "ブロックチェーン技術に興味があります。 (Burokkucheen gijutsu ni kyoumi ga arimasu.)"
+    },
+    {
+      "question": "仮想現実の可能性を探りましょう。 (Kasou genjitsu no kanousei o sagurimashou.)",
+      "answer": "仮想現実の可能性を探りましょう。 (Kasou genjitsu no kanousei o sagurimashou.)"
+    },
+    {
+      "question": "サイバーセキュリティについてのあなたの見解は？ (Saibaa sekurity ni tsuite no anata no kenkai wa?)",
+      "answer": "サイバーセキュリティについてのあなたの見解は？ (Saibaa sekurity ni tsuite no anata no kenkai wa?)"
+    },
+    {
+      "question": "データ分析をどう統合しますか？ (Deeta bunseki o dou tougou shimasu ka?)",
+      "answer": "データ分析をどう統合しますか？ (Deeta bunseki o dou tougou shimasu ka?)"
+    },
+    {
+      "question": "機械学習の世界について深く掘り下げましょう。 (Kikai gakushuu no sekai ni tsuite fukaku horisagemashou.)",
+      "answer": "機械学習の世界について深く掘り下げましょう。 (Kikai gakushuu no sekai ni tsuite fukaku horisagemashou.)"
+    },
+    {
+      "question": "将来どのようなイノベーションが見込まれますか？ (Shourai dono you na inobeesyon ga mikomaremasu ka?)",
+      "answer": "将来どのようなイノベーションが見込まれますか？ (Shourai dono you na inobeesyon ga mikomaremasu ka?)"
+    },
+    {
+      "question": "技術の進化について興味深いです。 (Gijutsu no shinka ni tsuite kyoumibukai desu.)",
+      "answer": "技術の進化について興味深いです。 (Gijutsu no shinka ni tsuite kyoumibukai desu.)"
+    }
+  ],
+  "scoring": {
+    "8-10 correct pronunciations": "Excellent! Your pronunciation is clear and well-suited for complex technological discussions in Japanese.",
+    "5-7 correct pronunciations": "Good! Most of your technological phrases are pronounced correctly, with some areas needing refinement for clarity.",
+    "2-4 correct pronunciations": "Fair. You understand basic technological concepts, but your pronunciation needs further development.",
+    "0-1 correct pronunciations": "Needs improvement. Focus on practicing these technological phrases to enhance your Japanese speaking skills."
+  }
+}

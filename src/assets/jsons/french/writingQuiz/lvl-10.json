@@ -1,0 +1,59 @@
+{
+  "title": "Fill in the Blanks - Medium Mode",
+  "description": "This intermediate-level quiz challenges you to fill in the blanks with the correct French translations of the given Tagalog words or phrases.",
+  "instructions": [
+    "Each sentence contains a blank space where a Tagalog word is provided in parentheses.",
+    "Translate the Tagalog word into French and fill in the blank.",
+    "Ensure the French word correctly completes the sentence in terms of both meaning and grammatical structure.",
+    "Review your answers before submission."
+  ],
+  "items": [
+    {
+      "question": "Le soir, nous aimons regarder les étoiles dans le ___ (langit).",
+      "suggestedAnswer": "ciel"
+    },
+    {
+      "question": "Pour le petit déjeuner, je mange habituellement des ___ (itlog) avec du riz.",
+      "suggestedAnswer": "œufs"
+    },
+    {
+      "question": "Il a besoin d'acheter un ___ (libro) pour son cours de français.",
+      "suggestedAnswer": "livre"
+    },
+    {
+      "question": "Les ___ (buhok) de la princesse sont longs et brillants.",
+      "suggestedAnswer": "cheveux"
+    },
+    {
+      "question": "Nous irons à la plage pour voir le ___ (pagsikat ng araw).",
+      "suggestedAnswer": "lever du soleil"
+    },
+    {
+      "question": "Elle porte un ___ (kuwintas) que sa grand-mère lui a donné.",
+      "suggestedAnswer": "collier"
+    },
+    {
+      "question": "Les ___ (puno) dans le jardin sont très hauts.",
+      "suggestedAnswer": "arbres"
+    },
+    {
+      "question": "Il a peur des ___ (aso) parce qu'il a été mordu une fois.",
+      "suggestedAnswer": "chiens"
+    },
+    {
+      "question": "J'ai perdu ma ___ (susì) et je ne peux pas ouvrir mon casier.",
+      "suggestedAnswer": "clé"
+    },
+    {
+      "question": "Le ___ (sapa) dans la forêt est clair et frais.",
+      "suggestedAnswer": "ruisseau"
+    }
+  ],
+  "scoring": {
+    "10 correct answers": "Excellent! Your translation skills are quite impressive.",
+    "7-9 correct answers": "Great job! You're almost there, with just a little more practice needed.",
+    "4-6 correct answers": "Good effort! You've shown a solid understanding, but room for improvement remains.",
+    "1-3 correct answers": "A good start! Keep studying and practicing to enhance your skills.",
+    "0 correct answers": "It's a challenging start, but don't give up! Learning a new language takes time and practice."
+  }
+}
