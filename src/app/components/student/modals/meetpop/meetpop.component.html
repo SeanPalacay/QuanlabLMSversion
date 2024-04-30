@@ -7,7 +7,28 @@
                 <span *ngIf="classObj ==  null">CHOOSE CLASS</span>
                 <span *ngIf="classObj != null" [title]="classObj.class">{{classObj.class}}</span>
             </p> 
-            <img src="assets/teacher/icondown.png">
+            <!-- <img src="assets/teacher/icondown.png"> -->
+            <svg class="ml-1" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 481.728 481.728" xml:space="preserve">
+                <defs>
+                  <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:var(--secondary-color);stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:var(--secondary-color);stop-opacity:1" />
+                  </linearGradient>
+                </defs>
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <g>
+                    <g>
+                      <path d="M10.467,146.592l198.857,252.903c17.417,30.532,45.661,30.532,63.085,0l198.839-252.867 c3.886-5.532,8.072-15.41,8.923-22.118c2.735-21.738,4.908-65.178-21.444-65.178H23.013c-26.353,0-24.192,43.415-21.463,65.147 C2.395,131.188,6.587,141.06,10.467,146.592z" fill="url(#gradient)"></path>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+              
+              
+              
+              
           </button>
           <div ngbDropdownMenu aria-labelledby="dropdownBasic1" [ngClass]="{'hide':classes.length <= 0}">
             <!-- <ng-container *ngIf="isTeacher" > -->
@@ -31,18 +52,18 @@
         </div>
         <div class="ml-20 mr-24 icons justify-between flex mt-3">
             <div class="toggle-button flex">
-                <img class="mr-2 mt-0.5" *ngIf="!isMicMuted" src="assets/notmute.png" alt="Mic Icon" style="width: 20px; height: 20px;">
-                <img class="mr-2 mt-0.5" *ngIf="isMicMuted" src="assets/mute.png" alt="Mute Icon" style="width: 20px; height: 20px;">
+                <i class="bx bx-microphone mr-2 mt-[-2px] text-lg text-blue-500" *ngIf="!isMicMuted"></i>
+                <i class="bx bxs-microphone-off mr-2 mt-[-2px] text-lg text-blue-500" *ngIf="isMicMuted"></i>
 
                 <label class="switch">
                     <input type="checkbox" (change)="toggleMic()">
                     <span class="slider round"></span>
                 </label>
             </div>
-            <div class="toggle-button flex">
+            <div class="ml-1 toggle-button flex">
                 <!-- <img class="mr-2" *ngIf="!isVideoDisabled" src="assets/spiderman.png" alt="Video Icon"> -->
-                <i class='bx bx-video mr-2 mt-[-2px] text-lg text-teal-500' *ngIf="!isVideoDisabled" ></i>
-                <i class='bx bxs-video-off mr-2 mt-[-2px] text-lg text-teal-500' *ngIf="isVideoDisabled" ></i>
+                <i class='bx bx-video mr-2 mt-[-2px] text-lg text-blue-500' *ngIf="!isVideoDisabled" ></i>
+                <i class='bx bxs-video-off mr-2 mt-[-2px] text-lg text-blue-500' *ngIf="isVideoDisabled" ></i>
                 <!-- <img class="mr-2" *ngIf="isVideoDisabled" src="assets/tonzxz.jpg" alt="Video Off Icon"> -->
                 <label class="switch">
                     <input type="checkbox" (change)="toggleVideo()">
