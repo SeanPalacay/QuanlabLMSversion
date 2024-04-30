@@ -1,0 +1,20 @@
+.module-container {
+    margin: 20px;
+  }
+  
+  .cover-image {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+  }
+  
+  .lesson-container {
+    margin-bottom: 30px;
+  }
+  
+  .lesson-media {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 10px;
+  }
+  

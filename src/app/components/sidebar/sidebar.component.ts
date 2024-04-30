@@ -29,10 +29,15 @@ export class SidebarComponent implements OnInit {
       icon: 'bx-border-all',
       routerLink: '/student/dashboard',
     },
-    LAB: {
-      redirect: 'student/lab',
+    // LAB: {
+    //   redirect: 'student/courses',
+    //   icon: 'bx-extension',
+    //   routerLink: '/student/courses',
+    // },
+    MODULE: {
+      redirect: 'student/courses',
       icon: 'bx-extension',
-      routerLink: '/student/lab',
+      routerLink: '/student/courses',
     },
     MEET: {
       redirect: 'student/quanhub',
@@ -72,6 +77,11 @@ export class SidebarComponent implements OnInit {
       redirect: 'teacher/managecourse',
       icon: 'bx-book-reader',
       routerLink: '/teacher/managecourse',
+    },
+    'MANAGE MODULE': {
+      redirect: 'teacher/manage-module',
+      icon: 'bx-book-reader',
+      routerLink: '/teacher/manage-module',
     },
     'MANAGE CLASS': {
       redirect: 'teacher/manageclass',

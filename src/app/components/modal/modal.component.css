@@ -88,7 +88,7 @@ margin-top: 20px;
 .terms input[type="checkbox"] {
 height: 18px;
 width: 18px;
-border: 1px solid #0cc3e4;
+border: 1px solid var(--secondary-color);
 }
 
 .terms label {
@@ -97,7 +97,7 @@ margin-left: 30px;
 
 .submit button {
 box-shadow: 0px 4px 4px #00000040;
-background: linear-gradient(to right, rgb(1, 114, 175) 0%, rgb(116, 254, 189) 100%);
+background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
 width: 40%;
 height: 50px;
 border-radius: 12px;
@@ -169,7 +169,11 @@ margin-left: -6px; /* Adjust margin as needed */
   100% { transform: translateX(0); }
 }
 
-.top input[type="text"].error-border {
+.top input[type="text"].error-border,
+.mid input[type="text"].error-border,
+.bottom input[type="text"].error-border,
+.passwords input[type="password"].error-border,
+.mid input[type="email"].error-border{
   border: 2px solid red !important;
 }
 

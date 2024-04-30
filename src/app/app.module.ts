@@ -1,6 +1,20 @@
 import { NgModule, importProvidersFrom } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { SharedService } from 'src/app/shared.service';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCFCtrVXlQoZ2f0SvfOhSey1OJyqJyQ4PE",
+  authDomain: "lmsfornow-fc681.firebaseapp.com",
+  projectId: "lmsfornow-fc681",
+  storageBucket: "lmsfornow-fc681.appspot.com",
+  messagingSenderId: "697929052905",
+  appId: "1:697929052905:web:23196eb765394fc20ab678",
+  measurementId: "G-9C89V814XJ"
+};
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -120,6 +134,7 @@ import { GroupComponent } from './speechlab/components/group/group.component';
 import { QuizAnalyticsComponent } from './components/teacher/quiz-analytics/quiz-analytics.component';
 import { AddPrincipalComponent } from './components/admin/modals/add-principal/add-principal.component';
 import { SurveyCertComponent } from './components/student/modals/survey-cert/survey-cert.component';
+import { ModuleComponent } from './teacher/module/module.component';
 
 
 
@@ -226,7 +241,8 @@ import { SurveyCertComponent } from './components/student/modals/survey-cert/sur
     GroupComponent,
     AddPrincipalComponent,
     QuizAnalyticsComponent,
-    SurveyCertComponent
+    SurveyCertComponent,
+    ModuleComponent
   ],
   
   imports: [
@@ -246,9 +262,12 @@ import { SurveyCertComponent } from './components/student/modals/survey-cert/sur
     MatIconModule,
     BrowserAnimationsModule,
     DragDropModule,
-    PdfViewerModule
+    PdfViewerModule,
+    provideFirebaseApp(() => initializeApp(firebaseConfig)),
+    provideFirestore(() => getFirestore()),
   ],
-  providers: [LoaderGuard],
+  providers: [SharedService],
   bootstrap: [AppComponent],
+  
 })
 export class AppModule {}

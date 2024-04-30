@@ -71,6 +71,7 @@ import { Practice1Component } from './speechlab/student/practice/practice1/pract
 import { DrillsComponent } from './components/admin/speechlab/drills/drills.component';
 import {PracticeParentComponent } from './speechlab/student/practice/practice-parent/practice-parent.component'
 import { QuizTemplateComponent } from './speechlab/student/module/quiz-template/quiz-template.component';
+import { ModuleComponent } from './teacher/module/module.component';
 const routes: Routes = [
   { path: 'loader', component: LoaderComponent },
   {
@@ -207,6 +208,7 @@ const routes: Routes = [
       { path: 'managecourse', component: ManageCourseComponent },
       { path: 'quiz-management', component: QuizManagementComponent },
       { path: 'manage-lessons', component: TlessonsComponent },
+      { path: 'manage-module', component: ModuleComponent },
       {
         path: 'teacher-view',
         canActivate: [TeacherViewGuardGuard],

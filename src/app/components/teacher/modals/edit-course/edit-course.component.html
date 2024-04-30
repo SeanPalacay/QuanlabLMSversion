@@ -12,15 +12,15 @@
                 <textarea [(ngModel)]="courseDesc" name="" id="" cols="30" rows="10" placeholder="Description :" class="textarea-field"></textarea>
             </div>
             <div class="topwrap2">
-                <div class="text">
+                <!-- <div class="text">
                     <select [(ngModel)]="language" (change)="selectLanguage(language)" name="language" id="language" class="poppins select-field">
                         <option class="placeholder poppins-b" value="" disabled selected hidden>Select Language:</option>
                         <option [value]='language.value.language' *ngFor="let language of languages|keyvalue" >
                           {{language.value.language}}
                        </option>
                     </select>
-                </div>
-                <div class="mode poppins">
+                </div> -->
+                <!-- <div class="mode poppins">
                     <div>
                         <h1 class="poppins-b">Select Mode :</h1>
                     </div>
@@ -28,7 +28,7 @@
                     <input [checked]="mode.read =='on'" (change)="read($event)"   type="radio"><span> Read</span>
                     <input [checked]="mode.speak =='on'"  (change)="speak($event)" type="radio"><span> Speak</span>
                     <input [checked]="mode.write =='on'" (change)="write($event)"  type="radio"><span> Write</span>
-                </div>
+                </div> -->
             </div>
         </div>
   
