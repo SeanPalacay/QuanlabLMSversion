@@ -1,48 +1,95 @@
 .custom-modal-content {
-  border-radius: 10px;
-  height: auto; /* Adjusted to auto for dynamic height based on content */
-  max-height: 800px; /* Set the maximum desired height */
-  overflow-y: auto; /* Enable vertical scrolling if content exceeds max-height */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 600px;
+  margin: 0 auto;
+}
 
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.invalid-input {
+  border-color: #ff0000;
+}
+
+.error-message {
+  color: #ff0000;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.time-schedule {
   display: flex;
-  flex-direction: column; /* Align children vertically */
   align-items: center;
-  text-align: center;
-  padding: 25px;
+  justify-content: space-between;
 }
 
-.inputwrap input[type="text"],
-.inputwrap select {
-  width: 100%; /* Adjusted to fill the container width */
-  max-width: 390px; /* Set the maximum desired width */
-  height: 45px;
-  /* background-color: #e1f3fd; */
-  border-radius: 18px;
-  border: 1px solid #00000040;
-  padding: 0 5px; /* Adjusted for horizontal padding */
-  margin-bottom: 10px; /* Added margin bottom for spacing */
-}
-
-.btnwrap .save,
-.btnwrap .cancel {
-  height: 35px;
-  width: 100px; /* Adjusted to wider width */
-  border-radius: 12px;
-  color: white;
-  cursor: pointer; /* Add cursor pointer on hover */
-}
-
-.btnwrap .save {
-  background: linear-gradient(to right, rgb(1, 114, 175) 0%, rgb(116, 254, 189) 100%);
-}
-
-.btnwrap .cancel {
-  background: #ff5f5f; /* Changed to a lighter red */
-  margin-left: 20px; /* Adjusted margin for spacing */
-}
-
-.btnwrap {
-  margin-top: 20px;
+.time-input {
   display: flex;
-  justify-content: center; /* Center align the buttons */
+  align-items: center;
+}
+
+.time-input select {
+  margin-right: 5px;
+  min-width: 70px;
+}
+
+.time-separator {
+  margin: 0 5px;
+}
+
+.time-range-separator {
+  margin: 0 10px;
+}
+
+.day-schedule {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.checkbox-label {
+  margin-right: 10px;
+}
+
+.button-group {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.save-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cancel-button {
+  padding: 10px 20px;
+  background-color: #ccc;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 10px;
 }

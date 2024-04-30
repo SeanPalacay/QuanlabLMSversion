@@ -3,9 +3,10 @@
   --snackbar-color: white;
   --snackbar-color-text: rgb(35, 53, 80);
   --tw-border-opacity: 1;
-  --primary-color:#74FEBD;
-  --secondary-color: #0172AF;
-  --primary-color-light: #f5f6ff;
+  --primary-color:#040454;
+  --secondary-color: #0474AC;
+  --primary-color-light: #BDD7DC;
+  --secondary-color-light: #7797B1;
   --tw-gradient-color:  var(--secondary-color),var(--primary-color);
     --body-color: #f5f7f9;
     --toggle-color: #DDD;
@@ -24,7 +25,7 @@
 }
 
 .primary-colorx {
-  background: #74FEBD;
+  background: var(--primary-color);
 }
 
 .border-gradient {
@@ -33,7 +34,7 @@
     border: double 2px transparent;
     border-radius: 50%;
     background-image: linear-gradient(white, white), 
-                      linear-gradient(to right, #0172AF, #74FEBD);
+                      linear-gradient(to right, var(--secondary-color), var(--primary-color));
     background-origin: border-box;
     background-clip: content-box, border-box; 
     box-decoration-break: clone;
@@ -67,7 +68,7 @@
 }
 ::-webkit-scrollbar-thumb{
     border-radius: 5px;
-    background-color: #0172AF;
+    background-color: var(--secondary-color);
 }
 
 
@@ -199,11 +200,11 @@ html{
 
 /* Theme */
 .primary-color {
-    background-color: #0172AF;
+    background-color: var(--secondary-color);
 }
 
 .secondary-color {
-    background-color: #74FEBD;
+    background-color: var(--primary-color);
 }
 
 .tertiary-color {   
@@ -215,7 +216,7 @@ html{
 }
 
 .search-color {
-    background-color: #59ddb9;
+    background-color: #27275a;
 }
 
 .whitesmoke-color {
@@ -224,20 +225,20 @@ html{
 
 .gradient-color {
     background-image: linear-gradient(to right, var(--tw-gradient-color), var(--tw-gradient-color));
-    /* --tw-gradient-stops:  #0172AF, #74FEBD; */
-    /* --tw-gradient-from: #0172AF var(--tw-gradient-from-position); */
+    /* --tw-gradient-stops:  #0474AC, #040454; */
+    /* --tw-gradient-from: #0474AC var(--tw-gradient-from-position); */
     /* --tw-gradient-to: rgb(6 182 212 / 0) var(--tw-gradient-to-position); */
     /* --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); */
-    /* --tw-gradient-to: #74FEBD var(--tw-gradient-to-position); */
+    /* --tw-gradient-to: #040454 var(--tw-gradient-to-position); */
     background-size: 300% 100%;
 }
 
 .gradient-color-updown {
     background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
-    --tw-gradient-from: #0172AF var(--tw-gradient-from-position);
+    --tw-gradient-from: var(--secondary-color) var(--tw-gradient-from-position);
     --tw-gradient-to: rgb(6 182 212 / 0) var(--tw-gradient-to-position);
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-    --tw-gradient-to: #74FEBD var(--tw-gradient-to-position);
+    --tw-gradient-to: var(--primary-color) var(--tw-gradient-to-position);
 }
 
 
@@ -303,10 +304,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
 
 .calendar-header {
     background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
-    --tw-gradient-from: #0172AF var(--tw-gradient-from-position);
+    --tw-gradient-from: var(--secondary-color) var(--tw-gradient-from-position);
     --tw-gradient-to: rgb(6 182 212 / 0) var(--tw-gradient-to-position);
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-    --tw-gradient-to: #74FEBD var(--tw-gradient-to-position);
+    --tw-gradient-to: var(--primary-color) var(--tw-gradient-to-position);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -390,11 +391,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
   .calendar-days div:hover {
     transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
     background-image: linear-gradient(to right, var(--tw-gradient-color), var(--tw-gradient-color));
-    /* --tw-gradient-stops:  #0172AF, #74FEBD; */
-    /* --tw-gradient-from: #0172AF var(--tw-gradient-from-position); */
+    /* --tw-gradient-stops:  #0474AC, #040454; */
+    /* --tw-gradient-from: #0474AC var(--tw-gradient-from-position); */
     /* --tw-gradient-to: rgb(6 182 212 / 0) var(--tw-gradient-to-position); */
     /* --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); */
-    /* --tw-gradient-to: #74FEBD var(--tw-gradient-to-position); */
+    /* --tw-gradient-to: #040454 var(--tw-gradient-to-position); */
     background-size: 300% 100%;
     border-radius: 100%; /* Makes the div circular */
     color: var(--white-color);

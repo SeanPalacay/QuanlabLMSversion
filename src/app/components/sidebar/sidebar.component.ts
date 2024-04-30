@@ -45,11 +45,11 @@ export class SidebarComponent implements OnInit {
       icon: 'bx-notepad',
       routerLink: '/student/to-do',
     },
-    'SPEECH LAB': {
-      redirect: '/student/speechlab',
-      icon: 'bx-notepad',
-      routerLink: '/student/speechlab',
-    },
+    // 'SPEECH LAB': {
+    //   redirect: '/student/speechlab',
+    //   icon: 'bx-notepad',
+    //   routerLink: '/student/speechlab',
+    // },
     // "PERFORMANCE" :  {
     //   redirect: 'student/performance',
     //   icon : 'bx-line-chart',
@@ -89,11 +89,11 @@ export class SidebarComponent implements OnInit {
       icon: 'bx-spreadsheet',
       routerLink: '/teacher/grade-list',
     },
-    'SPEECH LAB': {
-      redirect: 'teacher/speechlab',
-      icon: 'bx-spreadsheet',
-      routerLink: '/teacher/speechlab',
-    },
+    // 'SPEECH LAB': {
+    //   redirect: 'teacher/speechlab',
+    //   icon: 'bx-spreadsheet',
+    //   routerLink: '/teacher/speechlab',
+    // },
     // "COMMUNICATION": {
     //   redirect: 'teacher/communication',
     //   icon : 'bx-message-rounded-detail',

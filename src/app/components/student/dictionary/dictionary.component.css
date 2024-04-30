@@ -10,7 +10,7 @@
 .border-gradient1-wrapper {
   position: relative;
   border-radius: 8px;
-  background: linear-gradient(90deg, #0172af, #74febd);
+  background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
   padding: 2px;
 }
 
@@ -23,8 +23,7 @@
   box-shadow: 0px 4px 4px #00000040;
   background: linear-gradient(
     180deg,
-    rgb(17, 137, 182) 0%,
-    rgb(107, 243, 188) 100%
+    var(--secondary-color), var(--primary-color)
   );
 }
 .reset {

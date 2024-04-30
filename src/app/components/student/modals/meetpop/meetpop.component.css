@@ -12,7 +12,7 @@
   }
   .my-button:hover {
     /* Add your desired hover styles here */
-    background-color: #54afff;
+    background-color: var(--secondary-color);
     color: #ffffff;
     /* Add any other styles you want for the hover effect */
   }
@@ -168,11 +168,11 @@
   }
   
   input:checked + .slider {
-    background-color: #0172AF;
+    background-color: var(--secondary-color);
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px #0172AF;
+    box-shadow: 0 0 1px  var(--secondary-color);
   }
   
   input:checked + .slider:before {
@@ -221,8 +221,8 @@
 .new-task-button p {
   background: linear-gradient(
     to right,
-    rgb(1, 114, 175) 0%,
-    rgb(116, 254, 189) 100%
+    var(--secondary-color),
+    var(--primary-color)
   );
   color: transparent;
   background-clip: text;

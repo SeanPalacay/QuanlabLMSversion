@@ -76,7 +76,7 @@ export class ThomeComponent implements AfterViewInit,OnInit {
         ) {
           day.classList.add('current-date');
           day.style.color = 'white'; // Add this line to color the current date in blue
-          day.style.background = 'linear-gradient(to right, #0172AF , #74FEBD)';// Background color
+          day.style.background = 'linear-gradient(to right, var(--primary-color) , var(--secondary-color))';// Background color
         }
       }
       calendar_days.appendChild(day);

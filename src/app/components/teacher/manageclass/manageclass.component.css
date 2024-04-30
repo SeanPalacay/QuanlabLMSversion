@@ -1,6 +1,35 @@
     body {
   padding: 30px;
 }
+.plus-icon {
+  width: 15px;
+  height: 15px;
+  background-color: var(--secondary-color); /* Color of the circle */
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+.plus-icon::before,
+.plus-icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff; /* Color of the plus sign */
+}
+
+.plus-icon::before {
+  width: 6px; /* Width of the horizontal line */
+  height: 2px; /* Height of the horizontal line */
+}
+
+.plus-icon::after {
+  width: 2px; /* Width of the vertical line */
+  height: 6px; /* Height of the vertical line */
+}
+
 
 .newclass button {
   background-color: #ffffff;
@@ -10,8 +39,8 @@
   align-items: center;
   background-image: linear-gradient(
     to right,
-    rgb(1, 114, 175) 0%,
-    rgb(116, 254, 189) 100%
+    var(--secondary-color) 0%,
+    var(--primary-color) 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -40,8 +69,8 @@
   align-items: center;
   background-image: linear-gradient(
     to right,
-    rgb(1, 114, 175) 0%,
-    rgb(116, 254, 189) 100%
+    var(--secondary-color) 0%,
+    var(--secondary-color) 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -114,8 +143,8 @@
   width: 26%;
   background: linear-gradient(
     to right,
-    rgb(1, 114, 175) 0%,
-    rgb(116, 254, 189) 100%
+    var(--secondary-color) 0%,
+    var(--secondary-color) 100%
   );
   color: #e1f3fd;
 }
@@ -132,8 +161,8 @@
 .pendingcontent .table .title > h1 {
   background: linear-gradient(
     to right,
-    rgb(1, 114, 175) 0%,
-    rgb(116, 254, 189) 100%
+    var(--secondary-color) 0%,
+    var(--secondary-color) 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -198,8 +227,8 @@
   width: 26%;
   background: linear-gradient(
     to right,
-    rgb(1, 114, 175) 0%,
-    rgb(116, 254, 189) 100%
+    var(--secondary-color) 0%,
+    var(--secondary-color) 100%
   );
   color: #e1f3fd;
 }
@@ -266,8 +295,8 @@ label:active:after {
   width: 70%;
   background: linear-gradient(
     to right,
-    rgb(1, 114, 175) 0%,
-    rgb(116, 254, 189) 100%
+    var(--secondary-color) 0%,
+    var(--secondary-color) 100%
   );
   display: flex;
   border-radius: 12px;
@@ -302,7 +331,7 @@ td {
 }
 
 table thead {
-  background: linear-gradient(to right, #0172af, #74febd);
+  background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
   position: sticky;
   top: 0;
   height: 50px;

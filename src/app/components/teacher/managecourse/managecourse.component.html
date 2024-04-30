@@ -8,7 +8,7 @@
           Create Course
         </button>
       </div>
-      <div class="left-button mb-2 sm:mb-0">
+      <!-- <div class="left-button mb-2 sm:mb-0">
         <select
           class="bg-white text-green-500 h-auto p-2 rounded shadow-sm"
           [(ngModel)]="selectedLanguage"
@@ -22,12 +22,23 @@
             {{ language.value.language }}
           </option>
         </select>
-      </div>
+      </div> -->
     </div>
   </div>
 
   <!-- Grid for responsive layout -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">  
+    
+    <!-- Check if courseData is empty -->
+    <ng-container *ngIf="courseData.length === 0">
+      <div class="flex justify-center items-center relative rounded overflow-hidden shadow-md bg-white py-4">
+        <!-- Placeholder message -->
+        <div class="text-gray-700 text-center px-4">
+          There are no courses available. Click the button above to add a course.
+        </div>
+      </div>
+    </ng-container>
+
     <ng-container *ngFor="let course of courseData">
       <div *ngIf="languages.get(selectedLanguage) == null || course.lang == languages.get(selectedLanguage).id" class="flex flex-col justify-center items-center relative rounded overflow-hidden shadow-md bg-white py-4">
         <div class="absolute top-2 right-2">
