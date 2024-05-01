@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { SharedService } from 'src/app/shared.service';
-
+import {provideStorage, getStorage } from '@angular/fire/storage';
 const firebaseConfig = {
   apiKey: "AIzaSyCFCtrVXlQoZ2f0SvfOhSey1OJyqJyQ4PE",
   authDomain: "lmsfornow-fc681.firebaseapp.com",
@@ -265,6 +265,7 @@ import { ModuleComponent } from './teacher/module/module.component';
     PdfViewerModule,
     provideFirebaseApp(() => initializeApp(firebaseConfig)),
     provideFirestore(() => getFirestore()),
+    provideStorage(() => getStorage()),
   ],
   providers: [SharedService],
   bootstrap: [AppComponent],

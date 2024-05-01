@@ -78,11 +78,11 @@ export class SidebarComponent implements OnInit {
       icon: 'bx-book-reader',
       routerLink: '/teacher/managecourse',
     },
-    'MANAGE MODULE': {
-      redirect: 'teacher/manage-module',
-      icon: 'bx-book-reader',
-      routerLink: '/teacher/manage-module',
-    },
+    // 'MANAGE MODULE': {
+    //   redirect: 'teacher/manage-module',
+    //   icon: 'bx-book-reader',
+    //   routerLink: '/teacher/manage-module',
+    // },
     'MANAGE CLASS': {
       redirect: 'teacher/manageclass',
       icon: 'bx-chalkboard',

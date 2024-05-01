@@ -1,99 +1,59 @@
-<div>
-    <!-- Add Module Form -->
-    <form (ngSubmit)="addModule(moduleForm.value)" #moduleForm="ngForm">
-      <h3>Module</h3>
-      <div>
-        <label for="coverImageUrl">Cover Image URL:</label>
-        <input type="text" id="coverImageUrl" name="coverImageUrl" ngModel required>
-      </div>
-      <button type="submit">Add Module</button>
-    </form>
-  
-    <!-- Module List -->
-    <h3>Modules</h3>
-    <ul>
-      <li *ngFor="let module of modules">
-        <div>
-          <h4>Module: {{ module.id }}</h4>
-          <img [src]="module.coverImageUrl" alt="Module Cover Image">
-          <button (click)="deleteModule(module.id)">Delete Module</button>
-        </div>
-  
-        <!-- Add Lesson Form -->
-        <form (ngSubmit)="addLessonToModule(module.id, lessonForm.value)" #lessonForm="ngForm">
-          <h4>Add Lesson</h4>
-          <div>
-            <label for="lessonTitle">Title:</label>
-            <input type="text" id="lessonTitle" name="lessonTitle" ngModel required>
-          </div>
-          <div>
-            <label for="lessonContent">Content:</label>
-            <textarea id="lessonContent" name="lessonContent" ngModel required></textarea>
-          </div>
-          <div>
-            <label for="mediaType">Media Type:</label>
-            <select id="mediaType" name="mediaType" ngModel required>
-              <option value="image">Image</option>
-              <option value="video">Video</option>
-            </select>
-          </div>
-          <div>
-            <label for="mediaUrl">Media URL:</label>
-            <input type="text" id="mediaUrl" name="mediaUrl" ngModel required>
-          </div>
-          <button type="submit">Add Lesson</button>
-        </form>
-  
-        <!-- Lesson List -->
-        <h5>Lessons</h5>
-        <ul>
-          <li *ngFor="let lesson of lessons">{{ lesson.name }}
-            <div>
-              <p>{{ lesson.id }}<</p>
-              <p>Title: {{ lesson.title }}</p>
-              <p>Content: {{ lesson.content }}</p>
-              <div *ngIf="lesson.mediaType === 'image'">
-                <img [src]="lesson.mediaUrl" alt="Lesson Image">
-              </div>
-              <div *ngIf="lesson.mediaType === 'video'">
-                <video [src]="lesson.mediaUrl" controls>
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <button (click)="deleteLessonFromModule(module.id, lesson.id)">Delete Lesson</button>
+<div class="container">
+  <h2 class="title">Modules</h2>
+  <div class="create-module">
+    <input type="text" [(ngModel)]="newModuleName" placeholder="Enter module name" class="input">
+    <button (click)="createModule()" class="btn btn-primary">Create Module</button>
+  </div>
+  <div class="card-container">
+    <div class="card" *ngFor="let module of modules" (click)="openModal(module)">
+      <h3 class="card-title">{{ module.name }}</h3>
+    </div>
+  </div>
+</div>
+
+<div class="modal" *ngIf="selectedModule">
+  <div class="modal-content">
+    <h2 class="modal-title">{{ selectedModule.name }}</h2>
+    <button (click)="deleteModule(selectedModule.id)" class="btn btn-danger">Delete Module</button>
+    <div class="lessons">
+      <h4 class="lessons-title">Lessons</h4>
+      <div class="lesson-list-container">
+        <ul class="lesson-list">
+          <li *ngFor="let lesson of selectedModule.lessons" class="lesson-item">
+            <h5 class="lesson-title">{{ lesson.title }}</h5>
+            <p class="lesson-content">{{ lesson.content }}</p>
+            <div *ngIf="lesson.imageUrl" class="lesson-media">
+              <img *ngIf="lesson.imageUrl.includes('.jpg') || lesson.imageUrl.includes('.jpeg') || lesson.imageUrl.includes('.png') || lesson.imageUrl.includes('.gif')"
+                   [src]="lesson.imageUrl" alt="Lesson Image" class="lesson-image">
+              <video *ngIf="lesson.imageUrl.includes('.mp4') || lesson.imageUrl.includes('.ogg') || lesson.imageUrl.includes('.webm')"
+                     width="320" height="240" controls class="lesson-video">
+                <source [src]="lesson.imageUrl" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
             </div>
-  
-            <!-- Add Quiz Form -->
-            <form (ngSubmit)="addQuizToLesson(module.id, lesson.id, quizForm.value)" #quizForm="ngForm">
-              <h6>Add Quiz</h6>
-              <div>
-                <label for="question">Question:</label>
-                <input type="text" id="question" name="question" ngModel required>
-              </div>
-              <div>
-                <label for="options">Options:</label>
-                <textarea id="options" name="options" ngModel required></textarea>
-              </div>
-              <div>
-                <label for="correctAnswer">Correct Answer:</label>
-                <input type="text" id="correctAnswer" name="correctAnswer" ngModel required>
-              </div>
-              <button type="submit">Add Quiz</button>
-            </form>
-  
-            <!-- Quiz List -->
-            <h6>Quizzes</h6>
-            <ul>
-              <li *ngFor="let quiz of lesson.quizzes">
-                <div>
-                  <p>{{ quiz.question }}</p>
-                  <button (click)="deleteQuizFromLesson(module.id, lesson.id, quiz.id)">Delete Quiz</button>
-                </div>
-              </li>
-            </ul>
+            <button (click)="deleteLesson(selectedModule.id, lesson.id)" class="btn btn-danger">Delete Lesson</button>
           </li>
         </ul>
-      </li>
-    </ul>
+      </div>
+      <div class="create-lesson-container">
+        <h4 class="create-lesson-title">Create Lesson</h4>
+        <div class="create-lesson-form">
+          <div class="form-group">
+            <label for="lessonTitle" class="form-label">Enter lesson title</label>
+            <input type="text" [(ngModel)]="newLessonTitle" id="lessonTitle" class="input">
+          </div>
+          <div class="form-group">
+            <label for="lessonContent" class="form-label">Enter lesson content</label>
+            <textarea [(ngModel)]="newLessonContent" id="lessonContent" class="textarea"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="fileInput" class="form-label">Choose file</label>
+            <input type="file" (change)="onFileSelected($event)" id="fileInput" class="file-input">
+          </div>
+          <button (click)="createLesson(selectedModule.id)" class="btn btn-primary">Create Lesson</button>
+        </div>
+      </div>
+    </div>
+    <button (click)="closeModal()" class="btn btn-secondary">Close</button>
   </div>
-  
+</div>

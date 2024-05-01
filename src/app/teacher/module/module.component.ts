@@ -1,73 +1,127 @@
-import { Component } from '@angular/core';
-import { SharedService } from 'src/app/shared.service';
+  import { Component } from '@angular/core';
+  import { SharedService } from 'src/app/shared.service';
 
-@Component({
-  selector: 'app-module',
-  templateUrl: './module.component.html',
-  styleUrls: ['./module.component.css']
-})
-export class ModuleComponent {
-  modules: any[] = [];
-  lessons: any[] = []; // Initialize the lessons property with an empty array
-
-  constructor(private service: SharedService) {}
-
-  refreshModules() {
-    this.service.getModules().subscribe((res) => {
-      this.modules = res;
-    });
+  interface Module {
+    id: string;
+    name: string;
+    lessons: Lesson[];
   }
 
-  refreshLessons() {
-    this.service.getLessons().subscribe((lessons) => {
-      this.modules = lessons;
-    });
+  interface Lesson {
+    id: string;
+    title: string;
+    content: string;
+    imageUrl?: string; // Add imageUrl property to Lesson interface
+
   }
 
-  ngOnInit() {
-    this.refreshModules();
-    this.refreshLessons();
-  }
+  @Component({
+    selector: 'app-module',
+    templateUrl: './module.component.html',
+    styleUrls: ['./module.component.css']
+  })
+  export class ModuleComponent {
+    modules: Module[] = [];
+    newModuleName: string = '';
+    newLessonTitle: string = '';
+    newLessonContent: string = '';
+    imageFile: File | null = null;
 
-  addModule(moduleData: any) {
-    this.service.addModule(moduleData).then((res) => {
-      console.log(res);
-      this.refreshModules();
-    });
-  }
+    constructor(private moduleService: SharedService) {
+      this.getModules();
+    }
 
-  deleteModule(id: string) {
-    this.service.deleteModule(id).then((res) => {
-      console.log(res);
-      this.refreshModules();
-    });
-  }
+    
 
-  addLessonToModule(moduleId: string, lessonData: any) {
-    this.service.addLessonToModule(moduleId, lessonData).then((res) => {
-      console.log(res);
-      this.refreshModules();
-    });
-  }
+    getModules() {
+      this.moduleService.getModules().subscribe(modules => {
+        this.modules = modules;
+      });
+    }
 
-  deleteLessonFromModule(moduleId: string, lessonId: string) {
-    this.service.deleteLessonFromModule(moduleId, lessonId).then((res) => {
-      console.log(res);
-      this.refreshModules();
-    });
-  }
+    createModule() {
+      if (this.newModuleName) {
+        const moduleData: { name: string, lessons: Lesson[] } = {
+          name: this.newModuleName,
+          lessons: []
+        };
+        this.moduleService.createModule(moduleData).then(() => {
+          this.newModuleName = ''; // Reset the input field after successful creation
+          this.getModules(); // Refresh the modules list after creation
+        }).catch(error => {
+          console.error('Error creating module:', error); // Handle any potential errors
+        });
+      }
+    }
+    
 
-  addQuizToLesson(moduleId: string, lessonId: string, quizData: any) {
-    this.service.addQuizToLesson(moduleId, lessonId, quizData).then((res) => {
-      console.log(res);
-      this.refreshModules();
-    });
-  }
+    deleteModule(moduleId: string) {
+      this.moduleService.deleteModule(moduleId).then(() => {
+        this.getModules();
+      });
+    }
 
-  deleteQuizFromLesson(moduleId: string, lessonId: string, quizId: string) {
-    this.service.deleteQuizFromLesson(moduleId, lessonId, quizId).then((res) => {
-      console.log(res);
-      this.refreshModules();
+    createLesson(moduleId: string) {
+  if (this.newLessonTitle && this.newLessonContent && this.imageFile) {
+    const lessonData: { title: string, content: string, imageFile: File } = {
+      title: this.newLessonTitle,
+      content: this.newLessonContent,
+      imageFile: this.imageFile
+    };
+    this.moduleService.createLesson(moduleId, lessonData).then(() => {
+      if (this.selectedModule && this.selectedModule.id === moduleId) {
+        // Create a new lesson object with the provided data
+        const newLesson: Lesson = {
+          id: '', // Assign an appropriate ID here
+          title: this.newLessonTitle,
+          content: this.newLessonContent,
+          imageUrl: this.imageFile ? URL.createObjectURL(this.imageFile) : '' // Check if this.imageFile is not null before creating the URL
+        };
+        this.selectedModule.lessons.push(newLesson);
+      }
+      this.newLessonTitle = '';
+      this.newLessonContent = '';
+      this.imageFile = null;
+    }).catch(error => {
+      console.error('Error creating lesson:', error);
     });
   }
 }
+    onFileSelected(event: any) {
+      if (event.target.files && event.target.files.length > 0) {
+        this.imageFile = event.target.files[0];
+      }
+    }
+    
+    toggleLessons(module: any) {
+      module.showLessons = !module.showLessons;
+    }
+
+    deleteLesson(moduleId: string, lessonId: string) {
+      console.log("Module Id:", moduleId);
+      console.log("Lesson Id:", lessonId);
+      this.moduleService.deleteLesson(moduleId, lessonId).then(() => {
+        if (this.selectedModule && this.selectedModule.id === moduleId) {
+          const index = this.selectedModule.lessons.findIndex(lesson => lesson.id === lessonId);
+          if (index !== -1) {
+            this.selectedModule.lessons.splice(index, 1);
+          }
+        }
+      }).catch(error => {
+        console.error('Error deleting lesson:', error);
+      });
+    }
+    
+     selectedModule: Module | null = null;
+
+     openModal(module: Module) {
+      this.selectedModule = module;
+    }
+  
+    closeModal() {
+      this.selectedModule = null;
+    }
+    
+    
+    
+  }

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Route, Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { APIService } from 'src/app/services/API/api.service';
 import { Course } from 'src/app/shared/model/models';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-lessons',
@@ -9,46 +10,49 @@ import { Course } from 'src/app/shared/model/models';
   styleUrls: ['./lessons.component.css']
 })
 export class LessonsComponent implements OnInit {
-  lessons:any = [];
+  lessons: any = [];
+  hideMarkAsDone: boolean = false;
 
-  constructor(private API:APIService, private router:Router){}
+  constructor(private API: APIService, private router: Router, private route: ActivatedRoute, private location: Location) { }
 
   navigateBack(): void {
-    this.router.navigate(['student/courses']);
+    this.location.back();
   }
-
-  markAsDone(lesson:any){
+  markAsDone(lesson: any) {
     lesson.progress = 100;
-    const mark$ = this.API.lessonProgress(lesson.id, 100).subscribe(()=>{
+    const mark$ = this.API.lessonProgress(lesson.id, 100).subscribe(() => {
       mark$.unsubscribe();
     })
   }
+
   ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+      this.hideMarkAsDone = params['hideMarkAsDone'] === 'true';
+    });
+
     this.API.showLoader();
-    this.API.getLessons().subscribe(data=>{
+    this.API.getLessons().subscribe(data => {
       this.lessons = data.output;
       console.log(this.lessons);
       this.API.hideLoader();
     });
   }
 
-  isDone(lesson:any){
+  isDone(lesson: any) {
     return Number(lesson.progress) > 0;
   }
-  getURL(file:string){
+
+  getURL(file: string) {
     return this.API.getURL(file);
   }
 
-  parseTime(time:string){
+  parseTime(time: string) {
     var t = time.split(/[- :]/) as unknown as Array<number>;
-
-// Apply each element to the Date function
-  return (new Date(Date.UTC(t[0], t[1]-1, t[2], t[3], t[4], t[5]))).toLocaleString();
+    return (new Date(Date.UTC(t[0], t[1] - 1, t[2], t[3], t[4], t[5]))).toLocaleString();
   }
 
-  openFile(file:string){
+  openFile(file: string) {
     this.API.openFile(file);
   }
-
   
 }

@@ -36,12 +36,13 @@
             </div>
         <div>
             <div class="flex items-center">
-                <button *ngIf="!isDone(lesson)" (click)="markAsDone(lesson)" class="text-white poppins-sb ml-4 px-2 py-2 font-medium bg-blue-500 hover:bg-blue-600 rounded mr-2">
+                <button *ngIf="!isDone(lesson) && !hideMarkAsDone" (click)="markAsDone(lesson)" class="text-white poppins-sb ml-4 px-2 py-2 font-medium bg-blue-500 hover:bg-blue-600 rounded mr-2">
                     Mark as done
                 </button>
                 <button *ngIf="isDone(lesson)" class="text-white poppins-sb ml-4 px-4 py-2 font-medium bg-green-500 hover:bg-green-600 rounded mr-2">
                     Done
                 </button>
+                
             </div>
         </div>
         </div>

@@ -14,6 +14,7 @@ import Swal from 'sweetalert2';
 export class ManageCourseComponent implements OnInit {
   languages:Map<string, any> = new Map();
   selectedLanguage: string = '';
+  course: any; // Declare the course property
 
   constructor( private modalService: NgbModal, 
     private API: APIService,
@@ -269,5 +270,10 @@ export class ManageCourseComponent implements OnInit {
       console.log('Certificate preview closed without distribution.');
     }
   }
+  redirectToLessons(courseID: string) {
+    this.API.setCourse(courseID);
+    this.router.navigate(['/teacher/lessons'], { queryParams: { hideMarkAsDone: true } });
+  }
+  
 }
 

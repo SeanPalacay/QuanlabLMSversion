@@ -1,20 +1,209 @@
-.module-container {
-    margin: 20px;
-  }
-  
-  .cover-image {
-    width: 100%;
-    max-width: 600px;
-    margin-bottom: 20px;
-  }
-  
-  .lesson-container {
-    margin-bottom: 30px;
-  }
-  
-  .lesson-media {
-    width: 100%;
-    max-width: 600px;
-    margin-bottom: 10px;
-  }
-  
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.create-module {
+  margin-bottom: 20px;
+}
+
+.input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
+.card {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card:hover {
+  background-color: #e9ecef;
+}
+
+.card-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.modal-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.lessons {
+  margin-top: 20px;
+}
+
+.lessons-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.lesson-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.lesson-item {
+  margin-bottom: 20px;
+}
+
+.lesson-title {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.lesson-content {
+  font-size: 16px;
+  color: #666;
+}
+
+.lesson-media {
+  margin-top: 10px;
+}
+
+.lesson-image,
+.lesson-video {
+  max-width: 100%;
+  height: auto;
+}
+
+.create-lesson {
+  margin-top: 20px;
+}
+
+.textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.file-input {
+  margin-bottom: 10px;
+}
+
+/* ... (previous CSS code remains the same) ... */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+/* ... (previous CSS code remains the same) ... */
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  height: calc(100vh - 40px);
+  overflow-y: auto;
+}
+
+.lesson-list-container {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.create-lesson-container {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+.create-lesson-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.create-lesson-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+}

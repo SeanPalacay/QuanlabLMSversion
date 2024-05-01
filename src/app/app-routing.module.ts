@@ -209,6 +209,7 @@ const routes: Routes = [
       { path: 'quiz-management', component: QuizManagementComponent },
       { path: 'manage-lessons', component: TlessonsComponent },
       { path: 'manage-module', component: ModuleComponent },
+      { path: 'lessons', component: LessonsComponent },
       {
         path: 'teacher-view',
         canActivate: [TeacherViewGuardGuard],
