@@ -28,7 +28,7 @@ export class QuizAnalyticsComponent {
     { name: 't Delacruz', quiz1: 1, quiz2: 1 }
   ];
 
-  dropdownOptions: string[] = ['Quiz analytics ', 'Quiz analytics 2'];
+  dropdownOptions: string[] = ['Quiz analytics 1', 'Quiz analytics 2'];
   selectedOption: string = this.dropdownOptions[0]; // Default selection
 
   barChartData1: any[] = []; // Initialize with an empty array
