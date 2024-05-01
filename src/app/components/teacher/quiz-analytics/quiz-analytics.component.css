@@ -23,22 +23,20 @@
   background-color: #ffffff; /* White background */
   border-radius: 10px; /* Rounded corners */
   margin-left: 10px;
-  color: black !important;
 }
 
-.dropdown {
+.dropdown, .button-dropdown {
   font-weight: bold; /* Font weight */
   font-size: 1rem; /* Font size */
   padding: 8px 16px; /* Padding */
   border-radius: 8px; /* Rounded corners */
-  color: blueviolet !important; /* White text color */
+  color: blueviolet !important; /* Text color */
   border: none; /* Remove border */
   cursor: pointer; /* Cursor style */
   appearance: none; /* Remove default appearance */
-  outline: none; /* Remove outline */
 }
 
-.dropdown:focus {
+.dropdown:focus, .button-dropdown:focus {
   outline: none; /* Remove outline */
 }
 
