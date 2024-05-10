@@ -82,7 +82,16 @@ export class APIService implements OnDestroy, OnInit {
       obs.unsubscribe();
     });
   }
+  
+  pinParticipantVideo(classId: string, participantId: string): Observable<any> {
+    const url = `/api/classes/${classId}/participants/${participantId}/pin`;
+    return this.http.post(url, {});
+  }
 
+  unpinParticipantVideo(classId: string, participantId: string): Observable<any> {
+    const url = `/api/classes/${classId}/participants/${participantId}/unpin`;
+    return this.http.post(url, {});
+  }
   getAttendanceHistory() {
     const id = this.getUserData().id;
     const postObject = {

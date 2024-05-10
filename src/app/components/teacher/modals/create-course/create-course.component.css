@@ -19,8 +19,8 @@
 .titlehead h1 {
   background-image: linear-gradient(
     to right,
-    rgb(1, 114, 175) 0%,
-    rgb(116, 254, 189) 100%
+    var(--primary-color),
+    var(--secondary-color)
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -79,8 +79,8 @@
 .topwrap2 select .placeholder span {
   background-image: linear-gradient(
     to right,
-    rgb(1, 114, 175) 0%,
-    rgb(116, 254, 189) 100%
+    var(--primary-color),
+    var(--secondary-color)
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -107,8 +107,8 @@
 .mode div h1 {
   background-image: linear-gradient(
     to right,
-    rgb(1, 114, 175) 0%,
-    rgb(116, 254, 189) 100%
+    var(--primary-color),
+    var(--secondary-color)
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -124,8 +124,8 @@
   border: 2px solid transparent;
   border-image: linear-gradient(
       to right,
-      rgb(1, 114, 175) 0%,
-      rgb(116, 254, 189) 100%
+        var(--primary-color),
+    var(--secondary-color)
     )
     1;
 }
@@ -133,8 +133,8 @@
 .midtop .midtopwrap {
   background: linear-gradient(
     to right,
-    rgb(1, 114, 175) 0%,
-    rgb(116, 254, 189) 100%
+    var(--primary-color),
+    var(--secondary-color)
   );
   height: 40px;
   width: 100%;
@@ -247,8 +247,8 @@
   vertical-align: middle;
   background-image: linear-gradient(
     to right,
-    rgb(1, 114, 175) 0%,
-    rgb(116, 254, 189) 100%
+    var(--primary-color),
+    var(--secondary-color)
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -276,8 +276,8 @@
   width: 180px;
   background: linear-gradient(
     to right,
-    rgb(1, 114, 175) 0%,
-    rgb(116, 254, 189) 100%
+    var(--primary-color),
+    var(--secondary-color)
   );
   margin-top: 20px;
   border-radius: 18px;
@@ -299,8 +299,8 @@
   width: 100px;
   background: linear-gradient(
     to right,
-    rgb(1, 114, 175) 0%,
-    rgb(116, 254, 189) 100%
+    var(--primary-color),
+    var(--secondary-color)
   );
   margin-top: 20px;
   color: white;
@@ -339,8 +339,8 @@
   color: transparent;
   background-image: linear-gradient(
     to right,
-    rgb(1, 114, 175) 0%,
-    rgb(116, 254, 189) 100%
+    var(--primary-color) 0%,
+    var(--secondary-color) 100%
   );
   -webkit-background-clip: text;
   background-clip: text;

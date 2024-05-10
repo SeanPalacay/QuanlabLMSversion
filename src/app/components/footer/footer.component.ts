@@ -23,7 +23,8 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 })
 export class FooterComponent implements OnInit {
   menuState: string = 'in';
-
+  isArrowUp: boolean = false; // Track the state of the arrow icon
+  isPressed: boolean = true; // Track the state of the button press
   ngOnInit(): void {
     // Initially show the menu
     this.toggleMenu();
@@ -32,6 +33,10 @@ export class FooterComponent implements OnInit {
   toggleMenu(): void {
     // Toggles between 'in' and 'out' states
     this.menuState = this.menuState === 'out' ? 'in' : 'out';
+        // Toggle the arrow icon state
+        this.isArrowUp = !this.isArrowUp;
+        // Toggle the button press state
+        this.isPressed = !this.isPressed;
   }
 
   get isMenuOut(): boolean {

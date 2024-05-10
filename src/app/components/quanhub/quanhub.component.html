@@ -38,8 +38,16 @@
     
     <!--buttons at the bottom-->
     <div class="flex justify-center gap-x-4 absolute bottom-4 left-0 right-0">
-        <button (click)="toggleWebcam()" class="w-10 h-10  text-white rounded-full focus:outline-none" [ngClass]="{'bg-blue-500':isWebCamOn, 'bg-red-500':!isWebCamOn, 'opacity-65':webCamLoading}"><i class="fas fa-video"></i></button>
-        <button (click)="toggleMic()" class="w-10 h-10 text-white rounded-full focus:outline-none" [ngClass]="{'bg-green-500':isMicOn , 'bg-red-500':!isMicOn, 'opacity-65': micLoading}"><i class="fas fa-microphone"></i></button>
+        <button (click)="toggleWebcam()" class="w-10 h-10 text-white rounded-full focus:outline-none" [ngClass]="{'bg-blue-500':isWebCamOn, 'bg-red-500':!isWebCamOn && !isMicOn, 'opacity-65':webCamLoading}">
+            <i class="fas fa-video" *ngIf="isWebCamOn"></i>
+            <i class="fas fa-video-slash" *ngIf="!isWebCamOn && !isMicOn"></i>
+          </button>
+          
+          <button (click)="toggleMic()" class="w-10 h-10 text-white rounded-full focus:outline-none" [ngClass]="{'bg-green-500':isMicOn , 'bg-red-500':!isMicOn && !isWebCamOn, 'opacity-65': micLoading}">
+            <i class="fas fa-microphone" *ngIf="isMicOn"></i>
+            <i class="fas fa-microphone-alt-slash" *ngIf="!isMicOn && !isWebCamOn"></i>
+          </button>
+          
         <button (click)="shareScreen()" class="w-10 h-10 bg-orange-500 text-white rounded-full focus:outline-none"
             [ngClass]="{'opacity-65' : shareScreenLoading , 'bg-orange-500': isSharingScreen ,'bg-red-500': !isSharingScreen}"
         ><i class="fas fa-desktop"></i></button>

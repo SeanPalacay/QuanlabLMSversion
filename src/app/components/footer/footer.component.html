@@ -3,12 +3,15 @@
 
 <footer > 
     <div class="flex justify-center">
-        <button class="w-full gradient-color  flex items-center justify-center" (click)="toggleMenu()">
-          <i class="fa-solid fa-arrow-up text-white text-sm"></i>
-        </button>
+      <button class="w-full flex items-center justify-center" [ngClass]="{'quanby-gradient-color': isPressed, 'gradient-color': !isPressed}" (click)="toggleMenu()">
+        <i class="fa-solid text-base md:text-lg" [ngClass]="{'fa-arrow-up': isArrowUp, 'fa-arrow-down': !isArrowUp}"></i>
+    </button>
+    
+    
+    
       </div>
     
-      <div [@openClose]="menuState"  class="h-full w-full gradient-color p-2" *ngIf="menuState === 'in'">
+      <div [@openClose]="menuState"  class="h-full w-full quanby-gradient-color p-2" *ngIf="menuState === 'in'">
       
         
         <!-- content -->
@@ -16,7 +19,7 @@
            
         <div class="main flex mx-[10px] mb-[10px]">
             <div class="logo mt-[3%] lg:mt-[0%]">
-                <img src="assets/login/testinglang.png" class="h-[100px] w-[100px] lg:w-[150px] lg:h-[150px]">
+                <img src="assets/login/adslogo.png" class="h-[100px] w-[100px] lg:w-[150px] lg:h-[150px]">
             </div>
             <div class="about w-[400px] ml-[20px] hidden lg:block">
                 <p class="text-wrap poppins">Quanby IT Solutions is an innovative technology company dedicated to providing comprehensive web development and hardware services.

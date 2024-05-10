@@ -5,11 +5,44 @@
         <!-- Input -->
             <div class="w-4/5 h-2/3 flex lg:flex-row flex-col "></div>
 
-            <div class="w-full h-full lg:ml-36 ml-0 shadow-boxz z-50 rounded mt-15 relative" >
+            <div class="w-[1500px] h-full lg:ml-36 ml-0 shadow-boxz z-50 rounded mt-15 relative hidden custom1020:block"> <!-- added hidden md:block -->
 
                 <div class="rounded shadow-boxz bg-white" style="position:absolute; top: -20px; left: 31px; width: 290px; height: 50px; box-shadow: 0 0 10px var(--secondary-color);">   
                     <div class="ml-4 mt-2.5 animate-wave text-center poppins-b text-transparent bg-clip-text gradient-color text-2xl" style="display: flex; align-items: center;">
-                        <img src="assets/mega.png" alt="Megaphone Icon" style="width: 25px; height: 25px; margin-right: 8px;">
+                        <svg viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" width="25" height="25" style="margin-right: 8px;">
+                            <defs>
+                                <!-- Radial gradient for red color in the center -->
+                                <radialGradient id="redGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                                    <stop offset="0%" style="stop-color: var(--tertiary-color); stop-opacity: 1" />
+                                    <stop offset="100%" style="stop-color: var(--tertiary-color); stop-opacity: 0" />
+                                </radialGradient>
+                                <!-- Linear gradient for the gradient effect -->
+                                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color: var(--secondary-color); stop-opacity: 1" />
+                                    <stop offset="100%" style="stop-color: var(--secondary-color); stop-opacity: 1" />
+                                </linearGradient>
+                            </defs>
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <title>broadcast</title>
+                                <desc>Created with Sketch.</desc>
+                                <g id="broadcast" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+                                    <g id="编组" transform="translate(4.000000, 10.000000)">
+                                        <rect width="48" height="48" fill="white" fill-opacity="0.01"></rect>
+                                        <!-- Red color in the center -->
+                                        <ellipse id="Oval" fill="url(#redGradient)" fill-rule="nonzero" cx="20" cy="14.0979414" rx="4.54545455" ry="4.53125" stroke="none"></ellipse>
+                                        <!-- Blue to green gradient -->
+                                        <path d="M12,5 C6.66666667,9.97056275 6.66666667,18.0294373 12,23 M28,23 C33.3333333,18.0294373 33.3333333,9.97056275 28,5" id="Oval-2" stroke-linecap="round" stroke="url(#gradient)" stroke-width="4"></path>
+                                        <!-- Blue to green gradient -->
+                                        <path d="M5.85786438,1.59872116e-14 C-1.95262146,7.78607807 -1.95262146,20.4098048 5.85786438,28.1958829 M34.1421356,28.1958829 C41.9526215,20.4098048 41.9526215,7.78607807 34.1421356,1.24344979e-14" id="Oval-3" stroke-linecap="round" stroke="url(#gradient)" stroke-width="4"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+
+                        
+                        
                         <span>BROADCAST NOW!</span>
                     </div>
                     
@@ -385,8 +418,11 @@
 
         <div  class="rounded shadow-boxz bg-white" style="position:absolute; top: -20px; left: 31px; width: 200px; height: 50px; box-shadow: 0 0 10px var(--secondary-color);"> 
             <div class="ml-4 mt-2.5 animate-wave text-center poppins-b text-transparent bg-clip-text gradient-color text-2xl" style="display: flex; align-items: center;">
-                <img src="assets/alert.png" alt="Megaphone Icon" style="width: 25px; height: 25px; margin-right: 8px;">
-                <span>Send Alert!</span>
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="25" height="25" style="margin-right: 8px;">
+                    <rect width="24" height="24" fill="white"></rect>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM11 13C11 13.5523 11.4477 14 12 14C12.5523 14 13 13.5523 13 13V8C13 7.44772 12.5523 7 12 7C11.4477 7 11 7.44772 11 8V13ZM13 15.9888C13 15.4365 12.5523 14.9888 12 14.9888C11.4477 14.9888 11 15.4365 11 15.9888V16C11 16.5523 11.4477 17 12 17C12.5523 17 13 16.5523 13 16V15.9888Z" fill="url(#gradient)"></path>
+                </svg>
+                                <span>Send Alert!</span>
         </div>
         
             

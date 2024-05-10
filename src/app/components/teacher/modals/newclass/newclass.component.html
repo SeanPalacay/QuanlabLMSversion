@@ -62,18 +62,18 @@
 
       <div class="form-group">
         <label>Time Schedule:</label>
-        <div class="time-schedule">
+        <div *ngFor="let schedule of timeSchedules; let i = index" class="time-schedule">
           <div class="time-input">
-            <select [(ngModel)]="startHour" name="startHour" (change)="updateTimeSchedule()">
+            <select [(ngModel)]="startHours[i]" name="startHour{{i}}" (change)="updateTimeSchedule(i)">
               <option value="" disabled selected>HH</option>
               <option *ngFor="let h of hours" [value]="h">{{ h }}</option>
             </select>
             <span class="time-separator">:</span>
-            <select [(ngModel)]="startMinute" name="startMinute" (change)="updateTimeSchedule()">
+            <select [(ngModel)]="startMinutes[i]" name="startMinute{{i}}" (change)="updateTimeSchedule(i)">
               <option value="" disabled selected>MM</option>
               <option *ngFor="let m of minutes" [value]="m">{{ m }}</option>
             </select>
-            <select [(ngModel)]="startPeriod" name="startPeriod" (change)="updateTimeSchedule()">
+            <select [(ngModel)]="startPeriods[i]" name="startPeriod{{i}}" (change)="updateTimeSchedule(i)">
               <option value="" disabled selected>AM/PM</option>
               <option value="AM">AM</option>
               <option value="PM">PM</option>
@@ -81,23 +81,25 @@
           </div>
           <span class="time-range-separator">-</span>
           <div class="time-input">
-            <select [(ngModel)]="endHour" name="endHour" (change)="updateTimeSchedule()">
+            <select [(ngModel)]="endHours[i]" name="endHour{{i}}" (change)="updateTimeSchedule(i)">
               <option value="" disabled selected>HH</option>
               <option *ngFor="let h of hours" [value]="h">{{ h }}</option>
             </select>
             <span class="time-separator">:</span>
-            <select [(ngModel)]="endMinute" name="endMinute" (change)="updateTimeSchedule()">
+            <select [(ngModel)]="endMinutes[i]" name="endMinute{{i}}" (change)="updateTimeSchedule(i)">
               <option value="" disabled selected>MM</option>
               <option *ngFor="let m of minutes" [value]="m">{{ m }}</option>
             </select>
-            <select [(ngModel)]="endPeriod" name="endPeriod" (change)="updateTimeSchedule()">
+            <select [(ngModel)]="endPeriods[i]" name="endPeriod{{i}}" (change)="updateTimeSchedule(i)">
               <option value="" disabled selected>AM/PM</option>
               <option value="AM">AM</option>
               <option value="PM">PM</option>
             </select>
           </div>
+          <button class="remove-button" (click)="removeTimeSchedule(i)">Remove</button>
         </div>
-        <div class="error-message" *ngIf="(startHour === '' || startMinute === '' || startPeriod === '' || endHour === '' || endMinute === '' || endPeriod === '')">
+        <button class="add-button" (click)="addTimeSchedule()">Add Time Schedule</button>
+        <div class="error-message" *ngIf="(startHours[0] === '' || startMinutes[0] === '' || startPeriods[0] === '' || endHours[0] === '' || endMinutes[0] === '' || endPeriods[0] === '')">
           Fields are required
         </div>
       </div>

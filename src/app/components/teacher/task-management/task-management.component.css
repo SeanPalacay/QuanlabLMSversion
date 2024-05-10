@@ -13,8 +13,7 @@
   color: transparent;
   background-image: linear-gradient(
     to right,
-    rgb(1, 114, 175) 0%,
-    rgb(116, 254, 189) 100%
+   var(--primary-color), var(--secondary-color)
   );
 }
 .date-container,
@@ -35,8 +34,8 @@
   color: transparent;
   background-image: linear-gradient(
     to right,
-    rgb(1, 114, 175) 0%,
-    rgb(116, 254, 189) 100%
+    var(--primary-color), var(--secondary-color)
+
   );
 }
 span {
@@ -120,8 +119,8 @@ span {
   color: transparent;
   background-image: linear-gradient(
     to right,
-    rgb(1, 114, 175) 0%,
-    rgb(116, 254, 189) 100%
+    var(--primary-color), var(--secondary-color)
+
   );
   border: 2px solid #fff;
 }
@@ -157,8 +156,8 @@ span {
   color: transparent;
   background-image: linear-gradient(
     to right,
-    rgb(1, 114, 175) 0%,
-    rgb(116, 254, 189) 100%
+    var(--primary-color), var(--secondary-color)
+
   );
 }
 
@@ -200,8 +199,8 @@ span {
   color: transparent;
   background-image: linear-gradient(
     to right,
-    rgb(1, 114, 175) 0%,
-    rgb(116, 254, 189) 100%
+    var(--primary-color), var(--secondary-color)
+
   );
   width: 60px;
   padding: 5px 10px;
@@ -235,8 +234,8 @@ span {
   color: transparent;
   background-image: linear-gradient(
     to right,
-    rgb(1, 114, 175) 0%,
-    rgb(116, 254, 189) 100%
+    var(--primary-color), var(--secondary-color)
+
   );
 }
 .dropxnew-container {
@@ -253,8 +252,8 @@ span {
   font-size: x-small;
   background: linear-gradient(
     to right,
-    rgb(1, 114, 175) 0%,
-    rgb(116, 254, 189) 100%
+    var(--primary-color), var(--secondary-color)
+
   );
   padding: 8px 10px;
   border: 1px solid #8787875e;
@@ -275,8 +274,8 @@ span {
   color: transparent;
   background-image: linear-gradient(
     to right,
-    rgb(1, 114, 175) 0%,
-    rgb(116, 254, 189) 100%
+    var(--primary-color), var(--secondary-color)
+
   );
 }
 .toggle button:hover {
@@ -304,8 +303,8 @@ span {
 .new-task-button p {
   background: linear-gradient(
     to right,
-    rgb(1, 114, 175) 0%,
-    rgb(116, 254, 189) 100%
+    var(--primary-color), var(--secondary-color)
+
   );
   color: transparent;
   background-clip: text;
@@ -333,8 +332,8 @@ span {
   color: #fff;
   background-image: linear-gradient(
     to right,
-    rgb(1, 114, 175) 0%,
-    rgb(116, 254, 189) 100%
+    var(--primary-color), var(--secondary-color)
+
   );
   padding: 10px;
   text-align: center;

@@ -10,7 +10,7 @@
     animation: bounce 3s ease-in-out infinite;
   }
   .animate-bounce:hover {
-    filter: drop-shadow(0 0 2em #24f0ffaa);
+    filter: drop-shadow(0 0 2em var(--secondary-color));
   }
 
 

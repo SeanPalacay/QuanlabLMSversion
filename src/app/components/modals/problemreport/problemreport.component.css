@@ -15,8 +15,8 @@
   background-color: #ffffff;
   background-image: linear-gradient(
     to right,
-    rgb(1, 114, 175) 0%,
-    rgb(116, 254, 189) 100%
+    var(--primary-color),
+   var(--secondary-color)
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -36,8 +36,8 @@
   color: white;
   background-image: linear-gradient(
     to right,
-    rgb(1, 114, 175) 0%,
-    rgb(116, 254, 189) 100%
+    var(--primary-color),
+    var(--secondary-color)
   );
   display: flex;
   height: 25px;
@@ -55,7 +55,7 @@
   margin-left: 20px;
 }
 .toggle button:hover {
-  color: rgb(116, 254, 189);
+  color: var(--secondary-color);
   text-align: center;
 }
 .dropwrap {
@@ -76,8 +76,8 @@
   border: 1px solid;
   border-image: linear-gradient(
     to right,
-    rgb(1, 114, 175) 0%,
-    rgb(116, 254, 189)
+    var(--primary-color),
+    var(--secondary-color)
   );
   border-image-slice: 1;
   padding: 8px;
@@ -96,8 +96,8 @@
   border: 1px solid;
   border-image: linear-gradient(
     to right,
-    rgb(1, 114, 175) 0%,
-    rgb(116, 254, 189)
+    var(--primary-color),
+    var(--secondary-color)
   );
   border-image-slice: 1;
   padding: 8px;
@@ -117,8 +117,8 @@
 .submitwrap .submit {
   background: linear-gradient(
     to right,
-    rgb(1, 114, 175) 0%,
-    rgb(116, 254, 189) 100%
+    var(--primary-color),
+    var(--secondary-color)
   );
   color: white;
   height: 40px;
@@ -129,8 +129,8 @@
 .text select {
   background: linear-gradient(
     to right,
-    rgb(1, 114, 175) 0%,
-    rgb(116, 254, 189) 100%
+    var(--primary-color),
+    var(--secondary-color)
   );
   height: 30px;
   width: 100%;

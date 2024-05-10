@@ -1,4 +1,17 @@
 /* styles.css */
 .backgroundQuiz{
-    background: linear-gradient(to right, rgb(1, 114, 175) 0%, rgb(116, 254, 189) 100%);
+    background: linear-gradient(to right, var(--primary-color),var(--secondary-color));
 }
+
+.gradient-green-purple-blue {
+    background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  
+  .gradient-green-purple-blue:hover {
+    background-image: none;
+    color: var(--tertiary-color);
+  }
+  

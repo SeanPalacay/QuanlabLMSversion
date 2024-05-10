@@ -33,7 +33,7 @@
   overflow: hidden;
   color: white;
   transition: background-color 0.5s ease-in;
-  background: linear-gradient(to bottom right,#040454,#0474AC,#040454);
+  background: linear-gradient(to bottom right,var(--primary-color),var(--secondary-color),var(--primary-color));
 }
 
 .my-div::before {
@@ -45,7 +45,7 @@
   width: 70%;
   transform-origin: 60%;
   animation: blob 8s infinite cubic-bezier(0.6, -0.28, 0.735, 0.045);
-  background: linear-gradient(45deg, #0474AC, #040454);
+  background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
   filter: blur(50px) brightness(125%);
   z-index: 1;
 }
@@ -59,7 +59,7 @@
   width: 70%;
   transform-origin: 60%;
   animation: blob 10s infinite cubic-bezier(0.215, 0.61, 0.355, 1) reverse;
-  background: linear-gradient(45deg, #0474AC, #040454);
+  background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
   filter: blur(50px) brightness(125%);
   z-index: 1;
 }

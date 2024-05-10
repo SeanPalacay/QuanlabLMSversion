@@ -57,3 +57,15 @@
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1); /* Box shadow */
   padding: 20px; /* Padding inside the container */
 }
+
+.gradient-green-purple-blue {
+  background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.gradient-green-purple-blue:hover {
+  background-image: none;
+  color: var(--tertiary-color);
+}

@@ -54,5 +54,4 @@ export class LessonsComponent implements OnInit {
   openFile(file: string) {
     this.API.openFile(file);
   }
-  
 }

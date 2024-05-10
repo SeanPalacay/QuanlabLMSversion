@@ -227,25 +227,28 @@
         >
           Courses Enrolled
         </p>
-        <div
-          (click)="openCourse(course.value.id)"
-          class="cursor-pointer bg-transparent rounded-xl shadow-boxz mr-10 mt-3 w-full flex items-center boxes"
-          *ngFor="let course of courses | keyvalue"
-        >
-          <div class="w-20 lg:h-20 h-16 bg-purple-600 rounded mx-4 my-4"></div>
-          <div class="my-2 w-full h-32 pt-1 pr-1">
-            <h2 class="lg:text-lg font-bold pb-2 h-14 flex items-center">
-              {{ course.value.course }}
-            </h2>
-
-            <p class="text-sm mb-1 text-gray-500">
-              {{ course.value.firstname + " " + course.value.lastname }}
-            </p>
-            <p class="text-sm">
-              {{ course.value.class + " " + course.value.schedule }}
-            </p>
+        <div class="container mx-auto px-4">
+          <div
+            (click)="openCourse(course.value.id)"
+            class="cursor-pointer bg-transparent rounded-xl shadow-boxz mr-10 mt-3 lg:w-full flex items-center boxes"
+            *ngFor="let course of courses | keyvalue"
+          >
+            <div class="w-20 lg:w-32 lg:h-32 h-16 bg-purple-600 rounded mx-4 my-4"></div>
+            <div class="my-2 lg:w-2/3 w-full pt-1 pr-1 overflow-hidden">
+              <h2 class="lg:text-lg font-bold pb-2 h-14 flex items-center">
+                <span class="truncate">{{ course.value.course }}</span>
+              </h2>
+        
+              <p class="text-sm mb-1 text-gray-500">
+                <span>{{ course.value.firstname + " " + course.value.lastname }}</span>
+              </p>
+              <p class="text-sm">
+                <span>{{ course.value.class + " " + course.value.schedule }}</span>
+              </p>
+            </div>
           </div>
         </div>
+        
         <!-- end -->
       </div>
       <!-- end of start -->

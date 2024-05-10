@@ -7,9 +7,13 @@
   --secondary-color: #0474AC;
   --primary-color-light: #BDD7DC;
   --secondary-color-light: #7797B1;
+  --tertiary-color: #931B21;
+  --quanby-primary-color: #040454;
+  --quanby-secondary-color: #0474AC;
+  --quanby-gradient-color:  var(--quanby-secondary-color),var(--quanby-primary-color);
   --tw-gradient-color:  var(--secondary-color),var(--primary-color);
     --body-color: #f5f7f9;
-    --toggle-color: #DDD;
+    --toggle-color: #DDD; 
     --sidebar-color: #FFF;
     --text-color: #7F7F7F;
     --white-color: #ffffff;
@@ -216,13 +220,17 @@ html{
 }
 
 .search-color {
-    background-color: #27275a;
+    background-color: var(--primary-color);
 }
 
 .whitesmoke-color {
     background-color: #f5f7f9;
 }
 
+.quanby-gradient-color{
+  background-image: linear-gradient(to right, var(--quanby-gradient-color), var(--quanby-gradient-color));
+  background-size: 300% 100%;
+}
 .gradient-color {
     background-image: linear-gradient(to right, var(--tw-gradient-color), var(--tw-gradient-color));
     /* --tw-gradient-stops:  #0474AC, #040454; */

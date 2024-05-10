@@ -16,18 +16,18 @@ export class NewclassComponent implements OnInit {
   className: string = '';
   classCode: string = '';
   daySchedule: string = '';
-  timeSchedule: string = '';
+  timeSchedules: string[] = [''];
   showDayScheduleError: boolean = false;
 
-  startHour: string = '';
-  startMinute: string = '';
-  startPeriod: string = '';
-  endHour: string = '';
-  endMinute: string = '';
-  endPeriod: string = '';
+  startHours: string[] = [''];
+  startMinutes: string[] = [''];
+  startPeriods: string[] = [''];
+  endHours: string[] = [''];
+  endMinutes: string[] = [''];
+  endPeriods: string[] = [''];
 
-  hours: string[] = Array.from({length: 12}, (_, i) => (i + 1).toString());
-  minutes: string[] = Array.from({length: 60}, (_, i) => (i < 10 ? '0' : '') + i.toString());
+  hours: string[] = Array.from({ length: 12 }, (_, i) => (i + 1).toString());
+  minutes: string[] = Array.from({ length: 60 }, (_, i) => (i < 10 ? '0' : '') + i.toString());
 
   weekDays = [
     { name: 'M', checked: false },
@@ -38,7 +38,6 @@ export class NewclassComponent implements OnInit {
     { name: 'Sa', checked: false },
   ];
 
-  
   constructor(private API: APIService, public activeModal: NgbActiveModal) {}
 
   ngOnInit(): void {
@@ -46,28 +45,30 @@ export class NewclassComponent implements OnInit {
       this.className = this.data.className;
       this.classCode = this.data.classCode;
       this.daySchedule = this.data.daySchedule;
-      this.timeSchedule = this.data.timeSchedule;
       this.classID = this.data.classID;
       this.course = this.data.courseID;
       this.updateWeekDaysFromSchedule();
-      this.parseTimeSchedule();
+      this.parseTimeSchedules(this.data.timeSchedule);
     }
   }
 
-  parseTimeSchedule() {
-    const timeParts = this.timeSchedule.split(' - ');
-    const startTime = timeParts[0].split(' ');
-    const endTime = timeParts[1].split(' ');
+  parseTimeSchedules(timeScheduleString: string) {
+    this.timeSchedules = timeScheduleString.split(', ').map(schedule => {
+      const timeParts = schedule.match(/(\d{1,2}:\d{2} [AP]M) - (\d{1,2}:\d{2} [AP]M)/);
+      if (timeParts) {
+        const startTime = timeParts[1];
+        const endTime = timeParts[2];
+        return `${startTime} - ${endTime}`;
+      }
+      return '';
+    }).filter(schedule => schedule.trim() !== '');
 
-    const start = startTime[0].split(':');
-    this.startHour = start[0];
-    this.startMinute = start[1];
-    this.startPeriod = startTime[1];
-
-    const end = endTime[0].split(':');
-    this.endHour = end[0];
-    this.endMinute = end[1];
-    this.endPeriod = endTime[1];
+    this.startHours = this.timeSchedules.map(schedule => schedule.split(' - ')[0].split(':')[0]);
+    this.startMinutes = this.timeSchedules.map(schedule => schedule.split(' - ')[0].split(':')[1]);
+    this.startPeriods = this.timeSchedules.map(schedule => schedule.split(' - ')[0].split(' ')[1]);
+    this.endHours = this.timeSchedules.map(schedule => schedule.split(' - ')[1].split(':')[0]);
+    this.endMinutes = this.timeSchedules.map(schedule => schedule.split(' - ')[1].split(':')[1]);
+    this.endPeriods = this.timeSchedules.map(schedule => schedule.split(' - ')[1].split(' ')[1]);
   }
 
   updateWeekDaysFromSchedule() {
@@ -92,12 +93,38 @@ export class NewclassComponent implements OnInit {
     }
   }
   
-  updateTimeSchedule() {
-    if (this.startHour !== '' && this.startMinute !== '' && this.startPeriod !== '' &&
-        this.endHour !== '' && this.endMinute !== '' && this.endPeriod !== '') {
-      this.timeSchedule = `${this.startHour}:${this.startMinute} ${this.startPeriod} - ${this.endHour}:${this.endMinute} ${this.endPeriod}`;
+  addTimeSchedule() {
+    this.timeSchedules.push('');
+    this.startHours.push('');
+    this.startMinutes.push('');
+    this.startPeriods.push('');
+    this.endHours.push('');
+    this.endMinutes.push('');
+    this.endPeriods.push('');
+  }
+
+  removeTimeSchedule(index: number) {
+    this.timeSchedules.splice(index, 1);
+    this.startHours.splice(index, 1);
+    this.startMinutes.splice(index, 1);
+    this.startPeriods.splice(index, 1);
+    this.endHours.splice(index, 1);
+    this.endMinutes.splice(index, 1);
+    this.endPeriods.splice(index, 1);
+  }
+
+  updateTimeSchedule(index: number) {
+    const startHour = this.startHours[index];
+    const startMinute = this.startMinutes[index];
+    const startPeriod = this.startPeriods[index];
+    const endHour = this.endHours[index];
+    const endMinute = this.endMinutes[index];
+    const endPeriod = this.endPeriods[index];
+
+    if (startHour && startMinute && startPeriod && endHour && endMinute && endPeriod) {
+      this.timeSchedules[index] = `${startHour}:${startMinute} ${startPeriod} - ${endHour}:${endMinute} ${endPeriod}`;
     } else {
-      this.timeSchedule = '';
+      this.timeSchedules[index] = '';
     }
   }
 
@@ -109,7 +136,7 @@ export class NewclassComponent implements OnInit {
       !this.classCode.trim() ||
       !this.daySchedule.trim() ||
       !anyDaySelected ||
-      !this.timeSchedule.trim() ||
+      this.timeSchedules.some(schedule => !schedule.trim()) ||
       !this.course.trim()
     ) {
       if (!anyDaySelected) {
@@ -118,22 +145,22 @@ export class NewclassComponent implements OnInit {
       return;
     }
 
-    const scheduleString = `${this.daySchedule} (${this.timeSchedule})`;
+    const scheduleString = `${this.daySchedule} (${this.timeSchedules.join(', ')})`;
 
     const action = this.data == null ? 'Creating' : 'Updating';
-    this.API.justSnackbar(`${action} class ....`, 999999999);
+this.API.justSnackbar(`${action} class ....`);
 
-    if (this.data == null) {
-      this.API.createClass(
-        this.course,
-        this.className,
-        this.classCode,
-        scheduleString
-      ).subscribe(() => {
-        this.API.successSnackbar('Class created successfully');
-        this.closeModal('update');
-      });
-    } else {
+if (this.data == null) {
+  this.API.createClass(
+    this.course,
+    this.className,
+    this.classCode,
+    scheduleString
+  ).subscribe(() => {
+    this.API.successSnackbar('Class created successfully');
+    this.closeModal('update');
+  });
+} else {
       this.API.editClass(
         this.classID,
         this.className,
