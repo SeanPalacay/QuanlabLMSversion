@@ -1,14 +1,14 @@
 {
   "targets": {
-    "qlab-ded1a": {
+    "quanbylms-b4b15": {
       "hosting": {
         "quanlab": [
-          "qlab-ded1a"
+          "quanbylms-b4b15"
         ]
       }
     }
   },
   "projects": {
-    "default": "qlab-ded1a"
+    "default": "quanbylms-b4b15"
   }
 }

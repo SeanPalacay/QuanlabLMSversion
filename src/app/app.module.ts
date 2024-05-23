@@ -6,13 +6,13 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { SharedService } from 'src/app/shared.service';
 import {provideStorage, getStorage } from '@angular/fire/storage';
 const firebaseConfig = {
-  apiKey: "AIzaSyCFCtrVXlQoZ2f0SvfOhSey1OJyqJyQ4PE",
-  authDomain: "lmsfornow-fc681.firebaseapp.com",
-  projectId: "lmsfornow-fc681",
-  storageBucket: "lmsfornow-fc681.appspot.com",
-  messagingSenderId: "697929052905",
-  appId: "1:697929052905:web:23196eb765394fc20ab678",
-  measurementId: "G-9C89V814XJ"
+  apiKey: "AIzaSyDAd8uGtbwzUvEqiOeC2TW_kRHFEGtw38Q",
+  authDomain: "quanbylms-b4b15.firebaseapp.com",
+  projectId: "quanbylms-b4b15",
+  storageBucket: "quanbylms-b4b15.appspot.com",
+  messagingSenderId: "542875331963",
+  appId: "1:542875331963:web:4955ee9d892325421361de"
+  // measurementId: "G-9C89V814XJ"
 };
 
 
