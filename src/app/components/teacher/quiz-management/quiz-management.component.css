@@ -8,10 +8,10 @@
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
+    
   }
   
   .gradient-green-purple-blue:hover {
     background-image: none;
-    color: var(--tertiary-color);
+    color: var(--secondary-color);
   }
-  

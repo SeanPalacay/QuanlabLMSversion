@@ -4,7 +4,7 @@ import { firstValueFrom, lastValueFrom } from 'rxjs';
 import { APIService } from 'src/app/services/API/api.service';
 
 import {v4 as uuidv4} from 'uuid';
-
+import Swal from 'sweetalert2';
 interface Lesson {
   id?:string,
   lessonName: string;
@@ -80,15 +80,36 @@ export class EditCourseComponent  implements OnInit{
   deleteQueue:any = [];
 
 
-  delete(lesson:any){
-    if(this.lessons.length <= 1){
-      this.API.failedSnackbar('This course should atleast have one lesson');
+  delete(lesson: any) {
+    if (this.lessons.length <= 1) {
+      this.API.failedSnackbar('This course should at least have one lesson');
       return;
     }
-    this.deleteQueue.push(lesson.id);
-    const index = this.lessons.indexOf(lesson)
-    this.lessons.splice(index, 1);
+  
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, Remove it!"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.deleteQueue.push(lesson.id);
+        const index = this.lessons.indexOf(lesson);
+        if (index > -1) {
+          this.lessons.splice(index, 1);
+        }
+        Swal.fire({
+          title: "Removed!",
+          text: "Your file has been deleted.",
+          icon: "success"
+        });
+      }
+    });
   }
+  
 
   getGradient(): string {
     return 'linear-gradient(to right, #ff9a9e, #fad0c4)';

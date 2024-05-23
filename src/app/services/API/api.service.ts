@@ -82,16 +82,7 @@ export class APIService implements OnDestroy, OnInit {
       obs.unsubscribe();
     });
   }
-  
-  pinParticipantVideo(classId: string, participantId: string): Observable<any> {
-    const url = `/api/classes/${classId}/participants/${participantId}/pin`;
-    return this.http.post(url, {});
-  }
 
-  unpinParticipantVideo(classId: string, participantId: string): Observable<any> {
-    const url = `/api/classes/${classId}/participants/${participantId}/unpin`;
-    return this.http.post(url, {});
-  }
   getAttendanceHistory() {
     const id = this.getUserData().id;
     const postObject = {
@@ -703,6 +694,10 @@ export class APIService implements OnDestroy, OnInit {
               'logged_in',
               data.output.accountType.toString()
             );
+            const user = data.output;
+            if(user.esign){
+             user.esign = user.esign + '?' + new Date().getTime(); 
+            }
             this.usedStorage.setItem('user_info', JSON.stringify(data.output));
             switch (parseInt(data.output.accountType)) {
               case 0:
@@ -1579,7 +1574,7 @@ export class APIService implements OnDestroy, OnInit {
   getURL(file: string) {
     if (file) {
       if (file.includes('http')) return file;
-      return environment.server + '/' + file +'?' + new Date().getTime();
+      return environment.server + '/' + file ;
     }
     return file;
   }
@@ -4595,6 +4590,146 @@ export class APIService implements OnDestroy, OnInit {
     // console.log('Joined',this.meeting);
     this.handleMeetingEvents(this.meeting);
   }
+  
+
+  async distributeCertificates(courseid: string) {
+    const postObject = {
+      selectors: [
+        'SUM(lessons_taken.Progress)',
+        'COUNT(lessons.ID) as lessons',
+        'courses.course',
+        'student_classes.*',
+        'COUNT(surveys.ID) as answered_survey'
+      ],
+      tables: 'courses',
+      conditions: {
+        'LEFT JOIN lessons': 'ON lessons.CourseID = courses.ID',
+        'LEFT JOIN lessons_taken': 'ON lessons_taken.LessonID = lessons.ID',
+        'LEFT JOIN classes': 'ON classes.CourseID = courses.ID',
+        'LEFT JOIN student_classes' : 'ON student_classes.ClassID = classes.ID',
+        'LEFT JOIN surveys' : 'ON surveys.StudentID = student_classes.StudentID',
+        WHERE: {
+          'courses.ID': courseid,
+        },
+        'GROUP BY': 'student_classes.ID, classes.ID, courses.ID',
+      },
+    };
+
+    const response = await firstValueFrom(this.post('get_entries', {
+      data: JSON.stringify(postObject),
+    }));
+
+    // return;
+
+    if(!response.success) {
+      this.failedSnackbar('Error distributing certificates!');
+      return;
+    };
+    for(let student of response.output){
+      if(student.answered_survey > 0){
+        continue;
+      }
+      const progress = Number((Number(student.sum) / (Number(student.lessons) * 100)).toFixed(4))*100;
+      if(progress >= 100){
+        // push survey entry for students
+        this.addSurveyEntryStudent(student.studentid, courseid);
+        // student is legible for certificate
+        this.pushNotifications(
+          `[CERT]Claim your certificate for '${student.course}'`,
+          `<b>${this.getFullName()}</b> has distributed the certificate for <b>'${student.course}</b>', complete the survey below to claim your certificate.[COURSEID]${courseid}`,
+          student.studentid
+        )
+      }
+    }
+    
+    
+  }
+
+  addSurveyEntryStudent(studentid:string, courseid:string){
+    const postObject = {
+      tables: 'surveys',
+      values: {
+        StudentID: studentid,
+        CourseID: courseid,
+      },
+    };
+    const record$ = this.post('create_entry', {
+      data: JSON.stringify(postObject),
+    }).subscribe(() => {
+      record$.unsubscribe();
+    });
+  }
+
+ async getSurveyEntryStudent(courseid:string){
+    const postObject = {
+      selectors: ['*'],
+      tables: 'courses,teachers,surveys',
+      conditions: {
+        WHERE:  {
+          StudentID: this.getUserData().id,
+          CourseID: courseid,
+          'courses.ID': 'surveys.CourseID',
+          'teachers.ID': 'courses.TeacherID',
+        }
+      },
+    };
+    return (await firstValueFrom( this.post('get_entries', {
+      data: JSON.stringify(postObject),
+    }))).output[0];
+  }
+
+  async getAnsweredSurveyStudent(courseid:string){
+    const postObject = {
+      selectors: ['*'],
+      tables: 'surveys,survey_items',
+      conditions: {
+        WHERE:  {
+          'surveys.StudentID':  this.getUserData().id,
+          'surveys.CourseID':  courseid,
+          'surveys.ID' : 'survey_items.SurveyID'
+        }
+      },
+    };
+    return (await firstValueFrom( this.post('get_entries', {
+      data: JSON.stringify(postObject),
+    }))).output;
+  }
+
+
+  async uploadSurveyStudent( surveyid:string, survey:any[]){
+    this.justSnackbar("Uploading survey...");
+    var i = 0;
+    for(let item of survey){
+      i+=1
+      var options = ''
+      if(item.options){
+        for (let option of item.options) {
+          if(typeof option === 'object'){
+            options += option.value  + '\\n\\n';
+          }else{
+            options += option + '\\n\\n';
+          }
+        }
+      }
+
+      const postObject = {
+        tables: 'survey_items',
+        values: {
+          SurveyID: surveyid,
+          ItemNo: i,
+          Question: item.question,
+          Type: item.type,
+          Answer: item.answer,
+          Options: options,
+        },
+      };
+      await firstValueFrom(this.post('create_entry', {
+        data: JSON.stringify(postObject),
+      }));
+    }
+
+    this.successSnackbar("Thank you for answer the survey!");
+  }  
 
   participantsAudio: Map<string, ParticipantObject> = new Map();
   // particpantID = this.getUserData().id;
@@ -4955,4 +5090,58 @@ export class APIService implements OnDestroy, OnInit {
     // Replace the URL and method with your actual API endpoint
     return this.http.put(`/api/teachers/${teacherId}/approval`, { approved });
   }
+
+  groupMap = new Map<number, any[]>();
+  rows:any[] = [];
 }
+
+
+// class VideoSDK {
+//   static initMeeting(options:any) {
+//     return new WebRTCMeeting(options);
+//   }
+// }
+
+// class WebRTCMeeting {
+//   meetingId:any;
+//   participantId:any;
+//   name:any;
+//   metaData:any;
+//   micEnabled:any;
+//   webcamEnabled:any;
+//   peerConnection:any
+//   constructor({ meetingId = null, participantId = null, name = null, metaData = {}, micEnabled = true, webcamEnabled = true }) {
+//     this.meetingId = meetingId;
+//     this.participantId = participantId;
+//     this.name = name;
+//     this.metaData = metaData;
+//     this.micEnabled = micEnabled;
+//     this.webcamEnabled = webcamEnabled;
+//     this.peerConnection = null;
+//     this.startMeeting();
+//   }
+
+//   async startMeeting() {
+//     try {
+//       const stream = await navigator.mediaDevices.getUserMedia({ audio: this.micEnabled, video: this.webcamEnabled });
+//       this.createPeerConnection(stream);
+//       console.log('Meeting started with metadata:', this.metaData);
+//     } catch (error) {
+//       console.error('Error starting meeting:', error);
+//     }
+//   }
+
+//   createPeerConnection(stream:any) {
+//     const configuration = {
+//       iceServers: [{ urls: 'stun:stun.l.google.com:19302' }] // Example STUN server
+//     };
+//     this.peerConnection = new RTCPeerConnection(configuration);
+//     stream.getTracks().forEach((track:any )=> this.peerConnection.addTrack(track, stream));
+//   }
+
+//   endMeeting() {
+//     // Implement cleanup logic if needed
+//     this.peerConnection.close();
+//     console.log('Meeting ended');
+//   }
+// }

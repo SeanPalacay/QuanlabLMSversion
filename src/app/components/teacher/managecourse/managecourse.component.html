@@ -2,19 +2,19 @@
   <div class="flex flex-col sm:flex-row justify-between items-start">
     <div class="w-full flex flex-row justify-between items-center mt-2.5 mb-4">
       <div
-        class="flex justify-center items-center h-auto rounded p-2 backgroundLesson"
+        class="hover:scale-105 hover:ease-out duration-300 flex justify-center items-center h-auto rounded p-2 backgroundLesson"
       >
-        <button (click)="openModal()" class="poppins text-center text-white">
+        <button (click)="openModal()" class="poppins text-center text-white ">
           Create Course
         </button>
       </div>
-      <!-- <div class="left-button mb-2 sm:mb-0">
+      <div class="left-button mb-2 sm:mb-0">
         <select
-          class="bg-white text-green-500 h-auto p-2 rounded shadow-sm"
+          class="bg-white text-[--secondary-color] h-auto p-2 rounded shadow-sm"
           [(ngModel)]="selectedLanguage"
           (change)="languageSelected(selectedLanguage)"
         >
-          <option value="">Filter</option>
+          <option value="">Sort</option>
           <option
             *ngFor="let language of languages | keyvalue"
             [value]="language.value.language"
@@ -22,51 +22,51 @@
             {{ language.value.language }}
           </option>
         </select>
-      </div> -->
+      </div>
     </div>
   </div>
 
-  <!-- Grid for responsive layout -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">  
+ <!-- Grid for responsive layout -->
+ <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">  
     
-    <!-- Check if courseData is empty -->
-    <ng-container *ngIf="courseData.length === 0">
-      <div class="flex justify-center items-center relative rounded overflow-hidden shadow-md bg-white py-4">
-        <!-- Placeholder message -->
-        <div class="text-gray-700 text-center px-4">
-          There are no courses available. Click the button above to add a course.
-        </div>
+  <!-- Check if courseData is empty -->
+  <ng-container *ngIf="courseData.length === 0">
+    <div class="flex justify-center items-center relative rounded overflow-hidden shadow-md bg-white py-4">
+      <!-- Placeholder message -->
+      <div class="text-gray-700 text-center px-4">
+        There are no courses available. Click the button above to add a course.
       </div>
-    </ng-container>
+    </div>
+  </ng-container>
 
-    <ng-container *ngFor="let course of courseData">
-      <div *ngIf="languages.get(selectedLanguage) == null || course.lang == languages.get(selectedLanguage).id" class="flex flex-col justify-center items-center relative rounded overflow-hidden shadow-md bg-white py-4">
-        <div class="absolute top-2 right-2" >
-          <button (click)="showCertificateModal(course)" class="text-gray-500 hover:text-[--tertiary-color] focus:outline-none">
-            <i class="fas fa-certificate fa-lg"></i>
-          </button>
-        </div>
-        <img class="w-1/2 h-auto object-cover"  (click)="redirectToLessons(course.id)" src="assets/login/logonew.png" alt="Course Image" />
-        <div class="flex flex-col justify-center items-center flex-grow px-1 py-1">
-          <div class="font-bold bg-clip-text gradient-color text-transparent text-2xl text-center rounded-md mb-3 px-3 uppercase">
-            {{ course.title }}
-          </div>
-          <p class="text-gray-700 text-base mb-1">
-            Lessons: <span class="text-green-600 font-bold">{{ course.lessons }}</span>
-          </p>
-          <!-- <p class="text-gray-700 text-base mb-1">
-            Mode: <span class="text-green-600 font-bold">{{ course.mode }}</span>
-          </p> -->
-        </div>
-        <div class="w-full flex bg-white justify-center items-center mt-2.5 px-4 gap-2">
-          <button (click)="openEdit(course)" class="w-full backgroundLesson text-white px-4 py-2 rounded">
-            Edit
-          </button>
-          <button (click)="removeCourse(course.id)" class="w-full bg-red-500 text-white px-4 py-2 rounded">
-            Remove
-          </button>
-        </div>
+  <ng-container *ngFor="let course of courseData">
+    <div *ngIf="languages.get(selectedLanguage) == null || course.lang == languages.get(selectedLanguage).id" class="flex flex-col justify-center items-center relative rounded overflow-hidden shadow-md bg-white py-4">
+      <div class="absolute top-2 right-2" >
+        <button (click)="showCertificateModal(course)" class="text-gray-500 hover:text-[--tertiary-color] focus:outline-none">
+          <i class="fas fa-certificate fa-lg"></i>
+        </button>
       </div>
-    </ng-container>
-  </div>
+      <img class="w-1/2 h-auto object-cover"  (click)="redirectToLessons(course.id)" src="assets/login/school.png" alt="Course Image" />
+      <div class="flex flex-col justify-center items-center flex-grow px-1 py-1">
+        <div class="font-bold bg-clip-text gradient-color text-transparent text-2xl text-center rounded-md mb-3 px-3 uppercase">
+          {{ course.title }}
+        </div>
+        <p class="text-gray-700 text-base mb-1">
+          Lessons: <span class="text-green-600 font-bold">{{ course.lessons }}</span>
+        </p>
+        <!-- <p class="text-gray-700 text-base mb-1">
+          Mode: <span class="text-green-600 font-bold">{{ course.mode }}</span>
+        </p> -->
+      </div>
+      <div class="w-full flex bg-white justify-center items-center mt-2.5 px-4 gap-2">
+        <button (click)="openEdit(course)" class="hover:scale-105 hover:ease-out duration-300 w-full backgroundLesson text-white px-4 py-2 rounded">
+          Edit
+        </button>
+        <button (click)="removeCourse(course.id)" class="hover:scale-105 hover:ease-out duration-300 w-full bg-red-500 text-white px-4 py-2 rounded">
+          Remove
+        </button>
+      </div>
+    </div>
+  </ng-container>
+</div>
 </div>

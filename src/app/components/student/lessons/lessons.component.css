@@ -70,15 +70,3 @@
 .textcolor{
   color: #5f6368;
 }
-
-.gradient-green-purple-blue {
-  background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-
-.gradient-green-purple-blue:hover {
-  background-image: none;
-  color: var(--tertiary-color);
-}

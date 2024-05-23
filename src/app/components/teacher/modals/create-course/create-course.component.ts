@@ -32,6 +32,13 @@ export class CreateCourseComponent {
   audioDescription: string = ''; // Added property for audio description
 
   // form
+  language:string='';
+  mode:any = {
+    listen:false,
+    read:false,
+    speak:false,
+    write:false,
+  }
   courseTitle:string = '';
   courseDesc:string = '';
 
@@ -46,13 +53,28 @@ export class CreateCourseComponent {
       fileupload: null,
       description:'',
       complexity:1,
+
     };
     this.lessons.push(newLesson);
   }
 
-  
+
+
   getGradient(): string {
     return 'linear-gradient(to right, #ff9a9e, #fad0c4)';
+  }
+  
+  listen(e:any){
+    this.mode.listen = e.target.value;
+  }
+  read(e:any){
+    this.mode.read = e.target.value;
+  }
+  speak(e:any){
+    this.mode.speak = e.target.value;
+  }
+  write(e:any){
+    this.mode.write = e.target.value;
   }
 
   onFileSelected(event: Event, lesson:Lesson){
@@ -62,22 +84,23 @@ export class CreateCourseComponent {
     }
   }
 
-  // importImage(event: Event, lesson:Lesson){
-  //   const inputElement = event.target as HTMLInputElement;
-  //   if (inputElement.files) {
-  //     const validImageTypes = ['image/gif', 'image/jpeg', 'image/png'];
-  //     if(!validImageTypes.includes(inputElement.files[0].type)){
-  //       this.API.failedSnackbar('Select valid image file type!');
-  //       return;
-  //     }
-  //     lesson.coverImage = inputElement.files[0];
-  //   }
-  // }
+  importImage(event: Event, lesson:Lesson){
+    const inputElement = event.target as HTMLInputElement;
+    if (inputElement.files) {
+      const validImageTypes = ['image/gif', 'image/jpeg', 'image/png'];
+      if(!validImageTypes.includes(inputElement.files[0].type)){
+        this.API.failedSnackbar('Select valid image file type!');
+        return;
+      }
+      lesson.coverImage = inputElement.files[0];
+    }
+  }
 
   setComplexity(complexity:number, lesson:Lesson){
     lesson.complexity =  complexity;
     console.log(lesson.complexity);
   }
+
 
   complexityOptions = ['Beginner', 'Intermediate', 'Advanced'];
   selectedcomplexity: string = 'Beginner';
@@ -91,29 +114,35 @@ export class CreateCourseComponent {
   }
 
   async submit() {
-    // Set default mode to 'LRSW' (listen, read, speak, write)
-    const modeString = 'LRSW';
+    // Handle form submission logic, including using this.audioDescription
+    var modeString = '';
+    modeString += (this.mode.listen == 'on')? 'L' : ''; 
+    modeString += (this.mode.read == 'on')? 'R' : ''; 
+    modeString += (this.mode.speak == 'on')? 'S' : ''; 
+    modeString += (this.mode.write == 'on')? 'W' : ''; 
 
     if(this.courseTitle == ''){
       this.API.failedSnackbar('Course title should not be empty!');
       return;
     }
-
-    // Set default language to 'English'
-    const defaultLanguage = 'English';
-    const languageId = this.languages.get(defaultLanguage).id;
-
+    if(this.language == ''){
+      this.API.failedSnackbar('Please select course language!');
+      return;
+    }
+    if(modeString == ''){
+      this.API.failedSnackbar('Should contain at least one mode of learning!');
+      return;
+    }    
     for(let lesson of this.lessons){
       if(lesson.lessonName.trim() == ''){
+        // this.API.deleteCourse(genID);
         this.API.failedSnackbar('Lesson titles should be completely filled.');
         return;
       }
     }
-
     const genID = this.API.createID32();
     this.API.justSnackbar('Creating course, Please Wait...', 99999999999999);
-    await lastValueFrom(this.API.createCourse(genID,this.courseTitle, this.courseDesc, modeString, languageId))
-
+    await lastValueFrom(this.API.createCourse(genID,this.courseTitle, this.courseDesc, modeString, this.languages.get(this.language).id))
     for(let lesson of this.lessons){
       var attachments = undefined;
       var imageupload = undefined;
@@ -148,7 +177,12 @@ export class CreateCourseComponent {
     this.thisLesson();
   }
 
+  selectLanguage(langID:string){
+    this.language = langID!;
+  }
+
   closeModal() {
     this.activeModal.close();
+
   }
 }

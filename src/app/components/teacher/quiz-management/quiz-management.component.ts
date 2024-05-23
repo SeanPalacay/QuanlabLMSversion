@@ -18,7 +18,7 @@ export class QuizManagementComponent implements OnInit {
   ) {}
 
   isDropdownOpen = false;
-  currentCourse :any;
+  currentCourse: any;
   courses: any = [];
   mockAverageScore = 0;
   mockCompletionRate = 85;
@@ -76,7 +76,7 @@ export class QuizManagementComponent implements OnInit {
       }
     });
   }
-  selectQuiz(quiz:string){
+  selectQuiz(quiz: any) {
     this.selectedQuiz = quiz;
     this.resetStudent();
   }
@@ -93,55 +93,55 @@ export class QuizManagementComponent implements OnInit {
 
   gettingAvg = false;
 
-  getAverageScore(quiz:any){
+  getAverageScore(quiz: any) {
     this.search = '';
     this.resetStudent();
     this.selectedQuiz = quiz;
     this.gettingAvg = true;
     this.people = [];
-    this.API.getQuizAverage(quiz.id).subscribe(data=>{
-      if(data.output.length){
-        this.mockAverageScore = Number(Number(data.output[0].average).toFixed(4))
-      }else{
+    this.API.getQuizAverage(quiz.id).subscribe((data) => {
+      if (data.output.length) {
+        this.mockAverageScore = Number(Number(data.output[0].average).toFixed(4));
+      } else {
         this.mockAverageScore = 0;
       }
       this.gettingAvg = false;
     });
   }
   search = '';
-  people:any = [];
+  people: any = [];
   searching = false;
-  search$:any;
-  searchPeople(event:any){
-    this.people =[];
-    if(event.target.value.trim() == ''){
+  search$: any;
+  searchPeople(event: any) {
+    this.people = [];
+    if (event.target.value.trim() == '') {
       return;
     }
 
-    if(this.selectedQuiz == null){
+    if (this.selectedQuiz == null) {
       return;
     }
 
     this.searching = true;
     this.search$?.unsubscribe();
-    this.search$ =  this.API.searchStudentInQuiz(event.target.value.trim().toLowerCase(), this.selectedQuiz.id).subscribe(data=>{
+    this.search$ = this.API.searchStudentInQuiz(event.target.value.trim().toLowerCase(), this.selectedQuiz.id).subscribe((data) => {
       this.searching = false;
-      if(data.success){
-        for(let person of data.output){
+      if (data.success) {
+        for (let person of data.output) {
           this.people.push(person);
         }
       }
       this.search$?.unsubscribe();
-    })
+    });
   }
-  
-  selectStudent(student:any){
+
+  selectStudent(student: any) {
     this.selectedStudent = student;
-    this.search = student.firstname + ' '+ student.lastname;
+    this.search = student.firstname + ' ' + student.lastname;
     this.people = [];
   }
 
-  resetStudent(){
+  resetStudent() {
     this.selectedStudent = null;
     this.search = '';
   }
@@ -152,10 +152,7 @@ export class QuizManagementComponent implements OnInit {
       // You can add other options here if needed
     };
 
-    const modalRef = this.modalService.open(
-      QuizCreationComponent,
-      modalOptions
-    );
+    const modalRef = this.modalService.open(QuizCreationComponent, modalOptions);
     modalRef.componentInstance.myCustomClass = 'custom-modal';
     modalRef.componentInstance.courses = this.courses; // Pass the custom class name
     modalRef.closed.subscribe((data) => {
@@ -169,23 +166,7 @@ export class QuizManagementComponent implements OnInit {
   parseDate(date: string) {
     return this.API.parseDate(date);
   }
-  // toggleQuizDropdown() {
-  //   this.isQuizDropdownOpen = !this.isQuizDropdownOpen;
-  // }
 
-  // toggleStudentDropdown() {
-  //   this.isStudentDropdownOpen = !this.isStudentDropdownOpen;
-  // }
-
-  // selectQuiz(quiz: string) {
-  //   this.selectedQuiz = quiz;
-  //   this.isQuizDropdownOpen = false;
-  // }
-
-  // selectStudent(student: string) {
-  //   this.selectedStudent = student;
-  //   this.isStudentDropdownOpen = false;
-  // }
   filterQuizzes() {
     if (!this.selectedQuiz) {
       this.filteredQuizOptions = this.quizOptions.slice();
@@ -208,8 +189,8 @@ export class QuizManagementComponent implements OnInit {
   }
 
   feedback = '';
-  sendFeedback(){
-    if(!this.API.checkInputs([this.feedback, this.selectedQuiz, this.selectedStudent])){
+  sendFeedback() {
+    if (!this.API.checkInputs([this.feedback, this.selectedQuiz, this.selectedStudent])) {
       this.API.failedSnackbar('Complete fields before sending feedback.');
       return;
     }
@@ -217,8 +198,8 @@ export class QuizManagementComponent implements OnInit {
       `${this.API.getFullName()} sent a feedback`,
       `${this.API.getFullName()} sent a feedback about your quiz titled, <b>'${this.selectedQuiz.title}'</b>. ${this.API.getUserData().firstname} said <b>'${this.feedback}'</b>`,
       this.selectedStudent.id
-    )
-    this.API.successSnackbar('Successfully sent a feedback!')
+    );
+    this.API.successSnackbar('Successfully sent a feedback!');
     this.resetStudent();
     this.feedback = '';
   }
@@ -226,6 +207,10 @@ export class QuizManagementComponent implements OnInit {
     this.router.navigate(['teacher/t-home']);
   }
   navigateAnal(): void {
-    this.router.navigate(['teacher/quiz-analytics']);
+    if (this.selectedQuiz) {
+      this.router.navigate(['teacher/quiz-analytics'], { state: { quiz: this.selectedQuiz } });
+    } else {
+      this.API.failedSnackbar('Please select a quiz');
+    }
   }
 }

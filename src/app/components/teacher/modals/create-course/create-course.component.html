@@ -25,7 +25,7 @@
         ></textarea>
       </div>
       <div class="topwrap2">
-        <!-- <div class="text">
+        <div class="text">
           <select
             [(ngModel)]="language"
             (change)="selectLanguage(language)"
@@ -58,7 +58,7 @@
           <input (change)="read($event)" type="radio" /><span> Read</span>
           <input (change)="speak($event)" type="radio" /><span> Speak</span>
           <input (change)="write($event)" type="radio" /><span> Write</span>
-        </div> -->
+        </div>
       </div>
     </div>
 
@@ -132,24 +132,23 @@
                     ? getFilename(lesson.fileupload)
                     : "Attach File"
                 }}</span>
-                  <svg class="ml-1" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15px" height="15px" viewBox="0 0 481.728 481.728" xml:space="preserve">
-                    <defs>
-                      <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" style="stop-color:var(--secondary-color);stop-opacity:1" />
-                        <stop offset="100%" style="stop-color:var(--secondary-color);stop-opacity:1" />
-                      </linearGradient>
-                    </defs>
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                    <g id="SVGRepo_iconCarrier">
+                <svg class="ml-1" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15px" height="15px" viewBox="0 0 481.728 481.728" xml:space="preserve">
+                  <defs>
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" style="stop-color:var(--secondary-color);stop-opacity:1" />
+                      <stop offset="100%" style="stop-color:var(--primary-color);stop-opacity:1" />
+                    </linearGradient>
+                  </defs>
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <g>
                       <g>
-                        <g>
-                          <path d="M10.467,146.592l198.857,252.903c17.417,30.532,45.661,30.532,63.085,0l198.839-252.867 c3.886-5.532,8.072-15.41,8.923-22.118c2.735-21.738,4.908-65.178-21.444-65.178H23.013c-26.353,0-24.192,43.415-21.463,65.147 C2.395,131.188,6.587,141.06,10.467,146.592z" fill="url(#gradient)"></path>
-                        </g>
+                        <path d="M10.467,146.592l198.857,252.903c17.417,30.532,45.661,30.532,63.085,0l198.839-252.867 c3.886-5.532,8.072-15.41,8.923-22.118c2.735-21.738,4.908-65.178-21.444-65.178H23.013c-26.353,0-24.192,43.415-21.463,65.147 C2.395,131.188,6.587,141.06,10.467,146.592z" fill="url(#gradient)"></path>
                       </g>
                     </g>
-                  </svg>
-                  
+                  </g>
+                </svg>
               </label>
               <input
                 id="file-upload-{{ i }}"
@@ -168,7 +167,7 @@
     </div>
     <div class="buttonwrap">
       <div class="btnwrap">
-        <button class="save poppins" (click)="submit()">PUBLISH COURSE</button>
+        <button class="publish hover:scale-105 hover:ease-out duration-300 save poppins" (click)="submit()">PUBLISH COURSE</button>
         <button class="cancel poppins bg-red-500" (click)="closeModal()">
           Cancel
         </button>

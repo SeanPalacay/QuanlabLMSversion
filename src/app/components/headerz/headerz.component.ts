@@ -46,18 +46,7 @@ export class HeaderzComponent implements OnInit, OnDestroy {
     return this.API.userData.firstname + " " + this.API.userData.lastname 
   }
 
-  openSurveyModal() {
-    const modalOptions: NgbModalOptions = {
-      centered: false,
-      // You can add other options here if needed
-    };
 
-    const modalRef = this.modalService.open(
-      SurveyCertComponent,
-      modalOptions
-    );
-    modalRef.componentInstance.myCustomClass = 'custom-modal';
-  }
 
   reflectProfile(){
     return this.API.getURL(this.API.userData.profile) ??this.API.noProfile();

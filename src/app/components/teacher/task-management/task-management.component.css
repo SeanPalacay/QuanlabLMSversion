@@ -8,23 +8,7 @@
   margin-bottom: 26px;
   justify-content: space-between;
 }
-.back-button {
-  background-clip: text;
-  color: transparent;
-  background-image: linear-gradient(
-    to right,
-   var(--primary-color), var(--secondary-color)
-  );
-}
-.date-container,
-.back-button {
-  font-size: small;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  padding: 8px 10px;
-  border-radius: 8px;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-}
+
 .date-container p {
   margin: 0;
 }
@@ -252,7 +236,7 @@ span {
   font-size: x-small;
   background: linear-gradient(
     to right,
-    var(--primary-color), var(--secondary-color)
+    var(--secondary-color), var(--secondary-color)
 
   );
   padding: 8px 10px;
@@ -303,7 +287,7 @@ span {
 .new-task-button p {
   background: linear-gradient(
     to right,
-    var(--primary-color), var(--secondary-color)
+    var(--secondary-color), var(--secondary-color)
 
   );
   color: transparent;
