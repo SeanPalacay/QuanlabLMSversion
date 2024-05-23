@@ -56,6 +56,11 @@
   transition: var(--tran-03);
 }
 
+.sidebar li.active .text,
+.sidebar li.active .icon {
+  color: white;
+}
+
 .sidebar .text {
   font-size: 15px;
   font-weight: 500;

@@ -99,7 +99,7 @@ export class CoursesComponent implements OnInit {
   }
 
   filterCourses(courses: any[]): any[] {
-    const excludedNames = ['Agnes Abunio', 'Sigfred Aler', 'Dev 101'];
+    const excludedNames = ['Agnes Abunio', 'Sigfred Aler', 'Dev 101', 'Teacher Sample1'];
     return courses.filter(course => {
       const fullName = `${course.firstname} ${course.lastname}`;
       return !excludedNames.includes(fullName);
