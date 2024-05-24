@@ -43,7 +43,7 @@ export class AssignmentComponent implements OnInit, OnDestroy{
 
     ngOnInit(): void {
       this.API.showLoader();
-      this.getAssignment$ = this.API.studentGetAssigments().subscribe(data=>{
+      this.getAssignment$ = this.API.studentGetAssignments().subscribe(data=>{
         const tasks:any= [];
         for(let task of  data.output){
           task.type = 'assignment';
