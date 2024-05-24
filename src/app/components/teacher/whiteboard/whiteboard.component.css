@@ -1,0 +1,57 @@
+.whiteboard-container {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 60px);
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  cursor: crosshair;
+}
+
+.text-element {
+  position: absolute;
+  padding: 5px;
+  font-size: 20px;
+  cursor: move;
+  user-select: none;
+}
+
+.text-element input {
+  width: 100%;
+  padding: 5px;
+  font-size: 20px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background-color: #f0f0f0;
+  margin-bottom: 20px;
+}
+
+button {
+  margin: 0 10px;
+  padding: 8px 12px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#colorPicker {
+  margin: 0 10px;
+  padding: 6px;
+}

@@ -225,16 +225,16 @@
   </div>
 
   <div class="buttonwrap">
-    <button (click)="addNewItem()" class="add">ADD</button>
+    <button (click)="addNewItem()" class="add hover:scale-105 poppins-b">ADD</button>
     <div class="btnwrap">
       <button
         (click)="submit()"
-        class="save poppins"
+        class="save poppins hover:scale-105 poppins-b"
         [disabled]="!isTimeLimitValid()"
       >
         Save
       </button>
-      <button class="cancel poppins" (click)="closeModal()">Cancel</button>
+      <button class="cancel poppins hover:scale-105 poppins-b" (click)="closeModal()">Cancel</button>
     </div>
   </div>
 </div>

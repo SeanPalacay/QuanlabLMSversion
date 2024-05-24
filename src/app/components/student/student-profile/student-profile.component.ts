@@ -130,21 +130,6 @@ getUserSignature(){
     return ref;
   }
 }
-// Uploading e-sig
-// imageUrl: string = 'assets/Esig.png'; // Default image URL
-
-// onimageSelected(event: any) {
-//   const file: File = event.target.files[0];
-//   if (file) {
-//     const reader = new FileReader();
-//     reader.onload = () => {
-//       this.imageUrl = reader.result as string;
-//     };
-//     reader.readAsDataURL(file);
-//   }
-// }
-
-
   getURL(file: string) {
     if (file.includes('http')) {
       return file;
@@ -176,17 +161,6 @@ getUserSignature(){
   closeModalPassword() {
     this.showModalPassword = false;
   }
-
-  // toggleEdit(){
-  //   this.editing = !this.editing;
-  //   if(!this.editing){
-  //     this.API.updateLocalUserData(JSON.stringify(this.user))
-  //     const obs$ = this.API.updateStudentName(this.user.id, this.user.firstname, this.user.lastname).subscribe(()=>{
-  //       obs$.unsubscribe()
-
-  //     })
-  //   }
-  // }
 
   toggleEdit() {
     

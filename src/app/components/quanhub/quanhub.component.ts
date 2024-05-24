@@ -8,6 +8,9 @@ import { MessageObject, ParticipantObject } from "src/app/shared/model/models";
 import { MeetpopComponent } from '../student/modals/meetpop/meetpop.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import Swal from "sweetalert2";
+import { Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-quanhub',
@@ -18,6 +21,8 @@ export class QuanhubComponent implements OnInit, OnDestroy{
   isFullScreen: boolean = false;
   showParticipants: boolean = false;
   private isOriginalOrientation: boolean = true;
+  isWhiteboardOpen: boolean = false;
+  whiteboard: any; 
   isChatModalOpen = false;
   @ViewChild('videoContainer')
   videoContainer!: ElementRef;
@@ -25,6 +30,7 @@ export class QuanhubComponent implements OnInit, OnDestroy{
     private http: HttpClient,
     private API: APIService,
     private modalService: NgbModal,
+    private router: Router
    
 
   ) {
@@ -153,7 +159,6 @@ meetingInfo:any;
   profile?:string;
   
   meNotifDisplayed = false;
-
   localParticipant: any;
   showScreen:number = 0;
   isWebCamOn:boolean = true;
@@ -222,6 +227,8 @@ meetingInfo:any;
       
     }
   }
+
+  
   createMeeting(){
     const apiUrl = "https://api.videosdk.live/v2/rooms";
     const headers = new HttpHeaders({
@@ -522,6 +529,7 @@ meetingInfo:any;
     }
   }
 
+  
   sendMessage(){
     if(this.meeting == null){
       this.clearInput();
@@ -668,4 +676,8 @@ meetingInfo:any;
       }
     }
   }
+  openWhiteboard() {
+    this.router.navigateByUrl('/open-whiteboard');
+  }
+
 }

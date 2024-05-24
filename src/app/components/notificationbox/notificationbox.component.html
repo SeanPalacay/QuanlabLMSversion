@@ -18,7 +18,7 @@
                         <i *ngIf="!isUrgent(notification.title)" class='bx bxs-envelope text-xl text-gray-400' [ngClass]="{'text-yellow-400': notification.status != 'seen'}" ></i>
                         <i *ngIf="isUrgent(notification.title)" class='bx bxs-error-alt text-xl text-gray-400' [ngClass]="{'text-red-500': notification.status != 'seen'}" ></i>
                         <div class="ml-3">
-                            <div class="poppins-b text-[#7F7F7F]"><h2 [innerHTML]="removeUrgentTag(notification.title)"></h2></div>
+                            <div class="poppins-b text-[#7F7F7F]"><h2 [innerHTML]="removeTag(notification.title)"></h2></div>
                             <div class="poppins text-[#7F7F7F] whitespace-break-spaces text-clip">
                                 <p>{{ parseDate(notification.timestamp) }}</p>
                                 

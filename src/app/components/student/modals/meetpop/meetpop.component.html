@@ -52,8 +52,8 @@
         </div>
         <div class="ml-20 mr-24 icons justify-between flex mt-3">
             <div class="toggle-button flex">
-                <i class="bx bx-microphone mr-2 mt-[-2px] text-lg text-[--primary-color]" *ngIf="!isMicMuted"></i>
-                <i class="bx bxs-microphone-off mr-2 mt-[-2px] text-lg  text-[--primary-color]" *ngIf="isMicMuted"></i>
+                <i class="bx bx-microphone mr-2 mt-[-2px] text-lg text-[--secondary-color]" *ngIf="!isMicMuted"></i>
+                <i class="bx bxs-microphone-off mr-2 mt-[-2px] text-lg  text-[--secondary-color]" *ngIf="isMicMuted"></i>
 
                 <label class="switch">
                     <input type="checkbox" (change)="toggleMic()">
@@ -62,8 +62,8 @@
             </div>
             <div class="ml-1 toggle-button flex">
                 <!-- <img class="mr-2" *ngIf="!isVideoDisabled" src="assets/spiderman.png" alt="Video Icon"> -->
-                <i class='bx bx-video mr-2 mt-[-2px] text-lg text-[--primary-color]' *ngIf="!isVideoDisabled" ></i>
-                <i class='bx bxs-video-off mr-2 mt-[-2px] text-lg text-[--primary-color]' *ngIf="isVideoDisabled" ></i>
+                <i class='bx bx-video mr-2 mt-[-2px] text-lg text-[--secondary-color]' *ngIf="!isVideoDisabled" ></i>
+                <i class='bx bxs-video-off mr-2 mt-[-2px] text-lg text-[--secondary-color]' *ngIf="isVideoDisabled" ></i>
                 <!-- <img class="mr-2" *ngIf="isVideoDisabled" src="assets/tonzxz.jpg" alt="Video Off Icon"> -->
                 <label class="switch">
                     <input type="checkbox" (change)="toggleVideo()">

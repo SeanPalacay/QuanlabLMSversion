@@ -19,10 +19,14 @@ import * as FileSaver from 'file-saver';
 import {
   BehaviorSubject,
   EMPTY,
+  ReplaySubject,
   Subject,
   Subscription,
   catchError,
   firstValueFrom,
+  iif,
+  lastValueFrom,
+  min,
   timeout,
 } from 'rxjs';
 import { NgbModal, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
@@ -35,7 +39,8 @@ import {
 import { Observable, throwError } from 'rxjs';
 import { LoaderService } from 'src/app/loader.service';
 import Swal from 'sweetalert2';
-import { map } from 'rxjs/operators';
+import { first, map } from 'rxjs/operators';
+import { fromEvent, merge, of } from 'rxjs';
 import { VideoSDK } from '@videosdk.live/js-sdk';
 
 const client = new AssemblyAI({
@@ -78,384 +83,6 @@ export class APIService implements OnDestroy, OnInit {
     });
   }
 
-  ngOnDestroy(): void {
-    if (this.backgroundID) {
-      clearInterval(this.backgroundID);
-    }
-    this.downloadProgress$.unsubscribe();
-    const obs = this.endSpeechMeeting(this.getUserData().id).subscribe(() => {
-      obs.unsubscribe();
-    });
-  }
-
-  getUserData(logout: boolean = false) {
-    const userData = this.usedStorage.getItem('user_info');
-    if (userData == null && !logout) {
-      this.logout();
-      return null;
-    }
-    return JSON.parse(userData!);
-  }
-
-  getUserAccountType() {
-    const userData = this.usedStorage.getItem('user_info');
-    if (userData == null) {
-      return null;
-    }
-    const parsedUserData = JSON.parse(userData);
-    return parsedUserData.accountType;
-  }
-
-  getFullName() {
-    const user = this.getUserData();
-    return user.firstname + ' ' + user.lastname;
-  }
-
-  updateLocalUserData(userData: any) {
-    this.usedStorage.setItem('user_info', userData);
-    this.userData = this.getUserData();
-  }
-
-  useLocalStorage() {
-    localStorage.setItem('storage', 'local');
-  }
-
-  useSessionStorage() {
-    localStorage.setItem('storage', 'session');
-  }
-
-  isLocalStorage() {
-    const storage = localStorage.getItem('storage');
-    return storage == 'local';
-  }
-
-  isLoggedIn() {
-    let loggedIn = this.usedStorage.getItem('logged_in');
-    return loggedIn != null;
-  }
-
-  getUserType() {
-    let userType = this.usedStorage.getItem('logged_in');
-    return userType ? userType : undefined;
-  }
-
-  login(username: string, password: string) {
-    this.snackBar.openFromComponent(LoadingSnackbarComponent, {
-      verticalPosition: 'bottom',
-      horizontalPosition: 'right',
-      panelClass: ['default-snackbar'],
-    });
-    return this.post('login', {
-      Username: username,
-      Password: password,
-    }).subscribe((data) => {
-      this.snackBar.dismiss();
-      const display = data.success ? 'Login Successful!' : data.output;
-      const snackbarType = data.success
-        ? 'default-snackbar-success'
-        : 'default-snackbar-error';
-      this.snackBar
-        .open(display, 'Dismiss', {
-          duration: 500,
-          verticalPosition: 'bottom',
-          horizontalPosition: 'right',
-          panelClass: [snackbarType],
-        })
-        .afterDismissed()
-        .subscribe(() => {
-          if (data.success) {
-            this.usedStorage.setItem(
-              'logged_in',
-              data.output.accountType.toString()
-            );
-            this.usedStorage.setItem('user_info', JSON.stringify(data.output));
-            switch (parseInt(data.output.accountType)) {
-              case 0:
-                this.router.navigate(['/student/dashboard']);
-                break;
-              case 1:
-                this.router.navigate(['/teacher/dashboard']);
-                break;
-              case 2:
-                this.router.navigate(['/admin/dashboard']);
-                break;
-            }
-          }
-        });
-    });
-  }
-
-  logout() {
-    if (!this.isLoggedIn()) {
-      return;
-    }
-    const rememberMe = this.isLocalStorage();
-    const user = this.getUserData(true);
-    const email = user.email;
-    this.usedStorage.clear();
-    if (rememberMe) {
-      localStorage.setItem('remember', email);
-      localStorage.setItem('storage', 'local');
-    } else {
-      localStorage.clear();
-    }
-    this.router.navigate(['/login']);
-  }
-
-  updateLastSeen() {
-    if (!this.isLoggedIn()) return;
-    var tzoffset = new Date().getTimezoneOffset() * 60000; //offset in milliseconds
-    var localISOTime = new Date(Date.now() - tzoffset).toISOString();
-
-    const id = this.getUserData().id;
-    if (this.getUserType() == '2') {
-      const postObject = {
-        tables: 'administrators',
-        values: {
-          LastSeen: localISOTime.slice(0, 19).replace('T', ' '),
-        },
-        conditions: {
-          WHERE: {
-            ID: id,
-          },
-        },
-      };
-      const observable = this.post('update_entry', {
-        data: JSON.stringify(postObject),
-      }).subscribe(
-        () => {
-          observable.unsubscribe();
-        },
-        (error) => {
-          if (error instanceof HttpErrorResponse) {
-            if (error.status == 0) {
-              this.goOffline();
-            }
-          }
-        }
-      );
-    } else if (this.getUserType() == '1') {
-      const postObject = {
-        tables: 'teachers',
-        values: {
-          LastSeen: localISOTime.slice(0, 19).replace('T', ' '),
-        },
-        conditions: {
-          WHERE: {
-            ID: id,
-          },
-        },
-      };
-      const observable = this.post('update_entry', {
-        data: JSON.stringify(postObject),
-      }).subscribe(
-        () => {
-          observable.unsubscribe();
-        },
-        (error) => {
-          if (error instanceof HttpErrorResponse) {
-            if (error.status == 0) {
-              this.goOffline();
-            }
-          }
-        }
-      );
-    } else {
-      const postObject = {
-        tables: 'students',
-        values: {
-          LastSeen: localISOTime.slice(0, 19).replace('T', ' '),
-        },
-        conditions: {
-          WHERE: {
-            ID: id,
-          },
-        },
-      };
-      const observable = this.post('update_entry', {
-        data: JSON.stringify(postObject),
-      }).subscribe(
-        () => {
-          observable.unsubscribe();
-        },
-        (error) => {
-          if (error instanceof HttpErrorResponse) {
-            if (error.status == 0) {
-              this.goOffline();
-            }
-          }
-        }
-      );
-    }
-  }
-
-  endSpeechMeeting(teacherID: string) {
-    var tzoffset = new Date().getTimezoneOffset() * 60000;
-    var localISOTime = new Date(Date.now() - tzoffset).toISOString();
-    var time = localISOTime.slice(0, 19).replace('T', ' ');
-    const postObject = {
-      tables: 'lab_meetings',
-      values: {
-        EndTime: time,
-      },
-      conditions: {
-        WHERE: {
-          TeacherID: teacherID,
-        },
-        'AND EndTime IS ': 'NULL',
-      },
-    };
-    return this.post('update_entry', {
-      data: JSON.stringify(postObject),
-    });
-  }
-
-  getSavedEmail() {
-    const email = localStorage.getItem('remember');
-    return email;
-  }
-
-  checkIfPendingVerification(email: string) {
-    const postObject = {
-      selectors: ['*'],
-      tables: 'verification',
-      conditions: {
-        WHERE: {
-          '[dot]Email': email,
-        },
-      },
-    };
-    return this.post('get_entries', {
-      data: JSON.stringify(postObject),
-    });
-  }
-
-  pushVerification(data: any) {
-    const postObject = {
-      tables: 'verification',
-      values: {
-        Email: data.email,
-        FirstName: data.firstname,
-        LastName: data.lastname,
-        Token: data.token,
-      },
-    };
-
-    return this.post('create_entry', {
-      data: JSON.stringify(postObject),
-    });
-  }
-
-  sendVerification(details: any) {
-    return this.http.post<any>(
-      environment.nodeserver + '/send-verification-email',
-      {
-        key: environment.socketKey,
-        host: details.host,
-        email: details.email,
-        password: details.password,
-        firstname: details.firstname,
-        lastname: details.lastname,
-        address: details.address,
-        nationality: details.nationality,
-        birthdate: details.birthdate,
-        gender: details.gender,
-      }
-    );
-  }
-
-  adminVerifyToken(token: string) {
-    return this.http.post<any>(environment.nodeserver + '/admin-verify-email', {
-      key: environment.socketKey,
-      token: token,
-    });
-  }
-
-  adminRejectToken(token: string) {
-    return this.http.post<any>(environment.nodeserver + '/admin-reject-email', {
-      key: environment.socketKey,
-      token: token,
-    });
-  }
-
-  verifyEmail(token: string) {
-    return this.http.post<any>(environment.nodeserver + '/verify-email', {
-      key: environment.socketKey,
-      token: token,
-    });
-  }
-
-  removeFromVerification(email: string) {
-    const postObject = {
-      tables: 'verification',
-      conditions: {
-        WHERE: {
-          '[dot]Email': email,
-        },
-      },
-    };
-    return this.post('delete_entry', {
-      data: JSON.stringify(postObject),
-    });
-  }
-
-  register(details: any) {
-    const id = this.createID32();
-
-    const newDate = new Date().getTime().toString();
-    const visID =
-      'Q-S' + newDate.substring(4, 7) + '-' + newDate.substring(7, 13);
-
-    const postObject = {
-      tables: 'students',
-      values: {
-        ID: id,
-        VisibleID: visID,
-        Email: details.email,
-        '[hash]Password': details.password,
-        FirstName: details.firstname,
-        LastName: details.lastname,
-        Address: details.address,
-        Nationality: details.nationality,
-        BirthDate: details.birthdate,
-        Gender: details.gender,
-      },
-    };
-    return this.post('create_entry', {
-      data: JSON.stringify(postObject),
-    });
-  }
-
-  checkEmailExists(email: string, domain: string) {
-    const postObject = {
-      selectors: ['ID'],
-      tables: domain,
-      conditions: {
-        WHERE: {
-          '[dot]Email': email,
-        },
-      },
-    };
-    return this.post('get_entries', {
-      data: JSON.stringify(postObject),
-    });
-  }
-
-  ////////////////////
-
-  pinParticipantVideo(classId: string, participantId: string): Observable<any> {
-    const url = `/api/classes/${classId}/participants/${participantId}/pin`;
-    return this.http.post(url, {});
-  }
-
-  unpinParticipantVideo(
-    classId: string,
-    participantId: string
-  ): Observable<any> {
-    const url = `/api/classes/${classId}/participants/${participantId}/unpin`;
-    return this.http.post(url, {});
-  }
-
   getAttendanceHistory() {
     const id = this.getUserData().id;
     const postObject = {
@@ -480,12 +107,23 @@ export class APIService implements OnDestroy, OnInit {
     });
   }
 
+  // Method to fetch lesson data
   getLessonData(): Observable<any> {
     return this.http.get<any>('assets/jsons/speechlab/module1/lesson1.json');
   }
 
   getQuizData(): Observable<any> {
     return this.http.get<any>('assets/jsons/speechlab/vidquiz/vidquiz.json');
+  }
+
+  ngOnDestroy(): void {
+    if (this.backgroundID) {
+      clearInterval(this.backgroundID);
+    }
+    this.downloadProgress$.unsubscribe();
+    const obs = this.endSpeechMeeting(this.getUserData().id).subscribe(() => {
+      obs.unsubscribe();
+    });
   }
 
   backgroundID: any = 0;
@@ -531,10 +169,10 @@ export class APIService implements OnDestroy, OnInit {
     const file = await firstValueFrom(
       this.http.get(this.getURL(link), { responseType: 'blob' })
     );
+    // console.log(file);
     const base = await firstValueFrom(this.getBaseAsync(file));
     return base;
   }
-
   async getServerFile(link: string) {
     const file = await firstValueFrom(
       this.http.get(this.getURL(link), { responseType: 'blob' })
@@ -557,7 +195,6 @@ export class APIService implements OnDestroy, OnInit {
   createID32() {
     return uuidv4().replaceAll('-', '');
   }
-
   createID36() {
     return uuidv4();
   }
@@ -565,7 +202,6 @@ export class APIService implements OnDestroy, OnInit {
   showLoader() {
     this.loader.show();
   }
-
   hideLoader() {
     this.loader.hide();
   }
@@ -624,7 +260,7 @@ export class APIService implements OnDestroy, OnInit {
     });
   }
 
-  updateTeacherStudentName(id: string, firstname: string, lastname: string) {
+  updateTeacherStudentName(id: string, firstname: string, lastname:string) {
     const postObject = {
       table: 'students',
       update: {
@@ -632,14 +268,15 @@ export class APIService implements OnDestroy, OnInit {
         LastName: lastname,
       },
       where: {
-        ID: id,
-      },
+        ID: id
+      }
     };
-
+    
     return this.post('update_entry', {
       data: JSON.stringify(postObject),
     });
   }
+  
 
   updateAdminEmail(id: string, email: string) {
     const postObject = {
@@ -675,6 +312,8 @@ export class APIService implements OnDestroy, OnInit {
     });
   }
 
+  
+
   updateStudentEmail(id: string, email: string) {
     const postObject = {
       tables: 'students',
@@ -691,6 +330,8 @@ export class APIService implements OnDestroy, OnInit {
       data: JSON.stringify(postObject),
     });
   }
+
+  // edit for teacher 
 
   updateForStudentName(id: string, firstname: string, lastname: string) {
     const postObject = {
@@ -710,6 +351,8 @@ export class APIService implements OnDestroy, OnInit {
     });
   }
 
+
+
   updateForStudentEmail(id: string, email: string) {
     const postObject = {
       tables: 'students',
@@ -726,7 +369,7 @@ export class APIService implements OnDestroy, OnInit {
       data: JSON.stringify(postObject),
     });
   }
-
+  // end edit for teacher 
   updateProfileImage(id: string, url: string) {
     const userType = this.getUserType();
     const postObject = {
@@ -800,7 +443,6 @@ export class APIService implements OnDestroy, OnInit {
       data: JSON.stringify(postObject),
     });
   }
-
   askGemini(prompt: string) {
     this.justSnackbar('Asking Gemini for reponse...', 9999999);
     const headers = new HttpHeaders({
@@ -870,7 +512,7 @@ export class APIService implements OnDestroy, OnInit {
     });
   }
 
-  parseTime(date: string) {
+  parseTime(date:string){
     const dateObject = new Date(date);
     return dateObject.toLocaleTimeString('en-US', {
       hour: '2-digit',
@@ -880,6 +522,7 @@ export class APIService implements OnDestroy, OnInit {
 
   parseDateFromNow(date: string) {
     const timepassed = new Date().getTime() - new Date(date).getTime();
+    // if(timepassed)
     const seconds = timepassed / 1000;
     if (seconds < 60) return 'Just now';
     const minutes = Math.floor(seconds / 60);
@@ -929,7 +572,6 @@ export class APIService implements OnDestroy, OnInit {
       duration: duration,
     });
   }
-
   justSnackbar(message: string, timer?: number) {
     var time = 3000;
     if (timer != undefined) {
@@ -1023,6 +665,56 @@ export class APIService implements OnDestroy, OnInit {
     this.joinWithMic = undefined;
   }
 
+  login(username: string, password: string) {
+    this.snackBar.openFromComponent(LoadingSnackbarComponent, {
+      verticalPosition: 'bottom',
+      horizontalPosition: 'right',
+      panelClass: ['default-snackbar'],
+    });
+    return this.post('login', {
+      Username: username,
+      Password: password,
+    }).subscribe((data) => {
+      this.snackBar.dismiss();
+      const display = data.success ? 'Login Successful!' : data.output;
+      const snackbarType = data.success
+        ? 'default-snackbar-success'
+        : 'default-snackbar-error';
+      this.snackBar
+        .open(display, 'Dismiss', {
+          duration: 500,
+          verticalPosition: 'bottom',
+          horizontalPosition: 'right',
+          panelClass: [snackbarType],
+        })
+        .afterDismissed()
+        .subscribe(() => {
+          if (data.success) {
+            this.usedStorage.setItem(
+              'logged_in',
+              data.output.accountType.toString()
+            );
+            const user = data.output;
+            if(user.esign){
+             user.esign = user.esign + '?' + new Date().getTime(); 
+            }
+            this.usedStorage.setItem('user_info', JSON.stringify(data.output));
+            switch (parseInt(data.output.accountType)) {
+              case 0:
+                this.router.navigate(['/student/dashboard']);
+                break;
+              case 1:
+                this.router.navigate(['/teacher/dashboard']);
+                break;
+              case 2:
+                this.router.navigate(['/admin/dashboard']);
+                break;
+            }
+          }
+        });
+    });
+  }
+
   teacherAllCourses() {
     const id = this.getUserData().id;
     const postObject = {
@@ -1045,6 +737,9 @@ export class APIService implements OnDestroy, OnInit {
   getCourses(limit?: number, filter?: string) {
     const filterObject = filter != null ? { languageID: filter } : {};
     const limitObject = limit != null ? { LIMIT: limit } : {};
+    // const postObject =Object.assign(
+    //   {},filterObject, limitObject
+    // );
     const id = this.getUserData().id;
     const postObject = {
       selectors: [
@@ -1066,6 +761,7 @@ export class APIService implements OnDestroy, OnInit {
             `ON student_classes.ClassID = classes.ID AND student_classes.StudentID ='` +
             id +
             `'`,
+          // 'LEFT JOIN student_classes'
           WHERE: Object.assign(
             {
               'teachers.ID': 'courses.TeacherID',
@@ -1081,6 +777,7 @@ export class APIService implements OnDestroy, OnInit {
     return this.post('get_entries', {
       data: JSON.stringify(postObject),
     });
+    // return this.post('get_courses', postObject);
   }
 
   matchCourseCode(courseID: string, classCode: string) {
@@ -1147,13 +844,13 @@ export class APIService implements OnDestroy, OnInit {
           'courses.TeacherID': 'teachers.ID',
           'lessons.CourseID': 'courses.ID',
         },
+        // 'GROUP BY': 'lessons.ID,teachers.ID, courses.ID',
       },
     };
     return this.post('get_entries', {
       data: JSON.stringify(postObject),
     });
   }
-
   lessonProgress(lessonID: string, progress: number) {
     const id = this.getUserData().id;
     const postObject = {
@@ -1287,6 +984,8 @@ export class APIService implements OnDestroy, OnInit {
         'LEFT JOIN courses': 'ON classes.CourseID = courses.ID',
         'LEFT JOIN students': 'ON student_classes.StudentID = students.ID',
         WHERE: {
+          // 'classes.CourseID': 'courses.ID',
+          // 'student_classes.ClassID': 'classes.ID',
           'courses.TeacherID': id,
         },
         'GROUP BY': 'classes.ID,courses.ID',
@@ -1344,102 +1043,110 @@ export class APIService implements OnDestroy, OnInit {
     });
   }
 
-  getStudents() {
-    const postObject = {
-      selectors: [
-        'students.ID',
-        'students.FirstName',
-        'students.LastName',
-        'students.gender',
-        'students.birthdate',
-        'students.nationality',
-        'students.address',
-        'students.VisibleID',
-        'students.Email',
-        'students.profile',
-        'students.lastseen',
-      ],
-      tables: 'students',
-    };
-    return this.post('get_entries', {
-      data: JSON.stringify(postObject),
-    });
-  }
+    getStudents() {
+      const postObject = {
+        selectors: [
+          'students.ID',
+          'students.FirstName',
+          'students.LastName',  
+          'students.gender',
+          'students.birthdate',
+          'students.nationality',
+          'students.address',
+          'students.VisibleID',
+          'students.Email',
+          'students.profile',
+          'students.lastseen',
+        ],
+        tables: 'students',
+      };
+      return this.post('get_entries', {
+        data: JSON.stringify(postObject),
+      });
+    }
 
-  getStudentsTeacher() {
-    const postObject = {
-      selectors: [
-        'students.ID',
-        'students.FirstName',
-        'students.LastName',
-        'students.gender',
-        'students.birthdate',
-        'students.nationality',
-        'students.address',
-        'students.VisibleID',
-        'students.Email',
-        'students.profile',
-        'students.lastseen',
-        'courses.course',
-        'classes.class',
-        'classes.id AS class_id',
-      ],
-      tables: 'students,student_classes,classes,courses',
-      conditions: {
-        WHERE: {
-          'student_classes.StudentID': 'students.ID',
-          'student_classes.ClassID': 'classes.ID',
-          'classes.CourseID': 'courses.ID',
-          'courses.teacherID': this.getUserData().id,
+    getStudentsTeacher() {
+      const postObject = {
+        selectors: [
+          'students.ID',
+          'students.FirstName',
+          'students.LastName',  
+          'students.gender',
+          'students.birthdate',
+          'students.nationality',
+          'students.address',
+          'students.VisibleID',
+          'students.Email',
+          'students.profile',
+          'students.lastseen',
+          'courses.course',
+          'classes.class',
+          'classes.id AS class_id' 
+        ],
+        tables: 'students,student_classes,classes,courses',
+        conditions: {
+          WHERE: {
+            'student_classes.StudentID': 'students.ID',
+            'student_classes.ClassID': 'classes.ID',
+            'classes.CourseID': 'courses.ID',
+            'courses.teacherID': this.getUserData().id,
+          },
         },
-      },
-    };
-    return this.post('get_entries', {
-      data: JSON.stringify(postObject),
-    });
-  }
+      };
+      return this.post('get_entries', {
+        data: JSON.stringify(postObject),
+      });
+    }
 
-  deleteStudentFromCourse(classID: string, studentID: string) {
-    const postObject = {
-      tables: 'student_classes',
-      conditions: {
-        WHERE: {
-          ClassID: classID,
-          StudentID: studentID,
+
+    //delete 
+
+    deleteStudentFromCourse(classID: string, studentID: string) {
+      const postObject = {
+        tables: 'student_classes',
+        conditions: {
+          WHERE: {
+            ClassID: classID, 
+            StudentID: studentID,
+          },
         },
-      },
-    };
-    console.log('ken', postObject);
-    return this.post('delete_entry', {
-      data: JSON.stringify(postObject),
-    });
-  }
+      };
+      console.log('ken', postObject);
+      return this.post('delete_entry', {
+        data: JSON.stringify(postObject),
+      });
+    }
 
-  updateFromTeacher(id: string, firstname: string, lastname: string) {
-    const postObject = {
-      tables: 'students',
-      values: {
-        FirstName: firstname,
-        LastName: lastname,
-      },
-      conditions: {
-        WHERE: {
-          ID: id,
+  
+    
+    updateFromTeacher(id: string, firstname: string, lastname: string) {
+      const postObject = {
+        tables: 'students',
+        values: {
+          FirstName: firstname,
+          LastName: lastname
         },
-      },
-    };
+        conditions: {
+          WHERE: {
+            ID: id,
+          },
+        },
+      };
 
-    console.log('ken', postObject);
-    return this.post('update_entry', {
-      data: JSON.stringify(postObject),
-    });
-  }
+      console.log('ken', postObject);
+      return this.post('update_entry', {
+        data: JSON.stringify(postObject),
+      });
+    }
+    
 
   verificationNotifier = new BehaviorSubject<any>(null);
 
   getPendingStudents() {
     const postObject = {
-      selectors: ['*'],
+      selectors: [
+        '*',
+      ],
       tables: 'verification',
     };
     return this.post('get_entries', {
@@ -1467,14 +1174,20 @@ export class APIService implements OnDestroy, OnInit {
 
   getAdmins() {
     const postObject = {
-      selectors: ['ID', 'FirstName', 'LastName', 'Role', 'Email', 'LastSeen'],
+      selectors: [
+        'ID',
+        'FirstName',
+        'LastName',
+        'Role',
+        'Email',
+        'LastSeen'
+      ],
       tables: 'administrators',
     };
     return this.post('get_entries', {
       data: JSON.stringify(postObject),
     });
   }
-
   addStudent(newStudent: any): Observable<any> {
     const postObject = {
       tables: 'students',
@@ -1491,7 +1204,6 @@ export class APIService implements OnDestroy, OnInit {
       data: JSON.stringify(postObject),
     });
   }
-
   addTeacher(newTeacher: any): Observable<any> {
     const postObject = {
       tables: 'teachers',
@@ -1599,7 +1311,7 @@ export class APIService implements OnDestroy, OnInit {
         {
           FirstName: student.firstname,
           LastName: student.lastname,
-          Email: student.email,
+          Email: student.email, 
           VisibleID: student.visibleid,
         },
         password
@@ -1616,6 +1328,7 @@ export class APIService implements OnDestroy, OnInit {
     });
   }
 
+  
   getCourseProgress(courseid: string) {
     const id = this.getUserData().id;
     const postObject = {
@@ -1861,9 +1574,143 @@ export class APIService implements OnDestroy, OnInit {
   getURL(file: string) {
     if (file) {
       if (file.includes('http')) return file;
-      return environment.server + '/' + file + '?' + new Date().getTime();
+      return environment.server + '/' + file ;
     }
     return file;
+  }
+
+  checkIfPendingVerification(email:string){
+    const postObject = {
+      selectors: [
+      '*'
+      ],
+      tables: 'verification',
+      conditions: {
+        WHERE: {
+          '[dot]Email': email,
+        },
+      },
+    };
+    return this.post('get_entries', {
+      data: JSON.stringify(postObject),
+    });
+  }
+
+  pushVerification(data:any){
+    const postObject = {
+      tables: 'verification',
+      values: {
+        Email: data.email,
+        FirstName: data.firstname,
+        LastName: data.lastname,
+        Token: data.token
+      },
+    };
+    
+    // console.log(postObject);
+    return this.post('create_entry', {
+      data: JSON.stringify(postObject),
+    });
+  }
+
+  sendVerification(details: any) {
+    return this.http.post<any>(
+      environment.nodeserver + '/send-verification-email',
+      {
+        key: environment.socketKey,
+        host: details.host,
+        email: details.email,
+        password: details.password,
+        firstname: details.firstname,
+        lastname: details.lastname,
+        address: details.address,
+        nationality: details.nationality,
+        birthdate: details.birthdate,
+        gender: details.gender,
+      }
+    );
+  }
+
+  adminVerifyToken(token: string) {
+    return this.http.post<any>(environment.nodeserver + '/admin-verify-email', {
+      key: environment.socketKey,
+      token: token,
+    });
+  }
+  adminRejectToken(token: string) {
+    return this.http.post<any>(environment.nodeserver + '/admin-reject-email', {
+      key: environment.socketKey,
+      token: token,
+    });
+  }
+
+  verifyEmail(token: string) {
+    return this.http.post<any>(environment.nodeserver + '/verify-email', {
+      key: environment.socketKey,
+      token: token,
+    });
+  }
+
+  removeFromVerification(email:string){
+    const postObject = {
+      tables: 'verification',
+      conditions: {
+        WHERE: {
+          '[dot]Email': email,
+        },
+      },
+    };
+    return this.post('delete_entry', {
+      data: JSON.stringify(postObject),
+    });
+  }
+
+ register(details: any) {
+    const id = this.createID32();
+
+    const newDate = new Date().getTime().toString();
+    const visID =
+      'Q-S' + newDate.substring(4, 7) + '-' + newDate.substring(7, 13);
+
+    const postObject = {
+      tables: 'students',
+      values: {
+        ID: id,
+        VisibleID: visID,
+        Email: details.email,
+        '[hash]Password': details.password,
+        FirstName: details.firstname,
+        LastName: details.lastname,
+        Address: details.address,
+        Nationality: details.nationality,
+        BirthDate: details.birthdate,
+        Gender: details.gender,
+      },
+    };
+    return this.post('create_entry', {
+      data: JSON.stringify(postObject),
+    });
+  }
+
+  checkEmailExists(email: string, domain: string) {
+    const postObject = {
+      selectors: [
+        'ID',
+        // 'COUNT(teachers.ID) as B',
+        // 'COUNT(administrators.ID) as C',
+      ],
+      tables: domain,
+      conditions: {
+        // 'LEFT JOIN teachers': 'ON teachers.Email = "'+email+'"',
+        // 'LEFT JOIN administrators': 'ON administrators.Email = "'+email+'"',
+        WHERE: {
+          '[dot]Email': email,
+        },
+      },
+    };
+    return this.post('get_entries', {
+      data: JSON.stringify(postObject),
+    });
   }
 
   teacherCourseLessons(courseID: string) {
@@ -1933,8 +1780,13 @@ export class APIService implements OnDestroy, OnInit {
     });
   }
 
+
+ 
+
+
   dictionary(word: string) {
     return this.http.get<any>(environment.server + '/' + word, {});
+    // return this.http.get<any>(environment.server+ "/dictionary/"+word+".json",{});
   }
 
   getWord(word: string) {
@@ -1963,10 +1815,12 @@ export class APIService implements OnDestroy, OnInit {
   }
 
   fetchDictionaryAPI(word: string) {
+    // fetch from own server first
     const headers = new HttpHeaders({
       'X-RapidAPI-Key': environment.lexicalakey,
       'X-RapidAPI-Host': environment.lexicalahost,
     });
+    // return this.http.get<any>('https://api.dictionaryapi.dev/api/v2/entries/en/' + word);
     return this.http.get<any>(
       'https://' + environment.lexicalahost + '/search-entries',
       {
@@ -1992,6 +1846,7 @@ export class APIService implements OnDestroy, OnInit {
       'X-RapidAPI-Host': environment.srHost,
       'content-type': 'application/x-www-form-urlencoded',
     });
+    // return this.http.get<any>('https://api.dictionaryapi.dev/api/v2/entries/en/' + word);
     return this.http.post<any>(
       'https://' + environment.srHost + '/recognize',
       encodedParams,
@@ -2045,7 +1900,9 @@ export class APIService implements OnDestroy, OnInit {
     return this.post('save_pronunciation', {
       search_key: word,
       sound_url: soundURL,
-    }).subscribe((data) => {});
+    }).subscribe((data) => {
+      // console.log(data);
+    });
   }
 
   convertToBase64(url: string) {
@@ -2054,6 +1911,7 @@ export class APIService implements OnDestroy, OnInit {
         const reader = new FileReader();
         reader.onloadend = () => {
           var bbase64 = reader.result as string;
+          // console.log(bbase64);
         };
         reader.readAsDataURL(blob);
       },
@@ -2138,6 +1996,96 @@ export class APIService implements OnDestroy, OnInit {
     const offsetDiff = localOffset - targetOffset;
 
     return new Date(date.getTime() + offsetDiff * 60000);
+  }
+
+  updateLastSeen() {
+    if (!this.isLoggedIn()) return;
+    var tzoffset = new Date().getTimezoneOffset() * 60000; //offset in milliseconds
+    var localISOTime = new Date(Date.now() - tzoffset).toISOString();
+
+    const id = this.getUserData().id;
+    if (this.getUserType() == '2') {
+      const postObject = {
+        tables: 'administrators',
+        values: {
+          LastSeen: localISOTime.slice(0, 19).replace('T', ' '),
+        },
+        conditions: {
+          WHERE: {
+            ID: id,
+          },
+        },
+      };
+      const observable = this.post('update_entry', {
+        data: JSON.stringify(postObject),
+      }).subscribe(
+        () => {
+          observable.unsubscribe();
+        },
+        (error) => {
+          if (error instanceof HttpErrorResponse) {
+            // Handle error
+            if (error.status == 0) {
+              this.goOffline();
+            }
+          }
+        }
+      );
+    } else if (this.getUserType() == '1') {
+      const postObject = {
+        tables: 'teachers',
+        values: {
+          LastSeen: localISOTime.slice(0, 19).replace('T', ' '),
+        },
+        conditions: {
+          WHERE: {
+            ID: id,
+          },
+        },
+      };
+      const observable = this.post('update_entry', {
+        data: JSON.stringify(postObject),
+      }).subscribe(
+        () => {
+          observable.unsubscribe();
+        },
+        (error) => {
+          if (error instanceof HttpErrorResponse) {
+            // Handle error
+            if (error.status == 0) {
+              this.goOffline();
+            }
+          }
+        }
+      );
+    } else {
+      const postObject = {
+        tables: 'students',
+        values: {
+          LastSeen: localISOTime.slice(0, 19).replace('T', ' '),
+        },
+        conditions: {
+          WHERE: {
+            ID: id,
+          },
+        },
+      };
+      const observable = this.post('update_entry', {
+        data: JSON.stringify(postObject),
+      }).subscribe(
+        () => {
+          observable.unsubscribe();
+        },
+        (error) => {
+          if (error instanceof HttpErrorResponse) {
+            // Handle error
+            if (error.status == 0) {
+              this.goOffline();
+            }
+          }
+        }
+      );
+    }
   }
 
   recordAssessment(
@@ -2258,7 +2206,14 @@ export class APIService implements OnDestroy, OnInit {
           search_key: 'temp/' + uniqID,
         })
         .subscribe((data: any) => {
+          // console.log(data);
           const url = environment.server + '/temp/' + uniqID;
+          // deepgram.listen.prerecorded.transcribeUrl(
+          //   audioData,
+          //   {smart_format:true, model:'nova-2', language:'en-US'}
+          // ).then(data=>{
+          //   console.log(data);
+          // })
           const params: TranscribeParams = {
             audio: url,
             language_code: language as TranscriptLanguageCode,
@@ -2269,6 +2224,10 @@ export class APIService implements OnDestroy, OnInit {
               pollingInterval: 100,
             })
             .then((transcript) => {
+              // console.log(transcript);
+              // console.log(
+              //   ((Date.now() - stamp) / 1000).toString() + ' seconds'
+              // );
               if (transcript.text != null) {
                 this.speechComparison$.next({
                   spoken: transcript.text,
@@ -2277,9 +2236,24 @@ export class APIService implements OnDestroy, OnInit {
                     check!.toLowerCase()
                   ),
                 });
+                // if (check != null) {
+                //   if (
+
+                //     // transcript.text.toLowerCase().includes(check.toLowerCase())
+                //   ) {
+                //     this.successSnackbar('Passed!');
+                //   } else {
+                //     this.failedSnackbar('Failed!');
+                //   }
+                // }
+                // console.log(transcript.text);
               } else {
                 this.failedSnackbar('Transcription failed');
               }
+              // this.http.post(environment.nodeserver+'/filehandler',
+              // {
+              //   'method':'delete_url', 'search_key':uniqID
+              // }).subscribe();
             });
         });
     };
@@ -2347,19 +2321,18 @@ export class APIService implements OnDestroy, OnInit {
 
   async uploadBase64Async(file: string, name: string) {
     const base64String = (file as string).split(',')[1];
-    await firstValueFrom(
-      this.http.post(environment.nodeserver + '/filehandler', {
+    await firstValueFrom(this.http
+      .post(environment.nodeserver + '/filehandler', {
         key: environment.socketKey,
         method: 'create_url',
         file_content: base64String,
         search_key: name,
-      })
-    );
+      }));
   }
 
-  updateEsign(ref: string) {
+  updateEsign(ref:string){
     const id = this.getUserData().id;
-    if (this.getUserType() == '1') {
+    if(this.getUserType() =='1'){
       const postObject = {
         tables: 'teachers',
         values: {
@@ -2373,8 +2346,8 @@ export class APIService implements OnDestroy, OnInit {
       };
       return this.post('update_entry', {
         data: JSON.stringify(postObject),
-      });
-    } else {
+      })
+    }else{
       const postObject = {
         tables: 'administrators',
         values: {
@@ -2388,7 +2361,7 @@ export class APIService implements OnDestroy, OnInit {
       };
       return this.post('update_entry', {
         data: JSON.stringify(postObject),
-      });
+      })
     }
   }
 
@@ -2451,6 +2424,67 @@ export class APIService implements OnDestroy, OnInit {
       }
     );
   }
+
+  getUserAccountType() {
+    const userData = this.usedStorage.getItem('user_info');
+    if (userData == null) {
+      return null;
+    }
+    const parsedUserData = JSON.parse(userData);
+    return parsedUserData.accountType;
+  }
+
+  getUserData(logout: boolean = false) {
+    const userData = this.usedStorage.getItem('user_info');
+    if (userData == null && !logout) {
+      this.logout();
+      return null;
+    }
+    return JSON.parse(userData!);
+  }
+
+
+  updateLocalUserData(userData: any) {
+    this.usedStorage.setItem('user_info', userData);
+    this.userData = this.getUserData();
+  }
+
+
+  
+
+
+
+  useLocalStorage() {
+    localStorage.setItem('storage', 'local');
+  }
+
+  useSessionStorage() {
+    localStorage.setItem('storage', 'session');
+  }
+
+  isLocalStorage() {
+    const storage = localStorage.getItem('storage');
+    return storage == 'local';
+  }
+
+  isLoggedIn() {
+    let loggedIn = this.usedStorage.getItem('logged_in');
+    return loggedIn != null;
+  }
+
+  getUserType() {
+    let userType = this.usedStorage.getItem('logged_in');
+    return userType ? userType : undefined;
+  }
+
+  // startMeeting(uniqID:string, teacherID:string, meetingCode:string){
+  //   var classID = this.usedStorage.getItem('classID');
+  //   return this.post('start_meeting', {
+  //     'ClassID': classID,
+  //     'TeacherID': teacherID,
+  //     'MeetingCode': meetingCode,
+  //   });
+  // }
 
   startMeeting(uniqID: string, teacherID: string, meetingCode: string) {
     var classID = this.usedStorage.getItem('classID');
@@ -2565,6 +2599,10 @@ export class APIService implements OnDestroy, OnInit {
     return this.post('get_entries', {
       data: JSON.stringify(postObject),
     });
+    // return this.post('get_meeting', {
+    //   'StudentID': studentID,
+    //   'ClassID': classID,
+    // });
   }
 
   endMeeting(teacherID: string) {
@@ -2580,6 +2618,28 @@ export class APIService implements OnDestroy, OnInit {
       this.failedSnackbar(errorMsg);
       return new Array<any>();
     }
+  }
+
+  logout() {
+    if (!this.isLoggedIn()) {
+      return;
+    }
+    const rememberMe = this.isLocalStorage();
+    const user = this.getUserData(true);
+    const email = user.email;
+    this.usedStorage.clear();
+    if (rememberMe) {
+      localStorage.setItem('remember', email);
+      localStorage.setItem('storage', 'local');
+    } else {
+      localStorage.clear();
+    }
+    this.router.navigate(['/login']);
+  }
+
+  getSavedEmail() {
+    const email = localStorage.getItem('remember');
+    return email;
   }
 
   randomCourseCover(language: string) {
@@ -2630,10 +2690,12 @@ export class APIService implements OnDestroy, OnInit {
       centered: false,
       size: 'lg',
       windowClass: 'viewer-window',
+      // You can add other options here if needed
     };
 
     const modalRef = this.modalService.open(ViewerComponent, modalOptions);
-    modalRef.componentInstance.link = environment.server + '/' + file;
+    modalRef.componentInstance.link = environment.server + '/' + file; // Pass the custom class name
+    // console.log(environment.server + '/' + file);
   }
 
   openLocalFile(file: string) {
@@ -2641,10 +2703,12 @@ export class APIService implements OnDestroy, OnInit {
       centered: false,
       size: 'lg',
       windowClass: 'viewer-window',
+      // You can add other options here if needed
     };
 
     const modalRef = this.modalService.open(ViewerComponent, modalOptions);
-    modalRef.componentInstance.link = `${this.localServer}/${file}`;
+    modalRef.componentInstance.link = `${this.localServer}/${file}`; // Pass the custom class name
+    // console.log(environment.server + '/' + file);
   }
 
   checkInputs(inputs: Array<any>) {
@@ -2712,7 +2776,7 @@ export class APIService implements OnDestroy, OnInit {
     });
   }
 
-  studentGetAssignments() {
+  studentGetAssigments() {
     const id = this.getUserData().id;
     const postObject = {
       selectors: [
@@ -2730,6 +2794,10 @@ export class APIService implements OnDestroy, OnInit {
         'LEFT JOIN student_assignments': `ON student_assignments.StudentID = '${id}' AND student_assignments.AssignmentID = assignments.ID`,
 
         WHERE: {
+          // 'courses.ID' :'assignments.CourseID',
+          // 'courses.LanguageID' : 'languages.ID',
+          // 'classes.CourseID' : 'courses.ID',
+          // 'student_classes.ClassID': 'classes.ID',
           'student_classes.StudentID': id,
         },
         'GROUP BY':
@@ -2741,7 +2809,7 @@ export class APIService implements OnDestroy, OnInit {
     });
   }
 
-  studentGetAssignmentByID(taskID: string) {
+  studentGetAssigmentByID(taskID: string) {
     const id = this.getUserData().id;
     const postObject = {
       selectors: [
@@ -2812,7 +2880,6 @@ export class APIService implements OnDestroy, OnInit {
       data: JSON.stringify(postObject),
     });
   }
-
   studentAssignSubmitted(assignID: string) {
     const id = this.getUserData().id;
     const postObject = {
@@ -2829,6 +2896,8 @@ export class APIService implements OnDestroy, OnInit {
       data: JSON.stringify(postObject),
     });
   }
+
+  
 
   teacherGetStudentAssignment(subID: string) {
     const postObject = {
@@ -2939,6 +3008,7 @@ export class APIService implements OnDestroy, OnInit {
         opt
       ),
     };
+    // console.log(postObject);
     return this.post('create_entry', {
       data: JSON.stringify(postObject),
     });
@@ -3018,6 +3088,32 @@ export class APIService implements OnDestroy, OnInit {
     return this.post('get_entries', {
       data: JSON.stringify(postObject),
     });
+    // const id = this.getUserData().id;
+    // const postObject = {
+    //   'selectors':[
+    //     'assessments.*',
+    //     'courses.course',
+    //     'languages.Language'
+    //   ],
+    //   'tables':'assessments,courses,languages, classes, student_classes',
+    //   'conditions':{
+    //     'WHERE':{
+    //       'courses.ID' :'assessments.CourseID' ,
+    //       'classes.CourseID' : 'courses.ID',
+    //       'courses.LanguageID' : 'languages.ID',
+    //       'student_classes.ClassID': 'classes.ID',
+    //       'student_classes.StudentID': id,
+    //     }
+    //   }
+    // }
+    // return this.post('get_entries', {
+    //   'data': JSON.stringify(postObject),
+    // });
+  }
+
+  getFullName() {
+    const user = this.getUserData();
+    return user.firstname + ' ' + user.lastname;
   }
 
   teacherGradeTask(submissionID: string, grade: string, comment?: string) {
@@ -3104,7 +3200,7 @@ export class APIService implements OnDestroy, OnInit {
     const postObject = {
       tables: 'notifications',
       values: {
-        SenderID: id ?? 'Anonymous',
+        SenderID: id?? 'Anonymous',
         RecipientID: recipientID,
         Title: title,
         Message: message,
@@ -3118,11 +3214,9 @@ export class APIService implements OnDestroy, OnInit {
       this.socketSend({
         app: 'quanlab',
         type: 'notification',
-        sender:
-          this.getUserData() != null
-            ? this.getUserData().firstname + ' ' + this.getUserData().lastname
-            : 'Anonymous',
-        from: id ?? 'Anonymous',
+        sender: this.getUserData() != null ?
+          this.getUserData().firstname + ' ' + this.getUserData().lastname : 'Anonymous',
+        from:  id?? 'Anonymous',
         to: recipientID,
         title: title,
         message: title,
@@ -3174,7 +3268,7 @@ export class APIService implements OnDestroy, OnInit {
 
   markAllAsRead() {
     var id = this.getUserData().id;
-    if (this.getUserType() == '2') {
+    if(this.getUserType()=='2'){
       id = '[--administrator--]';
     }
     const postObject = {
@@ -3252,6 +3346,7 @@ export class APIService implements OnDestroy, OnInit {
     const obs$ = this.post('get_entries', {
       data: JSON.stringify(postObject),
     }).subscribe((data) => {
+      // console.log(data);
       if (data.success) {
         for (let student of data.output) {
           this.pushNotifications(title, message, student.id);
@@ -3450,6 +3545,11 @@ export class APIService implements OnDestroy, OnInit {
           lastConvo.senderid == id
             ? 'You: ' + lastConvo.message
             : lastConvo.message;
+        // const last$ =  this.getLastMessage(otherID).subscribe(message=>{
+        //   const lastConvo = message.output[0]
+        //   convo.lastmessage = lastConvo.senderid == id ? 'You: ' + lastConvo.message : lastConvo.message;
+        //   last$.unsubscribe();
+        // })
         convo.lastseen = this.parseDateFromNow(convo.lastseen);
         convos.push(convo);
       }
@@ -3573,6 +3673,22 @@ export class APIService implements OnDestroy, OnInit {
     });
   }
 
+  // sendBugReport(title:string, message:string, type:string){
+  //   const name =  this.getFullName();
+  //   const postObject = {
+  //     tables: 'bug_reports',
+  //     values: {
+  //       Title: title,
+  //       Description: message,
+  //       type: type,
+  //       Sender: name,
+  //     },
+  //   };
+  //   return this.post('create_entry', {
+  //     data: JSON.stringify(postObject),
+  //   });
+  // }
+
   getQuizAverage(quizID: string) {
     const postObject = {
       selectors: ['(AVG(TakenPoints)/AVG(TotalPoints)) as average'],
@@ -3623,8 +3739,8 @@ export class APIService implements OnDestroy, OnInit {
     });
   }
 
+  // LOCAL SAVES
   public downloadProgress$: Subject<number> = new Subject<number>();
-
   downloadCourses() {
     if (this.getUserType() != '0') return;
     const id = this.getUserData().id;
@@ -3661,6 +3777,7 @@ export class APIService implements OnDestroy, OnInit {
           const file = await firstValueFrom(
             this.http.get(this.getURL(link), { responseType: 'blob' })
           );
+          // console.log(file);
           const base = await firstValueFrom(this.getBaseAsync(file));
           await firstValueFrom(
             this.http.post(`${this.localServer}:3000` + '/filehandler', {
@@ -3670,6 +3787,13 @@ export class APIService implements OnDestroy, OnInit {
               search_key: link,
             })
           );
+          // const reader = new FileReader();
+
+          // reader.onloadend = () => {
+          //   const base64String = (reader.result as string).split(',')[1];
+
+          // };
+          // reader.readAsDataURL(file);
         }
 
         const postObject2 = {
@@ -3747,6 +3871,56 @@ export class APIService implements OnDestroy, OnInit {
       })
       .subscribe();
   }
+  // SPEECH LAB
+
+  /*
+    TABLES
+    DROP TABLE IF EXISTS speech_lessons;
+    DROP TABLE IF EXISTS speech_modules;
+    DROP TABLE IF EXISTS speech_lab_computers;
+    DROP TABLE IF EXISTS speech_labs;
+
+      CREATE TABLE speech_labs(
+        Name varchar(255) NOT NULL,
+        ID serial NOT NULL,
+        Timestamp timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        PRIMARY KEY (ID)
+      );
+
+      INSERT INTO speech_labs VALUES('Speech Lab 1');
+      INSERT INTO speech_labs VALUES('Speech Lab 2');
+
+      CREATE TABLE speech_modules(
+        LabID int NOT NULL,
+        Name varchar(255) NOT NULL,
+        Timestamp timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        ID varchar(32) NOT NULL,
+        PRIMARY KEY (ID),
+        FOREIGN KEY (LabID) REFERENCES speech_labs(ID) ON DELETE CASCADE
+      );
+      CREATE TABLE speech_lessons(
+        ModuleID varchar(32) NOT NULL,
+        Name varchar(255) NOT NULL,
+        LessonFile varchar(255) NOT NULL,
+        QuizFile varchar(255) NOT NULL,
+        LessonType varchar(100) NOT NULL,
+        Timestamp timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        ID varchar(32) NOT NULL,
+        PRIMARY KEY (ID),
+        FOREIGN KEY (ModuleID) REFERENCES speech_modules(ID) ON DELETE CASCADE
+      );
+
+      CREATE TABLE speech_lab_computers(
+        LabID int NOT NULL,
+        Name varchar(255) NOT NULL,
+        Address varchar(255) NOT NULL,
+        Timestamp timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        ID varchar(32) NOT NULL,
+        PRIMARY KEY (ID),
+        FOREIGN KEY (LabID) REFERENCES speech_labs(ID) ON DELETE CASCADE
+      );
+  */
+
   createSpeechModule(name: string, practice: boolean = false) {
     const id = this.createID32();
     const postObject = {
@@ -3872,6 +4046,7 @@ export class APIService implements OnDestroy, OnInit {
       tables: practice ? 'speech_drills' : 'speech_lessons',
       values: Object.assign(
         {
+          // Name: name,
           ID: id,
           Description: description,
         },
@@ -3973,6 +4148,7 @@ export class APIService implements OnDestroy, OnInit {
       tables: practice ? 'speech_drills' : 'speech_lessons',
       values: Object.assign(
         {
+          // Name: name,
           description: description,
         },
         lessonDrillObj,
@@ -4038,7 +4214,6 @@ export class APIService implements OnDestroy, OnInit {
       data: JSON.stringify(postObject),
     });
   }
-
   loadSpeechLessons(moduleID: string, practice: boolean = false) {
     const postObject = {
       selectors: practice
@@ -4093,6 +4268,8 @@ export class APIService implements OnDestroy, OnInit {
     });
   }
 
+  // Configurtion
+
   changeLocalAddress(ip_addr: string) {
     const postObject = {
       tables: 'admin_options',
@@ -4127,6 +4304,7 @@ export class APIService implements OnDestroy, OnInit {
       const obs$ = this.post('update_entry', {
         data: JSON.stringify(postObject),
       }).subscribe(() => {
+        // this.successSnackbar('Successfully changed address!')
         obs$.unsubscribe();
       });
     } else {
@@ -4143,6 +4321,7 @@ export class APIService implements OnDestroy, OnInit {
       const obs$ = this.post('create_entry', {
         data: JSON.stringify(postObject),
       }).subscribe(() => {
+        // this.successSnackbar('Successfully changed address!')
         obs$.unsubscribe();
       });
     }
@@ -4163,6 +4342,7 @@ export class APIService implements OnDestroy, OnInit {
     var row2: any[] = [];
     var row3: any[] = [];
     let pcIndex = 1;
+    // iterate to row 3
     for (let i = 0; i < 8; i++) {
       row3.push({
         id: null,
@@ -4192,7 +4372,6 @@ export class APIService implements OnDestroy, OnInit {
     }
     return [row1, row2, row3];
   }
-
   labID?: string;
   getStudentAssignedLab() {
     const id = this.getUserData().visibleid;
@@ -4212,6 +4391,8 @@ export class APIService implements OnDestroy, OnInit {
     });
   }
 
+  // speechlab meet
+
   meeting: any;
   meetingID?: string;
   isMicOn = false;
@@ -4219,12 +4400,12 @@ export class APIService implements OnDestroy, OnInit {
   async initSpeechMeeting() {
     VideoSDK.config(environment.token);
     this.meeting = VideoSDK.initMeeting({
-      meetingId: this.meetingID!,
+      meetingId: this.meetingID!, // required
       participantId: this.getUserData().visibleid,
-      name: this.getFullName(),
-      metaData: { who: this.getUserType(), id: this.getUserData().id },
-      micEnabled: this.getUserType() == '0',
-      webcamEnabled: false,
+      name: this.getFullName(), // required
+      metaData: { who: this.getUserType(), id : this.getUserData().id, },
+      micEnabled: this.getUserType() == '0', // optional, default: true
+      webcamEnabled: false, // optional, default: true
     });
   }
 
@@ -4250,17 +4431,15 @@ export class APIService implements OnDestroy, OnInit {
 
   sessionID?: string;
 
-  getOpenLabMeeting(lab: string) {
+  getOpenLabMeeting(lab:string){
     const postObject = {
-      selectors: [
-        'lab_meetings.*, teachers.Firstname, teachers.LastName,  speech_labs.Name as lab',
-      ],
+      selectors: ['lab_meetings.*, teachers.Firstname, teachers.LastName,  speech_labs.Name as lab'],
       tables: 'lab_meetings, teachers, speech_labs',
       conditions: {
         WHERE: {
-          'speech_labs.ID': 'lab_meetings.LabID',
+          'speech_labs.ID' : 'lab_meetings.LabID',
           'lab_meetings.LabID': lab,
-          'teachers.ID': 'lab_meetings.teacherid',
+          'teachers.ID' : 'lab_meetings.teacherid'
         },
         AND: 'lab_meetings.EndTime IS NULL',
       },
@@ -4288,7 +4467,6 @@ export class APIService implements OnDestroy, OnInit {
       data: JSON.stringify(postObject),
     });
   }
-
   getTeacherMeeting() {
     const postObject = {
       selectors: ['lab_meetings.*'],
@@ -4324,18 +4502,16 @@ export class APIService implements OnDestroy, OnInit {
       );
     } else {
       const obs = this.endSpeechMeeting(this.getUserData().id).subscribe(() => {
-        const obs2$ = this.getOpenLabMeeting(lab).subscribe((data) => {
-          if (data.success) {
-            if (data.output.length > 0) {
-              this.failedSnackbar(
-                `${data.output[0].firstname} ${data.output[0].lastname} is currently using ${data.output[0].lab}`
-              );
-            } else {
+        const obs2$ = this.getOpenLabMeeting(lab).subscribe(data=>{
+          if(data.success){
+            if(data.output.length > 0){
+              this.failedSnackbar(`${data.output[0].firstname} ${data.output[0].lastname} is currently using ${data.output[0].lab}` )
+            }else{
               this.createSpeechMeeting(lab);
             }
           }
           obs2$.unsubscribe();
-        });
+        })
         obs.unsubscribe();
       });
     }
@@ -4388,6 +4564,8 @@ export class APIService implements OnDestroy, OnInit {
           ).subscribe(
             (data) => {
               if (data.success) {
+                // this.meetingHeader = `${this.API.meetingInfo.course} (${this.API.meetingInfo.class})`;
+                // this.initSpeechMeeting();
                 this.joinSpeechMeeting();
               }
             },
@@ -4407,11 +4585,154 @@ export class APIService implements OnDestroy, OnInit {
 
   joinSpeechMeeting() {
     this.initSpeechMeeting();
+    // console.log('INIT',this.meeting);
     this.meeting.join();
+    // console.log('Joined',this.meeting);
     this.handleMeetingEvents(this.meeting);
   }
+  
+
+  async distributeCertificates(courseid: string) {
+    const postObject = {
+      selectors: [
+        'SUM(lessons_taken.Progress)',
+        'COUNT(lessons.ID) as lessons',
+        'courses.course',
+        'student_classes.*',
+        'COUNT(surveys.ID) as answered_survey'
+      ],
+      tables: 'courses',
+      conditions: {
+        'LEFT JOIN lessons': 'ON lessons.CourseID = courses.ID',
+        'LEFT JOIN lessons_taken': 'ON lessons_taken.LessonID = lessons.ID',
+        'LEFT JOIN classes': 'ON classes.CourseID = courses.ID',
+        'LEFT JOIN student_classes' : 'ON student_classes.ClassID = classes.ID',
+        'LEFT JOIN surveys' : 'ON surveys.StudentID = student_classes.StudentID',
+        WHERE: {
+          'courses.ID': courseid,
+        },
+        'GROUP BY': 'student_classes.ID, classes.ID, courses.ID',
+      },
+    };
+
+    const response = await firstValueFrom(this.post('get_entries', {
+      data: JSON.stringify(postObject),
+    }));
+
+    // return;
+
+    if(!response.success) {
+      this.failedSnackbar('Error distributing certificates!');
+      return;
+    };
+    for(let student of response.output){
+      if(student.answered_survey > 0){
+        continue;
+      }
+      const progress = Number((Number(student.sum) / (Number(student.lessons) * 100)).toFixed(4))*100;
+      if(progress >= 100){
+        // push survey entry for students
+        this.addSurveyEntryStudent(student.studentid, courseid);
+        // student is legible for certificate
+        this.pushNotifications(
+          `[CERT]Claim your certificate for '${student.course}'`,
+          `<b>${this.getFullName()}</b> has distributed the certificate for <b>'${student.course}</b>', complete the survey below to claim your certificate.[COURSEID]${courseid}`,
+          student.studentid
+        )
+      }
+    }
+    
+    
+  }
+
+  addSurveyEntryStudent(studentid:string, courseid:string){
+    const postObject = {
+      tables: 'surveys',
+      values: {
+        StudentID: studentid,
+        CourseID: courseid,
+      },
+    };
+    const record$ = this.post('create_entry', {
+      data: JSON.stringify(postObject),
+    }).subscribe(() => {
+      record$.unsubscribe();
+    });
+  }
+
+ async getSurveyEntryStudent(courseid:string){
+    const postObject = {
+      selectors: ['*'],
+      tables: 'courses,teachers,surveys',
+      conditions: {
+        WHERE:  {
+          StudentID: this.getUserData().id,
+          CourseID: courseid,
+          'courses.ID': 'surveys.CourseID',
+          'teachers.ID': 'courses.TeacherID',
+        }
+      },
+    };
+    return (await firstValueFrom( this.post('get_entries', {
+      data: JSON.stringify(postObject),
+    }))).output[0];
+  }
+
+  async getAnsweredSurveyStudent(courseid:string){
+    const postObject = {
+      selectors: ['*'],
+      tables: 'surveys,survey_items',
+      conditions: {
+        WHERE:  {
+          'surveys.StudentID':  this.getUserData().id,
+          'surveys.CourseID':  courseid,
+          'surveys.ID' : 'survey_items.SurveyID'
+        }
+      },
+    };
+    return (await firstValueFrom( this.post('get_entries', {
+      data: JSON.stringify(postObject),
+    }))).output;
+  }
+
+
+  async uploadSurveyStudent( surveyid:string, survey:any[]){
+    this.justSnackbar("Uploading survey...");
+    var i = 0;
+    for(let item of survey){
+      i+=1
+      var options = ''
+      if(item.options){
+        for (let option of item.options) {
+          if(typeof option === 'object'){
+            options += option.value  + '\\n\\n';
+          }else{
+            options += option + '\\n\\n';
+          }
+        }
+      }
+
+      const postObject = {
+        tables: 'survey_items',
+        values: {
+          SurveyID: surveyid,
+          ItemNo: i,
+          Question: item.question,
+          Type: item.type,
+          Answer: item.answer,
+          Options: options,
+        },
+      };
+      await firstValueFrom(this.post('create_entry', {
+        data: JSON.stringify(postObject),
+      }));
+    }
+
+    this.successSnackbar("Thank you for answer the survey!");
+  }  
 
   participantsAudio: Map<string, ParticipantObject> = new Map();
+  // particpantID = this.getUserData().id;
   labMessages: Array<MessageObject> = [];
 
   micEnabled(stream: any, participant: any) {
@@ -4431,7 +4752,6 @@ export class APIService implements OnDestroy, OnInit {
       }
     }
   }
-
   micDisabled(stream: any, participant: any) {
     if (stream?.kind == 'audio') {
       this.participantsAudio.delete(participant.id);
@@ -4452,18 +4772,39 @@ export class APIService implements OnDestroy, OnInit {
     }
   }
 
-  getCNSCPresident() {
+  getCNSCPresident(){
     const postObject = {
       selectors: ['*'],
       tables: 'administrators',
       conditions: {
-        WHERE: {
-          Role: 'CNSC President',
+        WHERE :  {
+          Role: 'doctor',
         },
-      },
+      }
     };
 
     return this.post('get_entries', {
+      data: JSON.stringify(postObject),
+    });
+  }
+
+  endSpeechMeeting(teacherID: string) {
+    var tzoffset = new Date().getTimezoneOffset() * 60000; //offset in milliseconds
+    var localISOTime = new Date(Date.now() - tzoffset).toISOString();
+    var time = localISOTime.slice(0, 19).replace('T', ' ');
+    const postObject = {
+      tables: 'lab_meetings',
+      values: {
+        EndTime: time,
+      },
+      conditions: {
+        WHERE: {
+          TeacherID: teacherID,
+        },
+        'AND EndTime IS ': 'NULL',
+      },
+    };
+    return this.post('update_entry', {
       data: JSON.stringify(postObject),
     });
   }
@@ -4474,38 +4815,36 @@ export class APIService implements OnDestroy, OnInit {
     this.labMessages = [];
   }
 
-  async recordSpeechLabAttendance(id: string) {
+  async recordSpeechLabAttendance(id:string){
     const checkObject = {
       selectors: ['*'],
       tables: 'speech_attendance',
       conditions: {
-        WHERE: {
+        WHERE :  {
           StudentID: id,
-          MeetingID: this.sessionID,
+          MeetingID: this.sessionID
         },
-      },
+      }
     };
 
-    const data = await firstValueFrom(
-      this.post('get_entries', {
-        data: JSON.stringify(checkObject),
-      })
-    );
+    const  data = await firstValueFrom(this.post('get_entries', {
+      data: JSON.stringify(checkObject),
+    }));
 
-    if (data.output.length > 0) return;
+    if(data.output.length > 0) return;
 
     const postObject = {
       tables: 'speech_attendance',
       values: {
         StudentID: id,
-        MeetingID: this.sessionID,
+        MeetingID: this.sessionID
       },
     };
-    const res = await firstValueFrom(
-      this.post('create_entry', {
-        data: JSON.stringify(postObject),
-      })
-    );
+    const res = await firstValueFrom(this.post('create_entry', {
+      data: JSON.stringify(postObject),
+    }));
+
+    // console.log(res);
   }
 
   handleMeetingEvents(meeting: any) {
@@ -4513,6 +4852,7 @@ export class APIService implements OnDestroy, OnInit {
       const { code, message } = data;
       console.log('Error', code, message);
     });
+    // // meeting joined event
     meeting.on('meeting-joined', () => {
       this.micDisabled(undefined, meeting.localParticipant);
     });
@@ -4524,6 +4864,7 @@ export class APIService implements OnDestroy, OnInit {
       this.micDisabled(stream, meeting.localParticipant);
     });
 
+    // meeting left event
     meeting.on('meeting-left', () => {
       this.resetUI();
       if (this.getUserType() == '1') {
@@ -4535,9 +4876,11 @@ export class APIService implements OnDestroy, OnInit {
       }
     });
 
-    meeting.on('participant-joined', async (participant: any) => {
-      if (this.getUserType() == '1') {
-        if (participant.metaData.who != '1') {
+    meeting.on('participant-joined',  async (participant: any)  => {
+      // On teacher side ..
+      if(this.getUserType() == '1'){
+        // Record attendance of students
+        if(participant.metaData.who != '1'){
           this.recordSpeechLabAttendance(participant.metaData.id);
         }
       }
@@ -4553,6 +4896,7 @@ export class APIService implements OnDestroy, OnInit {
       });
     });
 
+    // participants left
     meeting.on('participant-left', (participant: any) => {
       this.participantsAudio.delete(participant.id);
       if (participant.metaData.who == '1') {
@@ -4564,6 +4908,7 @@ export class APIService implements OnDestroy, OnInit {
     meeting.on('chat-message', (participantMessage: any) => {
       const { __, _, text } = participantMessage;
       const data = JSON.parse(text);
+      // console.log(data);
 
       if (data.type == 'message') {
         const now = new Date();
@@ -4600,6 +4945,7 @@ export class APIService implements OnDestroy, OnInit {
           this.router.navigate(['/student/speechlab/lab']);
         }
       } else {
+        // console.log(data.senderID ,this.getUserData().visibleid)
         if (data.action?.includes('select:')) {
           const content = data.action.split(':')[1];
           this.router.navigate([
@@ -4616,6 +4962,7 @@ export class APIService implements OnDestroy, OnInit {
             const participant = this.participantsAudio.get(data.senderID);
             participant!.muted = false;
             this.participantsAudio.set(data.senderID, participant!);
+            // console.log('Update',this.participantsAudio);
           }
           if (data.action == 'mute') {
             const participant = this.participantsAudio.get(data.senderID);
@@ -4627,7 +4974,6 @@ export class APIService implements OnDestroy, OnInit {
       }
     });
   }
-
   labNotifiier = new BehaviorSubject<any>(null);
 
   sendLabMessage(message: string) {
@@ -4646,11 +4992,11 @@ export class APIService implements OnDestroy, OnInit {
       );
     }
   }
-
   sendDirectLabMessage(message: string, destination: string, action: string) {
     if (this.meeting == null) {
       return;
     }
+    // if(message.trim() != ''){
     this.meeting.sendChatMessage(
       JSON.stringify({
         senderID: this.getUserData().visibleid,
@@ -4662,6 +5008,7 @@ export class APIService implements OnDestroy, OnInit {
         type: 'direct-message',
       })
     );
+    // }
   }
 
   sendLabAction(action: string) {
@@ -4733,10 +5080,68 @@ export class APIService implements OnDestroy, OnInit {
   chosenPCs: any = false;
 
   updateStudentApproval(studentId: string, approved: boolean) {
+    // Make an API call to update the student's approval status
+    // Replace the URL and method with your actual API endpoint
     return this.http.put(`/api/students/${studentId}/approval`, { approved });
   }
 
   updateTeacherApproval(teacherId: string, approved: boolean) {
+    // Make an API call to update the teacher's approval status
+    // Replace the URL and method with your actual API endpoint
     return this.http.put(`/api/teachers/${teacherId}/approval`, { approved });
   }
+
+  groupMap = new Map<number, any[]>();
+  rows:any[] = [];
 }
+
+
+// class VideoSDK {
+//   static initMeeting(options:any) {
+//     return new WebRTCMeeting(options);
+//   }
+// }
+
+// class WebRTCMeeting {
+//   meetingId:any;
+//   participantId:any;
+//   name:any;
+//   metaData:any;
+//   micEnabled:any;
+//   webcamEnabled:any;
+//   peerConnection:any
+//   constructor({ meetingId = null, participantId = null, name = null, metaData = {}, micEnabled = true, webcamEnabled = true }) {
+//     this.meetingId = meetingId;
+//     this.participantId = participantId;
+//     this.name = name;
+//     this.metaData = metaData;
+//     this.micEnabled = micEnabled;
+//     this.webcamEnabled = webcamEnabled;
+//     this.peerConnection = null;
+//     this.startMeeting();
+//   }
+
+//   async startMeeting() {
+//     try {
+//       const stream = await navigator.mediaDevices.getUserMedia({ audio: this.micEnabled, video: this.webcamEnabled });
+//       this.createPeerConnection(stream);
+//       console.log('Meeting started with metadata:', this.metaData);
+//     } catch (error) {
+//       console.error('Error starting meeting:', error);
+//     }
+//   }
+
+//   createPeerConnection(stream:any) {
+//     const configuration = {
+//       iceServers: [{ urls: 'stun:stun.l.google.com:19302' }] // Example STUN server
+//     };
+//     this.peerConnection = new RTCPeerConnection(configuration);
+//     stream.getTracks().forEach((track:any )=> this.peerConnection.addTrack(track, stream));
+//   }
+
+//   endMeeting() {
+//     // Implement cleanup logic if needed
+//     this.peerConnection.close();
+//     console.log('Meeting ended');
+//   }
+// }

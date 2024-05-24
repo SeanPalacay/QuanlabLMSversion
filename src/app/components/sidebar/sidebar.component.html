@@ -1,131 +1,131 @@
-  <nav class="sidebar poppins-b max-[768px]:hidden">
-    <header>
-      <div class="image-text">
-        <span class="image">
-          <img src="assets/login/logonew.png" alt="QLab Logo" />
-        </span>
+<nav class="sidebar poppins-b max-[768px]:hidden">
+  <header>
+    <div class="image-text">
+      <span class="image">
+        <img src="assets/login/logonew.png" alt="QLab Logo" />
+      </span>
 
-        <div class="text logo-text overlock-b items-center">
-          <span class="name">Learning</span>
-          <span class="profession">Management System</span>
-        </div>
+      <div class="text logo-text overlock-b items-center">
+        <span class="name">Language Lab</span>
+        <span class="profession">Classroom</span>
       </div>
+    </div>
 
-      <i class="bx bx-chevron-left toggle"></i>
-    </header>
+    <i class="bx bx-chevron-left toggle"></i>
+  </header>
 
-    <div class="menu-bar">
-      <div class="menu">
-        <ul class="menu-links">
+  <div class="menu-bar">
+    <div class="menu">
+      <ul class="menu-links">
+        <li
+          *ngFor="let itemKey of itemKeys"
+          class="nav-link cursor-pointer select-none"
+          routerLinkActive="active"
+        >
+          <a
+            (click)="navigate(displayedItems[itemKey].redirect)"
+            routerLink="{{ displayedItems[itemKey].routerLink }}"
+          >
+            <i class="bx {{ displayedItems[itemKey].icon }} icon"></i>
+            <span class="text nav-text"> {{ itemKey }}</span>
+          </a>
+        </li>
+        <br />
+        <hr />
+        <div *ngIf="checkAccount() == '0'">
+          <li class="nav-link" routerLinkActive="active">
+            <a
+              (click)="navigate('student/dictionary')"
+              routerLink="/student/dictionary"
+            >
+              <i class="bx bx-book-bookmark icon"></i>
+              <span class="text nav-text">DICTIONARY</span>
+            </a>
+          </li>
           <li
-            *ngFor="let itemKey of itemKeys"
             class="nav-link cursor-pointer select-none"
             routerLinkActive="active"
           >
             <a
-              (click)="navigate(displayedItems[itemKey].redirect)"
-              routerLink="{{ displayedItems[itemKey].routerLink }}"
+              (click)="navigate('student/texttospeech')"
+              routerLink="/student/texttospeech"
             >
-              <i class="bx {{ displayedItems[itemKey].icon }} icon"></i>
-              <span class="text nav-text"> {{ itemKey }}</span>
+              <i class="bx bx-user-voice icon"></i>
+              <span class="text nav-text">TEXT TO SPEECH</span>
             </a>
           </li>
-          <br />
-          <hr />
-          <div *ngIf="checkAccount() == '0'">
-            <li class="nav-link" routerLinkActive="active">
-              <a
-                (click)="navigate('student/dictionary')"
-                routerLink="/student/dictionary"
-              >
-                <i class="bx bx-book-bookmark icon"></i>
-                <span class="text nav-text">DICTIONARY</span>
-              </a>
-            </li>
-            <li
-              class="nav-link cursor-pointer select-none"
-              routerLinkActive="active"
+        </div>
+        <div *ngIf="checkAccount() == '1'">
+          <li class="nav-link" routerLinkActive="active">
+            <a
+              (click)="navigate('teacher/dictionary')"
+              routerLink="/teacher/dictionary"
             >
-              <a
-                (click)="navigate('student/texttospeech')"
-                routerLink="/student/texttospeech"
-              >
-                <i class="bx bx-user-voice icon"></i>
-                <span class="text nav-text">TEXT TO SPEECH</span>
-              </a>
-            </li>
-          </div>
-          <div *ngIf="checkAccount() == '1'">
-            <li class="nav-link" routerLinkActive="active">
-              <a
-                (click)="navigate('teacher/dictionary')"
-                routerLink="/teacher/dictionary"
-              >
-                <i class="bx bx-book-bookmark icon"></i>
-                <span class="text nav-text">DICTIONARY</span>
-              </a>
-            </li>
-            <li
-              class="nav-link cursor-pointer select-none"
-              routerLinkActive="active"
+              <i class="bx bx-book-bookmark icon"></i>
+              <span class="text nav-text">DICTIONARY</span>
+            </a>
+          </li>
+          <li
+            class="nav-link cursor-pointer select-none"
+            routerLinkActive="active"
+          >
+            <a
+              (click)="navigate('teacher/texttospeech')"
+              routerLink="/teacher/texttospeech"
             >
-              <a
-                (click)="navigate('teacher/texttospeech')"
-                routerLink="/teacher/texttospeech"
-              >
-                <i class="bx bx-user-voice icon"></i>
-                <span class="text nav-text">TEXT TO SPEECH</span>
-              </a>
-            </li>
-          </div>
-        </ul>
-      </div>
-
-      
-
-      <div class="bottom-content mb-3">
-        <li class="">
-          <a class="report">
-            <button
-              (click)="openModal()"
-              [ngClass]="{ 'smaller-text': isSidebarMinimized }"
-              class="h-10 mb-2 w-full font-bold poppins-b rounded-lg text-gray-500 focus:outline-none mt-2"
-            >
-              {{ isSidebarMinimized ? "REPORT" : "REPORT A PROBLEM" }}
-            </button>
-          </a>
-        </li>
-
-        <li class="" *ngIf="isStudent">
-          <!-- <a class=""> -->
-            <button
-            *ngIf="progress"
-            (click)="goOffline()"
-            [ngStyle]="{ width: progress + '%' }"
-              class="h-10 mb-2 flex justify-center items-center text-white hover:bg-blue-500 bg-blue-400 w-full font-bold poppins-b rounded-lg mt-2"
-            >
-            <span *ngIf="progress < 100">  Downloading</span>
-            <span *ngIf="progress >= 100">  Offline Available</span>
-
-          </button>
-            <button
-            *ngIf="!progress"
-          
-            [ngStyle]="{ width: '100%'}"
-              class="h-10 mb-2 flex justify-center items-center text-white hover:bg-slate-400 bg-slate-300 w-full font-bold poppins-b rounded-lg mt-2"
-            >
-            <span>  Loading</span>
-            <!-- <span *ngIf="progress >= 100">  Offline Available</span> -->
-
-          </button>
-          <!-- </a> -->
-        </li>
-        <li class="cursor-pointer select-none">
-          <a (click)="confirmBox()">
-            <i class="bx bx-log-out icon"></i>
-            <span class="text nav-text">Logout</span>
-          </a>
-        </li>
-      </div>
+              <i class="bx bx-user-voice icon"></i>
+              <span class="text nav-text">TEXT TO SPEECH</span>
+            </a>
+          </li>
+        </div>
+      </ul>
     </div>
-  </nav>
+
+    
+
+    <div class="bottom-content mb-3">
+      <li class="">
+        <a class="report">
+          <button
+            (click)="openModal()"
+            [ngClass]="{ 'smaller-text': isSidebarMinimized }"
+            class="h-10 mb-2 w-full font-bold poppins-b rounded-lg text-gray-500 focus:outline-none mt-2"
+          >
+            {{ isSidebarMinimized ? "REPORT" : "REPORT A PROBLEM" }}
+          </button>
+        </a>
+      </li>
+
+      <li class="" *ngIf="isStudent">
+        <!-- <a class=""> -->
+          <button
+          *ngIf="progress"
+          (click)="goOffline()"
+          [ngStyle]="{ width: progress + '%' }"
+            class="h-10 mb-2 flex justify-center items-center text-white hover:bg-blue-500 bg-blue-400 w-full font-bold poppins-b rounded-lg mt-2"
+          >
+          <span *ngIf="progress < 100">  Downloading</span>
+          <span *ngIf="progress >= 100">  Offline Available</span>
+
+        </button>
+          <button
+          *ngIf="!progress"
+        
+          [ngStyle]="{ width: '100%'}"
+            class="h-10 mb-2 flex justify-center items-center text-white hover:bg-slate-400 bg-slate-300 w-full font-bold poppins-b rounded-lg mt-2"
+          >
+          <span>  Loading</span>
+          <!-- <span *ngIf="progress >= 100">  Offline Available</span> -->
+
+        </button>
+        <!-- </a> -->
+      </li>
+      <li class="cursor-pointer select-none">
+        <a (click)="confirmBox()">
+          <i class="bx bx-log-out icon"></i>
+          <span class="text nav-text">Logout</span>
+        </a>
+      </li>
+    </div>
+  </div>
+</nav>

@@ -16,7 +16,7 @@
         display: block;
         height: 40px;
         width: 120px;
-        background: linear-gradient(to right, #0172AF, #74FEBD);
+        background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
         color: white;
         border-radius: 8px;
         box-shadow: 0px 0px 15px #00000040;

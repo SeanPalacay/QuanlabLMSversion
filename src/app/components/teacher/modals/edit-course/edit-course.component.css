@@ -17,7 +17,7 @@
   }
   
   .titlehead h1 {
-    background-image: linear-gradient(to right, rgb(1, 114, 175) 0%, rgb(116, 254, 189) 100%);
+    background-image: linear-gradient(to right, var(--secondary-color), var(--primary-color));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -73,7 +73,7 @@
   }
   
   .topwrap2 select .placeholder span {
-    background-image: linear-gradient(to right, rgb(1, 114, 175) 0%, rgb(116, 254, 189) 100%);
+    background-image: linear-gradient(to right, var(--secondary-color), var(--secondary-color));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -97,7 +97,7 @@
   }
   
   .mode div h1 {
-    background-image: linear-gradient(to right, rgb(1, 114, 175) 0%, rgb(116, 254, 189) 100%);
+    background-image: linear-gradient(to right, var(--secondary-color), var(--secondary-color));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -110,11 +110,11 @@
     margin-left: 10px;
     border-radius: 8px;
     border: 2px solid transparent;
-    border-image: linear-gradient(to right, rgb(1, 114, 175) 0%, rgb(116, 254, 189) 100%) 1;
+    border-image: linear-gradient(to right, var(--primary-color), var(--secondary-color)) 1;
   }
   
   .midtop .midtopwrap {
-    background: linear-gradient(to right, rgb(1, 114, 175) 0%, rgb(116, 254, 189) 100%);
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
     height: 40px;
     width: 100%;
     padding-top: 5px;
@@ -233,7 +233,7 @@
   
   .buttom .buttomwrap .file-label span {
     vertical-align: middle;
-    background-image: linear-gradient(to right, rgb(1, 114, 175) 0%, rgb(116, 254, 189) 100%);
+    background-image: linear-gradient(to right, var(--secondary-color), var(--primary-color));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -258,13 +258,17 @@
   .buttonwrap .save {
     height: 40px;
     width: 180px;
-    background: linear-gradient(to right, rgb(1, 114, 175) 0%, rgb(116, 254, 189) 100%);
+    background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
     margin-top: 20px;
     border-radius: 18px;
     color: white;
     margin-left: 50px;
   }
   
+  .buttonwrap .save:hover{
+    cursor: pointer;
+    background: var(--secondary-color); /* Change background to secondary color on hover */
+  }
   .buttonwrap .cancel {
     height: 40px;
     width: 180px;
@@ -278,7 +282,7 @@
   .addlesson .lesson {
     height: 30px;
     width: 100px;
-    background: linear-gradient(to right, rgb(1, 114, 175) 0%, rgb(116, 254, 189) 100%);
+    background: linear-gradient(to right, var(--secondary-color), var(--secondary-color));
     margin-top: 20px;
     color: white;
     margin-left: 50px;
@@ -317,7 +321,7 @@
     margin-top: -5px;
     font-size: 20px;
     color: transparent;
-    background-image: linear-gradient(to right, rgb(1, 114, 175) 0%, rgb(116, 254, 189) 100%);
+    background-image: linear-gradient(to right, var(--secondary-color), var(--primary-color));
     -webkit-background-clip: text;
     background-clip: text;
   }

@@ -12,15 +12,15 @@
                 <textarea [(ngModel)]="courseDesc" name="" id="" cols="30" rows="10" placeholder="Description :" class="textarea-field"></textarea>
             </div>
             <div class="topwrap2">
-                <!-- <div class="text">
+                <div class="text">
                     <select [(ngModel)]="language" (change)="selectLanguage(language)" name="language" id="language" class="poppins select-field">
                         <option class="placeholder poppins-b" value="" disabled selected hidden>Select Language:</option>
                         <option [value]='language.value.language' *ngFor="let language of languages|keyvalue" >
                           {{language.value.language}}
                        </option>
                     </select>
-                </div> -->
-                <!-- <div class="mode poppins">
+                </div>
+                <div class="mode poppins">
                     <div>
                         <h1 class="poppins-b">Select Mode :</h1>
                     </div>
@@ -28,7 +28,7 @@
                     <input [checked]="mode.read =='on'" (change)="read($event)"   type="radio"><span> Read</span>
                     <input [checked]="mode.speak =='on'"  (change)="speak($event)" type="radio"><span> Speak</span>
                     <input [checked]="mode.write =='on'" (change)="write($event)"  type="radio"><span> Write</span>
-                </div> -->
+                </div>
             </div>
         </div>
   
@@ -75,8 +75,24 @@
                   <div class="buttomwrap">
                       <div class="file">
                           <label for="file-upload-{{i}}" class="file-label">
-                              <span class="poppins full-width-span">{{(lesson.fileupload)? getFilename(lesson.fileupload):'Attach File' }}</span>  
-                              <img src="assets/teacher/icondown.png" alt="Attach audio feedback">
+                              <span class="mr-2 poppins full-width-span">{{(lesson.fileupload)? getFilename(lesson.fileupload):'Attach File' }}</span>  
+                              <svg class="ml-1" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15px" height="15px" viewBox="0 0 481.728 481.728" xml:space="preserve">
+                                <defs>
+                                  <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:var(--secondary-color);stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:var(--primary-color);stop-opacity:1" />
+                                  </linearGradient>
+                                </defs>
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                  <g>
+                                    <g>
+                                      <path d="M10.467,146.592l198.857,252.903c17.417,30.532,45.661,30.532,63.085,0l198.839-252.867 c3.886-5.532,8.072-15.41,8.923-22.118c2.735-21.738,4.908-65.178-21.444-65.178H23.013c-26.353,0-24.192,43.415-21.463,65.147 C2.395,131.188,6.587,141.06,10.467,146.592z" fill="url(#gradient)"></path>
+                                    </g>
+                                  </g>
+                                </g>
+                              </svg>
                           </label>
                           <input id="file-upload-{{i}}" type="file" (change)="onFileSelected($event, lesson)">
                       </div>
@@ -96,8 +112,8 @@
         </div>
         <div class="buttonwrap">
             <div class="btnwrap">
-                <button class="save poppins" (click)="submit()">SAVE</button>
-                <button class="cancel poppins" (click)="closeModal()">Cancel</button>
+                <button class="hover:scale-105 hover:ease-out duration-300 save poppins" (click)="submit()">SAVE</button>
+                <button class="hover:scale-105 hover:ease-out duration-300 cancel poppins" (click)="closeModal()">Cancel</button>
             </div>
         </div>
     </div>

@@ -14,7 +14,6 @@ import Swal from 'sweetalert2';
 export class ManageCourseComponent implements OnInit {
   languages:Map<string, any> = new Map();
   selectedLanguage: string = '';
-  course: any; // Declare the course property
 
   constructor( private modalService: NgbModal, 
     private API: APIService,
@@ -84,13 +83,13 @@ export class ManageCourseComponent implements OnInit {
         showCancelButton: true,
         confirmButtonColor: "#3085d6",
         cancelButtonColor: "#d33",
-        confirmButtonText: "Yes, delete it!"
+        confirmButtonText: "Yes, Remove it!"
     }).then((result) => {
         if (result.isConfirmed) {
             this.API.deleteCourse(courseID).subscribe(() => {
                 this.getTeacherCourses();
                 Swal.fire({
-                    title: "Deleted!",
+                    title: "Removed!",
                     text: "Your file has been deleted.",
                     icon: "success"
                 });
@@ -188,7 +187,7 @@ export class ManageCourseComponent implements OnInit {
   // }
   
   async showCertificateModal(course: any) {
-    const imageUrl = 'assets/cert/cnsc-cert.jpg'; // Replace with the actual URL or path to the certificate image
+    const imageUrl = 'assets/cert/ace-cert.png'; // Replace with the actual URL or path to the certificate image
     const teacherSign = this.API.getUserData().esign;
     const response =  await firstValueFrom(this.API.getCNSCPresident());
     if(response.output.length <= 0){
@@ -204,7 +203,7 @@ export class ManageCourseComponent implements OnInit {
     const result = await Swal.fire({
       title: 'Certificate Preview',
       html: `
-        <div style="width: 100%;" class='select-none overflow-hidden'>
+        <div style="width: 740px;" class='select-none overflow-hidden'>
           <div class='relative w-full h-[500px]'>
             <div class='absolute top-[54%] left-6 w-full flex justify-center z-10 font-semibold text-3xl text-black'>
               JUAN DE LA CRUZ
@@ -253,9 +252,9 @@ export class ManageCourseComponent implements OnInit {
                 showCancelButton: true,
                 confirmButtonText: 'Yes, distribute',
                 cancelButtonText: 'Cancel'
-              }).then((confirmResult) => {
+              }).then( async(confirmResult) => {
                 if (confirmResult.isConfirmed) {
-                  console.log('Distributing certificates for course:', course);
+                  this.API.distributeCertificates(course.id)
                   // Add your certificate distribution code here
                   Swal.fire('Certificates Distributed', 'Certificates have been successfully distributed to eligible students.', 'success');
                 }
@@ -270,6 +269,7 @@ export class ManageCourseComponent implements OnInit {
       console.log('Certificate preview closed without distribution.');
     }
   }
+
   redirectToLessons(courseID: string) {
     this.API.setCourse(courseID);
     this.router.navigate(['/teacher/lessons'], { queryParams: { hideMarkAsDone: true } });

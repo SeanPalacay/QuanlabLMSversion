@@ -3,7 +3,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { NewclassComponent } from '../modals/newclass/newclass.component';
 import { APIService } from 'src/app/services/API/api.service';
 import { __classPrivateFieldIn } from 'tslib';
-
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-manageclass',
@@ -40,23 +40,21 @@ export class ManageclassComponent implements OnInit {
       });
       // You might pass data or perform any other operations here.
     }
-    openEditModal(classID:string,className:string,classCode:string
-      ,daySchedule:string, timeSchedule:string,courseID:string){
+    openEditModal(classID: string, className: string, classCode: string, daySchedule: string, timeSchedule: string, courseID: string) {
       const modalRef = this.modalService.open(NewclassComponent);
       modalRef.componentInstance.courses = this.courses;
-      modalRef.componentInstance.data={
-        'classID':classID,
-        'className': className,
-        'classCode': classCode,
-        'daySchedule': daySchedule,
-        'timeSchedule': timeSchedule,
-        'courseID': courseID
-      }
-      modalRef.closed.subscribe(data=>{
-        if(data=='update'){
+      modalRef.componentInstance.data = {
+        classID: classID,
+        className: className,
+        classCode: classCode,
+        daySchedule: daySchedule,
+        timeSchedule: timeSchedule,
+        courseID: courseID
+      };
+      modalRef.closed.subscribe(data => {
+        if (data === 'update') {
           this.loadClasses();
         }
-      
       });
     }
 
@@ -205,9 +203,28 @@ export class ManageclassComponent implements OnInit {
     }
 
     deleteClass(classID:string){
-      this.API.deleteClass(classID).subscribe(data=>{
-        this.loadClasses();
+
+      Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, delete it!"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire({
+            title: "Deleted!",
+            text: "Your file has been deleted.",
+            icon: "success"
+          });
+          this.API.deleteClass(classID).subscribe(data=>{
+            this.loadClasses();
+          });
+        }
       });
+
     }
 
     parsetime(schedule:string){

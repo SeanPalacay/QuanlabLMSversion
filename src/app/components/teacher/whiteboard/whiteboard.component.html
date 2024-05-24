@@ -1,0 +1,12 @@
+<div class="whiteboard-container">
+    <canvas #whiteboard></canvas>
+    <div class="text-element" *ngFor="let textElement of textElements" [style.left.px]="textElement.x" [style.top.px]="textElement.y" (mousedown)="startDraggingText(textElement, $event)" (mousemove)="dragText(textElement, $event)" (mouseup)="stopDraggingText(textElement)" (dblclick)="editText(textElement)">
+      <span *ngIf="!textElement.editing">{{textElement.text}}</span>
+      <input *ngIf="textElement.editing" type="text" [(ngModel)]="textElement.text" (blur)="stopEditingText(textElement)" (keydown.enter)="stopEditingText(textElement)" autofocus>
+    </div>
+  </div>
+  <div class="button-container">
+    <button id="clearButton">Clear</button>
+    <button id="eraserButton">Eraser</button>
+    <input type="color" id="colorPicker" value="#000000">
+  </div>

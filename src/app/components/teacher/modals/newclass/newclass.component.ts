@@ -9,7 +9,7 @@ import { APIService } from 'src/app/services/API/api.service';
 })
 export class NewclassComponent implements OnInit {
   @Input() public data: any = null;
-  @Input() public courses?: Map<string, any>;
+@Input() public courses?: Map<string, any>;
 
   course: string = '';
   classID: string = '';
@@ -36,6 +36,7 @@ export class NewclassComponent implements OnInit {
     { name: 'Th', checked: false },
     { name: 'F', checked: false },
     { name: 'Sa', checked: false },
+    { name: 'Su', checked: false },
   ];
 
   constructor(private API: APIService, public activeModal: NgbActiveModal) {}
@@ -54,20 +55,24 @@ export class NewclassComponent implements OnInit {
 
   parseTimeSchedules(timeScheduleString: string) {
     this.timeSchedules = timeScheduleString.split(', ').map(schedule => {
-      const timeParts = schedule.match(/(\d{1,2}:\d{2} [AP]M) - (\d{1,2}:\d{2} [AP]M)/);
+      const timeParts = schedule.match(/(\d{1,2}):(\d{2}) ([AP]M) - (\d{1,2}):(\d{2}) ([AP]M)/);
       if (timeParts) {
-        const startTime = timeParts[1];
-        const endTime = timeParts[2];
-        return `${startTime} - ${endTime}`;
+        const startHour = timeParts[1];
+        const startMinute = timeParts[2];
+        const startPeriod = timeParts[3];
+        const endHour = timeParts[4];
+        const endMinute = timeParts[5];
+        const endPeriod = timeParts[6];
+        return `${startHour}:${startMinute} ${startPeriod} - ${endHour}:${endMinute} ${endPeriod}`;
       }
       return '';
     }).filter(schedule => schedule.trim() !== '');
-
+  
     this.startHours = this.timeSchedules.map(schedule => schedule.split(' - ')[0].split(':')[0]);
-    this.startMinutes = this.timeSchedules.map(schedule => schedule.split(' - ')[0].split(':')[1]);
+    this.startMinutes = this.timeSchedules.map(schedule => schedule.split(' - ')[0].split(':')[1].split(' ')[0]);
     this.startPeriods = this.timeSchedules.map(schedule => schedule.split(' - ')[0].split(' ')[1]);
     this.endHours = this.timeSchedules.map(schedule => schedule.split(' - ')[1].split(':')[0]);
-    this.endMinutes = this.timeSchedules.map(schedule => schedule.split(' - ')[1].split(':')[1]);
+    this.endMinutes = this.timeSchedules.map(schedule => schedule.split(' - ')[1].split(':')[1].split(' ')[0]);
     this.endPeriods = this.timeSchedules.map(schedule => schedule.split(' - ')[1].split(' ')[1]);
   }
 

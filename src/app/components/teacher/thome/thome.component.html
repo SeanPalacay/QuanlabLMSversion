@@ -25,7 +25,7 @@
 
     <div
       routerLink="/teacher/task-management"
-      class="cursor-pointer group lg:ml-36 ml-4 w-11/12 lg:w-1/4 h-full shadow-boxz rounded flex items-center justify-center hover:bg-gradient-to-r hover:from-[var(--secondary-color)] hover:to-[var(--primary-color)]"
+      class="hover:scale-105 hover:ease-out duration-300 cursor-pointer group lg:ml-36 ml-4 w-11/12 lg:w-1/4 h-full shadow-boxz rounded flex items-center justify-center hover:bg-gradient-to-r hover:from-[var(--secondary-color)] hover:to-[var(--primary-color)]"
     >
       <p
         class="poppins-b text-transparent bg-clip-text gradient-color custom-smaller-text group-hover:text-white"
@@ -36,7 +36,7 @@
 
     <div
       routerLink="/teacher/quiz-management"
-      class="cursor-pointer group ml-4 w-11/12 lg:w-1/4 lg:mr-20 h-full shadow-boxz rounded flex items-center justify-center hover:bg-gradient-to-r hover:from-[var(--secondary-color)] hover:to-[var(--primary-color)]"
+      class="hover:scale-105 hover:ease-out duration-300 cursor-pointer group ml-4 w-11/12 lg:w-1/4 lg:mr-20 h-full shadow-boxz rounded flex items-center justify-center hover:bg-gradient-to-r hover:from-[var(--secondary-color)] hover:to-[var(--primary-color)]"
     >
       <p
         class="poppins-b text-transparent bg-clip-text gradient-color custom-smaller-text group-hover:text-white"
@@ -160,26 +160,26 @@
         class="flex items-center justify-center h-4 w-4 rounded-full gradient-color-updown mt-3.5 mr-3.5"
         (click)="openInbox()"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-2 w-2"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="white"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M14 5l7 7m0 0l-7 7m7-7H3"
-          ></path>
-        </svg>
+      <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-2 w-2"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="white"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M14 5l7 7m0 0l-7 7m7-7H3"
+      ></path>
+    </svg>
       </button>
     </div>
 
     <div class="h-full p-2 mt-2 rounded w-full">
       <style>
-        .gg:hover {
+         .gg:hover {
           filter: drop-shadow(0 0 2em var(--secondary-color));
         }
       </style>

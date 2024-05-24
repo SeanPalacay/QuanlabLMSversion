@@ -3,7 +3,7 @@
     <button
         (click)="selectTab('quizzes')"
         [ngClass]="{
-            'bg-blue-500 text-white': selectedTab === 'quizzes',
+            'bg-[--secondary-color] text-white': selectedTab === 'quizzes',
             'bg-gray-200 text-gray-700': selectedTab !== 'quizzes'
         }"
         class="px-4 py-2 rounded-md transition-colors duration-300 mb-2 md:mb-0 md:mr-2"
@@ -14,7 +14,7 @@
     <button
         (click)="selectTab('assignments')"
         [ngClass]="{
-            'bg-blue-500 text-white': selectedTab === 'assignments',
+            'bg-[--secondary-color] text-white': selectedTab === 'assignments',
             'bg-gray-200 text-gray-700': selectedTab !== 'assignments'
         }"
         class="px-4 py-2 rounded-md transition-colors duration-300 mb-2 md:mb-0 md:mr-2"
@@ -25,7 +25,7 @@
     <button
         (click)="selectTab('attendanceHistory')"
         [ngClass]="{
-            'bg-blue-500 text-white': selectedTab === 'attendanceHistory',
+            'bg-[--secondary-color] text-white': selectedTab === 'attendanceHistory',
             'bg-gray-200 text-gray-700': selectedTab !== 'attendanceHistory'
         }"
         class="px-4 py-2 rounded-md transition-colors duration-300 mb-2 md:mb-0"
@@ -40,7 +40,7 @@
     *ngIf="selectedTab === 'quizzes'"
     class="information-container bg-white shadow-md rounded-lg p-6"
   >
-    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Quiz Grades</h2>
+    <h2 class="text-transparent bg-clip-text gradient-color  text-2xl font-semibold mb-4">Quiz Grades</h2>
     <select
       [(ngModel)]="selectedQuiz"
       class="w-full mb-6 px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600"
@@ -132,7 +132,7 @@
     *ngIf="selectedTab === 'assignments'"
     class="information-container bg-white shadow-md rounded-lg p-6"
   >
-    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Assignment Grades</h2>
+    <h2 class="text-transparent bg-clip-text gradient-color  text-2xl font-semibold mb-4">Assignment Grades</h2>
 
     <ng-container *ngIf="assignmentGrades.size; else asEmpty">
       <ul class="space-y-4">
@@ -174,7 +174,7 @@
     *ngIf="selectedTab === 'attendanceHistory'"
     class="information-container bg-white shadow-md rounded-lg p-6"
   >
-    <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+    <h2 class="text-transparent bg-clip-text gradient-color text-2xl font-semibold mb-4">
       Select Attendance History
     </h2>
     <select
@@ -208,6 +208,7 @@
   </div>
 
   <div *ngIf="!selectedTab" class="initial-message text-gray-500 text-center">
-    <p>Select to view tab.</p>
-  </div>
+    <p>Choose a tab to view.</p>
+</div>
+
 </div>

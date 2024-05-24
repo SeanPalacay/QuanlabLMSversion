@@ -29,15 +29,10 @@ export class SidebarComponent implements OnInit {
       icon: 'bx-border-all',
       routerLink: '/student/dashboard',
     },
-    // LAB: {
-    //   redirect: 'student/courses',
-    //   icon: 'bx-extension',
-    //   routerLink: '/student/courses',
-    // },
-    MODULE: {
-      redirect: 'student/courses',
+    LAB: {
+      redirect: 'student/lab',
       icon: 'bx-extension',
-      routerLink: '/student/courses',
+      routerLink: '/student/lab',
     },
     MEET: {
       redirect: 'student/quanhub',
@@ -78,11 +73,6 @@ export class SidebarComponent implements OnInit {
       icon: 'bx-book-reader',
       routerLink: '/teacher/managecourse',
     },
-    // 'MANAGE MODULE': {
-    //   redirect: 'teacher/manage-module',
-    //   icon: 'bx-book-reader',
-    //   routerLink: '/teacher/manage-module',
-    // },
     'MANAGE CLASS': {
       redirect: 'teacher/manageclass',
       icon: 'bx-chalkboard',
@@ -127,11 +117,11 @@ export class SidebarComponent implements OnInit {
       icon: 'bxs-time-five',
       routerLink: '/admin/count',
     },
-    SPEECHLAB: {
-      redirect: 'admin/speechlab',
-      icon: 'bxs-time-five',
-      routerLink: '/admin/speechlab',
-    },
+    // SPEECHLAB: {
+    //   redirect: 'admin/speechlab',
+    //   icon: 'bxs-time-five',
+    //   routerLink: '/admin/speechlab',
+    // },
   };
 
 
@@ -152,11 +142,11 @@ export class SidebarComponent implements OnInit {
       icon: 'bxs-time-five',
       routerLink: '/admin/count',
     },
-    SPEECHLAB: {
-      redirect: 'admin/speechlab',
-      icon: 'bxs-time-five',
-      routerLink: '/admin/speechlab',
-    },
+    // SPEECHLAB: {
+    //   redirect: 'admin/speechlab',
+    //   icon: 'bxs-time-five',
+    //   routerLink: '/admin/speechlab',
+    // },
   };
 
   displayedItems: any;

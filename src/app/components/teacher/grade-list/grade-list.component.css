@@ -14,7 +14,7 @@
 .tabs button:hover {
   color: #fff;
   font-weight: bold;
-  background-color: #00be65;
+  background-color: var(--secondary-color);
 }
 
 ul {
