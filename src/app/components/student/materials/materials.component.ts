@@ -41,7 +41,7 @@ export class MaterialsComponent implements OnInit {
     
 
     // this.API.justSnackbar('Loading content....',999999);
-    this.API.studentGetAssigmentByID(taskID!).subscribe(data => {
+    this.API.studentGetAssignmentByID(taskID!).subscribe(data => {
       if (data.output.length <= 0) {
         this.location.back();
       }

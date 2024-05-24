@@ -2809,7 +2809,7 @@ export class APIService implements OnDestroy, OnInit {
     });
   }
 
-  studentGetAssigmentByID(taskID: string) {
+  studentGetAssignmentByID(taskID: string) {
     const id = this.getUserData().id;
     const postObject = {
       selectors: [
