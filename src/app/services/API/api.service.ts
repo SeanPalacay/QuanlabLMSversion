@@ -2776,7 +2776,7 @@ export class APIService implements OnDestroy, OnInit {
     });
   }
 
-  studentGetAssigments() {
+  studentGetAssignments() {
     const id = this.getUserData().id;
     const postObject = {
       selectors: [
