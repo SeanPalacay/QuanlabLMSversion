@@ -1,3 +1,61 @@
+<style>
+    .modal-content.custom-modal-content {
+        max-height: 80vh; /* Adjust as needed */
+        overflow-y: auto;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .contentwrap {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .flexwrap {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .midwrap, .btnwrap, .ratewrap {
+        flex: 1;
+        margin: 10px;
+    }
+
+    .detailswrap, .lessonwrap {
+        margin-top: 20px;
+    }
+
+    .lessoncontainer {
+        max-height: 300px; /* Adjust as needed */
+        overflow-y: auto;
+    }
+
+    .close-button {
+        background: none;
+        border: none;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+
+    .poppins-b {
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+    }
+
+    .poppins {
+        font-family: 'Poppins', sans-serif;
+    }
+</style>
+
 <div class="modal-content custom-modal-content">
     <div class="container">
         <div class="title">
@@ -8,65 +66,74 @@
         <div class="contentwrap">
             <img class="vid w-full h-full object-cover" [src]="course.cover">
             <div class="flexwrap">
-        <div class="midwrap">
-            
-            <div class="buttonwrap">
-                <div class="desc">
-                <div class="textwrap poppins">
-                    <img src="assets/enrollcourse/User.png" alt=""><p class="ml-2"> Creator: </p><p class=" ml-1 name">{{course.firstname + ' '+ course.lastname}}</p>
+                <div class="midwrap">
+                    <div class="buttonwrap">
+                        <div class="desc">
+                            <div class="textwrap poppins">
+                                <img src="assets/enrollcourse/User.png" alt="">
+                                <p class="ml-2"> Creator: </p>
+                                <p class="ml-1 name">{{course.firstname + ' ' + course.lastname}}</p>
+                            </div>
+                            <div class="textwrap poppins">
+                                <!-- <img src="assets/enrollcourse/Send.png" alt=""><p class="ml-2"> Uploaded On:</p><p class="name">12/04/2022</p> -->
+                            </div>
+                            <div class="textwrap poppins">
+                                <img src="assets/enrollcourse/Chart.png" alt="">
+                                <p class="ml-2"> Lessons: </p>
+                                <p class="ml-1 name"> x {{course.lessoncount}}</p>
+                            </div>
+                            <div class="textwrap poppins">
+                                <img src="assets/enrollcourse/Document.png" alt="">
+                                <p class="ml-2"> Language: </p>
+                                <p class="ml-1 name">{{course.language}}</p>
+                            </div>
+                            <div class="descfooter"></div>
+                        </div>
+                    </div>
+                    <div class="btnwrap">
+                        <button (click)="enroll()" class="poppins">Enroll Now</button>
+                        <input [(ngModel)]="courseCode" class="mt-3 ml-10 h-8 w-52 p-2 rounded-md poppins" placeholder="Course code :" type="text">
+                    </div>
                 </div>
-                <div class="textwrap poppins">
-                    <!-- <img src="assets/enrollcourse/Send.png" alt=""><p class="ml-2"> Uploaded On:</p><p class="name">12/04/2022</p> -->
-                </div>
-                <div class="textwrap poppins">
-                    <img src="assets/enrollcourse/Chart.png" alt=""><p class="ml-2"> Lessons: </p><p class=" ml-1 name">  x {{course.lessoncount}}</p>
-                </div>
-                <div class="textwrap poppins">
-                    <img src="assets/enrollcourse/Document.png" alt=""><p class="ml-2"> Language: </p><p class=" ml-1 name">{{course.language}}</p>
-                </div>
-                <div class="descfooter"></div>
+                <div class="ratewrap">
+                    <ngb-rating class="rate" [rate]="course.complexity"></ngb-rating>
+                    <span>
+                        <p *ngIf="course.complexity <= 2" class="level">(Beginner)</p>
+                        <p *ngIf="course.complexity < 4 && course.complexity > 2" class="level">(Intermediate)</p>
+                        <p *ngIf="course.complexity >= 4" class="level">(Expert)</p>
+                    </span>
                 </div>
             </div>
-
-            <div class="btnwrap">
-                <button (click)="enroll()" class="poppins">Enroll Now</button>
-                <input [(ngModel)]="courseCode" class="mt-3 ml-10 h-8 w-52 p-2 rounded-md poppins" placeholder="Course code :" type="text">
-            </div>
-        </div>
-            <div class="ratewrap">
-            <ngb-rating class="rate" [rate]="course.complexity" /><span>
-                <p *ngIf="course.complexity <= 2"  class="level">(Beginner)</p>
-                <p *ngIf="course.complexity < 4 && course.complexity > 2" class="level">(Intermediate)</p>
-                <p *ngIf="course.complexity >= 4" class="level">(Expert)</p>
-            </span>
-            </div>
-        </div>
-
-        <div class="detailswrap">
-            <div class="details poppins-b"><h1>Details</h1></div>
-            <p class="detailscontent" [ngClass]="{ 'show-more': showFullContent }">{{course.details? course.details: '[NONE]'}}
-            </p><button (click)="toggleReadMore()">{{ showFullContent ? 'Show less' : 'Read more' }}</button>
-            
-        </div>
-
-        <div class="lessonwrap">
-            <div class="lesson poppins-b"><h1>Lessons</h1></div>
-            <div class="lessoncontainer">
-                <div *ngIf="lessons.length ==0">
-                    Currently, this course has no lessons.
+            <div class="detailswrap">
+                <div class="details poppins-b">
+                    <h1>Details</h1>
                 </div>
-                <div *ngFor="let lesson of lessons;let i = index" class="lessontitle">
-                    <div class="thislesson">Lesson {{i+1}} : <span class="poppins-b">{{lesson.title}}</span></div>
-                    <div class="lessontext"><p>{{lesson.details}}</p></div>
-                </div>
-                <!-- <div class="lessontitle">
-                    <div class="thislesson">Lesson 2 : <span class="poppins-b">Title</span></div>
-                    <div class="lessontext"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec lectus ac justo consectetur venenatis sed eget arcu. Vestibulum convallis,
-                        ipsum id facilisis malesuada, mauris velit ultrices velit, quis commodo ipsum justo id libero.</p></div>
-                </div> -->
+                <p class="detailscontent" [ngClass]="{ 'show-more': showFullContent }">{{course.details ? course.details : '[NONE]'}}</p>
+                <button (click)="toggleReadMore()">{{ showFullContent ? 'Show less' : 'Read more' }}</button>
             </div>
-        </div>
-            
+            <div class="lessonwrap">
+                <div class="lesson poppins-b">
+                    <h1>Lessons</h1>
+                </div>
+                <div class="lessoncontainer">
+                    <div *ngIf="lessons.length == 0">
+                        Currently, this course has no lessons.
+                    </div>
+                    <div *ngFor="let lesson of lessons; let i = index" class="lessontitle">
+                        <div class="thislesson">Lesson {{i+1}} : <span class="poppins-b">{{lesson.title}}</span></div>
+                        <div class="lessontext">
+                            <p>{{lesson.details}}</p>
+                        </div>
+                    </div>
+                    <!-- <div class="lessontitle">
+                        <div class="thislesson">Lesson 2 : <span class="poppins-b">Title</span></div>
+                        <div class="lessontext">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec lectus ac justo consectetur venenatis sed eget arcu. Vestibulum convallis,
+                                ipsum id facilisis malesuada, mauris velit ultrices velit, quis commodo ipsum justo id libero.</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
         </div>
     </div>
-    </div>
+</div>
