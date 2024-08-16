@@ -150,8 +150,9 @@ button {
 	height: 100%;
 	z-index: -1;
 	bottom: auto;
-    background: #00bfff;
-    background: linear-gradient(to top, rgb(0, 234, 255) 0%, rgb(0, 142, 114) 100%);
+    background: #cacac2;
+    background: linear-gradient(to top, rgb(202, 202, 194) 0%, rgb(202, 202, 194) 100%);
+
 	top: 0;
 	left: 0;
 	width: 100%;
