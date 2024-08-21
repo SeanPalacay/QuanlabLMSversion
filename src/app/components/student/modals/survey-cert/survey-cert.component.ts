@@ -122,7 +122,7 @@ export class SurveyCertComponent implements OnInit {
 
   async showCertificateModal(course: any) {
     console.log(course)
-    const imageUrl = 'assets/cert/cnsc-cert.jpg'; // Replace with the actual URL or path to the certificate image
+    const imageUrl = 'assets/cert/cnsc-cert.png'; // Replace with the actual URL or path to the certificate image
     const teacherSign = course.esign;
     console.log(teacherSign)
     const response =  await firstValueFrom(this.API.getCNSCPresident());

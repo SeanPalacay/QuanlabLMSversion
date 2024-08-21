@@ -123,7 +123,7 @@ export class NotificationboxComponent {
 
 async showCertificateModal(course: any) {
   console.log(course);
-  const imageUrl = 'assets/cert/cnsc-cert.jpg';
+  const imageUrl = 'assets/cert/cnsc-cert.png';
   const teacherSign = course.esign;
   console.log(teacherSign);
   const response = await firstValueFrom(this.API.getCNSCPresident());
